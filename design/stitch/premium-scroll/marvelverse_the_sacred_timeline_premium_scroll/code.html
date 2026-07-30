@@ -1,0 +1,455 @@
+<!DOCTYPE html><html class="dark lenis lenis-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MarvelVerse | The Sacred Timeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Archivo+Narrow:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<!-- GSAP for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        /* Lenis base styles */
+        html.lenis {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .marvel-glow {
+            box-shadow: 0 0 20px rgba(230, 36, 41, 0.4);
+        }
+        .pulse-red {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(0.98); }
+        }
+        .timeline-cursor {
+            pointer-events: none;
+            transition: transform 0.15s ease-out;
+        }
+        
+        /* Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffb4ac",
+                        "tertiary": "#82cfff",
+                        "on-secondary-fixed-variant": "#594400",
+                        "tertiary-fixed": "#c6e7ff",
+                        "surface-tint": "#ffb4ac",
+                        "on-tertiary-fixed-variant": "#004c6b",
+                        "primary-container": "#e62429",
+                        "on-primary-fixed-variant": "#93000e",
+                        "inverse-primary": "#c00016",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "primary-fixed": "#ffdad6",
+                        "outline-variant": "#5d3f3c",
+                        "on-primary-container": "#ffffff",
+                        "on-surface-variant": "#e7bdb8",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "on-primary": "#690007",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdf95",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#3c2c00",
+                        "secondary": "#f0c03e",
+                        "secondary-container": "#ba9000",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-fixed": "#251a00",
+                        "on-secondary": "#3e2e00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#007fb0",
+                        "outline": "#ad8884",
+                        "secondary-fixed-dim": "#f0c03e",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#001e2d",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "on-tertiary": "#00344b",
+                        "tertiary-fixed-dim": "#82cfff",
+                        "surface-container-highest": "#353534"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "display-hero": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "700"}],
+                        "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-sm text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/0 transition-all duration-500" id="main-header">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-black tracking-tighter text-primary-container">
+            MARVELVERSE
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Phases</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Movies</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Characters</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-title-md text-title-md" href="#">Timeline</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 transition-all duration-300 rounded-full scale-95 active:scale-90 spring-hover icon-boop">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Interactive Container -->
+<main class="relative w-full h-screen overflow-hidden">
+<!-- Background Shader -->
+
+<!-- 3D Timeline Engine -->
+
+<!-- Floating UI Overlays -->
+<div class="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between p-margin-desktop">
+<!-- Top Section -->
+<div class="flex justify-between items-start pt-16">
+<div class="pointer-events-auto reveal-left" id="header-reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 bg-primary-container rounded-full pulse-red"></span>
+<h1 class="font-display-hero text-display-hero uppercase tracking-tight text-white">The Sacred Timeline</h1>
+</div>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-xl mt-2 opacity-80">
+                    Charting the multiversal convergence from the Big Bang to the present reality.
+                </p>
+</div>
+</div>
+<!-- Left/Right Nav Controls -->
+<div class="absolute inset-y-0 left-margin-desktop flex flex-col justify-center gap-4 pointer-events-auto z-20 reveal-left" id="controls-reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="glass-panel p-2 rounded-xl flex flex-col gap-2">
+<button class="w-12 h-12 flex items-center justify-center hover:bg-white/10 rounded-lg transition-all spring-hover icon-boop" title="Zoom In">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center hover:bg-white/10 rounded-lg transition-all spring-hover icon-boop" title="Zoom Out">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="h-px bg-white/10 mx-2 my-1"></div>
+<button class="w-12 h-12 flex items-center justify-center text-primary-container spring-hover icon-boop" title="Center Camera">
+<span class="material-symbols-outlined">filter_center_focus</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-4" id="phase-indicators">
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white border-primary-container transition-all spring-hover">PHASE 1</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all spring-hover">PHASE 2</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all spring-hover">PHASE 3</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all spring-hover">THE MULTIVERSE SAGA</button>
+</div>
+</div>
+<!-- Bottom Section -->
+<div class="flex justify-between items-end pb-8">
+<!-- Active Reality Card -->
+<div class="glass-panel p-6 rounded-2xl w-[400px] pointer-events-auto transform transition-all hover:scale-[1.02] reveal-up" id="reality-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-primary font-label-caps text-label-caps">YEAR: 2018</span>
+<h2 class="font-title-md text-title-md text-white mt-1">Avengers: Infinity War</h2>
+</div>
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 rounded text-[10px] font-bold">CRITICAL EVENT</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 leading-relaxed">
+                    The Mad Titan Thanos initiates the Decimation, wiping out 50% of all life in the universe. A nexus point of unparalleled significance.
+                </p>
+<button class="w-full bg-primary-container text-white py-3 rounded-lg font-bold text-sm tracking-wider hover:brightness-110 transition-all marvel-glow spring-hover">
+                    EXPLORE NODE
+                </button>
+</div>
+<!-- Stats Summary -->
+<div class="flex gap-8 pointer-events-auto reveal-right" id="stats-reveal" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="text-right">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Total Runtime</div>
+<div class="font-headline-lg text-headline-lg text-white leading-none"><span class="stat-counter" data-target="132">132</span><span class="text-primary-container">h</span></div>
+</div>
+<div class="text-right">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Temporal Nodes</div>
+<div class="font-headline-lg text-headline-lg text-white leading-none"><span class="stat-counter" data-target="4812">4,812</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Progress Bar -->
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[80vw] h-1 bg-white/10 rounded-full z-50 overflow-hidden">
+<div class="h-full bg-primary-container w-[0%]" id="scroll-progress" style="box-shadow: 0 0 15px #e62429;"></div>
+</div>
+<!-- Custom Cursor Indicator -->
+<div class="timeline-cursor fixed top-0 left-0 z-[100] opacity-0 pointer-events-none" id="custom-cursor">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-lg">drag_pan</span>
+</div>
+<span class="text-[10px] font-bold tracking-[0.2em] text-white mt-2 drop-shadow-lg">DRAG TO NAVIGATE</span>
+</div>
+</div>
+</main>
+<!-- Detailed View Section (Scroll reveal) -->
+<section class="relative z-20 bg-background px-margin-desktop py-section-gap">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-16">
+<div class="reveal-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Cinematic Milestones</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl">The convergence of separate narratives into a singular, unified tapestry of heroism.</p>
+</div>
+<div class="flex gap-4 reveal-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all spring-hover icon-boop">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all spring-hover icon-boop">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Hover Cards -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-[800px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl bg-surface-container border border-white/5 reveal-up card-spring" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMhtcNX_vQ5tIh0Eq_Oq6ykBALc9oTk-cSPJ9SqSaF1_MFj_cmrWP0gdenw63kyoH0avrlUKIMKMQIwWAtZQFbZC3C51pfSeVIa50D-502QiGu8ZHhuBtzQjl9vDL5HxwKMrKzsDaS5BNMtiZv8yTJ7bI_a7pXQv0T3OGfsffcheEQRo7TovLFsFOqv_mVAwZOYPxr2ZBJ_68wxZ2wrCtBGxj9v_0eQwr85_SmH1MMDku_z0lW_DXi')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<span class="px-3 py-1 bg-primary-container text-white text-[10px] font-bold rounded mb-4 inline-block">THE ORIGIN</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Iron Man (2008)</h3>
+<p class="text-on-surface-variant max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-body-sm text-body-sm">
+                        The spark that ignited the universe. Tony Stark's redemption arc redefined the superhero genre with gritty realism and high-tech flair.
+                    </p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter card-spring">
+<div class="h-1/2 group relative overflow-hidden rounded-2xl bg-surface-container border border-white/5 reveal-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpThD7tKnW5liVFX9Q-J5C7yAgjaB_l9q0ZPQ7mXuxWsw1OB-YVjItrB_h9aeW7GsblJUUHaKlBwe1l6W-X9LcNWeyOcMmNH7hqBw0B2hFU915FxSJS8s9YcT4LdAwo71tLK_tRQlfWM3vTJr7Cn3pXxWXdKX7YUqY12jUmClHwGi8ZAB2-DVhC9zXBPWBUQpju2aODNMRa4U_EKsQ811iDUjBnyA4eH_7CVC_W-Yom9VmD-y7yflz')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h4 class="font-title-md text-title-md text-white">The First Avenger</h4>
+<p class="text-on-surface-variant text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity">1942: Genesis of the Super Soldier</p>
+</div>
+</div>
+<div class="h-1/2 group relative overflow-hidden rounded-2xl bg-surface-container border border-white/5 reveal-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWu2TN2L_4vax6yhFuzPZEOECV8fxRWpnsKtZ5KBks-iyWVrEA0QMCBGGLf44dhHgLc4Z5w9UYPcxGk6Y4RU9W33KEkWu6NJeoao3LrAYgCLlzBqtOg3iU-iMZX5kwcnwkAadumhbHqvnf_IhJsQRiI2RjWYJKhtX4OyPGOmDNqRIVseccFcCrleQ9BDf7P5Mx0at0ipvrcGD0Ygl8ePbWkCpxBjiAhC6ybX6OkFrpu85M2R4O2jMq')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h4 class="font-title-md text-title-md text-white">Black Panther</h4>
+<p class="text-on-surface-variant text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity">The Hidden Kingdom of Wakanda</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-white/5 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="font-title-md text-title-md font-bold text-on-surface">MarvelVerse</div>
+<div class="flex gap-8 font-body-sm text-body-sm">
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Contact Support</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Marvel.com</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            © 2024 MarvelVerse Explorer. All Cinematic Rights Reserved.
+        </p>
+</div>
+</footer>
+<script>
+    // Initialize GSAP & ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 2. UI Entry Animations (Apple-style fade & slide)
+    window.addEventListener('load', () => {
+        const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.5 } });
+        
+        tl.to("#header-reveal", { opacity: 1, x: 0, delay: 0.5 })
+          .to("#controls-reveal", { opacity: 1, x: 0 }, "-=1.2")
+          .to("#reality-card", { opacity: 1, y: 0 }, "-=1.2")
+          .to("#stats-reveal", { opacity: 1, x: 0 }, "-=1.2")
+          .call(() => animateCounters());
+    });
+
+    // 3. Stats Counters Logic
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-counter');
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            gsap.to(counter, {
+                innerText: target,
+                duration: 2.5,
+                snap: { innerText: 1 },
+                ease: "power2.out",
+                onUpdate: function() {
+                    counter.innerText = Math.ceil(this.targets()[0].innerText).toLocaleString();
+                }
+            });
+        });
+    }
+
+    // 4. Scroll-based interactions
+    // Header Sticky Transition
+    ScrollTrigger.create({
+        start: 'top -50',
+        onUpdate: (self) => {
+            const header = document.getElementById('main-header');
+            if (self.direction === 1) {
+                header.classList.add('bg-surface/80', 'border-white/10');
+            } else if (self.progress === 0) {
+                header.classList.remove('bg-surface/80', 'border-white/10');
+            }
+        }
+    });
+
+    // Reveal elements on scroll
+    gsap.utils.toArray('.reveal-up').forEach(elem => {
+        gsap.to(elem, {
+            scrollTrigger: {
+                trigger: elem,
+                start: 'top 90%',
+                toggleActions: 'play none none none'
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    });
+
+    // Scroll Progress Update
+    lenis.on('scroll', ({ scroll, limit, velocity, progress }) => {
+        document.getElementById("scroll-progress").style.width = (progress * 100) + "%";
+        
+        // Parallax effect for the main UI as we scroll away from top
+        const mainUI = document.querySelector('main .z-10');
+        gsap.to(mainUI, {
+            y: scroll * 0.4,
+            opacity: 1 - progress * 2.5,
+            overwrite: 'auto'
+        });
+    });
+
+    // Custom Cursor Logic
+    const cursor = document.getElementById('custom-cursor');
+    const main = document.querySelector('main');
+
+    main.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, {
+            x: e.clientX - 24,
+            y: e.clientY - 24,
+            duration: 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    main.addEventListener('mouseenter', () => {
+        gsap.to(cursor, { opacity: 1, duration: 0.3 });
+    });
+
+    main.addEventListener('mouseleave', () => {
+        gsap.to(cursor, { opacity: 0, duration: 0.3 });
+    });
+
+    // Ensure Three.js canvas doesn't steal all scroll if user wants to scroll page
+    // (Handled by Lenis and data-lenis-prevent on the scene container)
+</script>
+
+
+</body></html>

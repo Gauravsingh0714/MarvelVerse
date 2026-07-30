@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wanda Maximoff | MarvelVerse Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb4ac",
+                    "tertiary-container": "#007fb0",
+                    "secondary-container": "#ba9000",
+                    "on-tertiary-fixed-variant": "#004c6b",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#ffdf95",
+                    "on-secondary-fixed": "#251a00",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#f0c03e",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "on-surface-variant": "#e7bdb8",
+                    "on-tertiary": "#00344b",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#001e2d",
+                    "on-primary-fixed": "#410003",
+                    "on-secondary-fixed-variant": "#594400",
+                    "tertiary-fixed": "#c6e7ff",
+                    "on-secondary": "#3e2e00",
+                    "surface-dim": "#131313",
+                    "on-secondary-container": "#3c2c00",
+                    "on-tertiary-container": "#ffffff",
+                    "error": "#ffb4ab",
+                    "on-primary": "#690007",
+                    "background": "#131313",
+                    "on-primary-container": "#ffffff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline-variant": "#5d3f3c",
+                    "primary-fixed": "#ffdad6",
+                    "secondary": "#f0c03e",
+                    "on-primary-fixed-variant": "#93000e",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#ffb4ac",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "surface-variant": "#353534",
+                    "tertiary": "#82cfff",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#e62429",
+                    "surface-container": "#201f1f",
+                    "inverse-primary": "#c00016",
+                    "tertiary-fixed-dim": "#82cfff",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#ad8884"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Archivo Narrow"],
+                    "body-sm": ["Inter"],
+                    "display-hero": ["Archivo Narrow"],
+                    "label-caps": ["Inter"],
+                    "headline-lg-mobile": ["Archivo Narrow"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.4) 100%);
+        }
+        .red-glow-hover:hover {
+            box-shadow: 0 0 25px rgba(230, 36, 41, 0.6);
+        }
+        .character-glow {
+            filter: drop-shadow(0 0 40px rgba(230, 36, 41, 0.2));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-sm">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="MarvelVerse Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisSc73RdbnVUGVPG8Jy_a_5JoJzxWVYKroyMK7R-x5vcY0jgCWvSWKcR7IE1qrpxtoKgh2_Y4uQ1uQ-7zYYrAwm41MVKvzlT5-JMmbrs0YWD9INFKU-FuwzUG_HaH4OD4HRgDntW6EbHImtvtcSkzR8KWZuN8wnsqXSdWmRHu8JVJDC5MwZSbD2OnJkNs897LaL7i6zV7V02G2JDnH_559PmOq00YSkevjhg2iD8WE2LtX69oya8s"/>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors" href="#">Phases</a>
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors" href="#">Movies</a>
+<a class="font-title-md text-title-md text-primary border-b-2 border-primary pb-1" href="#">Characters</a>
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors" href="#">Timeline</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-end pt-32 overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center character-glow" data-alt="A cinematic, high-resolution full-body portrait of Wanda Maximoff as the Scarlet Witch, wearing her iconic dark red crown and intricate crimson leather suit. She stands in a powerful stance with glowing red chaos magic energy swirling around her hands. The background is a dark, atmospheric void with faint embers and mystical particles, creating a premium glassmorphic and high-contrast cinematic aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCamWy6HAUnSXQwdjiCu8hpkbvBYyTqnSPnUpIS22RIsxR5JhPF1drnZoWmJaCl2GPGmHLFhkiRhJ14pmuxhyLl90YpzmjxyfEG-UZU-DvU_HvQRIDCnyfn3S1ACWwKuRDDOSGukGbJZkYV-8wgteIrzGWPvMnmS-WIe7G32aXP3M0cEAd4IZkqWlZTw5JYlvFaXMHZV0pThBOC2vT7ZuFY8AiMLTWhbXr-zOPYXyU3EHTBK-65qk9U')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-16">
+<div class="max-w-3xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary-container text-white px-3 py-1 rounded-sm font-label-caps text-label-caps tracking-widest uppercase">Active</span>
+<span class="bg-white/10 text-white/80 px-3 py-1 rounded-sm font-label-caps text-label-caps tracking-widest uppercase">Enhanced</span>
+</div>
+<h1 class="font-display-hero text-[64px] md:text-display-hero leading-none mb-2 tracking-tighter uppercase italic">Wanda Maximoff</h1>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 opacity-90 italic">The Scarlet Witch</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 border-l-2 border-primary-container pl-6 py-2">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Real Name</p>
+<p class="font-title-md text-title-md">Wanda Maximoff</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Affiliation</p>
+<p class="font-title-md text-title-md text-secondary">Avengers</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Origin</p>
+<p class="font-title-md text-title-md">Sokovia</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-none font-title-md text-title-md uppercase tracking-widest red-glow-hover transition-all duration-300 scale-100 active:scale-95">
+                            Appearances
+                        </button>
+<button class="border border-white/40 text-white px-8 py-4 rounded-none font-title-md text-title-md uppercase tracking-widest hover:bg-white/10 transition-all duration-300">
+                            Powers
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Biography Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg mb-8 uppercase italic border-b border-white/10 pb-4">The Journey</h3>
+<div class="space-y-12">
+<div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-primary-container">
+<h4 class="font-title-md text-title-md text-primary mb-2">Sokovian Beginnings</h4>
+<p class="font-body-lg text-body-lg text-on-surface/70 leading-relaxed">
+                                Born in Sokovia, Wanda and her brother Pietro survived a traumatic childhood marked by conflict, leading them to volunteer for HYDRA experiments that unlocked her latent abilities.
+                            </p>
+</div>
+<div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white/20">
+<h4 class="font-title-md text-title-md text-primary mb-2">The Westview Anomaly</h4>
+<p class="font-body-lg text-body-lg text-on-surface/70 leading-relaxed">
+                                In the wake of profound grief, Wanda inadvertently rewrote reality itself, creating a suburban paradise that revealed her true nature as the mythical Scarlet Witch.
+                            </p>
+</div>
+</div>
+</div>
+<div class="md:col-span-8">
+<div class="glass-panel p-10 h-full flex flex-col justify-center">
+<p class="font-body-lg text-[24px] md:text-[32px] italic leading-tight text-white mb-8">
+                            "You have no idea how reasonable I've been. I'm not a monster, Stephen. I'm a mother."
+                        </p>
+<div class="h-1 w-24 bg-primary-container"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Power Levels & Abilities Bento -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h3 class="font-headline-lg text-headline-lg mb-12 uppercase italic text-center">Power Profile</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Power Card -->
+<div class="glass-panel p-8 md:col-span-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-end mb-6">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Threat Level</span>
+<span class="text-4xl font-black text-white">OMEGA</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-body-sm text-body-sm opacity-60">Chaos Magic Proficiency</span>
+<span class="font-body-sm text-body-sm">98%</span>
+</div>
+<div class="w-full h-1 bg-white/10">
+<div class="h-full bg-primary-container w-[98%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-body-sm text-body-sm opacity-60">Reality Manipulation</span>
+<span class="font-body-sm text-body-sm">100%</span>
+</div>
+<div class="w-full h-1 bg-white/10">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<span class="material-symbols-outlined text-primary-container text-6xl">auto_fix_high</span>
+</div>
+</div>
+<!-- Abilities Grid -->
+<div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Chaos Magic</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">The ability to manipulate psionic energy and cast hexes, far exceeding the capabilities of Sorcerer Supremes.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Reality Warping</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Subconscious and conscious alteration of the fabric of existence, as seen in the Westview Hex.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Telepathy</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Reading minds and projecting illusions that force targets to relive their deepest fears.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Telekinesis</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Precision control over physical matter, strong enough to dismantle vibranium-grade synthezoids.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Movie Appearances Carousel-like Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<h3 class="font-headline-lg text-headline-lg mb-12 uppercase italic">Cinematic Timeline</h3>
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Movie Card 1 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="relative aspect-[2/3] overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110" data-alt="Official movie poster for Avengers: Age of Ultron featuring an action-packed scene with Ultron sentinels. Dark cinematic tones with metallic highlights and a gritty sci-fi aesthetic typical of the Marvel Cinematic Universe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2015</p>
+<h4 class="font-title-md text-title-md uppercase">Age of Ultron</h4>
+</div>
+<!-- Movie Card 2 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="relative aspect-[2/3] overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110" data-alt="Official movie poster for Captain America: Civil War showing the conflict between Iron Man and Captain America. Dramatic, high-contrast lighting with a cool blue and intense red color palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2016</p>
+<h4 class="font-title-md text-title-md uppercase">Civil War</h4>
+</div>
+<!-- Movie Card 3 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="relative aspect-[2/3] overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110" data-alt="Official movie poster for Avengers: Infinity War featuring Thanos and the massive cast of superheroes. Epic scale, vibrant galactic colors, and a somber, high-stakes atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyLj691i2voDZxSOTc9QK5jmdExCKvBBYec9aONRqe0oZkjesW39a9GjsdW4KhVl2Ryyn4iWFnS2fGpZNAQZMEYi91lYPNcrLpk5VqMNItL61OKtMk_QTGI2YKfcaC6vdecyW9Rp9dOjlfzuIm3RdIiZ-XT5eyDgdAdWfc3CaEQO2upWiJl0S8IEwIM2ODx8sjtFrPTvs43Rs0T6askgObcRKJiVdULASyZ_Hk9uFGHwOhtXqo7bv1')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2018</p>
+<h4 class="font-title-md text-title-md uppercase">Infinity War</h4>
+</div>
+<!-- Movie Card 4 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="relative aspect-[2/3] overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110" data-alt="Official movie poster for Avengers: Endgame. A cinematic masterpiece with a focus on the core Avengers members, dark purple and blue cosmic hues, and an emotional, triumphant tone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2019</p>
+<h4 class="font-title-md text-title-md uppercase">Endgame</h4>
+</div>
+<!-- Movie Card 5 -->
+<div class="min-w-[280px] md:min-w-[320px] snap-start group">
+<div class="relative aspect-[2/3] overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110" data-alt="Official movie poster for Doctor Strange in the Multiverse of Madness. A psychedelic, dark fantasy aesthetic with fragmented mirrors, mystical mandalas, and an intense eldritch horror vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdl1Y22xizrDhZWBhmIeZSDViPpvGGFleeJWsfIkMZEE3dOGdmbMZJhxab-q7Aha0efYxf_qB-cOJgX5y3O9-WVVqYEoI62k2otFG2PRWjevKLHOa0loc2SSkr6HIRDVOuN32skQFpHi68k0ohk_bf4R59wZ_B0xzUC_lg17BqIxgVrRPli0_BZoweL8KGzl7NzfEFmHaAk373CU22-mCQvBhvlWinhezv5ToDnHh85iBZKP0zvoY8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2022</p>
+<h4 class="font-title-md text-title-md uppercase">Multiverse of Madness</h4>
+</div>
+</div>
+</section>
+<!-- Relationship Network -->
+<section class="py-section-gap bg-surface-container">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<h3 class="font-headline-lg text-headline-lg uppercase italic">Key Connections</h3>
+<p class="font-body-sm text-body-sm text-on-surface/50 max-w-md">Those who define her world, from the family she lost to the family she created through magic.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Vision -->
+<div class="text-center group cursor-pointer">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 group-hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait of Vision, the synthezoid Avenger, with the Mind Stone glowing in his forehead. Deep maroon skin, gold and green circuitry details, set against a high-tech minimalist background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Vision</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Soulmate</p>
+</div>
+<!-- Pietro -->
+<div class="text-center group cursor-pointer">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 group-hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait of Pietro Maximoff, Quicksilver, with his signature silver hair and a determined expression. Cinematic blue lighting with motion blur effects to suggest super speed." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8bcAYyH_9S69aZU6HBdVktALmyih1mqYibMwzXUqgr-q3EnGyDkm3lE3cyJB9LFta8N1fgSbkXSb7MkOHL_QWrhuzAaTjtwDrzk3VLn-D16uMByGcLARVcp-vS8r5o7qQ8SWhrWDTOfhgkCoflmnMnFJ-gl4zhUHiFRdD3GduW5SyABCnSf7eWgM-HpTVLdZrhlE-IlqIKcyWyUCitLlRtmHRXzihS0mnhN-2G0O5kdL2SARdgRJ_')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Pietro</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Twin Brother</p>
+</div>
+<!-- Billy -->
+<div class="text-center group cursor-pointer">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 group-hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait of a young Billy Maximoff from Westview, with hints of blue magic sparking around his fingertips. Soft, warm suburban lighting with a slightly surreal cinematic glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANYoz6tuQXI_11XPZONDrj4FDYJhtL71vvSRIQjW0UN0sTib_piSih6e5Vuqou4o67svvqQ_U7pkYRL7BoVlje71M0DB84rBPRqlXkT6-4pq_D-LZamULkIk5wfknwQKIZXv8ppn_mCAtVCplFgBT_P-H7cVU8NvARnKA_YvmW1mKtE1zTI08K_eQayIN5pgzlmz-Vk4Kgrr-dEen6co_qrhAGiHlQ-KL3le_O6p61JYBb5md7IrY0')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Billy</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Son</p>
+</div>
+<!-- Tommy -->
+<div class="text-center group cursor-pointer">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 group-hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait of a young Tommy Maximoff from Westview, wearing a green speedster-style shirt. Bright, energetic daylight with a slight motion blur effect." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBrnYcbIimu6427HrToDFj4q_7HftEA1ZXoRCVVLpEoW5V5VKhL8Xk16o4r4VuMDLy82BCwr_uhvgZPEJGBks8LXJWdxfrXgNsNoUOek51dgumCBSKv0hASrrTT6akSAOg9YSiYkNXHzOJdgzafNMxe9UTitqCAj2rdAKRKLLHEze9MCIYUAXilYea8dFERZEA1c8CqjjGuW_O6EDSgP4cd7BBYYb8n-9CexS7K7EzfKhjg4Xa-3WF')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Tommy</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Son</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-white/5 w-full py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-title-md text-title-md font-bold text-on-surface uppercase tracking-tight">MarvelVerse</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center md:text-left">
+                    © 2024 MarvelVerse Explorer. All Cinematic Rights Reserved.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Contact Support</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Marvel.com</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for power bars on scroll
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.bg-primary-container');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const powerSection = document.querySelector('.bg-surface-container-lowest');
+        if (powerSection) observer.observe(powerSection);
+
+        // Simple smooth horizontal scroll for the movie grid on mobile touch
+        const movieGrid = document.querySelector('.overflow-x-auto');
+        if (movieGrid) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            movieGrid.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - movieGrid.offsetLeft;
+                scrollLeft = movieGrid.scrollLeft;
+            });
+            movieGrid.addEventListener('mouseleave', () => { isDown = false; });
+            movieGrid.addEventListener('mouseup', () => { isDown = false; });
+            movieGrid.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - movieGrid.offsetLeft;
+                const walk = (x - startX) * 2;
+                movieGrid.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
+</body></html>

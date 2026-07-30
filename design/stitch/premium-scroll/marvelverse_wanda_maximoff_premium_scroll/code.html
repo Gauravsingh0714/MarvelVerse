@@ -1,0 +1,684 @@
+<!DOCTYPE html><html class="dark lenis" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Wanda Maximoff | MarvelVerse Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Lenis Smooth Scroll Library -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb4ac",
+                    "tertiary-container": "#007fb0",
+                    "secondary-container": "#ba9000",
+                    "on-tertiary-fixed-variant": "#004c6b",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#ffdf95",
+                    "on-secondary-fixed": "#251a00",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#f0c03e",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "on-surface-variant": "#e7bdb8",
+                    "on-tertiary": "#00344b",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#001e2d",
+                    "on-primary-fixed": "#410003",
+                    "on-secondary-fixed-variant": "#594400",
+                    "tertiary-fixed": "#c6e7ff",
+                    "on-secondary": "#3e2e00",
+                    "surface-dim": "#131313",
+                    "on-secondary-container": "#3c2c00",
+                    "on-tertiary-container": "#ffffff",
+                    "error": "#ffb4ab",
+                    "on-primary": "#690007",
+                    "background": "#131313",
+                    "on-primary-container": "#ffffff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline-variant": "#5d3f3c",
+                    "primary-fixed": "#ffdad6",
+                    "secondary": "#f0c03e",
+                    "on-primary-fixed-variant": "#93000e",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#ffb4ac",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "surface-variant": "#353534",
+                    "tertiary": "#82cfff",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#e62429",
+                    "surface-container": "#201f1f",
+                    "inverse-primary": "#c00016",
+                    "tertiary-fixed-dim": "#82cfff",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#ad8884"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Archivo Narrow"],
+                    "body-sm": ["Inter"],
+                    "display-hero": ["Archivo Narrow"],
+                    "label-caps": ["Inter"],
+                    "headline-lg-mobile": ["Archivo Narrow"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, #050505 0%, rgba(5, 5, 5, 0) 50%, rgba(5, 5, 5, 0.4) 100%);
+        }
+        .red-glow-hover:hover {
+            box-shadow: 0 0 25px rgba(230, 36, 41, 0.6);
+        }
+        .character-glow {
+            filter: drop-shadow(0 0 40px rgba(230, 36, 41, 0.2));
+            transition: transform 0.1s ease-out;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Shutter Reveal Animation */
+        .shutter-hide {
+            clip-path: inset(50% 0 50% 0);
+            transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .shutter-reveal {
+            clip-path: inset(0 0 0 0);
+        }
+
+        /* Typography Effects */
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 10px rgba(230, 36, 41, 0.2), 2px 0 0 rgba(255,0,0,0.1), -2px 0 0 rgba(0,255,255,0.1); }
+            50% { text-shadow: 0 0 30px rgba(230, 36, 41, 0.8), 4px 0 0 rgba(255,0,0,0.3), -4px 0 0 rgba(0,255,255,0.3); }
+        }
+        .chaos-text-effect {
+            animation: glowPulse 4s infinite ease-in-out;
+        }
+
+        /* Atmospheric Particles */
+        #chaos-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(230, 36, 41, 0.6) 0%, rgba(230, 36, 41, 0) 70%);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        /* Apple-style Scroll Reveals */
+        .reveal-on-scroll {
+            opacity: 0;
+            filter: blur(10px);
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                        filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0);
+        }
+
+        /* Staggered Content Reveals */
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .stagger-parent.visible .stagger-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scale reveal for images */
+        .scale-reveal {
+            transform: scale(0.9);
+            transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .visible .scale-reveal {
+            transform: scale(1);
+        }
+
+        .magnetic-card {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        #entrance-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            pointer-events: none;
+            transition: opacity 2s ease-in-out;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="font-body-sm overflow-hidden" style="overflow: auto;">
+
+<div id="chaos-particles"><div class="particle" style="width: 62.9795px; height: 62.9795px; left: 14.8379%; top: 79.8479%; opacity: 0.139654;"></div><div class="particle" style="width: 21.854px; height: 21.854px; left: 20.4038%; top: 87.1089%; opacity: 0.128535;"></div><div class="particle" style="width: 32.5289px; height: 32.5289px; left: 10.4835%; top: 83.9377%; opacity: 0.399222;"></div><div class="particle" style="width: 77.6677px; height: 77.6677px; left: 29.6458%; top: 92.6637%; opacity: 0.163508;"></div><div class="particle" style="width: 80.5901px; height: 80.5901px; left: 5.06966%; top: 8.89951%; opacity: 0.115558;"></div><div class="particle" style="width: 95.9511px; height: 95.9511px; left: 15.4956%; top: 28.2794%; opacity: 0.00664098;"></div><div class="particle" style="width: 78.5222px; height: 78.5222px; left: 8.16025%; top: 56.4729%; opacity: 0.0227521;"></div><div class="particle" style="width: 80.6779px; height: 80.6779px; left: 73.9438%; top: 19.5808%; opacity: 0.0687991;"></div><div class="particle" style="width: 73.2124px; height: 73.2124px; left: 56.3102%; top: 42.2112%; opacity: 0.170237;"></div><div class="particle" style="width: 77.1499px; height: 77.1499px; left: 13.4681%; top: 14.8145%; opacity: 0.382686;"></div><div class="particle" style="width: 47.9459px; height: 47.9459px; left: 51.8989%; top: 93.7313%; opacity: 0.365728;"></div><div class="particle" style="width: 78.5359px; height: 78.5359px; left: 29.3426%; top: 55.6181%; opacity: 0.154379;"></div><div class="particle" style="width: 91.7153px; height: 91.7153px; left: 63.221%; top: 12.7202%; opacity: 0.0452544;"></div><div class="particle" style="width: 93.8975px; height: 93.8975px; left: 65.1195%; top: 69.1268%; opacity: 0.270171;"></div><div class="particle" style="width: 55.5354px; height: 55.5354px; left: 67.3493%; top: 80.8224%; opacity: 0.0842611;"></div><div class="particle" style="width: 59.1626px; height: 59.1626px; left: 72.172%; top: 51.8885%; opacity: 0.0970365;"></div><div class="particle" style="width: 60.7628px; height: 60.7628px; left: 8.86749%; top: 80.2564%; opacity: 0.00496627;"></div><div class="particle" style="width: 33.8742px; height: 33.8742px; left: 85.0091%; top: 49.0052%; opacity: 0.131439;"></div><div class="particle" style="width: 59.2821px; height: 59.2821px; left: 20.811%; top: 15.7391%; opacity: 0.120563;"></div><div class="particle" style="width: 79.0105px; height: 79.0105px; left: 76.3124%; top: 98.6732%; opacity: 0.305439;"></div><div class="particle" style="width: 66.5229px; height: 66.5229px; left: 99.0341%; top: 69.1275%; opacity: 0.18574;"></div><div class="particle" style="width: 92.2529px; height: 92.2529px; left: 41.9767%; top: 16.8742%; opacity: 0.332121;"></div><div class="particle" style="width: 65.5676px; height: 65.5676px; left: 64.5763%; top: 49.2286%; opacity: 0.278013;"></div><div class="particle" style="width: 36.6726px; height: 36.6726px; left: 50.4647%; top: 51.7514%; opacity: 0.0405917;"></div><div class="particle" style="width: 32.0705px; height: 32.0705px; left: 20.5348%; top: 70.7367%; opacity: 0.0516823;"></div></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/50 transition-opacity duration-1000" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="MarvelVerse Logo" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisSc73RdbnVUGVPG8Jy_a_5JoJzxWVYKroyMK7R-x5vcY0jgCWvSWKcR7IE1qrpxtoKgh2_Y4uQ1uQ-7zYYrAwm41MVKvzlT5-JMmbrs0YWD9INFKU-FuwzUG_HaH4OD4HRgDntW6EbHImtvtcSkzR8KWZuN8wnsqXSdWmRHu8JVJDC5MwZSbD2OnJkNs897LaL7i6zV7V02G2JDnH_559PmOq00YSkevjhg2iD8WE2LtX69oya8s">
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors hover:scale-105 active:scale-95 transition-transform duration-300" href="#">Phases</a>
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors hover:scale-105 active:scale-95 transition-transform duration-300" href="#">Movies</a>
+<a class="font-title-md text-title-md text-primary border-b-2 border-primary pb-1" href="#">Characters</a>
+<a class="font-title-md text-title-md text-on-surface/70 hover:text-on-surface transition-colors hover:scale-105 active:scale-95 transition-transform duration-300" href="#">Timeline</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined text-primary hover:scale-125 hover:rotate-12 transition-transform duration-300">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="transition-opacity duration-1000" id="main-content">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-end pt-32 overflow-hidden reveal-on-scroll visible">
+<div class="absolute inset-0 z-0 overflow-hidden shutter-hide shutter-reveal" id="hero-shutter">
+<div class="w-full h-full bg-cover bg-center character-glow scale-110" id="hero-parallax" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCamWy6HAUnSXQwdjiCu8hpkbvBYyTqnSPnUpIS22RIsxR5JhPF1drnZoWmJaCl2GPGmHLFhkiRhJ14pmuxhyLl90YpzmjxyfEG-UZU-DvU_HvQRIDCnyfn3S1ACWwKuRDDOSGukGbJZkYV-8wgteIrzGWPvMnmS-WIe7G32aXP3M0cEAd4IZkqWlZTw5JYlvFaXMHZV0pThBOC2vT7ZuFY8AiMLTWhbXr-zOPYXyU3EHTBK-65qk9U')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-16 shutter-hide shutter-reveal" id="hero-content-shutter">
+<div class="max-w-3xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary-container text-white px-3 py-1 rounded-sm font-label-caps text-label-caps tracking-widest uppercase">Active</span>
+<span class="bg-white/10 text-white/80 px-3 py-1 rounded-sm font-label-caps text-label-caps tracking-widest uppercase">Enhanced</span>
+</div>
+<h1 class="font-display-hero text-[64px] md:text-display-hero leading-none mb-2 tracking-tighter uppercase italic chaos-text-effect">Wanda Maximoff</h1>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 opacity-90 italic">The Scarlet Witch</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10 border-l-2 border-primary-container pl-6 py-2">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Real Name</p>
+<p class="font-title-md text-title-md">Wanda Maximoff</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Affiliation</p>
+<p class="font-title-md text-title-md text-secondary">Avengers</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface/50 uppercase mb-1">Origin</p>
+<p class="font-title-md text-title-md">Sokovia</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-none font-title-md text-title-md uppercase tracking-widest red-glow-hover transition-all duration-300 active:scale-95">
+                        Appearances
+                    </button>
+<button class="border border-white/40 text-white px-8 py-4 rounded-none font-title-md text-title-md uppercase tracking-widest hover:bg-white/10 transition-all duration-300 active:scale-95 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        Powers
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Biography Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-on-scroll visible">
+<div class="grid md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg mb-8 uppercase italic border-b border-white/10 pb-4">The Journey</h3>
+<div class="space-y-12">
+<div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-primary-container">
+<h4 class="font-title-md text-title-md text-primary mb-2">Sokovian Beginnings</h4>
+<p class="font-body-lg text-body-lg text-on-surface/70 leading-relaxed">
+                            Born in Sokovia, Wanda and her brother Pietro survived a traumatic childhood marked by conflict, leading them to volunteer for HYDRA experiments that unlocked her latent abilities.
+                        </p>
+</div>
+<div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white/20">
+<h4 class="font-title-md text-title-md text-primary mb-2">The Westview Anomaly</h4>
+<p class="font-body-lg text-body-lg text-on-surface/70 leading-relaxed">
+                            In the wake of profound grief, Wanda inadvertently rewrote reality itself, creating a suburban paradise that revealed her true nature as the mythical Scarlet Witch.
+                        </p>
+</div>
+</div>
+</div>
+<div class="md:col-span-8">
+<div class="glass-panel p-10 h-full flex flex-col justify-center">
+<p class="font-body-lg text-[24px] md:text-[32px] italic leading-tight text-white mb-8">
+                        "You have no idea how reasonable I've been. I'm not a monster, Stephen. I'm a mother."
+                    </p>
+<div class="h-1 w-24 bg-primary-container"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Power Levels & Abilities -->
+<section class="py-section-gap bg-surface-container-lowest reveal-on-scroll stagger-parent visible" id="power-section">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h3 class="font-headline-lg text-headline-lg mb-12 uppercase italic text-center">Power Profile</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-panel p-8 md:col-span-1 flex flex-col justify-between stagger-item" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);">
+<div>
+<div class="flex justify-between items-end mb-6">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Threat Level</span>
+<span class="text-4xl font-black text-white">OMEGA</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-body-sm text-body-sm opacity-60">Chaos Magic Proficiency</span>
+<span class="font-body-sm text-body-sm animate-num" data-target="98">98%</span>
+</div>
+<div class="w-full h-1 bg-white/10 overflow-hidden">
+<div class="h-full bg-primary-container stat-bar" data-target="98%" style="width: 98%; transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-body-sm text-body-sm opacity-60">Reality Manipulation</span>
+<span class="font-body-sm text-body-sm animate-num" data-target="100">100%</span>
+</div>
+<div class="w-full h-1 bg-white/10 overflow-hidden">
+<div class="h-full bg-primary-container stat-bar" data-target="100%" style="width: 100%; transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<span class="material-symbols-outlined text-primary-container text-6xl hover:scale-110 hover:-rotate-6 transition-transform duration-300">auto_fix_high</span>
+</div>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300 stagger-item" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Chaos Magic</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">The ability to manipulate psionic energy and cast hexes, far exceeding the capabilities of Sorcerer Supremes.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300 stagger-item" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Reality Warping</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Subconscious and conscious alteration of the fabric of existence, as seen in the Westview Hex.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300 stagger-item" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Telepathy</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Reading minds and projecting illusions that force targets to relive their deepest fears.</p>
+</div>
+<div class="bg-surface-container-high p-8 hover:bg-surface-bright transition-colors duration-300 stagger-item" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);">
+<h4 class="font-title-md text-title-md text-white mb-4 uppercase italic">Telekinesis</h4>
+<p class="font-body-sm text-body-sm text-on-surface/60">Precision control over physical matter, strong enough to dismantle vibranium-grade synthezoids.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Movie Appearances Carousel -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden reveal-on-scroll visible">
+<h3 class="font-headline-lg text-headline-lg mb-12 uppercase italic">Cinematic Timeline</h3>
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
+<div class="min-w-[280px] md:min-w-[320px] snap-start group hover:-translate-y-2 transition-transform duration-700">
+<div class="relative aspect-[2/3] overflow-hidden mb-4 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 scale-reveal" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2015</p>
+<h4 class="font-title-md text-title-md uppercase">Age of Ultron</h4>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group hover:-translate-y-2 transition-transform duration-700">
+<div class="relative aspect-[2/3] overflow-hidden mb-4 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 scale-reveal" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2016</p>
+<h4 class="font-title-md text-title-md uppercase">Civil War</h4>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group hover:-translate-y-2 transition-transform duration-700">
+<div class="relative aspect-[2/3] overflow-hidden mb-4 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 scale-reveal" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2018</p>
+<h4 class="font-title-md text-title-md uppercase">Infinity War</h4>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group hover:-translate-y-2 transition-transform duration-700">
+<div class="relative aspect-[2/3] overflow-hidden mb-4 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 scale-reveal" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2019</p>
+<h4 class="font-title-md text-title-md uppercase">Endgame</h4>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] snap-start group hover:-translate-y-2 transition-transform duration-700">
+<div class="relative aspect-[2/3] overflow-hidden mb-4 bg-surface-container">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 scale-reveal" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+</div>
+<p class="font-label-caps text-label-caps text-primary mb-1">2022</p>
+<h4 class="font-title-md text-title-md uppercase">Multiverse of Madness</h4>
+</div>
+</div>
+</section>
+<!-- Relationship Network -->
+<section class="py-section-gap bg-surface-container reveal-on-scroll stagger-parent visible">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<h3 class="font-headline-lg text-headline-lg uppercase italic">Key Connections</h3>
+<p class="font-body-sm text-body-sm text-on-surface/50 max-w-md">Those who define her world, from the family she lost to the family she created through magic.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="text-center cursor-pointer magnetic-card stagger-item transition-transform duration-700" data-strength="25" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); opacity: 1;">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center scale-reveal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Vision</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Soulmate</p>
+</div>
+<div class="text-center cursor-pointer magnetic-card stagger-item transition-transform duration-700" data-strength="25" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); opacity: 1;">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center scale-reveal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8bcAYyH_9S69aZU6HBdVktALmyih1mqYibMwzXUqgr-q3EnGyDkm3lE3cyJB9LFta8N1fgSbkXSb7MkOHL_QWrhuzAaTjtwDrzk3VLn-D16uMByGcLARVcp-vS8r5o7qQ8SWhrWDTOfhgkCoflmnMnFJ-gl4zhUHiFRdD3GduW5SyABCnSf7eWgM-HpTVLdZrhlE-IlqIKcyWyUCitLlRtmHRXzihS0mnhN-2G0O5kdL2SARdgRJ_')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Pietro</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Twin Brother</p>
+</div>
+<div class="text-center cursor-pointer magnetic-card stagger-item transition-transform duration-700" data-strength="25" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); opacity: 1;">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center scale-reveal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANYoz6tuQXI_11XPZONDrj4FDYJhtL71vvSRIQjW0UN0sTib_piSih6e5Vuqou4o67svvqQ_U7pkYRL7BoVlje71M0DB84rBPRqlXkT6-4pq_D-LZamULkIk5wfknwQKIZXv8ppn_mCAtVCplFgBT_P-H7cVU8NvARnKA_YvmW1mKtE1zTI08K_eQayIN5pgzlmz-Vk4Kgrr-dEen6co_qrhAGiHlQ-KL3le_O6p61JYBb5md7IrY0')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Billy</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Son</p>
+</div>
+<div class="text-center cursor-pointer magnetic-card stagger-item transition-transform duration-700" data-strength="25" style="transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); opacity: 1;">
+<div class="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/5 hover:border-primary-container transition-all">
+<div class="w-full h-full bg-cover bg-center scale-reveal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBrnYcbIimu6427HrToDFj4q_7HftEA1ZXoRCVVLpEoW5V5VKhL8Xk16o4r4VuMDLy82BCwr_uhvgZPEJGBks8LXJWdxfrXgNsNoUOek51dgumCBSKv0hASrrTT6akSAOg9YSiYkNXHzOJdgzafNMxe9UTitqCAj2rdAKRKLLHEze9MCIYUAXilYea8dFERZEA1c8CqjjGuW_O6EDSgP4cd7BBYYb8n-9CexS7K7EzfKhjg4Xa-3WF')"></div>
+</div>
+<h5 class="font-title-md text-title-md text-white mb-1">Tommy</h5>
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase">Son</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background border-t border-white/5 w-full py-section-gap reveal-on-scroll transition-opacity duration-1000 visible" id="main-footer">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-title-md text-title-md font-bold text-on-surface uppercase tracking-tight">MarvelVerse</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-center md:text-left">
+                © 2024 MarvelVerse Explorer. All Cinematic Rights Reserved.
+            </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Contact Support</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Marvel.com</a>
+</div>
+</div>
+</footer>
+<script>
+    // 1. Initialize Lenis Smooth Scroll
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        smoothWheel: true,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // 2. Atmosphere: Particles
+    function initParticles() {
+        const container = document.getElementById('chaos-particles');
+        const particleCount = 25;
+        for (let i = 0; i < particleCount; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 80 + 20;
+            p.style.width = `${size}px`;
+            p.style.height = `${size}px`;
+            resetParticle(p);
+            container.appendChild(p);
+            animateParticle(p);
+        }
+    }
+
+    function resetParticle(p) {
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.top = `${Math.random() * 100}%`;
+        p.style.opacity = Math.random() * 0.4;
+    }
+
+    function animateParticle(p) {
+        const duration = Math.random() * 10000 + 5000;
+        p.animate([
+            { transform: 'translate(0, 0) scale(1)', opacity: p.style.opacity },
+            { transform: `translate(${(Math.random() - 0.5) * 200}px, ${(Math.random() - 0.5) * 200}px) scale(1.5)`, opacity: 0 }
+        ], {
+            duration: duration,
+            iterations: Infinity,
+            easing: 'ease-in-out'
+        });
+    }
+    initParticles();
+
+    // 3. Apple-style Scroll Reveals & Stagger Logic
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // If it's a stagger parent, trigger children with delay
+                if (entry.target.classList.contains('stagger-parent')) {
+                    const items = entry.target.querySelectorAll('.stagger-item');
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, index * 150);
+                    });
+                }
+
+                // If it's the power section, animate bars and numbers
+                if (entry.target.id === 'power-section') {
+                    // Animate Stat Bars
+                    const bars = entry.target.querySelectorAll('.stat-bar');
+                    bars.forEach(bar => {
+                        const target = bar.getAttribute('data-target');
+                        bar.style.transition = 'width 2s cubic-bezier(0.22, 1, 0.36, 1)';
+                        bar.style.width = target;
+                    });
+
+                    // Animate Numbers
+                    const nums = entry.target.querySelectorAll('.animate-num');
+                    nums.forEach(num => {
+                        const target = parseInt(num.getAttribute('data-target'));
+                        let count = 0;
+                        const duration = 2000;
+                        const startTime = performance.now();
+
+                        function update(currentTime) {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const currentCount = Math.floor(progress * target);
+                            num.innerText = `${currentCount}%`;
+                            if (progress < 1) {
+                                requestAnimationFrame(update);
+                            }
+                        }
+                        requestAnimationFrame(update);
+                    });
+                }
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-on-scroll, .stagger-parent').forEach(el => revealObserver.observe(el));
+
+    // 4. Hero Parallax Effect
+    const heroImg = document.getElementById('hero-parallax');
+    lenis.on('scroll', (e) => {
+        const scroll = e.animatedScroll;
+        if (heroImg) {
+            const scale = 1.1 - (scroll * 0.0001);
+            const yPos = scroll * 0.2;
+            heroImg.style.transform = `scale(${Math.max(1, scale)}) translateY(${yPos}px)`;
+        }
+    });
+
+    // 5. Magnetic Hover Effect
+    const magnets = document.querySelectorAll('.magnetic-card');
+    magnets.forEach(m => {
+        m.addEventListener('mousemove', (e) => {
+            const rect = m.getBoundingClientRect();
+            const strength = m.getAttribute('data-strength') || 40;
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            m.style.transform = `translate(${x / strength}px, ${y / strength}px)`;
+        });
+        m.addEventListener('mouseleave', () => {
+            m.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    // 6. Shader Overlay Logic
+    const canvas = document.getElementById('shader-canvas');
+    const gl = canvas.getContext('webgl');
+    if (gl) {
+        const vertexShaderSource = `
+            attribute vec2 position;
+            varying vec2 v_texCoord;
+            void main() {
+                v_texCoord = position * 0.5 + 0.5;
+                v_texCoord.y = 1.0 - v_texCoord.y;
+                gl_Position = vec4(position, 0.0, 1.0);
+            }
+        `;
+        const fragmentShaderSource = `
+            precision highp float;
+            varying vec2 v_texCoord;
+            uniform float u_time;
+            float noise(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+            void main() {
+                vec2 uv = v_texCoord;
+                vec2 center = uv - 0.5;
+                float dist = length(center);
+                float ripple = sin(dist * 20.0 - u_time * 5.0) * 0.5 + 0.5;
+                float alpha = smoothstep(0.5, 0.0, dist) * ripple;
+                vec3 color = vec3(0.9, 0.1, 0.1); 
+                vec3 glow = vec3(1.0, 0.2, 0.3);
+                vec3 finalColor = mix(color, glow, ripple);
+                gl_FragColor = vec4(finalColor, alpha * 0.8);
+            }
+        `;
+        function createShader(gl, type, source) {
+            const shader = gl.createShader(type);
+            gl.shaderSource(shader, source);
+            gl.compileShader(shader);
+            return shader;
+        }
+        const program = gl.createProgram();
+        gl.attachShader(program, createShader(gl, gl.VERTEX_SHADER, vertexShaderSource));
+        gl.attachShader(program, createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource));
+        gl.linkProgram(program);
+        gl.useProgram(program);
+        const positionBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
+        const positionLocation = gl.getAttribLocation(program, "position");
+        gl.enableVertexAttribArray(positionLocation);
+        gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+        const timeLocation = gl.getUniformLocation(program, "u_time");
+        function render(time) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            gl.viewport(0, 0, canvas.width, canvas.height);
+            gl.uniform1f(timeLocation, time * 0.001);
+            gl.drawArrays(gl.TRIANGLES, 0, 6);
+            requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+    }
+
+    // 7. Sequenced Reveal on Load
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const overlay = document.getElementById('entrance-overlay');
+            const mainContent = document.getElementById('main-content');
+            const mainNav = document.getElementById('main-nav');
+            const mainFooter = document.getElementById('main-footer');
+            const heroShutter = document.getElementById('hero-shutter');
+            const heroTextShutter = document.getElementById('hero-content-shutter');
+
+            overlay.style.opacity = '0';
+            mainContent.classList.remove('opacity-0');
+            mainNav.classList.remove('opacity-0');
+            mainFooter.classList.remove('opacity-0');
+            
+            setTimeout(() => {
+                heroShutter.classList.add('shutter-reveal');
+                heroTextShutter.classList.add('shutter-reveal');
+                document.body.style.overflow = 'auto';
+            }, 500);
+
+            setTimeout(() => { overlay.remove(); }, 2500);
+        }, 1000);
+    });
+</script>
+
+
+</body></html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MarvelVerse | The Sacred Timeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Archivo+Narrow:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            scrollbar-width: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .marvel-glow {
+            box-shadow: 0 0 20px rgba(230, 36, 41, 0.4);
+        }
+        .pulse-red {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(0.98); }
+        }
+        .timeline-cursor {
+            pointer-events: none;
+            transition: transform 0.15s ease-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#ffb4ac",
+                        "tertiary": "#82cfff",
+                        "on-secondary-fixed-variant": "#594400",
+                        "tertiary-fixed": "#c6e7ff",
+                        "surface-tint": "#ffb4ac",
+                        "on-tertiary-fixed-variant": "#004c6b",
+                        "primary-container": "#e62429",
+                        "on-primary-fixed-variant": "#93000e",
+                        "inverse-primary": "#c00016",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "primary-fixed": "#ffdad6",
+                        "outline-variant": "#5d3f3c",
+                        "on-primary-container": "#ffffff",
+                        "on-surface-variant": "#e7bdb8",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "on-primary": "#690007",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdf95",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#3c2c00",
+                        "secondary": "#f0c03e",
+                        "secondary-container": "#ba9000",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-fixed": "#251a00",
+                        "on-secondary": "#3e2e00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#007fb0",
+                        "outline": "#ad8884",
+                        "secondary-fixed-dim": "#f0c03e",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed": "#001e2d",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#410003",
+                        "on-tertiary": "#00344b",
+                        "tertiary-fixed-dim": "#82cfff",
+                        "surface-container-highest": "#353534"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "display-hero": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "700"}],
+                        "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-sm text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/50">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-black tracking-tighter text-primary-container">
+                MARVELVERSE
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Phases</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Movies</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-title-md" href="#">Characters</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-title-md text-title-md" href="#">Timeline</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 transition-all duration-300 rounded-full scale-95 active:scale-90">
+<span class="material-symbols-outlined text-primary">person</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Interactive Container -->
+<main class="relative w-full h-screen overflow-hidden">
+<!-- Background Shader -->
+<!-- STITCH_SHADER_START:ANIMATION_13 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_13" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_13');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec2 center = uv - 0.5;
+    center.x *= u_resolution.x / u_resolution.y;
+    
+    // Deep cinematic background with subtle nebula drift
+    vec3 color1 = vec3(0.02, 0.02, 0.05); // Deep navy
+    vec3 color2 = vec3(0.05, 0.01, 0.01); // Subtle maroon/void
+    
+    float n = noise(uv + u_time * 0.05);
+    vec3 base = mix(color1, color2, sin(u_time * 0.2 + uv.y * 2.0) * 0.5 + 0.5);
+    
+    // Distant stars/nodes glow
+    float star = 0.0;
+    vec2 starPos = fract(uv * 10.0 + u_time * 0.01) - 0.5;
+    star = smoothstep(0.48, 0.5, 1.0 - length(starPos));
+    star *= noise(floor(uv * 10.0));
+    
+    vec3 finalColor = base + (star * 0.05);
+    
+    // Vignette
+    float vignette = smoothstep(0.8, 0.2, length(center));
+    finalColor *= vignette;
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_13 -->
+<!-- 3D Timeline Engine -->
+<!-- STITCH_THREEJS_START:ANIMATION_14 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_14" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_14');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const container = document.querySelector('.timeline-canvas-container');
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Timeline State
+let scrollX = 0;
+let targetScrollX = 0;
+let zoom = 1;
+let targetZoom = 1;
+let isDragging = false;
+let startX = 0;
+
+// Nodes data (conceptual)
+const movieNodes = [
+    { x: -50, y: 0, title: "Iron Man", year: "2008", phase: 1 },
+    { x: -30, y: 5, title: "The Incredible Hulk", year: "2008", phase: 1 },
+    { x: -10, y: -5, title: "Iron Man 2", year: "2010", phase: 1 },
+    { x: 10, y: 8, title: "Thor", year: "2011", phase: 1 },
+    { x: 30, y: -2, title: "Captain America", year: "2011", phase: 1 },
+    { x: 60, y: 0, title: "The Avengers", year: "2012", phase: 1 },
+    { x: 90, y: -10, title: "Iron Man 3", year: "2013", phase: 2 },
+    { x: 120, y: 5, title: "Thor: Dark World", year: "2013", phase: 2 }
+];
+
+const nodesGroup = new THREE.Group();
+scene.add(nodesGroup);
+
+const lineMaterial = new THREE.LineBasicMaterial({ color: 0xe62429, transparent: true, opacity: 0.5 });
+const nodeGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+const glowMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.8 });
+
+// Create Path
+const points = movieNodes.map(n => new THREE.Vector3(n.x, n.y, 0));
+const curve = new THREE.CatmullRomCurve3(points);
+const curvePoints = curve.getPoints(200);
+const geometry = new THREE.BufferGeometry().setFromPoints(curvePoints);
+const line = new THREE.Line(geometry, lineMaterial);
+nodesGroup.add(line);
+
+// Add Nodes
+movieNodes.forEach(node => {
+    const mesh = new THREE.Mesh(nodeGeometry, glowMaterial);
+    mesh.position.set(node.x, node.y, 0);
+    nodesGroup.add(mesh);
+    
+    // Inner Glow
+    const light = new THREE.PointLight(0xe62429, 2, 10);
+    light.position.set(node.x, node.y, 0);
+    nodesGroup.add(light);
+});
+
+camera.position.z = 50;
+
+// Interactions
+container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+});
+
+window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - startX;
+    targetScrollX -= delta * 0.1;
+    startX = e.clientX;
+});
+
+window.addEventListener('mouseup', () => isDragging = false);
+
+container.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (e.ctrlKey) {
+        targetZoom = Math.min(Math.max(targetZoom + e.deltaY * -0.01, 0.5), 3);
+    } else {
+        targetScrollX += e.deltaY * 0.1;
+    }
+}, { passive: false });
+
+function animate() {
+    requestAnimationFrame(animate);
+    
+    // Smooth Lerp
+    scrollX += (targetScrollX - scrollX) * 0.1;
+    zoom += (targetZoom - zoom) * 0.1;
+    
+    nodesGroup.position.x = -scrollX;
+    camera.position.z = 50 / zoom;
+    
+    // Dynamic camera tilt
+    camera.rotation.y = -scrollX * 0.001;
+    camera.position.y = Math.sin(scrollX * 0.02) * 2;
+    
+    renderer.render(scene, camera);
+}
+
+animate();
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_14 -->
+<!-- Floating UI Overlays -->
+<div class="absolute inset-0 z-10 pointer-events-none flex flex-col justify-between p-margin-desktop">
+<!-- Top Section -->
+<div class="flex justify-between items-start pt-16">
+<div class="pointer-events-auto">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 bg-primary-container rounded-full pulse-red"></span>
+<h1 class="font-display-hero text-display-hero uppercase tracking-tight text-white">The Sacred Timeline</h1>
+</div>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-xl mt-2 opacity-80">
+                        Charting the multiversal convergence from the Big Bang to the present reality.
+                    </p>
+</div>
+</div>
+<!-- Left/Right Nav Controls -->
+<div class="absolute inset-y-0 left-margin-desktop flex flex-col justify-center gap-4 pointer-events-auto z-20">
+<div class="glass-panel p-2 rounded-xl flex flex-col gap-2">
+<button class="w-12 h-12 flex items-center justify-center hover:bg-white/10 rounded-lg transition-all" title="Zoom In">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center hover:bg-white/10 rounded-lg transition-all" title="Zoom Out">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="h-px bg-white/10 mx-2 my-1"></div>
+<button class="w-12 h-12 flex items-center justify-center text-primary-container" title="Center Camera">
+<span class="material-symbols-outlined">filter_center_focus</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white hover:border-primary-container transition-all">PHASE 1</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all">PHASE 2</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all">PHASE 3</button>
+<button class="glass-panel px-4 py-2 rounded-full font-label-caps text-label-caps text-white/40 hover:text-white transition-all">THE MULTIVERSE SAGA</button>
+</div>
+</div>
+<!-- Bottom Section -->
+<div class="flex justify-between items-end pb-8">
+<!-- Active Reality Card -->
+<div class="glass-panel p-6 rounded-2xl w-[400px] pointer-events-auto transform transition-all hover:scale-[1.02]">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-primary font-label-caps text-label-caps">YEAR: 2018</span>
+<h2 class="font-title-md text-title-md text-white mt-1">Avengers: Infinity War</h2>
+</div>
+<span class="bg-primary-container/20 text-primary-container px-3 py-1 rounded text-[10px] font-bold">CRITICAL EVENT</span>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 leading-relaxed">
+                        The Mad Titan Thanos initiates the Decimation, wiping out 50% of all life in the universe. A nexus point of unparalleled significance.
+                    </p>
+<button class="w-full bg-primary-container text-white py-3 rounded-lg font-bold text-sm tracking-wider hover:brightness-110 transition-all marvel-glow">
+                        EXPLORE NODE
+                    </button>
+</div>
+<!-- Stats Summary -->
+<div class="flex gap-8 pointer-events-auto">
+<div class="text-right">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Total Runtime</div>
+<div class="font-headline-lg text-headline-lg text-white leading-none">132<span class="text-primary-container">h</span></div>
+</div>
+<div class="text-right">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Temporal Nodes</div>
+<div class="font-headline-lg text-headline-lg text-white leading-none">4,812</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Progress Bar -->
+<div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[80vw] h-1 bg-white/10 rounded-full z-50 overflow-hidden">
+<div class="h-full bg-primary-container w-[35%] shadow-[0_0_10px_#e62429]" id="scroll-progress"></div>
+</div>
+<!-- Custom Cursor Indicator -->
+<div class="timeline-cursor fixed top-0 left-0 z-[100] opacity-0 pointer-events-none" id="custom-cursor">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 border-2 border-white/30 rounded-full flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-lg">drag_pan</span>
+</div>
+<span class="text-[10px] font-bold tracking-[0.2em] text-white mt-2 drop-shadow-lg">DRAG TO NAVIGATE</span>
+</div>
+</div>
+</main>
+<!-- Detailed View Section (Scroll reveal) -->
+<section class="relative z-20 bg-background px-margin-desktop py-section-gap">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Cinematic Milestones</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl">The convergence of separate narratives into a singular, unified tapestry of heroism.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Hover Cards -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-[800px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl bg-surface-container transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/20 border border-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic wide shot of Tony Stark in the Mark 1 armor emerging from a dark cave, high-contrast chiaroscuro lighting, metallic textures catching sparks and orange firelight, premium dark aesthetic, cinematic noir style, deep blacks and vibrant reds." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMhtcNX_vQ5tIh0Eq_Oq6ykBALc9oTk-cSPJ9SqSaF1_MFj_cmrWP0gdenw63kyoH0avrlUKIMKMQIwWAtZQFbZC3C51pfSeVIa50D-502QiGu8ZHhuBtzQjl9vDL5HxwKMrKzsDaS5BNMtiZv8yTJ7bI_a7pXQv0T3OGfsffcheEQRo7TovLFsFOqv_mVAwZOYPxr2ZBJ_68wxZ2wrCtBGxj9v_0eQwr85_SmH1MMDku_z0lW_DXi')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 p-8 w-full">
+<span class="px-3 py-1 bg-primary-container text-white text-[10px] font-bold rounded mb-4 inline-block">THE ORIGIN</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Iron Man (2008)</h3>
+<p class="text-on-surface-variant max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-body-sm text-body-sm">
+                            The spark that ignited the universe. Tony Stark's redemption arc redefined the superhero genre with gritty realism and high-tech flair.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="h-1/2 group relative overflow-hidden rounded-2xl bg-surface-container transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/10 border border-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close up of Captain America's vibranium shield reflecting a burning battlefield, atmospheric smoke, gritty cinematic texture, cinematic noir lighting, intense red and blue accents against deep shadows, highly detailed metal surface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpThD7tKnW5liVFX9Q-J5C7yAgjaB_l9q0ZPQ7mXuxWsw1OB-YVjItrB_h9aeW7GsblJUUHaKlBwe1l6W-X9LcNWeyOcMmNH7hqBw0B2hFU915FxSJS8s9YcT4LdAwo71tLK_tRQlfWM3vTJr7Cn3pXxWXdKX7YUqY12jUmClHwGi8ZAB2-DVhC9zXBPWBUQpju2aODNMRa4U_EKsQ811iDUjBnyA4eH_7CVC_W-Yom9VmD-y7yflz')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h4 class="font-title-md text-title-md text-white">The First Avenger</h4>
+<p class="text-on-surface-variant text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity">1942: Genesis of the Super Soldier</p>
+</div>
+</div>
+<div class="h-1/2 group relative overflow-hidden rounded-2xl bg-surface-container transition-all duration-500 hover:shadow-2xl hover:shadow-primary-container/10 border border-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A majestic cosmic nebula in the shape of a panther, vibrant purple and deep black space aesthetics, celestial lighting, high-end Marvel cinematic style, ethereal and powerful mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWu2TN2L_4vax6yhFuzPZEOECV8fxRWpnsKtZ5KBks-iyWVrEA0QMCBGGLf44dhHgLc4Z5w9UYPcxGk6Y4RU9W33KEkWu6NJeoao3LrAYgCLlzBqtOg3iU-iMZX5kwcnwkAadumhbHqvnf_IhJsQRiI2RjWYJKhtX4OyPGOmDNqRIVseccFcCrleQ9BDf7P5Mx0at0ipvrcGD0Ygl8ePbWkCpxBjiAhC6ybX6OkFrpu85M2R4O2jMq')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<div class="absolute bottom-0 p-6">
+<h4 class="font-title-md text-title-md text-white">Black Panther</h4>
+<p class="text-on-surface-variant text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity">The Hidden Kingdom of Wakanda</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-white/5 bg-background">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="font-title-md text-title-md font-bold text-on-surface">MarvelVerse</div>
+<div class="flex gap-8 font-body-sm text-body-sm">
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Contact Support</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-opacity" href="#">Marvel.com</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                © 2024 MarvelVerse Explorer. All Cinematic Rights Reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Custom Cursor Logic
+        const cursor = document.getElementById('custom-cursor');
+        const main = document.querySelector('main');
+
+        main.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 24}px, ${e.clientY - 24}px)`;
+        });
+
+        main.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+        });
+
+        main.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+        });
+
+        // Scroll Progress Logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        });
+
+        // Simple smooth scroll reveal effect for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(40px)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+            observer.observe(card);
+        });
+    </script>
+</body></html>

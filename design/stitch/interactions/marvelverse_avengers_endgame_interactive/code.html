@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MarvelVerse | Avengers: Endgame</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Archivo+Narrow:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffb4ac",
+                    "tertiary-container": "#007fb0",
+                    "secondary-container": "#ba9000",
+                    "on-tertiary-fixed-variant": "#004c6b",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#ffdf95",
+                    "on-secondary-fixed": "#251a00",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#f0c03e",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "on-surface-variant": "#e7bdb8",
+                    "on-tertiary": "#00344b",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#001e2d",
+                    "on-primary-fixed": "#410003",
+                    "on-secondary-fixed-variant": "#594400",
+                    "tertiary-fixed": "#c6e7ff",
+                    "on-secondary": "#3e2e00",
+                    "surface-dim": "#131313",
+                    "on-secondary-container": "#3c2c00",
+                    "on-tertiary-container": "#ffffff",
+                    "error": "#ffb4ac",
+                    "on-primary": "#690007",
+                    "background": "#050505",
+                    "on-primary-container": "#ffffff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline-variant": "#5d3f3c",
+                    "primary-fixed": "#ffdad6",
+                    "secondary": "#f0c03e",
+                    "on-primary-fixed-variant": "#93000e",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#ffb4ac",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "surface-variant": "#353534",
+                    "tertiary": "#82cfff",
+                    "on-surface": "#e5e2e1",
+                    "primary-container": "#e62429",
+                    "surface-container": "#201f1f",
+                    "inverse-primary": "#c00016",
+                    "tertiary-fixed-dim": "#82cfff",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#ad8884"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Archivo Narrow"],
+                    "body-sm": ["Inter"],
+                    "display-hero": ["Archivo Narrow"],
+                    "label-caps": ["Inter"],
+                    "headline-lg-mobile": ["Archivo Narrow"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #050505; color: #e5e2e1; overflow-x: hidden; }
+        .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .hero-gradient { background: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,0.8) 70%, rgba(5,5,5,1) 100%); }
+        .character-card:hover .card-border { opacity: 1; }
+        
+        /* High-end Glow Expansion */
+        .primary-glow { position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .primary-glow:hover { box-shadow: 0 0 30px rgba(230, 36, 41, 0.4), 0 0 60px rgba(230, 36, 41, 0.2); transform: translateY(-2px); }
+        .primary-glow::after { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: rgba(255,255,255,0.1); border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.6s ease-out, height 0.6s ease-out; }
+        .primary-glow:hover::after { width: 300%; height: 300%; }
+
+        .secondary-glow { position: relative; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .secondary-glow:hover { box-shadow: 0 0 30px rgba(255, 255, 255, 0.1); border-color: rgba(255,255,255,0.8); transform: translateY(-2px); }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Ken Burns Effect */
+        @keyframes kenburns {
+            0% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.1) translate(-1%, -1%); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
+        .animate-kenburns { animation: kenburns 30s ease-in-out infinite; }
+
+        /* Reveal Animations */
+        .reveal-item { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-item.active { opacity: 1; transform: translateY(0); }
+
+        /* Parallax Container */
+        .parallax-section { position: relative; }
+        .parallax-bg { position: absolute; top: 0; left: 0; width: 100%; height: 120%; z-index: -1; pointer-events: none; transition: transform 0.1s linear; }
+    </style>
+</head>
+<body class="font-body-lg text-body-lg">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-3xl border-b border-white/10 shadow-2xl shadow-black/50">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<img alt="MarvelVerse Logo" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisSc73RdbnVUGVPG8Jy_a_5JoJzxWVYKroyMK7R-x5vcY0jgCWvSWKcR7IE1qrpxtoKgh2_Y4uQ1uQ-7zYYrAwm41MVKvzlT5-JMmbrs0YWD9INFKU-FuwzUG_HaH4OD4HRgDntW6EbHImtvtcSkzR8KWZuN8wnsqXSdWmRHu8JVJDC5MwZSbD2OnJkNs897LaL7i6zV7V02G2JDnH_559PmOq00YSkevjhg2iD8WE2LtX69oya8s"/>
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black tracking-tighter text-primary-container leading-none">MarvelVerse</span>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-body-sm" href="#">Phases</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-title-md text-body-sm" href="#">Movies</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-body-sm" href="#">Characters</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-title-md text-body-sm" href="#">Timeline</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface/50 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm placeholder:text-on-surface/30 w-48" placeholder="Search Cinematic Universe..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-primary hover:bg-white/5 p-2 rounded-full transition-all duration-300 scale-95 active:scale-90" data-icon="person">person</button>
+</div>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[85vh] md:h-screen overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center animate-kenburns" data-alt="A cinematic, wide-angle landscape shot of the decimated Avengers facility battleground from Avengers: Endgame. In the distance, a glowing, massive portal opens against a twilight sky filled with cosmic energy and smoke. The lighting is dramatic and high-contrast, with deep shadows and vibrant blue and orange highlights, capturing a sense of epic scale and high-stakes drama in a premium, dark-mode cinematic aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHzM0cmgJSqDSDhxmAgvusDV5MkqgeFeKQ6IYJJLLrD2yBdYYEj5nU4zv70W3NIDzT7kwZB1RI9jjWjJAnAfHVakurcyTBJiD89fQQhgdhjhDkBttnGIiNYMSBQvdd_ATx9GUlgk8kdTs_BbyOAplGR28_7v4eWXvaTUmKQ_aNRwtetviIZWEvN6teyqp9slaaLAPyReNtSFPlr6ShrwYgi5kard-OLE-QaXW4eEILdqeZuCjF_HYo')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-end px-margin-mobile md:px-margin-desktop pb-16 max-w-container-max mx-auto">
+<div class="space-y-6 max-w-4xl reveal-item active">
+<div class="flex flex-wrap items-center gap-4">
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-lg font-label-caps text-label-caps border border-white/10 uppercase">Phase 3</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined fill text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-title-md text-title-md">8.4</span>
+</div>
+<span class="text-on-surface/60 font-body-sm text-body-sm">• April 26, 2019 • 3h 2m</span>
+</div>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero leading-tight text-on-surface">Avengers: Endgame</h1>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-lg font-title-md text-title-md flex items-center justify-center gap-3 transition-all duration-300 primary-glow group">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Watch Trailer
+                        </button>
+<button class="border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-lg font-title-md text-title-md flex items-center justify-center gap-3 transition-all duration-300 glass-panel secondary-glow group">
+<span class="material-symbols-outlined">group</span>
+                            View Cast
+                        </button>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-white/5 max-w-md">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface/40 uppercase">Director</span>
+<span class="font-title-md text-body-sm">Anthony &amp; Joe Russo</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Synopsis & Details Bento Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Synopsis Card -->
+<div class="lg:col-span-8 bg-[#181818] rounded-xl p-8 md:p-12 border border-white/5 relative overflow-hidden group reveal-item" data-reveal="fade-in">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary-container/5 blur-3xl rounded-full"></div>
+<h2 class="font-headline-lg text-title-md md:text-headline-lg text-on-surface mb-8">Synopsis</h2>
+<p class="text-on-surface/80 leading-relaxed text-body-lg mb-8 max-w-3xl">
+                        Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers — Thor, Black Widow, Captain America and Bruce Banner — must figure out a way to bring back their vanquished allies for an epic showdown with Thanos — the evil demigod who decimated the planet and the universe.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/5">
+<div class="reveal-item" style="transition-delay: 100ms">
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase mb-1">Status</p>
+<p class="font-title-md text-body-sm">Released</p>
+</div>
+<div class="reveal-item" style="transition-delay: 200ms">
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase mb-1">Budget</p>
+<p class="font-title-md text-body-sm">$356M</p>
+</div>
+<div class="reveal-item" style="transition-delay: 300ms">
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase mb-1">Revenue</p>
+<p class="font-title-md text-body-sm">$2.798B</p>
+</div>
+<div class="reveal-item" style="transition-delay: 400ms">
+<p class="font-label-caps text-label-caps text-on-surface/40 uppercase mb-1">Language</p>
+<p class="font-title-md text-body-sm">English</p>
+</div>
+</div>
+</div>
+<!-- Trivia & Post-Credit -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-[#181818] rounded-xl p-8 border border-white/5 flex-1 relative overflow-hidden group reveal-item" style="transition-delay: 200ms">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl">history_edu</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Did You Know?</h3>
+<p class="text-on-surface/60 text-body-sm">Robert Downey Jr. was the only actor to read the entire script of the movie, keeping the monumental ending a surprise for everyone else.</p>
+<div class="mt-6 flex items-center text-primary-container text-body-sm font-semibold cursor-pointer group-hover:gap-2 transition-all">
+                             More Trivia <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="bg-secondary-container/10 rounded-xl p-8 border border-secondary-container/20 flex-1 relative overflow-hidden group reveal-item" style="transition-delay: 400ms">
+<span class="material-symbols-outlined text-secondary mb-4 text-3xl">movie_edit</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Post-Credit Scene</h3>
+<p class="text-on-surface/60 text-body-sm">Unlike previous MCU entries, Endgame features no visual post-credit scene, but instead includes the sound of Tony Stark forging the first Iron Man suit.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cast Section -->
+<section class="bg-surface py-section-gap parallax-section overflow-hidden">
+<div class="parallax-bg bg-[#0a0a0a]" style="background-image: radial-gradient(circle at 20% 30%, rgba(230, 36, 41, 0.03) 0%, transparent 40%);"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="flex justify-between items-end mb-12 reveal-item">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">The Earth's Mightiest</h2>
+<p class="text-on-surface/40 text-body-lg">The final stand against the Mad Titan.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-on-surface/60 hover:text-on-surface transition-colors group">
+                        All Cast <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+<!-- Cast Member 1 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 0ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwWxs9IEkYQQeKwQJmlde_mkUKOQN0fu_Ki5M5Vw3YRy-4B7g7Tf9c99KBMQGJx6-a429ialrPV09qniN6HqITHFa0F2Wde8U-a8qQ3sPahYJaryigLyEX5xbS-0EDkbOfy8WjLkTNp1WHCjraDB17WlRj0GvcSIE-hq4DIiFonSAbVf2-58ysDdRLWaw8R2OrzsQGB4gaHLVKXP18XshwYN8ivx6UNTuxVrJyaBAJ6JIaLejHVNhm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<span class="font-label-caps text-label-caps text-primary uppercase">Leader</span>
+</div>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Robert Downey Jr.</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Tony Stark / Iron Man</p>
+</div>
+<!-- Cast Member 2 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 100ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC"/>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Chris Evans</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Steve Rogers / Capt. America</p>
+</div>
+<!-- Cast Member 3 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 200ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn8Se136Xqevq1_cFRrA14lPqi6IrObexLJSQnBYta91DcXgQsnEy3bTByZfHEHbCVGyLmC-4OymgH3iq3wFhc1PlOed5C_28-0DtpK56dtHpGKKN1vPEroXiiEx-B_jQsVgrPPsCHOoc8cYSo6skVwFlxnrFc-xxSBbVyrtYtkIyc77VdDeOLuZ_guBUgUwC_1GU3qEcy5dbkcIlr61PGWt6-VSZrtLhxpbiV2DRPK6bKdF1gc_GC"/>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Chris Hemsworth</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Thor Odinson</p>
+</div>
+<!-- Cast Member 4 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 300ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISdGHP0rjjPx8HXBxTlnRwjbJjzLMeXNvtbw2YHlyVDRMb6ENHvZ2TnbgjrxCzlzHgxdfGRQwAugF7beROLVnMRAZO6O-bFnhzma2VfjBZ31ZbnV4Xxdgx_WGaIIe9Anes991wZIpjajH6mmzgfTOnr0FR2OgBSjyMfa7fXYWWR2dI20l38VpiHifMMNdWflLUQEsuGwKcN40NEOirxAzGgSR1gSaJJl8I4ExBmy2cjjLvJBFJtNg"/>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Scarlett Johansson</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Natasha Romanoff</p>
+</div>
+<!-- Cast Member 5 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 400ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARfH-teQVCpU8UgPOr6xxSAEbo-I7B_I3K1j95CgYX43sc377SJUhZnnHDDz8lfFBIUB5O6HqFtl-1k3G1jhAqnVaHH2PjOobEYUaxc_DPW10smSc5eKSTVhjD8PpfOdBjBB_nWr5aHm4s48rcI8HhJGEkkEz8HkT7Kun3pZEP5blzxQRlHtuZnx1kjDD81NpCz5bk5MayunkZ3R9B4ttJPO1LCLMAl2_Vn5f5oPkdwhh4-R3AHh42"/>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Mark Ruffalo</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Bruce Banner / Hulk</p>
+</div>
+<!-- Cast Member 6 -->
+<div class="group cursor-pointer reveal-item" style="transition-delay: 500ms">
+<div class="aspect-[2/3] rounded-xl bg-[#181818] overflow-hidden border border-white/5 mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3OeCkXfIdTugGEw9DfyUpw-mG0RCHa5ei7uzoY6CZYo-G7KrsnOSW08pbSuBFOL_tf14rCZEhZqe4jYiTSruJ9YX_vccmi5WTgfP9avN5A6W_DGUYxo8agsTZ_7Dwq0x2dTuXWt8uj9yoeDE4PRZ-PSB69qE8UyYV0UuxCMdAtEIzHUyujxFKVGn9zmNIT_UwfgTnC_z0TXaXXwyiFQAjna_23r_5AVjFx59WC3SkD0q5Drmkm51"/>
+</div>
+<h4 class="font-title-md text-body-sm text-on-surface">Josh Brolin</h4>
+<p class="text-on-surface/40 text-xs uppercase tracking-widest font-label-caps mt-1">Thanos</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12 reveal-item">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Cinematic Moments</h2>
+</div>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar px-margin-mobile md:px-margin-desktop">
+<div class="flex-none w-[80vw] md:w-[60vw] aspect-video rounded-xl bg-[#181818] border border-white/5 overflow-hidden group relative reveal-item" style="transition-delay: 100ms">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqlj0YygycLpCBUfYbhhCmafL3zUAAA2SP7-P0ebJMk1NAs9Dpra2ve3Iqh7iWf7Gs6VwqxWlSgTfmi4vBTGvfxv8DwOaHiKXWkFlzBiisEGgR0D_2OzIxANYhjBQ_0yGzSDrAcktBOchppZfT7NxTJhsipfeIBe-DOW_BOUhXm7iMhxFXQAcOyg1Ooe9ksnOqu5I6mslkC_NdzIoIYKp6zHIXJ9MYTxdCg9Zjh74GCpZ73O6I-8gF"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="flex-none w-[80vw] md:w-[60vw] aspect-video rounded-xl bg-[#181818] border border-white/5 overflow-hidden group relative reveal-item" style="transition-delay: 300ms">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXLKSif3yafm046p_AUeO3V691RuI894UjXcFx06MRIA3DIDeWyRQQjdSRQZY0jRTXTxqsj-b7JFRiGTm1zJb9aqK0Xr1FJ_Sqken4vjyb1zNRgKLxiBVP7r2-gqRfQ8gmzTnPrjFA-a9E7kyNftrhQRwAJM61pnixgK0zqD6JPVMzfjn2VtuE-HoHBJaTxcXCALEKtlkTe7sCXkLiOU1I-1jwm-G0QIGt0V09KTBnY1-v0vCxhU0h"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="flex-none w-[80vw] md:w-[60vw] aspect-video rounded-xl bg-[#181818] border border-white/5 overflow-hidden group relative reveal-item" style="transition-delay: 500ms">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoT9URI7bCE0t7d3wI9eyWudio-cLcHqVdvzENCQNeSXoNhnccSjE-DYSY5krOsxlAoR5nVtnDm6Mw98FyV568O3IAit-zDfJA5TbcFknqAxFGx8Y5O3OcpyEw6NUICYnuDbz8dAnKhYk03lJYyOT_RRWkp7tSqgm0OS4HoW3QyjBXYtDu0sJHfRhxUta27YAU8ESBQAPu5I-5h8Tzxi1Xz5QlnfaQ15ePrW7mInpF8qIWunfBkTvF"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Movies -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12 reveal-item">Prequels &amp; Related</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group relative aspect-[16/7] rounded-xl overflow-hidden border border-white/5 cursor-pointer reveal-item" style="transition-delay: 100ms">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2su-g3ZXkUuEwno6XWazg4n2gKUENqwdubwgGJumLFzGnCRwn9D4VH2QGU3EuNV7dtr_Exwewuu5b4Og8068BPdpEQW6DYzslyjs75u2CInXbtfGxZR4MeeyNwNxwILB8ygSntLCCzD9keulBZ466io1kQMfxGZtz-7KgpJFkMpnprL3khexpv9m6cxJAQfghY1wxvvtBDkiVhBJ_fIaJrzBucbq36l9FYGPyW7NkLH5ym-2Vwz3I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2">Previous Entry</span>
+<h3 class="font-headline-lg text-title-md md:text-headline-lg text-on-surface">Infinity War</h3>
+</div>
+</div>
+<div class="group relative aspect-[16/7] rounded-xl overflow-hidden border border-white/5 cursor-pointer reveal-item" style="transition-delay: 200ms">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-9ik5ZL9eZiuEBFo8bDjEqTZXPTzuMeIEQV-neByxPvoBJYQCJBqW2IQadiFt-JXj4iT2az0H7n3jy5BvT8O901WqKf794WBmebZEkJvXoZFNEwom2_CofzQx5_MtEHl9iNZ6kiRsjTtXQD-ZQ2Hh7xy2HsLvxepcuxU4F0lid_79UA98Uu49QiZ5aOPF7ZSKvl-UyOaG50VnCzRQ9BLkozEv1lOUrr57spojrzpTocHPCb9HGwj4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+<span class="font-label-caps text-label-caps text-on-surface/60 uppercase mb-2">Key Prelude</span>
+<h3 class="font-headline-lg text-title-md md:text-headline-lg text-on-surface">Civil War</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-white/5 bg-background reveal-item">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-2">
+<img alt="MarvelVerse Footer Logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisSc73RdbnVUGVPG8Jy_a_5JoJzxWVYKroyMK7R-x5vcY0jgCWvSWKcR7IE1qrpxtoKgh2_Y4uQ1uQ-7zYYrAwm41MVKvzlT5-JMmbrs0YWD9INFKU-FuwzUG_HaH4OD4HRgDntW6EbHImtvtcSkzR8KWZuN8wnsqXSdWmRHu8JVJDC5MwZSbD2OnJkNs897LaL7i6zV7V02G2JDnH_559PmOq00YSkevjhg2iD8WE2LtX69oya8s"/>
+<span class="font-title-md text-title-md font-bold text-on-surface">MarvelVerse</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 MarvelVerse Explorer. All Cinematic Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:opacity-80 transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:opacity-80 transition-all" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:opacity-80 transition-all" href="#">Contact Support</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:opacity-80 transition-all" href="#">Marvel.com</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all">
+<img alt="Facebook" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx3TiSg7TrUHF6Nuo43RV_keOFu1mtgFQCmMQ8O3YZ1Fv8TE9-QNcefiHL3pfhrpa8dmMSRJKWZmUM-0vVHVrgHjhtzgX80lWAmCeVMgynmpagjLePET9naFiyEGqHXrNxH_lLgB8_Dt7Jd26irqzyG4HEiDfLH21Ntjszb3uG8kyi9hlRyAoSFX3UJDA_11t-h-5UTz83me1H9UT-5oeg9MZ3h0ZLIRh_Pu_sVP68c5YsPbcNZnmE"/>
+</button>
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all">
+<img alt="X" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoWLAtbsplnmv-5WwKkoIxoWSSY9xczmksdCypB8zrTH16xAZWCyzUy7KUN9RRpQRNqac5mmQTSalVIUpJ9YDq3NCpSGKHCVm7CwxJfTCrU0B7RskjvOk4iJf92kRY6Yp2y1q98iHWRp_g6qJqXkkBWY9yIf_CuhW7lHJlc5ZKuWfY8wEVfDpkDmUpOFeQ-GMVqj9-3ir0eBzg1Jl1Ok70mR15nVvVjoz42Rkjhe_CTEnWfsumaiE9"/>
+</button>
+<button class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all">
+<img alt="Instagram" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLb9FYGxIkDO0VBzmBfiKluUMUrUq0G2EICfjrGgWyf9-D9pFFLMJyvG85cJpQVFWMKPqdlX1Yz_n9T0Tgu592Dwqey9qqvhdEYxe4Gn7f3ABlgOyPOhzyp412VaQg-qM63OlZ8IRkRdyCH1MZmGcxLZv7I_Bdk8nCf2-hQmAzf33GJUOcZmgaQprIv85quXTeMs47qHWAngWrYDaAHwF4XGcx_MjkEPupGeECBxA66MSpfEU-ldKT"/>
+</button>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer: Atmospheric Dust/Ember Effect -->
+<canvas class="fixed inset-0 pointer-events-none z-10 opacity-30" id="atmosphereCanvas"></canvas>
+<script>
+        const canvas = document.getElementById('atmosphereCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.init();
+            }
+            init() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.3 - 0.1;
+                this.alpha = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.y < -10) this.y = canvas.height + 10;
+                if (this.x < -10) this.x = canvas.width + 10;
+                if (this.x > canvas.width + 10) this.x = -10;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function setup() {
+            resize();
+            for (let i = 0; i < 50; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        setup();
+        animate();
+
+        // Reveal on scroll logic with staggered support
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax Effect Logic
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.pageYOffset;
+            const parallaxBg = document.querySelector('.parallax-bg');
+            if (parallaxBg) {
+                const speed = 0.2;
+                parallaxBg.style.transform = `translateY(${scrollPos * speed}px)`;
+            }
+        });
+    </script>
+</body></html>
