@@ -1,6 +1,8 @@
+<div align="center">
+
 # 🦸 MarvelVerse
 
-> An interactive cinematic Marvel Cinematic Universe (MCU) explorer built with a modern full-stack architecture. Discover movies, series, characters, actors, timelines, organizations, locations, artifacts, and their interconnected relationships through an immersive and visually rich experience.
+An interactive cinematic Marvel Cinematic Universe (MCU) explorer built with a modern full-stack architecture. Discover movies, series, characters, actors, timelines, organizations, locations, artifacts, and their interconnected relationships through an immersive and visually rich experience.
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Frontend](https://img.shields.io/badge/frontend-React%2019-blue)
@@ -8,340 +10,161 @@
 ![Database](https://img.shields.io/badge/database-PostgreSQL-blue)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
----
-
-# 📖 Project Overview
-
-MarvelVerse is a production-grade full-stack web application that allows users to explore the Marvel Cinematic Universe in an interactive way.
-
-Unlike traditional movie databases or wiki websites, MarvelVerse focuses on relationships between every entity in the MCU.
-
-Users will be able to:
-
-- Explore every MCU Saga and Phase
-- Browse Movies and Disney+ Series
-- Discover Characters and Actors
-- Navigate the MCU Timeline
-- Explore Teams and Organizations
-- View Locations and Artifacts
-- Search across the entire universe
-- Visualize relationships between entities
-
-The project is designed as a portfolio-quality software engineering project emphasizing scalability, maintainability, and modern development practices.
+</div>
 
 ---
 
-# ✨ Planned Features
+## 📖 Project Overview
 
-## 🎬 Movies & Series
+**MarvelVerse** is a production-grade full-stack web application designed to help fans explore the Marvel Cinematic Universe interactively.
 
-- Movie pages
-- TV Series pages
-- Ratings
-- Release information
-- Watch order
-- Chronological order
+Unlike traditional movie databases or wiki websites, MarvelVerse focuses on the **relationships** between every entity in the MCU. From the intricate chronological timeline to the interconnected web of characters, actors, teams, and locations, MarvelVerse aims to be the ultimate reference for MCU lore.
 
-## 🦸 Characters
+## 🎯 Project Goals
 
-- Character profiles
-- Biography
-- Powers
-- Affiliations
-- Relationships
-- Appearances
+This repository serves as a portfolio-quality software engineering showcase demonstrating:
 
-## 🎭 Actors
+- **Modern React Architecture:** Utilizing React 19, Vite, and Zustand.
+- **Scalable Node.js Backend:** Express combined with Prisma ORM and PostgreSQL.
+- **Type-Safe Full-Stack Development:** End-to-end type safety with TypeScript and Zod.
+- **Enterprise-Grade Structure:** Feature-first modular organization.
+- **Clean System Design:** Adherence to SOLID principles and the Repository Pattern.
+- **Modern UI/UX Practices:** Rich animations using Framer Motion, GSAP, and Lenis smooth scrolling.
 
-- Actor profiles
-- Filmography
-- Character portrayals
+## 🚀 Live Demo
 
-## 🛡 Teams
+_Coming soon..._
 
-- Avengers
-- Guardians of the Galaxy
-- Illuminati
-- Thunderbolts
-- Young Avengers
-- and more...
+## 🖼️ Screenshots
 
-## 🏛 Organizations
+_Application screenshots will be added after the first public release._
 
-- S.H.I.E.L.D.
-- HYDRA
-- TVA
-- Stark Industries
-- Damage Control
-- Wakandan Government
+## 💎 Repository Highlights
 
-## 🌍 Locations
+The architecture is designed to reflect best practices used in large-scale open-source projects:
 
-- Earth
-- Wakanda
-- Asgard
-- Knowhere
-- Kamar-Taj
-- Quantum Realm
-- Multiverse locations
+- **Feature-first Architecture:** Logic is grouped by feature domain rather than purely by file type.
+- **Monorepo Structure:** Managed efficiently using `pnpm` workspaces.
+- **TypeScript:** 100% strict type coverage across frontend, backend, and shared libraries.
+- **Database:** PostgreSQL modeled safely with Prisma ORM.
+- **Backend:** Express API structured in a layered architecture (Controllers, Services, Repositories).
+- **Frontend:** Modern React 19 foundation optimized for performance.
 
-## 💎 Artifacts
+## ✨ Features
 
-- Infinity Stones
-- Mjolnir
-- Stormbreaker
-- Ten Rings
-- Darkhold
-- Eye of Agamotto
+- **🎬 Movies & Series:** Browse phases, ratings, release info, watch orders, and chronological orders.
+- **🦸 Characters:** Deep-dive profiles including biographies, powers, affiliations, and appearances.
+- **🎭 Actors:** Filmography tracking and character portrayals.
+- **🛡️ Teams & Organizations:** Explore the Avengers, S.H.I.E.L.D., HYDRA, the TVA, and more.
+- **🌍 Locations & Artifacts:** Discover everything from Wakanda and Asgard to the Infinity Stones.
+- **🕒 Timeline:** Navigate an interactive, scrubbable MCU timeline.
+- **🔍 Global Search:** Powerful unified search across the entire universe.
 
-## 🕒 Timeline
+## 🏗️ Architecture
 
-Interactive MCU timeline including
+MarvelVerse follows a modern monorepo setup ensuring clear separation of concerns while maximizing code sharing.
 
-- Sagas
-- Phases
-- Events
-- Movies
-- Series
-
-## 🔍 Search
-
-Global search supporting
-
-- Movies
-- Characters
-- Actors
-- Teams
-- Organizations
-- Locations
-- Artifacts
-
----
-
-# 🏗 Architecture
-
-MarvelVerse follows a modern monorepo architecture.
-
-```
+```text
 MarvelVerse
-│
-├── frontend/          React + Vite
-├── backend/           Express + TypeScript
-├── shared/            Shared types & utilities
-├── docs/              Project documentation
-├── design/            UI/UX assets
-└── .github/           GitHub workflows
+├── frontend/          # React 19 + Vite UI application
+├── backend/           # Express + TypeScript API server
+├── shared/            # Shared DTOs, types & utility functions
+├── docs/              # System architecture & design documents
+├── design/            # UI/UX assets and prototypes
+└── .github/           # GitHub Actions workflows & templates
 ```
 
-The architecture follows:
+## 🛠️ Technology Stack
 
-- Feature-first organization
-- SOLID principles
-- Repository Pattern
-- Layered Architecture
-- REST API
-- Type-safe development
+**Frontend:**
+React 19 • TypeScript • Vite • Tailwind CSS • React Router • TanStack Query • Zustand • React Hook Form • Zod • Framer Motion • GSAP • Lenis
 
----
+**Backend:**
+Node.js • Express • TypeScript • Prisma ORM • PostgreSQL • Zod • Pino
 
-# 🛠 Technology Stack
+**Development & Tooling:**
+pnpm Workspaces • ESLint • Prettier • Husky • Commitlint • lint-staged
 
-## Frontend
+## 🚀 Getting Started
 
-- React 19
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- TanStack Query
-- Zustand
-- React Hook Form
-- Zod
-- Framer Motion
-- GSAP
-- Lenis
-
-## Backend
-
-- Node.js
-- Express
-- TypeScript
-- Prisma ORM
-- PostgreSQL
-- Zod
-- Pino
-
-## Development
-
-- pnpm Workspaces
-- ESLint
-- Prettier
-- Husky
-- Commitlint
-- lint-staged
-
----
-
-# 📂 Repository Structure
-
-```
-.
-├── backend/
-├── frontend/
-├── shared/
-├── docs/
-├── design/
-├── assets/
-├── scripts/
-└── .github/
-```
-
----
-
-# 🚀 Getting Started
-
-## Prerequisites
+### Prerequisites
 
 - Node.js 20+
 - pnpm
 - PostgreSQL
 
-## Installation
+### Installation
 
-```bash
-git clone https://github.com/Gauravsingh0714/MarvelVerse.git
+1. Clone the repository:
 
-cd MarvelVerse
+   ```bash
+   git clone https://github.com/Gauravsingh0714/MarvelVerse.git
+   cd MarvelVerse
+   ```
 
-pnpm install
-```
+2. Install dependencies across the workspace:
 
----
+   ```bash
+   pnpm install
+   ```
 
-# ⚙ Environment Variables
+3. Configure Environment Variables:
+   > Copy the provided `.env.example` files (in both `frontend/` and `backend/`) to `.env` and configure the required environment variables before running the project.
 
-Create the required `.env` files using the provided `.env.example` templates.
+### Development
 
-Example:
-
-```env
-DATABASE_URL=
-PORT=
-NODE_ENV=
-FRONTEND_URL=
-```
-
----
-
-# 🧪 Development
-
-Start the frontend
+Start the frontend application:
 
 ```bash
 pnpm --filter frontend dev
 ```
 
-Start the backend
+Start the backend API server:
 
 ```bash
 pnpm --filter backend dev
 ```
 
-Run lint
+**Available Global Scripts:**
 
-```bash
-pnpm lint
-```
+- `pnpm lint`: Run ESLint across all workspaces.
+- `pnpm typecheck`: Run TypeScript compilation checks.
+- `pnpm build`: Create a production build of all applications.
 
-Run type checking
+## 📚 Documentation
 
-```bash
-pnpm typecheck
-```
+Extensive project documentation can be found inside the [`docs/`](./docs) directory.
 
-Create a production build
+Key documentation folders:
 
-```bash
-pnpm build
-```
+- **[Architecture](./docs/02-architecture)** - Folder structure, component design, schema mapping.
+- **[Design](./docs/04-design)** - Design system, UI patterns, and styling rules.
+- **[Development](./docs/03-development)** - Engineering handbooks and development playbooks.
+- **[Planning](./docs/01-planning)** - PRDs, Technical Requirements, and ADrs.
 
----
-
-# 📚 Documentation
-
-Project documentation can be found inside:
-
-```
-docs/
-```
-
-Including
-
-- Product Requirements
-- Technical Requirements
-- Information Architecture
-- Application Flow
-- Design System
-- Backend Schema
-- Implementation Roadmap
-- Architecture Decisions (ADR)
-
----
-
-# 📈 Current Progress
-
-| Stage                              | Status |
-| ---------------------------------- | ------ |
-| Repository Setup                   | ✅     |
-| Stage 0.1 – Monorepo               | ✅     |
-| Stage 0.2 – Frontend Bootstrap     | ✅     |
-| Stage 0.3 – Backend Bootstrap      | ✅     |
-| Stage 0.4 – Shared Infrastructure  | 🚧     |
-| Stage 0.5 – Engineering Validation | ⏳     |
-| Stage 1 – Design System            | ⏳     |
-| Stage 2 – Application Shell        | ⏳     |
-| Stage 3 – Feature Development      | ⏳     |
-
----
-
-# 🗺 Roadmap
+## 🗺️ Roadmap
 
 Upcoming milestones include:
 
-- Shared Infrastructure
-- Design System
-- Application Shell
-- Content Management
-- Search Engine
-- Timeline Explorer
-- Relationship Graph
-- Motion & Animations
-- Testing
-- Deployment
+- Shared Infrastructure setup
+- Design System integration
+- Application Shell construction
+- Content Management & Search Engine implementation
+- Timeline Explorer & Relationship Graph development
+- Motion & Animation pass
+- E2E Testing & Deployment
 
-See `ROADMAP.md` for detailed planning.
+## 🤝 Contributing
 
----
+Contributions are always welcome. Please read our guidelines before submitting issues or pull requests:
 
-# 🤝 Contributing
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
 
-Contributions are welcome.
+## 📄 License
 
-Please read:
-
-- CONTRIBUTING.md
-- CODE_OF_CONDUCT.md
-- SECURITY.md
-
-before submitting issues or pull requests.
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
-See the `LICENSE` file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
