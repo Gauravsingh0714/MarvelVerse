@@ -29,7 +29,8 @@
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
       "@types/*": ["src/types/*"],
-      "@config/*": ["src/config/*"]
+      "@config/*": ["src/config/*"],
+      "@marvelverse/shared": ["../shared/src/index.ts"]
     }
   },
   "include": ["src"],

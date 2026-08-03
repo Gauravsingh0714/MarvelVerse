@@ -9,12 +9,13 @@
     "start": "node dist/index.js",
     "lint": "eslint . --ext ts",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf dist",
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"
   },
   "dependencies": {
+    "@marvelverse/shared": "workspace:*",
     "@prisma/client": "^5.16.1",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",

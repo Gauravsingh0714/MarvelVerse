@@ -17,7 +17,8 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@types': path.resolve(__dirname, './src/types'),
-      '@config': path.resolve(__dirname, './src/config')
-    }
-  }
+      '@config': path.resolve(__dirname, './src/config'),
+      '@marvelverse/shared': path.resolve(__dirname, '../shared/src/index.ts'),
+    },
+  },
 });
