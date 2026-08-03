@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./design/stitch/branding/marvelverse_logo/screen.png" alt="MarvelVerse Logo" width="600" />
+
 # 🦸 MarvelVerse
 
 An interactive cinematic Marvel Cinematic Universe (MCU) explorer built with a modern full-stack architecture. Discover movies, series, characters, actors, timelines, organizations, locations, artifacts, and their interconnected relationships through an immersive and visually rich experience.
