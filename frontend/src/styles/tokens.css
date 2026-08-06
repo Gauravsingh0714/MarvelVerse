@@ -1,0 +1,202 @@
+/**
+ * Static Design Tokens CSS Variables
+ * MarvelVerse Design System - Stage 1.1
+ * Theme Layer: Separated from token definitions
+ */
+
+:root {
+  /* Colors - Primitives */
+  --color-obsidian-950: #07090e;
+  --color-obsidian-900: #0b0e14;
+  --color-obsidian-850: #10141d;
+  --color-obsidian-800: #161b26;
+  --color-obsidian-700: #202736;
+  --color-obsidian-600: #2d364a;
+  --color-obsidian-500: #44516b;
+  --color-obsidian-400: #687899;
+  --color-obsidian-300: #94a3c7;
+  --color-obsidian-200: #cbd5e1;
+  --color-obsidian-100: #f8fafc;
+
+  --color-stark-red: #e50914;
+  --color-stark-red-hover: #c10711;
+  --color-vibranium-cyan: #00f2fe;
+  --color-vibranium-cyan-hover: #00d8e4;
+  --color-infinity-gold: #ffd700;
+  --color-cosmic-purple: #8a2be2;
+  --color-tva-amber: #ff9f1c;
+
+  /* Colors - Default Dark Semantics */
+  --color-bg-canvas: var(--color-obsidian-900);
+  --color-bg-surface: var(--color-obsidian-850);
+  --color-bg-surface-raised: var(--color-obsidian-800);
+  --color-bg-surface-glass: rgba(16, 20, 29, 0.7);
+
+  --color-text-primary: var(--color-obsidian-100);
+  --color-text-secondary: var(--color-obsidian-300);
+  --color-text-muted: var(--color-obsidian-400);
+  --color-text-accent: var(--color-vibranium-cyan);
+
+  --color-border-default: var(--color-obsidian-700);
+  --color-border-subtle: var(--color-obsidian-800);
+  --color-border-focus: var(--color-vibranium-cyan);
+
+  --color-interactive-primary: var(--color-stark-red);
+  --color-interactive-hover: var(--color-stark-red-hover);
+
+  --color-status-success: #10b981;
+  --color-status-warning: #f59e0b;
+  --color-status-error: #ef4444;
+  --color-status-info: #3b82f6;
+
+  /* Typography Families */
+  --font-family-display:
+    'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  --font-family-body:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+  --font-family-code:
+    'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+
+  /* Spacing Scale */
+  --space-0: 0px;
+  --space-05: 0.125rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Border Radii */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Border Widths */
+  --border-width-none: 0px;
+  --border-width-hairline: 1px;
+  --border-width-thin: 2px;
+  --border-width-medium: 4px;
+  --border-width-thick: 8px;
+
+  /* Icon Sizes */
+  --icon-size-xs: 12px;
+  --icon-size-sm: 16px;
+  --icon-size-md: 20px;
+  --icon-size-lg: 24px;
+  --icon-size-xl: 32px;
+  --icon-size-2xl: 48px;
+
+  /* Shadows & Glows */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -4px rgba(0, 0, 0, 0.5);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+  --shadow-glow-cyan: 0 0 20px 0 rgba(0, 242, 254, 0.35);
+  --shadow-glow-red: 0 0 20px 0 rgba(229, 9, 20, 0.4);
+  --shadow-glow-gold: 0 0 20px 0 rgba(255, 215, 0, 0.35);
+
+  /* Motion */
+  --motion-duration-instant: 0ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 250ms;
+  --motion-duration-slow: 350ms;
+  --motion-duration-cinematic: 600ms;
+
+  --motion-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-ease-in: cubic-bezier(0.3, 0, 1, 1);
+  --motion-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --motion-ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Blurs */
+  --blur-none: blur(0px);
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+
+  /* Opacity */
+  --opacity-disabled: 0.38;
+  --opacity-inactive: 0.6;
+  --opacity-glass: 0.7;
+  --opacity-hover: 0.85;
+  --opacity-full: 1;
+
+  /* Z-Index */
+  --z-deep: -1;
+  --z-base: 0;
+  --z-card: 10;
+  --z-sticky: 100;
+  --z-header: 1000;
+  --z-dropdown: 1100;
+  --z-drawer: 1200;
+  --z-modal: 1300;
+  --z-tooltip: 1400;
+  --z-toast: 1500;
+  --z-curtain: 9999;
+}
+
+/* Light Theme Theme Layer Override */
+[data-theme='light'] {
+  --color-bg-canvas: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-surface-raised: #f1f5f9;
+  --color-bg-surface-glass: rgba(255, 255, 255, 0.85);
+
+  --color-text-primary: var(--color-obsidian-950);
+  --color-text-secondary: var(--color-obsidian-700);
+  --color-text-muted: var(--color-obsidian-500);
+  --color-text-accent: #00838f;
+
+  --color-border-default: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-border-focus: #00838f;
+}
+
+/* High-Contrast Theme Theme Layer Override */
+[data-theme='high-contrast'] {
+  --color-bg-canvas: #000000;
+  --color-bg-surface: #000000;
+  --color-bg-surface-raised: #121212;
+  --color-bg-surface-glass: #000000;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffff00;
+  --color-text-muted: #e0e0e0;
+  --color-text-accent: #00ffff;
+
+  --color-border-default: #ffffff;
+  --color-border-subtle: #ffffff;
+  --color-border-focus: #00ffff;
+
+  --color-interactive-primary: #ff0000;
+  --color-interactive-hover: #cc0000;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast: 0ms;
+    --motion-duration-normal: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-cinematic: 0ms;
+  }
+}
