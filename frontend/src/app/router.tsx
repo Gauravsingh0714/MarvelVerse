@@ -7,14 +7,65 @@ const Characters = lazy(() => import('./routes/Characters'));
 const Timeline = lazy(() => import('./routes/Timeline'));
 const Search = lazy(() => import('./routes/Search'));
 const About = lazy(() => import('./routes/About'));
+const ShellShowcase = lazy(() => import('./routes/ShellShowcase'));
 
 const PageLoader = () => <div>Loading...</div>;
 
 export const router = createBrowserRouter([
-  { path: '/', element: <Suspense fallback={<PageLoader />}><Home /></Suspense> },
-  { path: '/movies', element: <Suspense fallback={<PageLoader />}><Movies /></Suspense> },
-  { path: '/characters', element: <Suspense fallback={<PageLoader />}><Characters /></Suspense> },
-  { path: '/timeline', element: <Suspense fallback={<PageLoader />}><Timeline /></Suspense> },
-  { path: '/search', element: <Suspense fallback={<PageLoader />}><Search /></Suspense> },
-  { path: '/about', element: <Suspense fallback={<PageLoader />}><About /></Suspense> },
+  {
+    path: '/',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <Home />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/movies',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <Movies />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/characters',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <Characters />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/timeline',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <Timeline />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/search',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <Search />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/about',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <About />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/showcase/shell',
+    element: (
+      <Suspense fallback={<PageLoader />}>
+        <ShellShowcase />
+      </Suspense>
+    ),
+  },
 ]);

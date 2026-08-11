@@ -140,6 +140,7 @@ export interface IconButtonProps extends Omit<
   as?: React.ElementType;
   className?: string;
   disabled?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const iconSizeClasses: Record<ButtonSize, string> = {
