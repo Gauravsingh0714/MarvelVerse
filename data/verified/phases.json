@@ -1,0 +1,38 @@
+[
+  {
+    "id": "phase-1",
+    "name": "Phase One",
+    "number": 1,
+    "sagaId": "infinity-saga"
+  },
+  {
+    "id": "phase-2",
+    "name": "Phase Two",
+    "number": 2,
+    "sagaId": "infinity-saga"
+  },
+  {
+    "id": "phase-3",
+    "name": "Phase Three",
+    "number": 3,
+    "sagaId": "infinity-saga"
+  },
+  {
+    "id": "phase-4",
+    "name": "Phase Four",
+    "number": 4,
+    "sagaId": "multiverse-saga"
+  },
+  {
+    "id": "phase-5",
+    "name": "Phase Five",
+    "number": 5,
+    "sagaId": "multiverse-saga"
+  },
+  {
+    "id": "phase-6",
+    "name": "Phase Six",
+    "number": 6,
+    "sagaId": "multiverse-saga"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "infinity-saga",
+    "name": "Infinity Saga",
+    "order": 1
+  },
+  {
+    "id": "multiverse-saga",
+    "name": "Multiverse Saga",
+    "order": 2
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "tmdb",
+    "name": "The Movie Database",
+    "type": "api",
+    "purpose": ["movies", "tv", "episodes", "people", "cast", "images"]
+  },
+  {
+    "id": "marvel-official",
+    "name": "Marvel",
+    "type": "official",
+    "purpose": ["marvel-specific-verification"]
+  }
+]
