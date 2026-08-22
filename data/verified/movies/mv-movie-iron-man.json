@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-iron-man",
+  "title": "Iron Man",
+  "releaseDate": "2008-04-30",
+  "releaseOrder": 1,
+  "runtime": 126,
+  "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+  "posterPath": "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+  "backdropPath": "/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+  "genres": ["Action", "Science Fiction", "Adventure"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 1726,
+    "imdb": "tt0371746"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1726,
+    "acquiredAt": "2026-08-20T15:17:44.520Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.608Z",
+    "notes": "Confirmed as MCU PHASE-1 release #1."
+  }
+}

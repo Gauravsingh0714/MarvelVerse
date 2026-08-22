@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-iron-man-2",
+  "title": "Iron Man 2",
+  "releaseDate": "2010-04-28",
+  "releaseOrder": 3,
+  "runtime": 124,
+  "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+  "posterPath": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+  "backdropPath": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+  "genres": ["Adventure", "Action", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 10138,
+    "imdb": "tt1228705"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 10138,
+    "acquiredAt": "2026-08-22T14:05:50.552Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.701Z",
+    "notes": "Confirmed as MCU PHASE-1 release #3."
+  }
+}

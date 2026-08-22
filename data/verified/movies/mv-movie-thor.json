@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-thor",
+  "title": "Thor",
+  "releaseDate": "2011-04-21",
+  "releaseOrder": 4,
+  "runtime": 115,
+  "overview": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+  "posterPath": "/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+  "backdropPath": "/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
+  "genres": ["Adventure", "Fantasy", "Action"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 10195,
+    "imdb": "tt0800369"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 10195,
+    "acquiredAt": "2026-08-22T14:05:50.824Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.713Z",
+    "notes": "Confirmed as MCU PHASE-1 release #4."
+  }
+}

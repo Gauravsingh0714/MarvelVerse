@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-tony-stark",
+  "name": "Tony Stark",
+  "realName": "Anthony Edward Stark",
+  "aliases": ["Iron Man"],
+  "species": "Human",
+  "overview": "Genius, billionaire, playboy, philanthropist who built the Iron Man armor.",
+  "externalIds": {
+    "tmdb": 3223
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.586Z",
+    "notes": "Confirmed Phase 1 MCU lead character."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-the-incredible-hulk",
+  "title": "The Adventures of Rocky & Bullwinkle",
+  "releaseDate": "2000-06-30",
+  "releaseOrder": 2,
+  "runtime": 92,
+  "overview": "Rocky and Bullwinkle have been living off the finances made from the reruns of their cartoon show. Boris and Natasha somehow manage to crossover into reality and team up with Fearless Leader, an evil criminal turned media mogul with some evil plans up his sleeve. Rocky and Bullwinkle must stop the three of them before they wreak havoc.",
+  "posterPath": "/xCFSsftt2rglC81I6QLWcZSTCBM.jpg",
+  "backdropPath": "/9K1y8HCokYpuU92jKauiFwu0y7P.jpg",
+  "genres": ["Adventure", "Animation", "Comedy", "Family"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 17711,
+    "imdb": "tt0131704"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 17711,
+    "acquiredAt": "2026-08-22T14:05:50.267Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.687Z",
+    "notes": "Confirmed as MCU PHASE-1 release #2."
+  }
+}

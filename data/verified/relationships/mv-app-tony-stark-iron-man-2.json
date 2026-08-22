@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-tony-stark-iron-man-2",
+  "characterId": "mv-character-tony-stark",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-2",
+  "roleName": "Tony Stark / Iron Man",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z"
+  }
+}

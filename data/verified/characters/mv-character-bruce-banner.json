@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-bruce-banner",
+  "name": "Bruce Banner",
+  "realName": "Robert Bruce Banner",
+  "aliases": ["The Incredible Hulk"],
+  "species": "Human (Gamma Mutate)",
+  "overview": "Physicist transformed into the Hulk through gamma radiation exposure.",
+  "externalIds": {
+    "tmdb": 103
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z",
+    "notes": "Confirmed Phase 1 MCU lead character."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-natasha-romanoff",
+  "name": "Natasha Romanoff",
+  "realName": "Natalia Alianovna Romanova",
+  "aliases": ["Black Widow"],
+  "species": "Human",
+  "overview": "Master spy and elite martial artist operative of S.H.I.E.L.D.",
+  "externalIds": {
+    "tmdb": 1245
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z",
+    "notes": "Confirmed Phase 1 MCU lead character."
+  }
+}

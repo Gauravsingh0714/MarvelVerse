@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-captain-america-the-first-avenger",
+  "title": "Captain America: The First Avenger",
+  "releaseDate": "2011-07-22",
+  "releaseOrder": 5,
+  "runtime": 124,
+  "overview": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+  "posterPath": "/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+  "backdropPath": "/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 1771,
+    "imdb": "tt0458339"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1771,
+    "acquiredAt": "2026-08-22T14:05:51.122Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.724Z",
+    "notes": "Confirmed as MCU PHASE-1 release #5."
+  }
+}

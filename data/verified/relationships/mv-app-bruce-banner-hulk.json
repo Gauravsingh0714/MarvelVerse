@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bruce-banner-hulk",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-incredible-hulk",
+  "roleName": "Bruce Banner / The Hulk",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z"
+  }
+}

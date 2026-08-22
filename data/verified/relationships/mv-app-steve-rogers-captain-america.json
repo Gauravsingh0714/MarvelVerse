@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-steve-rogers-captain-america",
+  "characterId": "mv-character-steve-rogers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-first-avenger",
+  "roleName": "Steve Rogers / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z"
+  }
+}

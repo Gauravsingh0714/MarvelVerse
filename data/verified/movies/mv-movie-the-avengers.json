@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-the-avengers",
+  "title": "The Avengers",
+  "releaseDate": "2012-04-25",
+  "releaseOrder": 6,
+  "runtime": 143,
+  "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+  "posterPath": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+  "backdropPath": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+  "genres": ["Science Fiction", "Action", "Adventure"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-1",
+  "externalIds": {
+    "tmdb": 24428,
+    "imdb": "tt0848228"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 24428,
+    "acquiredAt": "2026-08-20T15:17:44.968Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.734Z",
+    "notes": "Confirmed as MCU PHASE-1 release #6."
+  }
+}

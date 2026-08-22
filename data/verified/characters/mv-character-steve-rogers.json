@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-steve-rogers",
+  "name": "Steve Rogers",
+  "realName": "Steven Grant Rogers",
+  "aliases": ["Captain America", "The First Avenger"],
+  "species": "Human (Super Soldier)",
+  "overview": "World War II veteran enhanced by Super Soldier Serum.",
+  "externalIds": {
+    "tmdb": 16828
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z",
+    "notes": "Confirmed Phase 1 MCU lead character."
+  }
+}

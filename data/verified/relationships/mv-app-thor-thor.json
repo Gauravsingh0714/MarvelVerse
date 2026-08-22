@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-thor-thor",
+  "characterId": "mv-character-thor-odinson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor",
+  "roleName": "Thor Odinson",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-08-22T14:23:24.589Z"
+  }
+}

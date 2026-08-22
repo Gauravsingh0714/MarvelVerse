@@ -15,6 +15,7 @@
     "typecheck": "pnpm -r run typecheck",
     "test": "pnpm -r run test",
     "data:tmdb:test": "pnpm --filter marvelverse-backend exec tsx src/scripts/tmdb-test-acquisition.ts",
+    "data:canonical:verify": "pnpm --filter marvelverse-backend exec tsx src/scripts/canonical-verify.ts",
     "clean": "pnpm -r run clean",
     "prepare": "husky"
   },
