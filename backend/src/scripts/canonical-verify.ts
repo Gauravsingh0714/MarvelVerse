@@ -41,7 +41,7 @@ const PHASE_1_MOVIES: Phase1CuratedItem[] = [
   },
   {
     slug: 'the-incredible-hulk',
-    tmdbId: 17711,
+    tmdbId: 1724,
     releaseOrder: 2,
     universeId: 'earth-616',
     sagaId: 'infinity-saga',
