@@ -34,8 +34,23 @@ export class CanonicalRepository {
   }
 }
 
+let sharedRepositoryInstance: CanonicalRepository | null = null;
+
 export function createCanonicalRepository(
   options: CanonicalRepositoryOptions = {}
 ): CanonicalRepository {
   return new CanonicalRepository(options);
+}
+
+export function getCanonicalRepository(
+  options: CanonicalRepositoryOptions = {}
+): CanonicalRepository {
+  if (!sharedRepositoryInstance || Object.keys(options).length > 0) {
+    const instance = createCanonicalRepository(options);
+    if (Object.keys(options).length === 0) {
+      sharedRepositoryInstance = instance;
+    }
+    return instance;
+  }
+  return sharedRepositoryInstance;
 }

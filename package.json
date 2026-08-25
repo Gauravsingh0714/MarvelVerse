@@ -17,6 +17,7 @@
     "data:tmdb:test": "pnpm --filter marvelverse-backend exec tsx src/scripts/tmdb-test-acquisition.ts",
     "data:canonical:verify": "pnpm --filter marvelverse-backend exec tsx src/scripts/canonical-verify.ts",
     "data:repository:verify": "pnpm --filter marvelverse-backend exec tsx src/scripts/repository-verify.ts",
+    "data:api:verify": "pnpm --filter marvelverse-backend exec tsx src/scripts/api-verify.ts",
     "clean": "pnpm -r run clean",
     "prepare": "husky"
   },
