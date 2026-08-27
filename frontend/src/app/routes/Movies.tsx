@@ -1,41 +1,95 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useMovies } from '../../hooks/useMovies.js';
-import { RouteLoading } from '../components/RouteLoading.js';
-import { Film, RefreshCw, Calendar, Tag } from 'lucide-react';
+import { usePhases } from '../../hooks/useFoundation.js';
+import {
+  Card,
+  Badge,
+  Button,
+  Input,
+  Select,
+  Alert,
+  Skeleton,
+} from '../../components/ui/index.js';
+import {
+  Film,
+  Search,
+  RefreshCw,
+  Calendar,
+  Clock,
+  Tag,
+  ArrowRight,
+  FilterX,
+} from 'lucide-react';
 
 export default function Movies() {
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [phaseFilter, setPhaseFilter] = useState<string>('');
+
   const {
     data: movies,
-    isLoading,
-    error,
-    refetch,
+    isLoading: isMoviesLoading,
+    error: moviesError,
+    refetch: refetchMovies,
   } = useMovies({
     phaseId: phaseFilter || undefined,
     sort: 'releaseOrder',
   });
 
-  if (isLoading) {
-    return <RouteLoading label="Loading verified MarvelVerse movies..." />;
+  const { data: phases } = usePhases();
+
+  // Local filtering for title and genre matching
+  const filteredMovies = useMemo(() => {
+    if (!movies) return [];
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return movies;
+
+    return movies.filter(
+      (m) =>
+        m.title.toLowerCase().includes(query) ||
+        m.genres.some((g) => g.toLowerCase().includes(query))
+    );
+  }, [movies, searchQuery]);
+
+  if (isMoviesLoading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        <div className="space-y-4">
+          <Skeleton className="h-9 w-64" />
+          <Skeleton className="h-4 w-96" />
+        </div>
+        <Skeleton.Group className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <Skeleton key={i} className="h-64 w-full rounded-xl" />
+          ))}
+        </Skeleton.Group>
+      </div>
+    );
   }
 
-  if (error) {
+  if (moviesError) {
     return (
-      <div className="p-6 max-w-4xl mx-auto text-center space-y-4 bg-red-950/40 border border-red-800/50 rounded-xl my-8">
-        <h3 className="text-xl font-bold text-red-200">
-          Unable to load movies
-        </h3>
-        <p className="text-sm text-red-300/80">
-          {error.message ||
-            'Please check if the MarvelVerse API server is running.'}
-        </p>
-        <button
-          onClick={refetch}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-red-900/60 hover:bg-red-800/80 text-red-100 rounded-lg text-sm font-medium transition-colors"
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <Alert
+          variant="error"
+          title="Unable to Load Marvel Canonical Movies"
+          icon={<Film className="w-5 h-5" />}
         >
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
+          <div className="space-y-4">
+            <p>
+              {moviesError.message ||
+                'Please check if the MarvelVerse API server is running.'}
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={refetchMovies}
+              leftIcon={<RefreshCw className="w-4 h-4" />}
+            >
+              Try Again
+            </Button>
+          </div>
+        </Alert>
       </div>
     );
   }
@@ -43,103 +97,125 @@ export default function Movies() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stroke-subtle pb-6">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-            <Film className="w-8 h-8 text-red-500" />
+          <h1 className="text-3xl font-extrabold tracking-tight text-content-primary flex items-center gap-3">
+            <Film className="w-8 h-8 text-starkRed" />
             Marvel Canonical Movies
           </h1>
-          <p className="text-sm text-slate-400 mt-1">
+          <p className="text-sm text-content-secondary mt-1">
             Verified Marvel Cinematic Universe releases powered by TMDB &
             Canonical Data Architecture.
           </p>
         </div>
 
-        {/* Filter Controls */}
-        <div className="flex items-center gap-3">
-          <label
-            htmlFor="phase-filter"
-            className="text-xs font-semibold text-slate-400 uppercase tracking-wider"
-          >
-            Filter Phase:
-          </label>
-          <select
-            id="phase-filter"
-            value={phaseFilter}
-            onChange={(e) => setPhaseFilter(e.target.value)}
-            className="bg-slate-900 border border-slate-700 text-slate-200 text-sm rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-red-500 focus:outline-none"
-          >
-            <option value="">All Phases</option>
-            <option value="phase-1">Phase 1</option>
-            <option value="phase-2">Phase 2</option>
-            <option value="phase-3">Phase 3</option>
-          </select>
+        {/* Search & Filter Controls */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
+          <div className="w-full sm:w-64">
+            <Input
+              placeholder="Search movie title or genre..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              leftIcon={<Search className="w-4 h-4" />}
+            />
+          </div>
+
+          <div className="w-full sm:w-48">
+            <Select
+              value={phaseFilter}
+              onChange={(e) => setPhaseFilter(e.target.value)}
+            >
+              <option value="">All Phases</option>
+              {phases?.map((phase) => (
+                <option key={phase.id} value={phase.id}>
+                  {phase.name} ({phase.id.toUpperCase()})
+                </option>
+              ))}
+            </Select>
+          </div>
         </div>
       </div>
 
-      {/* Movies Grid */}
-      {!movies || movies.length === 0 ? (
-        <div className="text-center py-12 text-slate-400">
-          No canonical movies found for the selected filter.
+      {/* Movies Grid / Empty States */}
+      {!filteredMovies || filteredMovies.length === 0 ? (
+        <div className="py-12">
+          <Alert variant="info" title="No Canonical Movies Found">
+            <div className="space-y-3">
+              <p>
+                No verified movie records match your current search query ("
+                {searchQuery}") or phase filter.
+              </p>
+              {(searchQuery || phaseFilter) && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setSearchQuery('');
+                    setPhaseFilter('');
+                  }}
+                  leftIcon={<FilterX className="w-4 h-4" />}
+                >
+                  Clear Search & Filters
+                </Button>
+              )}
+            </div>
+          </Alert>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {movies.map((movie) => (
-            <article
-              key={movie.canonicalId}
-              className="bg-slate-900/80 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-slate-700 transition-all flex flex-col"
-            >
-              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-950/80 text-red-400 border border-red-800/40">
-                      Release #{movie.releaseOrder}
-                    </span>
-                    <span className="text-xs text-slate-500 font-mono">
-                      {movie.phaseId.toUpperCase()}
-                    </span>
-                  </div>
+          {filteredMovies.map((movie) => (
+            <Link key={movie.canonicalId} to={`/movies/${movie.canonicalId}`}>
+              <Card interactive className="h-full group border-stroke-subtle">
+                <Card.Header bordered className="py-3 px-5">
+                  <Badge variant="primary" size="sm">
+                    Release #{movie.releaseOrder}
+                  </Badge>
+                  <Badge variant="vibranium" size="sm">
+                    {phases?.find((p) => p.id === movie.phaseId)?.name ||
+                      movie.phaseId.toUpperCase()}
+                  </Badge>
+                </Card.Header>
 
-                  <h2 className="text-xl font-bold text-white tracking-tight">
+                <Card.Body className="space-y-3 p-5">
+                  <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
                     {movie.title}
                   </h2>
 
-                  <div className="flex items-center gap-4 text-xs text-slate-400">
+                  <div className="flex items-center gap-4 text-xs text-content-muted">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-slate-500" />
+                      <Calendar className="w-3.5 h-3.5 text-starkRed" />
                       {movie.releaseDate}
                     </span>
-                    {movie.runtime && <span>{movie.runtime} min</span>}
+                    {movie.runtime && (
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5 text-vibraniumCyan" />
+                        {movie.runtime} min
+                      </span>
+                    )}
                   </div>
 
-                  <p className="text-xs text-slate-300/80 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-content-secondary line-clamp-3 leading-relaxed">
                     {movie.overview}
                   </p>
-                </div>
+                </Card.Body>
 
-                {/* Genres & External ID Metadata */}
-                <div className="pt-4 border-t border-slate-800/80 space-y-3">
-                  <div className="flex flex-wrap gap-1.5">
-                    {movie.genres.map((g) => (
-                      <span
-                        key={g}
-                        className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 bg-slate-800 text-slate-300 rounded"
-                      >
-                        <Tag className="w-2.5 h-2.5 text-slate-400" />
+                <Card.Footer bordered className="py-3 px-5">
+                  <div className="flex flex-wrap gap-1.5 flex-1 mr-2">
+                    {movie.genres.slice(0, 3).map((g) => (
+                      <Badge key={g} variant="default" size="sm">
+                        <Tag className="w-2.5 h-2.5 mr-1" />
                         {g}
-                      </span>
+                      </Badge>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono pt-1">
-                    <span>ID: {movie.canonicalId}</span>
-                    {movie.externalIds?.tmdb && (
-                      <span>TMDB: #{movie.externalIds.tmdb}</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </article>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-starkRed group-hover:translate-x-0.5 transition-transform">
+                    Details
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Card.Footer>
+              </Card>
+            </Link>
           ))}
         </div>
       )}

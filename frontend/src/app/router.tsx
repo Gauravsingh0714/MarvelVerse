@@ -7,6 +7,7 @@ import { RouteLoading } from './components/RouteLoading';
 
 const Home = lazy(() => import('./routes/Home'));
 const Movies = lazy(() => import('./routes/Movies'));
+const MovieDetail = lazy(() => import('./routes/MovieDetail'));
 const Characters = lazy(() => import('./routes/Characters'));
 const Timeline = lazy(() => import('./routes/Timeline'));
 const Search = lazy(() => import('./routes/Search'));
@@ -41,6 +42,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageFallback />}>
             <Movies />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'movies/:canonicalId',
+        element: (
+          <Suspense fallback={<PageFallback />}>
+            <MovieDetail />
           </Suspense>
         ),
       },
