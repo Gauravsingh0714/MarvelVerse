@@ -9,6 +9,7 @@ const Home = lazy(() => import('./routes/Home'));
 const Movies = lazy(() => import('./routes/Movies'));
 const MovieDetail = lazy(() => import('./routes/MovieDetail'));
 const Characters = lazy(() => import('./routes/Characters'));
+const CharacterDetail = lazy(() => import('./routes/CharacterDetail'));
 const Timeline = lazy(() => import('./routes/Timeline'));
 const Search = lazy(() => import('./routes/Search'));
 const About = lazy(() => import('./routes/About'));
@@ -58,6 +59,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageFallback />}>
             <Characters />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'characters/:canonicalId',
+        element: (
+          <Suspense fallback={<PageFallback />}>
+            <CharacterDetail />
           </Suspense>
         ),
       },
