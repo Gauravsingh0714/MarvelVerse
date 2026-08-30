@@ -1,95 +1,375 @@
+import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  CanonicalSaga,
+  CanonicalPhase,
+  CanonicalMovie,
+} from '@marvelverse/shared';
 import { useMovies } from '../../hooks/useMovies.js';
-import { RouteLoading } from '../components/RouteLoading.js';
-import { Clock, Calendar, RefreshCw } from 'lucide-react';
+import {
+  useUniverses,
+  useSagas,
+  usePhases,
+} from '../../hooks/useFoundation.js';
+import {
+  Card,
+  Badge,
+  Button,
+  Alert,
+  Skeleton,
+} from '../../components/ui/index.js';
+import {
+  Clock,
+  Calendar,
+  RefreshCw,
+  Layers,
+  Globe,
+  Sparkles,
+  ArrowRight,
+  Info,
+} from 'lucide-react';
+
+interface PhaseGroup {
+  phase: CanonicalPhase;
+  movies: CanonicalMovie[];
+}
+
+interface SagaGroup {
+  saga: CanonicalSaga;
+  phases: PhaseGroup[];
+  totalMovies: number;
+}
 
 export default function Timeline() {
+  const [selectedSagaId, setSelectedSagaId] = useState<string>('all');
+
+  const {
+    data: universes,
+    isLoading: isUniversesLoading,
+    error: universesError,
+    refetch: refetchUniverses,
+  } = useUniverses();
+
+  const {
+    data: sagas,
+    isLoading: isSagasLoading,
+    error: sagasError,
+    refetch: refetchSagas,
+  } = useSagas();
+
+  const {
+    data: phases,
+    isLoading: isPhasesLoading,
+    error: phasesError,
+    refetch: refetchPhases,
+  } = usePhases();
+
   const {
     data: movies,
-    isLoading,
-    error,
-    refetch,
+    isLoading: isMoviesLoading,
+    error: moviesError,
+    refetch: refetchMovies,
   } = useMovies({
     sort: 'releaseOrder',
   });
 
+  const isLoading =
+    isUniversesLoading || isSagasLoading || isPhasesLoading || isMoviesLoading;
+  const combinedError =
+    universesError || sagasError || phasesError || moviesError;
+
+  const handleRefetchAll = () => {
+    refetchUniverses();
+    refetchSagas();
+    refetchPhases();
+    refetchMovies();
+  };
+
+  // Primary universe context (Earth-616 is primary MCU continuity)
+  const primaryUniverse = useMemo(() => {
+    return universes?.find((u) => u.id === 'earth-616') || universes?.[0];
+  }, [universes]);
+
+  // Hierarchical grouping: Saga -> Phase -> Movies (Strategy A)
+  const sagaGroups = useMemo<SagaGroup[]>(() => {
+    if (!sagas || !phases || !movies) return [];
+
+    const sortedSagas = [...sagas].sort((a, b) => a.order - b.order);
+    const sortedPhases = [...phases].sort((a, b) => a.number - b.number);
+
+    return sortedSagas.map((saga) => {
+      const sagaPhases = sortedPhases.filter((p) => p.sagaId === saga.id);
+
+      let totalMoviesInSaga = 0;
+
+      const phaseGroups: PhaseGroup[] = sagaPhases.map((phase) => {
+        const phaseMovies = movies.filter((m) => m.phaseId === phase.id);
+        totalMoviesInSaga += phaseMovies.length;
+        return {
+          phase,
+          movies: phaseMovies,
+        };
+      });
+
+      return {
+        saga,
+        phases: phaseGroups,
+        totalMovies: totalMoviesInSaga,
+      };
+    });
+  }, [sagas, phases, movies]);
+
+  // Filtered sagas based on active tab selection
+  const displayedSagaGroups = useMemo(() => {
+    if (selectedSagaId === 'all') return sagaGroups;
+    return sagaGroups.filter((sg) => sg.saga.id === selectedSagaId);
+  }, [sagaGroups, selectedSagaId]);
+
   if (isLoading) {
     return (
-      <RouteLoading label="Loading Marvel Cinematic Universe timeline..." />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        <div className="space-y-3">
+          <Skeleton className="h-10 w-72" />
+          <Skeleton className="h-4 w-96" />
+        </div>
+        <div className="flex gap-2 pt-2">
+          <Skeleton className="h-9 w-28 rounded-md" />
+          <Skeleton className="h-9 w-36 rounded-md" />
+          <Skeleton className="h-9 w-36 rounded-md" />
+        </div>
+        <Skeleton.Group className="space-y-6 pt-4">
+          <Skeleton className="h-8 w-48" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Skeleton className="h-44 w-full rounded-xl" />
+            <Skeleton className="h-44 w-full rounded-xl" />
+          </div>
+        </Skeleton.Group>
+      </div>
     );
   }
 
-  if (error) {
+  if (combinedError) {
     return (
-      <div className="p-6 max-w-4xl mx-auto text-center space-y-4 bg-red-950/40 border border-red-800/50 rounded-xl my-8">
-        <h3 className="text-xl font-bold text-red-200">
-          Unable to load timeline
-        </h3>
-        <p className="text-sm text-red-300/80">
-          {error.message ||
-            'Please check if the MarvelVerse API server is running.'}
-        </p>
-        <button
-          onClick={refetch}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-red-900/60 hover:bg-red-800/80 text-red-100 rounded-lg text-sm font-medium transition-colors"
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <Alert
+          variant="error"
+          title="Unable to Load Marvel Cinematic Universe Timeline"
+          icon={<Clock className="w-5 h-5" />}
         >
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
+          <div className="space-y-4">
+            <p>
+              {combinedError.message ||
+                'Please check if the MarvelVerse API server is running.'}
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleRefetchAll}
+              leftIcon={<RefreshCw className="w-4 h-4" />}
+            >
+              Try Again
+            </Button>
+          </div>
+        </Alert>
       </div>
     );
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header */}
-      <div className="border-b border-white/10 pb-6">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white flex items-center gap-3">
-          <Clock className="w-8 h-8 text-red-500" />
-          MCU Chronological Release Timeline
-        </h1>
-        <p className="text-sm text-slate-400 mt-1">
-          Verified MCU Release Order timeline fetched dynamically via Stage 2.8
-          REST API.
-        </p>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stroke-subtle pb-6">
+        <div>
+          <h1 className="text-3xl font-extrabold tracking-tight text-content-primary flex items-center gap-3">
+            <Clock className="w-8 h-8 text-starkRed" />
+            MCU Chronological Timeline Explorer
+          </h1>
+          <p className="text-sm text-content-secondary mt-1">
+            Structured narrative hierarchy tracking verified releases across
+            Sagas and Phases in the Marvel Cinematic Universe.
+          </p>
+        </div>
+
+        {/* Universe Context Indicator */}
+        {primaryUniverse && (
+          <div className="flex items-center gap-2 self-start md:self-auto">
+            <span className="text-xs text-content-muted font-medium">
+              Continuity:
+            </span>
+            <Badge variant="vibranium" size="md">
+              <Globe className="w-3.5 h-3.5 mr-1" />
+              {primaryUniverse.name}
+            </Badge>
+          </div>
+        )}
       </div>
 
-      {/* Timeline Node List */}
-      {!movies || movies.length === 0 ? (
-        <div className="text-center py-12 text-slate-400">
-          No timeline records available.
-        </div>
+      {/* Saga Navigation Tabs / Pill Controls */}
+      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+        <Button
+          variant={selectedSagaId === 'all' ? 'primary' : 'secondary'}
+          size="sm"
+          onClick={() => setSelectedSagaId('all')}
+          leftIcon={<Layers className="w-4 h-4" />}
+        >
+          All Sagas ({movies?.length || 0} Releases)
+        </Button>
+
+        {sagas?.map((saga) => {
+          const matchedGroup = sagaGroups.find((sg) => sg.saga.id === saga.id);
+          const count = matchedGroup?.totalMovies || 0;
+
+          return (
+            <Button
+              key={saga.id}
+              variant={selectedSagaId === saga.id ? 'primary' : 'secondary'}
+              size="sm"
+              onClick={() => setSelectedSagaId(saga.id)}
+            >
+              {saga.name} ({count})
+            </Button>
+          );
+        })}
+      </div>
+
+      {/* Main Hierarchical Timeline Content */}
+      {displayedSagaGroups.length === 0 ? (
+        <Alert variant="info" title="No Sagas Available">
+          No verified sagas are currently configured in the MarvelVerse
+          database.
+        </Alert>
       ) : (
-        <div className="relative border-l-2 border-slate-800 ml-4 pl-6 space-y-8">
-          {movies.map((movie) => (
-            <div key={movie.canonicalId} className="relative group">
-              {/* Timeline Marker Badge */}
-              <div className="absolute -left-[35px] top-1.5 w-6 h-6 rounded-full bg-red-600 border-4 border-slate-950 text-white font-bold text-[10px] flex items-center justify-center shadow">
-                {movie.releaseOrder}
-              </div>
-
-              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-6 shadow-md hover:border-slate-700 transition-all space-y-2">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-mono text-red-400 uppercase tracking-wide">
-                    {movie.phaseId} • Order #{movie.releaseOrder}
-                  </span>
-                  <span className="text-xs text-slate-400 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                    {movie.releaseDate}
-                  </span>
+        <div className="space-y-12">
+          {displayedSagaGroups.map((sagaGroup) => (
+            <section
+              key={sagaGroup.saga.id}
+              className="space-y-8 border-l-2 border-starkRed/30 pl-4 sm:pl-6 relative"
+            >
+              {/* Saga Node Header */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stroke-subtle pb-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-starkRed/10 border border-starkRed/30 flex items-center justify-center text-starkRed">
+                    <Layers className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold tracking-tight text-content-primary">
+                      {sagaGroup.saga.name}
+                    </h2>
+                    <span className="text-xs text-content-muted font-mono">
+                      Canonical Saga Order #{sagaGroup.saga.order}
+                    </span>
+                  </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-white">{movie.title}</h2>
+                <Badge variant="primary" size="md">
+                  {sagaGroup.totalMovies} Total Releases
+                </Badge>
+              </div>
 
-                <p className="text-xs text-slate-300/80 leading-relaxed">
-                  {movie.overview}
+              {/* Phases within Saga */}
+              {sagaGroup.phases.length === 0 ? (
+                <p className="text-sm text-content-muted italic py-4">
+                  No verified phases available for this saga.
                 </p>
+              ) : (
+                <div className="space-y-8">
+                  {sagaGroup.phases.map((phaseGroup) => (
+                    <div key={phaseGroup.phase.id} className="space-y-4">
+                      {/* Phase Header */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Sparkles className="w-4 h-4 text-vibraniumCyan" />
+                          <h3 className="text-lg font-bold text-content-primary">
+                            {phaseGroup.phase.name}
+                          </h3>
+                          <Badge variant="vibranium" size="sm">
+                            {phaseGroup.phase.id.toUpperCase()}
+                          </Badge>
+                        </div>
 
-                <div className="pt-2 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-                  <span>Canonical ID: {movie.canonicalId}</span>
-                  <span>Universe: {movie.universeId}</span>
+                        <span className="text-xs text-content-muted font-medium">
+                          {phaseGroup.movies.length}{' '}
+                          {phaseGroup.movies.length === 1 ? 'Movie' : 'Movies'}
+                        </span>
+                      </div>
+
+                      {/* Phase Movies Grid or Empty Phase Fallback */}
+                      {phaseGroup.movies.length === 0 ? (
+                        <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle/60 flex items-center gap-3 text-xs text-content-secondary">
+                          <Info className="w-4 h-4 text-content-muted shrink-0" />
+                          <span>
+                            No verified movies are currently associated with{' '}
+                            <strong>{phaseGroup.phase.name}</strong>.
+                          </span>
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {phaseGroup.movies.map((movie) => (
+                            <Link
+                              key={movie.canonicalId}
+                              to={`/movies/${movie.canonicalId}`}
+                              className="block group"
+                            >
+                              <Card
+                                interactive
+                                className="h-full border-stroke-subtle"
+                              >
+                                <Card.Header
+                                  bordered
+                                  className="py-2.5 px-4 flex items-center justify-between"
+                                >
+                                  <Badge variant="primary" size="sm">
+                                    Release #{movie.releaseOrder}
+                                  </Badge>
+                                  <span className="text-xs font-mono text-content-muted">
+                                    {movie.releaseDate.slice(0, 4)}
+                                  </span>
+                                </Card.Header>
+
+                                <Card.Body className="p-4 space-y-2">
+                                  <h4 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors">
+                                    {movie.title}
+                                  </h4>
+
+                                  <div className="flex items-center gap-3 text-xs text-content-muted">
+                                    <span className="flex items-center gap-1">
+                                      <Calendar className="w-3 h-3 text-starkRed" />
+                                      {movie.releaseDate}
+                                    </span>
+                                    {movie.runtime && (
+                                      <span className="flex items-center gap-1">
+                                        <Clock className="w-3 h-3 text-vibraniumCyan" />
+                                        {movie.runtime} min
+                                      </span>
+                                    )}
+                                  </div>
+
+                                  <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                                    {movie.overview}
+                                  </p>
+                                </Card.Body>
+
+                                <Card.Footer
+                                  bordered
+                                  className="py-2.5 px-4 flex items-center justify-between text-xs"
+                                >
+                                  <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
+                                    {movie.canonicalId}
+                                  </span>
+                                  <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
+                                    Details <ArrowRight className="w-3 h-3" />
+                                  </span>
+                                </Card.Footer>
+                              </Card>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              </div>
-            </div>
+              )}
+            </section>
           ))}
         </div>
       )}
