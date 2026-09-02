@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useMovie, useMovieAppearances } from '../../hooks/useMovies.js';
+import { useCharacters } from '../../hooks/useCharacters.js';
 import {
   usePhases,
   useSagas,
@@ -14,6 +15,7 @@ import {
 } from '../../components/ui/index.js';
 import {
   ArrowLeft,
+  ArrowRight,
   Film,
   Calendar,
   Clock,
@@ -42,6 +44,8 @@ export default function MovieDetail() {
     isLoading: isAppearancesLoading,
     error: appearancesError,
   } = useMovieAppearances(canonicalId ?? null);
+
+  const { data: characters } = useCharacters();
 
   const { data: phases } = usePhases();
   const { data: sagas } = useSagas();
@@ -291,28 +295,49 @@ export default function MovieDetail() {
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {appearances.map((app) => (
-              <Card key={app.canonicalId} className="border-stroke-subtle">
-                <Card.Body className="p-4 space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-bold text-sm text-content-primary">
-                      {app.roleName}
-                    </span>
-                    {app.isUncredited && (
-                      <Badge variant="warning" size="sm">
-                        Uncredited
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="flex items-center justify-between text-xs text-content-muted font-mono pt-1 border-t border-stroke-subtle/50">
-                    <span>Character ID:</span>
-                    <span className="text-content-secondary">
-                      {app.characterId}
-                    </span>
-                  </div>
-                </Card.Body>
-              </Card>
-            ))}
+            {appearances.map((app) => {
+              const matchedCharacter = characters?.find(
+                (character) => character.canonicalId === app.characterId
+              );
+              const characterName = matchedCharacter?.name || app.roleName;
+
+              return (
+                <Link
+                  key={app.canonicalId}
+                  to={`/characters/${app.characterId}`}
+                  className="block group"
+                >
+                  <Card interactive className="h-full border-stroke-subtle">
+                    <Card.Body className="p-4 space-y-2.5">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="space-y-0.5">
+                          <h3 className="font-bold text-sm text-content-primary group-hover:text-starkRed transition-colors">
+                            {characterName}
+                          </h3>
+                          <p className="text-xs text-content-secondary">
+                            Role:{' '}
+                            <span className="font-medium text-content-primary">
+                              {app.roleName}
+                            </span>
+                          </p>
+                        </div>
+                        {app.isUncredited && (
+                          <Badge variant="warning" size="sm">
+                            Uncredited
+                          </Badge>
+                        )}
+                      </div>
+                      <div className="flex items-center justify-between text-xs text-content-muted font-mono pt-2 border-t border-stroke-subtle/50">
+                        <span>Character Details</span>
+                        <span className="inline-flex items-center gap-1 text-starkRed font-sans font-medium group-hover:translate-x-0.5 transition-transform">
+                          View <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>
