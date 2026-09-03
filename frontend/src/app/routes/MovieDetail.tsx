@@ -218,15 +218,18 @@ export default function MovieDetail() {
               </p>
             </div>
 
-            <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1">
+            <Link
+              to="/timeline"
+              className="block group p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1 hover:border-starkRed/50 transition-colors"
+            >
               <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-starkRed" />
                 Phase
               </span>
-              <p className="text-sm font-bold text-content-primary">
+              <p className="text-sm font-bold text-content-primary group-hover:text-starkRed transition-colors">
                 {phaseName}
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* External Identifiers */}
