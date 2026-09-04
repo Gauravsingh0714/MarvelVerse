@@ -37,9 +37,9 @@ export const NotFound: React.FC = () => {
             variant="primary"
             size="sm"
             leftIcon={<ArrowLeft className="w-3.5 h-3.5" />}
-            onClick={() => navigate('/app/dashboard')}
+            onClick={() => navigate('/')}
           >
-            Return to Dashboard
+            Return to Home
           </Button>
         </div>
       </Card>

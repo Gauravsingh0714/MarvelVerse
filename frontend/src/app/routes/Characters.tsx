@@ -149,13 +149,17 @@ export default function Characters() {
       {/* Characters Grid / Empty States */}
       {!filteredCharacters || filteredCharacters.length === 0 ? (
         <div className="py-12">
-          <Alert variant="info" title="No Canonical Characters Found">
-            <div className="space-y-3">
-              <p>
-                No verified character records match your current search query ("
-                {searchQuery}") or species filter.
-              </p>
-              {(searchQuery || speciesFilter) && (
+          {!searchQuery && !speciesFilter ? (
+            <Alert variant="info" title="No Canonical Characters Found">
+              <p>No verified canonical characters are currently available.</p>
+            </Alert>
+          ) : (
+            <Alert variant="info" title="No Canonical Characters Found">
+              <div className="space-y-3">
+                <p>
+                  No verified character records match your current search or
+                  species filter.
+                </p>
                 <Button
                   variant="outline"
                   size="sm"
@@ -167,9 +171,9 @@ export default function Characters() {
                 >
                   Clear Search & Filters
                 </Button>
-              )}
-            </div>
-          </Alert>
+              </div>
+            </Alert>
+          )}
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

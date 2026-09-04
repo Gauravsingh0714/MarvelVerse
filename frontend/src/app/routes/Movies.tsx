@@ -139,13 +139,17 @@ export default function Movies() {
       {/* Movies Grid / Empty States */}
       {!filteredMovies || filteredMovies.length === 0 ? (
         <div className="py-12">
-          <Alert variant="info" title="No Canonical Movies Found">
-            <div className="space-y-3">
-              <p>
-                No verified movie records match your current search query ("
-                {searchQuery}") or phase filter.
-              </p>
-              {(searchQuery || phaseFilter) && (
+          {!searchQuery && !phaseFilter ? (
+            <Alert variant="info" title="No Canonical Movies Found">
+              <p>No verified canonical movies are currently available.</p>
+            </Alert>
+          ) : (
+            <Alert variant="info" title="No Canonical Movies Found">
+              <div className="space-y-3">
+                <p>
+                  No verified movie records match your current search or phase
+                  filter.
+                </p>
                 <Button
                   variant="outline"
                   size="sm"
@@ -157,9 +161,9 @@ export default function Movies() {
                 >
                   Clear Search & Filters
                 </Button>
-              )}
-            </div>
-          </Alert>
+              </div>
+            </Alert>
+          )}
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
