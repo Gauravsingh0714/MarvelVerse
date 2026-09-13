@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
 import { useMovies } from '../../hooks/useMovies.js';
 import { useCharacters } from '../../hooks/useCharacters.js';
@@ -201,7 +202,7 @@ export default function Search() {
             <SearchIcon className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-content-primary">
+            <h1 className="text-3xl font-bold tracking-tight text-content-primary">
               Global Search
             </h1>
             <p className="text-sm text-content-secondary mt-0.5">
@@ -375,80 +376,81 @@ export default function Search() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {matchingMovies.map((movie) => (
-                  <Link
-                    key={movie.canonicalId}
-                    to={`/movies/${movie.canonicalId}`}
-                    className="block group"
-                  >
-                    <Card interactive className="h-full border-stroke-subtle">
-                      <Card.Header
-                        bordered
-                        className="py-2.5 px-4 flex items-center justify-between"
-                      >
-                        <Badge variant="primary" size="sm">
-                          <Film className="w-3 h-3 mr-1" />
-                          Movie
-                        </Badge>
-                        <span className="text-xs font-mono text-content-muted">
-                          {movie.releaseDate
-                            ? movie.releaseDate.slice(0, 4)
-                            : 'MCU'}
-                        </span>
-                      </Card.Header>
+                  <ScrollReveal key={movie.canonicalId}>
+                    <Link
+                      to={`/movies/${movie.canonicalId}`}
+                      className="block group"
+                    >
+                      <Card interactive className="h-full border-stroke-subtle">
+                        <Card.Header
+                          bordered
+                          className="py-2.5 px-4 flex items-center justify-between"
+                        >
+                          <Badge variant="primary" size="sm">
+                            <Film className="w-3 h-3 mr-1" />
+                            Movie
+                          </Badge>
+                          <span className="text-xs font-mono text-content-muted">
+                            {movie.releaseDate
+                              ? movie.releaseDate.slice(0, 4)
+                              : 'MCU'}
+                          </span>
+                        </Card.Header>
 
-                      <Card.Body className="p-4 space-y-2.5">
-                        <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors line-clamp-1">
-                          {movie.title}
-                        </h3>
+                        <Card.Body className="p-4 space-y-2.5">
+                          <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors line-clamp-1">
+                            {movie.title}
+                          </h3>
 
-                        <div className="flex flex-wrap items-center gap-3 text-xs text-content-muted">
-                          {movie.releaseDate && (
-                            <span className="flex items-center gap-1">
-                              <Calendar className="w-3 h-3 text-starkRed" />
-                              {movie.releaseDate}
-                            </span>
-                          )}
-                          {movie.runtime && (
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-3 h-3 text-vibraniumCyan" />
-                              {movie.runtime} min
-                            </span>
-                          )}
-                        </div>
-
-                        {movie.overview && (
-                          <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
-                            {movie.overview}
-                          </p>
-                        )}
-
-                        {movie.genres && movie.genres.length > 0 && (
-                          <div className="flex flex-wrap gap-1 pt-1">
-                            {movie.genres.slice(0, 3).map((genre) => (
-                              <span
-                                key={genre}
-                                className="text-[10px] px-1.5 py-0.5 rounded bg-surface-raised text-content-muted font-medium"
-                              >
-                                {genre}
+                          <div className="flex flex-wrap items-center gap-3 text-xs text-content-muted">
+                            {movie.releaseDate && (
+                              <span className="flex items-center gap-1">
+                                <Calendar className="w-3 h-3 text-starkRed" />
+                                {movie.releaseDate}
                               </span>
-                            ))}
+                            )}
+                            {movie.runtime && (
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-3 h-3 text-vibraniumCyan" />
+                                {movie.runtime} min
+                              </span>
+                            )}
                           </div>
-                        )}
-                      </Card.Body>
 
-                      <Card.Footer
-                        bordered
-                        className="py-2 px-4 flex items-center justify-between text-xs"
-                      >
-                        <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
-                          {movie.canonicalId}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
-                          Details <ArrowRight className="w-3 h-3" />
-                        </span>
-                      </Card.Footer>
-                    </Card>
-                  </Link>
+                          {movie.overview && (
+                            <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                              {movie.overview}
+                            </p>
+                          )}
+
+                          {movie.genres && movie.genres.length > 0 && (
+                            <div className="flex flex-wrap gap-1 pt-1">
+                              {movie.genres.slice(0, 3).map((genre) => (
+                                <span
+                                  key={genre}
+                                  className="text-[10px] px-1.5 py-0.5 rounded bg-surface-raised text-content-muted font-medium"
+                                >
+                                  {genre}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </Card.Body>
+
+                        <Card.Footer
+                          bordered
+                          className="py-2 px-4 flex items-center justify-between text-xs"
+                        >
+                          <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
+                            {movie.canonicalId}
+                          </span>
+                          <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
+                            Details <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </Card.Footer>
+                      </Card>
+                    </Link>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>
@@ -470,95 +472,96 @@ export default function Search() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {matchingCharacters.map((item) => (
-                  <Link
-                    key={item.character.canonicalId}
-                    to={`/characters/${item.character.canonicalId}`}
-                    className="block group"
-                  >
-                    <Card interactive className="h-full border-stroke-subtle">
-                      <Card.Header
-                        bordered
-                        className="py-2.5 px-4 flex items-center justify-between"
-                      >
-                        <Badge variant="vibranium" size="sm">
-                          <Users className="w-3 h-3 mr-1" />
-                          Character
-                        </Badge>
-                        {item.character.species && (
-                          <span className="text-xs font-medium text-content-muted flex items-center gap-1">
-                            <Dna className="w-3 h-3 text-vibraniumCyan" />
-                            {item.character.species}
-                          </span>
-                        )}
-                      </Card.Header>
-
-                      <Card.Body className="p-4 space-y-2.5">
-                        <div className="flex items-center gap-3">
-                          <Avatar
-                            name={item.character.name}
-                            size="md"
-                            className="border border-starkRed/30 shrink-0"
-                          />
-                          <div className="min-w-0 flex-1">
-                            <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors truncate">
-                              {item.character.name}
-                            </h3>
-                            {item.character.realName &&
-                              item.character.realName !==
-                                item.character.name && (
-                                <p className="text-xs text-content-muted truncate">
-                                  {item.character.realName}
-                                </p>
-                              )}
-                          </div>
-                        </div>
-
-                        {item.matchedAlias && (
-                          <div className="flex items-center gap-1.5 text-xs text-vibraniumCyan bg-vibraniumCyan/10 border border-vibraniumCyan/20 px-2 py-1 rounded-md font-medium">
-                            <Tag className="w-3 h-3 shrink-0" />
-                            <span className="truncate">
-                              Matched alias: {item.matchedAlias}
+                  <ScrollReveal key={item.character.canonicalId}>
+                    <Link
+                      to={`/characters/${item.character.canonicalId}`}
+                      className="block group"
+                    >
+                      <Card interactive className="h-full border-stroke-subtle">
+                        <Card.Header
+                          bordered
+                          className="py-2.5 px-4 flex items-center justify-between"
+                        >
+                          <Badge variant="vibranium" size="sm">
+                            <Users className="w-3 h-3 mr-1" />
+                            Character
+                          </Badge>
+                          {item.character.species && (
+                            <span className="text-xs font-medium text-content-muted flex items-center gap-1">
+                              <Dna className="w-3 h-3 text-vibraniumCyan" />
+                              {item.character.species}
                             </span>
+                          )}
+                        </Card.Header>
+
+                        <Card.Body className="p-4 space-y-2.5">
+                          <div className="flex items-center gap-3">
+                            <Avatar
+                              name={item.character.name}
+                              size="md"
+                              className="border border-starkRed/30 shrink-0"
+                            />
+                            <div className="min-w-0 flex-1">
+                              <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors truncate">
+                                {item.character.name}
+                              </h3>
+                              {item.character.realName &&
+                                item.character.realName !==
+                                  item.character.name && (
+                                  <p className="text-xs text-content-muted truncate">
+                                    {item.character.realName}
+                                  </p>
+                                )}
+                            </div>
                           </div>
-                        )}
 
-                        {item.character.overview && (
-                          <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
-                            {item.character.overview}
-                          </p>
-                        )}
-
-                        {item.character.aliases &&
-                          item.character.aliases.length > 0 &&
-                          !item.matchedAlias && (
-                            <div className="flex flex-wrap gap-1 pt-1">
-                              {item.character.aliases
-                                .slice(0, 2)
-                                .map((alias) => (
-                                  <span
-                                    key={alias}
-                                    className="text-[10px] px-1.5 py-0.5 rounded bg-surface-raised text-content-muted font-medium"
-                                  >
-                                    {alias}
-                                  </span>
-                                ))}
+                          {item.matchedAlias && (
+                            <div className="flex items-center gap-1.5 text-xs text-vibraniumCyan bg-vibraniumCyan/10 border border-vibraniumCyan/20 px-2 py-1 rounded-md font-medium">
+                              <Tag className="w-3 h-3 shrink-0" />
+                              <span className="truncate">
+                                Matched alias: {item.matchedAlias}
+                              </span>
                             </div>
                           )}
-                      </Card.Body>
 
-                      <Card.Footer
-                        bordered
-                        className="py-2 px-4 flex items-center justify-between text-xs"
-                      >
-                        <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
-                          {item.character.canonicalId}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
-                          View Profile <ArrowRight className="w-3 h-3" />
-                        </span>
-                      </Card.Footer>
-                    </Card>
-                  </Link>
+                          {item.character.overview && (
+                            <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                              {item.character.overview}
+                            </p>
+                          )}
+
+                          {item.character.aliases &&
+                            item.character.aliases.length > 0 &&
+                            !item.matchedAlias && (
+                              <div className="flex flex-wrap gap-1 pt-1">
+                                {item.character.aliases
+                                  .slice(0, 2)
+                                  .map((alias) => (
+                                    <span
+                                      key={alias}
+                                      className="text-[10px] px-1.5 py-0.5 rounded bg-surface-raised text-content-muted font-medium"
+                                    >
+                                      {alias}
+                                    </span>
+                                  ))}
+                              </div>
+                            )}
+                        </Card.Body>
+
+                        <Card.Footer
+                          bordered
+                          className="py-2 px-4 flex items-center justify-between text-xs"
+                        >
+                          <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
+                            {item.character.canonicalId}
+                          </span>
+                          <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
+                            View Profile <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </Card.Footer>
+                      </Card>
+                    </Link>
+                  </ScrollReveal>
                 ))}
               </div>
             </section>

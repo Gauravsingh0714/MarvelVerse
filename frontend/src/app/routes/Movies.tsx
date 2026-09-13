@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
 import { useMovies } from '../../hooks/useMovies.js';
 import { usePhases } from '../../hooks/useFoundation.js';
@@ -99,7 +100,7 @@ export default function Movies() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stroke-subtle pb-6">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-content-primary flex items-center gap-3">
+          <h1 className="text-3xl font-bold tracking-tight text-content-primary flex items-center gap-3">
             <Film className="w-8 h-8 text-starkRed" />
             Marvel Canonical Movies
           </h1>
@@ -168,58 +169,60 @@ export default function Movies() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMovies.map((movie) => (
-            <Link key={movie.canonicalId} to={`/movies/${movie.canonicalId}`}>
-              <Card interactive className="h-full group border-stroke-subtle">
-                <Card.Header bordered className="py-3 px-5">
-                  <Badge variant="primary" size="sm">
-                    Release #{movie.releaseOrder}
-                  </Badge>
-                  <Badge variant="vibranium" size="sm">
-                    {phases?.find((p) => p.id === movie.phaseId)?.name ||
-                      movie.phaseId.toUpperCase()}
-                  </Badge>
-                </Card.Header>
+            <ScrollReveal key={movie.canonicalId}>
+              <Link to={`/movies/${movie.canonicalId}`}>
+                <Card interactive className="h-full group border-stroke-subtle">
+                  <Card.Header bordered className="py-3 px-5">
+                    <Badge variant="primary" size="sm">
+                      Release #{movie.releaseOrder}
+                    </Badge>
+                    <Badge variant="vibranium" size="sm">
+                      {phases?.find((p) => p.id === movie.phaseId)?.name ||
+                        movie.phaseId.toUpperCase()}
+                    </Badge>
+                  </Card.Header>
 
-                <Card.Body className="space-y-3 p-5">
-                  <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
-                    {movie.title}
-                  </h2>
+                  <Card.Body className="space-y-3 p-5">
+                    <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
+                      {movie.title}
+                    </h2>
 
-                  <div className="flex items-center gap-4 text-xs text-content-muted">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-starkRed" />
-                      {movie.releaseDate}
-                    </span>
-                    {movie.runtime && (
+                    <div className="flex items-center gap-4 text-xs text-content-muted">
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-vibraniumCyan" />
-                        {movie.runtime} min
+                        <Calendar className="w-3.5 h-3.5 text-starkRed" />
+                        {movie.releaseDate}
                       </span>
-                    )}
-                  </div>
+                      {movie.runtime && (
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-vibraniumCyan" />
+                          {movie.runtime} min
+                        </span>
+                      )}
+                    </div>
 
-                  <p className="text-xs text-content-secondary line-clamp-3 leading-relaxed">
-                    {movie.overview}
-                  </p>
-                </Card.Body>
+                    <p className="text-xs text-content-secondary line-clamp-3 leading-relaxed">
+                      {movie.overview}
+                    </p>
+                  </Card.Body>
 
-                <Card.Footer bordered className="py-3 px-5">
-                  <div className="flex flex-wrap gap-1.5 flex-1 mr-2">
-                    {movie.genres.slice(0, 3).map((g) => (
-                      <Badge key={g} variant="default" size="sm">
-                        <Tag className="w-2.5 h-2.5 mr-1" />
-                        {g}
-                      </Badge>
-                    ))}
-                  </div>
+                  <Card.Footer bordered className="py-3 px-5">
+                    <div className="flex flex-wrap gap-1.5 flex-1 mr-2">
+                      {movie.genres.slice(0, 3).map((g) => (
+                        <Badge key={g} variant="default" size="sm">
+                          <Tag className="w-2.5 h-2.5 mr-1" />
+                          {g}
+                        </Badge>
+                      ))}
+                    </div>
 
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-starkRed group-hover:translate-x-0.5 transition-transform">
-                    Details
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </Card.Footer>
-              </Card>
-            </Link>
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-starkRed group-hover:translate-x-0.5 transition-transform">
+                      Details
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Card.Footer>
+                </Card>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
       )}

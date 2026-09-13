@@ -1,4 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
+import { heroStaggerContainer, heroItemVariants } from '../../utils/motion.js';
 import {
   useCharacter,
   useCharacterAppearances,
@@ -27,6 +29,7 @@ import {
 export default function CharacterDetail() {
   const { canonicalId } = useParams<{ canonicalId: string }>();
   const navigate = useNavigate();
+  const prefersReducedMotion = useReducedMotion();
 
   const {
     data: character,
@@ -133,87 +136,106 @@ export default function CharacterDetail() {
 
       {/* Main Character Hero Card */}
       <Card className="border-stroke-subtle shadow-xl">
-        <Card.Body className="p-6 sm:p-8 space-y-6">
-          {/* Header Info with Avatar */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-b border-stroke-subtle pb-6">
-            <Avatar
-              name={character.name}
-              size="xl"
-              className="w-20 h-20 text-2xl border-2 border-starkRed/30"
-            />
-            <div className="space-y-1.5 flex-1">
-              <div className="flex flex-wrap items-center gap-3">
-                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
-                  {character.name}
-                </h1>
-                {character.realName &&
-                  character.realName !== character.name && (
-                    <span className="text-base text-content-muted font-normal">
-                      ({character.realName})
-                    </span>
+        <Card.Body className="p-6 sm:p-8 space-y-0">
+          <motion.div
+            variants={heroStaggerContainer}
+            initial={prefersReducedMotion ? false : 'initial'}
+            animate="animate"
+            className="space-y-6"
+          >
+            {/* Header Info with Avatar */}
+            <motion.div
+              variants={prefersReducedMotion ? {} : heroItemVariants}
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-b border-stroke-subtle pb-6"
+            >
+              <Avatar
+                name={character.name}
+                size="xl"
+                className="w-20 h-20 text-2xl border-2 border-starkRed/30"
+              />
+              <div className="space-y-1.5 flex-1">
+                <div className="flex flex-wrap items-center gap-3">
+                  <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
+                    {character.name}
+                  </h1>
+                  {character.realName &&
+                    character.realName !== character.name && (
+                      <span className="text-base text-content-muted font-normal">
+                        ({character.realName})
+                      </span>
+                    )}
+                </div>
+                <div className="flex items-center gap-4 text-xs font-mono text-content-muted">
+                  <span>Canonical ID: {character.canonicalId}</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Aliases */}
+            {character.aliases && character.aliases.length > 0 && (
+              <motion.div
+                variants={prefersReducedMotion ? {} : heroItemVariants}
+                className="space-y-2"
+              >
+                <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
+                  Known Aliases
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {character.aliases.map((alias) => (
+                    <Badge key={alias} variant="primary" size="md">
+                      <Tag className="w-3 h-3 mr-1" />
+                      {alias}
+                    </Badge>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Overview */}
+            {character.overview && (
+              <motion.div
+                variants={prefersReducedMotion ? {} : heroItemVariants}
+                className="space-y-2"
+              >
+                <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
+                  Biography & Lore Overview
+                </h2>
+                <p className="text-base text-content-secondary leading-relaxed">
+                  {character.overview}
+                </p>
+              </motion.div>
+            )}
+
+            {/* External Identifiers */}
+            {character.externalIds && (
+              <motion.div
+                variants={prefersReducedMotion ? {} : heroItemVariants}
+                className="pt-4 border-t border-stroke-subtle flex flex-wrap items-center justify-between gap-4 text-xs"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-semibold text-content-muted">
+                    External Identifiers:
+                  </span>
+                  {character.externalIds.tmdb && (
+                    <Badge variant="info" size="sm">
+                      TMDB Person #{character.externalIds.tmdb}
+                    </Badge>
                   )}
-              </div>
-              <div className="flex items-center gap-4 text-xs font-mono text-content-muted">
-                <span>Canonical ID: {character.canonicalId}</span>
-              </div>
-            </div>
-          </div>
+                </div>
 
-          {/* Aliases */}
-          {character.aliases && character.aliases.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
-                Known Aliases
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {character.aliases.map((alias) => (
-                  <Badge key={alias} variant="primary" size="md">
-                    <Tag className="w-3 h-3 mr-1" />
-                    {alias}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Overview */}
-          {character.overview && (
-            <div className="space-y-2">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
-                Biography & Lore Overview
-              </h2>
-              <p className="text-base text-content-secondary leading-relaxed">
-                {character.overview}
-              </p>
-            </div>
-          )}
-
-          {/* External Identifiers */}
-          {character.externalIds && (
-            <div className="pt-4 border-t border-stroke-subtle flex flex-wrap items-center justify-between gap-4 text-xs">
-              <div className="flex items-center gap-3">
-                <span className="font-semibold text-content-muted">
-                  External Identifiers:
-                </span>
                 {character.externalIds.tmdb && (
-                  <Badge variant="info" size="sm">
-                    TMDB Person #{character.externalIds.tmdb}
-                  </Badge>
+                  <a
+                    href={`https://www.themoviedb.org/person/${character.externalIds.tmdb}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-starkRed hover:underline font-medium"
+                  >
+                    View on TMDB <ExternalLink className="w-3 h-3" />
+                  </a>
                 )}
-              </div>
-
-              {character.externalIds.tmdb && (
-                <a
-                  href={`https://www.themoviedb.org/person/${character.externalIds.tmdb}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-starkRed hover:underline font-medium"
-                >
-                  View on TMDB <ExternalLink className="w-3 h-3" />
-                </a>
-              )}
-            </div>
-          )}
+              </motion.div>
+            )}
+          </motion.div>
         </Card.Body>
       </Card>
 

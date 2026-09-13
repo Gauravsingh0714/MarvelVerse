@@ -17,7 +17,7 @@ const CardComponent = forwardRef<HTMLDivElement, CardProps>(
         className={cn(
           'overflow-hidden flex flex-col',
           interactive &&
-            'cursor-pointer hover:shadow-lg hover:border-stroke-focus transition-all duration-150 active:scale-[0.99]',
+            'cursor-pointer hover:shadow-lg hover:-translate-y-1 hover:border-stroke-focus transition-all duration-150 active:scale-[0.99]',
           className
         )}
         {...props}

@@ -1,4 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
+import { heroStaggerContainer, heroItemVariants } from '../../utils/motion.js';
 import { useMovie, useMovieAppearances } from '../../hooks/useMovies.js';
 import { useCharacters } from '../../hooks/useCharacters.js';
 import {
@@ -31,6 +33,7 @@ import {
 export default function MovieDetail() {
   const { canonicalId } = useParams<{ canonicalId: string }>();
   const navigate = useNavigate();
+  const prefersReducedMotion = useReducedMotion();
 
   const {
     data: movie,
@@ -140,129 +143,151 @@ export default function MovieDetail() {
 
       {/* Main Movie Hero Card */}
       <Card className="border-stroke-subtle shadow-xl">
-        <Card.Body className="p-6 sm:p-8 space-y-6">
-          {/* Header Info */}
-          <div className="space-y-3 border-b border-stroke-subtle pb-6">
-            <div className="flex flex-wrap items-center gap-3">
-              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
-                {movie.title}
-              </h1>
-              {movie.originalTitle && movie.originalTitle !== movie.title && (
-                <span className="text-sm text-content-muted font-normal italic">
-                  ({movie.originalTitle})
-                </span>
-              )}
-            </div>
-
-            <div className="flex flex-wrap items-center gap-6 text-sm text-content-secondary">
-              <span className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-starkRed" />
-                {movie.releaseDate}
-              </span>
-              {movie.runtime && (
-                <span className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-vibraniumCyan" />
-                  {movie.runtime} minutes
-                </span>
-              )}
-              <span className="flex items-center gap-1.5 font-mono text-xs text-content-muted">
-                Canonical ID: {movie.canonicalId}
-              </span>
-            </div>
-          </div>
-
-          {/* Overview */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
-              Synopsis & Lore Overview
-            </h2>
-            <p className="text-base text-content-secondary leading-relaxed">
-              {movie.overview}
-            </p>
-          </div>
-
-          {/* Genres */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
-              Genres
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {movie.genres.map((genre) => (
-                <Badge key={genre} variant="default" size="md">
-                  <Tag className="w-3 h-3 text-content-secondary mr-1" />
-                  {genre}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          {/* Marvel Classification Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-stroke-subtle">
-            <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1">
-              <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
-                <Globe className="w-3.5 h-3.5 text-vibraniumCyan" />
-                Universe
-              </span>
-              <p className="text-sm font-bold text-content-primary">
-                {universeName}
-              </p>
-            </div>
-
-            <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1">
-              <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-statusWarning" />
-                Saga
-              </span>
-              <p className="text-sm font-bold text-content-primary">
-                {sagaName}
-              </p>
-            </div>
-
-            <Link
-              to="/timeline"
-              className="block group p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1 hover:border-starkRed/50 transition-colors"
+        <Card.Body className="p-6 sm:p-8 space-y-0">
+          <motion.div
+            variants={heroStaggerContainer}
+            initial={prefersReducedMotion ? false : 'initial'}
+            animate="animate"
+            className="space-y-6"
+          >
+            {/* Header Info */}
+            <motion.div
+              variants={prefersReducedMotion ? {} : heroItemVariants}
+              className="space-y-3 border-b border-stroke-subtle pb-6"
             >
-              <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-starkRed" />
-                Phase
-              </span>
-              <p className="text-sm font-bold text-content-primary group-hover:text-starkRed transition-colors">
-                {phaseName}
-              </p>
-            </Link>
-          </div>
-
-          {/* External Identifiers */}
-          {movie.externalIds && (
-            <div className="pt-4 border-t border-stroke-subtle flex flex-wrap items-center justify-between gap-4 text-xs">
-              <div className="flex items-center gap-3">
-                <span className="font-semibold text-content-muted">
-                  External Identifiers:
-                </span>
-                {movie.externalIds.tmdb && (
-                  <Badge variant="info" size="sm">
-                    TMDB #{movie.externalIds.tmdb}
-                  </Badge>
-                )}
-                {movie.externalIds.imdb && (
-                  <Badge variant="default" size="sm">
-                    IMDb #{movie.externalIds.imdb}
-                  </Badge>
+              <div className="flex flex-wrap items-center gap-3">
+                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
+                  {movie.title}
+                </h1>
+                {movie.originalTitle && movie.originalTitle !== movie.title && (
+                  <span className="text-sm text-content-muted font-normal italic">
+                    ({movie.originalTitle})
+                  </span>
                 )}
               </div>
 
-              {movie.externalIds.tmdb && (
-                <a
-                  href={`https://www.themoviedb.org/movie/${movie.externalIds.tmdb}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-starkRed hover:underline font-medium"
-                >
-                  View on TMDB <ExternalLink className="w-3 h-3" />
-                </a>
-              )}
-            </div>
-          )}
+              <div className="flex flex-wrap items-center gap-6 text-sm text-content-secondary">
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4 text-starkRed" />
+                  {movie.releaseDate}
+                </span>
+                {movie.runtime && (
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-vibraniumCyan" />
+                    {movie.runtime} minutes
+                  </span>
+                )}
+                <span className="flex items-center gap-1.5 font-mono text-xs text-content-muted">
+                  Canonical ID: {movie.canonicalId}
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Overview */}
+            <motion.div
+              variants={prefersReducedMotion ? {} : heroItemVariants}
+              className="space-y-2"
+            >
+              <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
+                Synopsis & Lore Overview
+              </h2>
+              <p className="text-base text-content-secondary leading-relaxed">
+                {movie.overview}
+              </p>
+            </motion.div>
+
+            {/* Genres */}
+            <motion.div
+              variants={prefersReducedMotion ? {} : heroItemVariants}
+              className="space-y-2"
+            >
+              <h2 className="text-xs font-bold uppercase tracking-wider text-content-muted">
+                Genres
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {movie.genres.map((genre) => (
+                  <Badge key={genre} variant="default" size="md">
+                    <Tag className="w-3 h-3 text-content-secondary mr-1" />
+                    {genre}
+                  </Badge>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Marvel Classification Grid */}
+            <motion.div
+              variants={prefersReducedMotion ? {} : heroItemVariants}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-stroke-subtle"
+            >
+              <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1">
+                <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
+                  <Globe className="w-3.5 h-3.5 text-vibraniumCyan" />
+                  Universe
+                </span>
+                <p className="text-sm font-bold text-content-primary">
+                  {universeName}
+                </p>
+              </div>
+
+              <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1">
+                <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-statusWarning" />
+                  Saga
+                </span>
+                <p className="text-sm font-bold text-content-primary">
+                  {sagaName}
+                </p>
+              </div>
+
+              <Link
+                to="/timeline"
+                className="block group p-4 rounded-lg bg-surface-raised border border-stroke-subtle space-y-1 hover:border-starkRed/50 transition-colors"
+              >
+                <span className="text-xs font-semibold text-content-muted flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-starkRed" />
+                  Phase
+                </span>
+                <p className="text-sm font-bold text-content-primary group-hover:text-starkRed transition-colors">
+                  {phaseName}
+                </p>
+              </Link>
+            </motion.div>
+
+            {/* External Identifiers */}
+            {movie.externalIds && (
+              <motion.div
+                variants={prefersReducedMotion ? {} : heroItemVariants}
+                className="pt-4 border-t border-stroke-subtle flex flex-wrap items-center justify-between gap-4 text-xs"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-semibold text-content-muted">
+                    External Identifiers:
+                  </span>
+                  {movie.externalIds.tmdb && (
+                    <Badge variant="info" size="sm">
+                      TMDB #{movie.externalIds.tmdb}
+                    </Badge>
+                  )}
+                  {movie.externalIds.imdb && (
+                    <Badge variant="default" size="sm">
+                      IMDb #{movie.externalIds.imdb}
+                    </Badge>
+                  )}
+                </div>
+
+                {movie.externalIds.tmdb && (
+                  <a
+                    href={`https://www.themoviedb.org/movie/${movie.externalIds.tmdb}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-starkRed hover:underline font-medium"
+                  >
+                    View on TMDB <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+              </motion.div>
+            )}
+          </motion.div>
         </Card.Body>
       </Card>
 

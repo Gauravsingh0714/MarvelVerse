@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
 import { useCharacters } from '../../hooks/useCharacters.js';
 import {
@@ -109,7 +110,7 @@ export default function Characters() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stroke-subtle pb-6">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-content-primary flex items-center gap-3">
+          <h1 className="text-3xl font-bold tracking-tight text-content-primary flex items-center gap-3">
             <Users className="w-8 h-8 text-starkRed" />
             Marvel Canonical Characters
           </h1>
@@ -178,76 +179,75 @@ export default function Characters() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCharacters.map((character) => (
-            <Link
-              key={character.canonicalId}
-              to={`/characters/${character.canonicalId}`}
-            >
-              <Card interactive className="h-full group border-stroke-subtle">
-                <Card.Header bordered className="py-3 px-5">
-                  <div className="flex items-center gap-2">
-                    {character.species && (
-                      <Badge variant="vibranium" size="sm">
-                        <Dna className="w-3 h-3 mr-1" />
-                        {character.species}
-                      </Badge>
-                    )}
-                  </div>
-                  {character.externalIds?.tmdb && (
-                    <span className="text-[11px] font-mono text-content-muted">
-                      TMDB #{character.externalIds.tmdb}
-                    </span>
-                  )}
-                </Card.Header>
-
-                <Card.Body className="space-y-3 p-5">
-                  <div className="flex items-center gap-3.5">
-                    <Avatar
-                      name={character.name}
-                      size="md"
-                      className="border border-starkRed/30"
-                    />
-                    <div className="space-y-0.5">
-                      <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
-                        {character.name}
-                      </h2>
-                      {character.realName && (
-                        <p className="text-xs font-medium text-content-muted">
-                          {character.realName}
-                        </p>
+            <ScrollReveal key={character.canonicalId}>
+              <Link to={`/characters/${character.canonicalId}`}>
+                <Card interactive className="h-full group border-stroke-subtle">
+                  <Card.Header bordered className="py-3 px-5">
+                    <div className="flex items-center gap-2">
+                      {character.species && (
+                        <Badge variant="vibranium" size="sm">
+                          <Dna className="w-3 h-3 mr-1" />
+                          {character.species}
+                        </Badge>
                       )}
                     </div>
-                  </div>
-
-                  {character.overview && (
-                    <p className="text-xs text-content-secondary line-clamp-3 leading-relaxed pt-1">
-                      {character.overview}
-                    </p>
-                  )}
-                </Card.Body>
-
-                <Card.Footer bordered className="py-3 px-5">
-                  <div className="flex flex-wrap gap-1.5 flex-1 mr-2">
-                    {character.aliases && character.aliases.length > 0 ? (
-                      character.aliases.slice(0, 2).map((alias) => (
-                        <Badge key={alias} variant="default" size="sm">
-                          <Tag className="w-2.5 h-2.5 mr-1" />
-                          {alias}
-                        </Badge>
-                      ))
-                    ) : (
+                    {character.externalIds?.tmdb && (
                       <span className="text-[11px] font-mono text-content-muted">
-                        ID: {character.canonicalId}
+                        TMDB #{character.externalIds.tmdb}
                       </span>
                     )}
-                  </div>
+                  </Card.Header>
 
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-starkRed group-hover:translate-x-0.5 transition-transform">
-                    Profile
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </Card.Footer>
-              </Card>
-            </Link>
+                  <Card.Body className="space-y-3 p-5">
+                    <div className="flex items-center gap-3.5">
+                      <Avatar
+                        name={character.name}
+                        size="md"
+                        className="border border-starkRed/30"
+                      />
+                      <div className="space-y-0.5">
+                        <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
+                          {character.name}
+                        </h2>
+                        {character.realName && (
+                          <p className="text-xs font-medium text-content-muted">
+                            {character.realName}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    {character.overview && (
+                      <p className="text-xs text-content-secondary line-clamp-3 leading-relaxed pt-1">
+                        {character.overview}
+                      </p>
+                    )}
+                  </Card.Body>
+
+                  <Card.Footer bordered className="py-3 px-5">
+                    <div className="flex flex-wrap gap-1.5 flex-1 mr-2">
+                      {character.aliases && character.aliases.length > 0 ? (
+                        character.aliases.slice(0, 2).map((alias) => (
+                          <Badge key={alias} variant="default" size="sm">
+                            <Tag className="w-2.5 h-2.5 mr-1" />
+                            {alias}
+                          </Badge>
+                        ))
+                      ) : (
+                        <span className="text-[11px] font-mono text-content-muted">
+                          ID: {character.canonicalId}
+                        </span>
+                      )}
+                    </div>
+
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-starkRed group-hover:translate-x-0.5 transition-transform">
+                      Profile
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Card.Footer>
+                </Card>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
       )}

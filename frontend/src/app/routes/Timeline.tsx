@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
 import {
   CanonicalSaga,
@@ -180,7 +181,7 @@ export default function Timeline() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stroke-subtle pb-6">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-content-primary flex items-center gap-3">
+          <h1 className="text-3xl font-bold tracking-tight text-content-primary flex items-center gap-3">
             <Clock className="w-8 h-8 text-starkRed" />
             MCU Chronological Timeline Explorer
           </h1>
@@ -305,63 +306,64 @@ export default function Timeline() {
                       ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                           {phaseGroup.movies.map((movie) => (
-                            <Link
-                              key={movie.canonicalId}
-                              to={`/movies/${movie.canonicalId}`}
-                              className="block group"
-                            >
-                              <Card
-                                interactive
-                                className="h-full border-stroke-subtle"
+                            <ScrollReveal key={movie.canonicalId}>
+                              <Link
+                                to={`/movies/${movie.canonicalId}`}
+                                className="block group"
                               >
-                                <Card.Header
-                                  bordered
-                                  className="py-2.5 px-4 flex items-center justify-between"
+                                <Card
+                                  interactive
+                                  className="h-full border-stroke-subtle"
                                 >
-                                  <Badge variant="primary" size="sm">
-                                    Release #{movie.releaseOrder}
-                                  </Badge>
-                                  <span className="text-xs font-mono text-content-muted">
-                                    {movie.releaseDate.slice(0, 4)}
-                                  </span>
-                                </Card.Header>
-
-                                <Card.Body className="p-4 space-y-2">
-                                  <h4 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors">
-                                    {movie.title}
-                                  </h4>
-
-                                  <div className="flex items-center gap-3 text-xs text-content-muted">
-                                    <span className="flex items-center gap-1">
-                                      <Calendar className="w-3 h-3 text-starkRed" />
-                                      {movie.releaseDate}
+                                  <Card.Header
+                                    bordered
+                                    className="py-2.5 px-4 flex items-center justify-between"
+                                  >
+                                    <Badge variant="primary" size="sm">
+                                      Release #{movie.releaseOrder}
+                                    </Badge>
+                                    <span className="text-xs font-mono text-content-muted">
+                                      {movie.releaseDate.slice(0, 4)}
                                     </span>
-                                    {movie.runtime && (
+                                  </Card.Header>
+
+                                  <Card.Body className="p-4 space-y-2">
+                                    <h4 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors">
+                                      {movie.title}
+                                    </h4>
+
+                                    <div className="flex items-center gap-3 text-xs text-content-muted">
                                       <span className="flex items-center gap-1">
-                                        <Clock className="w-3 h-3 text-vibraniumCyan" />
-                                        {movie.runtime} min
+                                        <Calendar className="w-3 h-3 text-starkRed" />
+                                        {movie.releaseDate}
                                       </span>
-                                    )}
-                                  </div>
+                                      {movie.runtime && (
+                                        <span className="flex items-center gap-1">
+                                          <Clock className="w-3 h-3 text-vibraniumCyan" />
+                                          {movie.runtime} min
+                                        </span>
+                                      )}
+                                    </div>
 
-                                  <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
-                                    {movie.overview}
-                                  </p>
-                                </Card.Body>
+                                    <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                                      {movie.overview}
+                                    </p>
+                                  </Card.Body>
 
-                                <Card.Footer
-                                  bordered
-                                  className="py-2.5 px-4 flex items-center justify-between text-xs"
-                                >
-                                  <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
-                                    {movie.canonicalId}
-                                  </span>
-                                  <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
-                                    Details <ArrowRight className="w-3 h-3" />
-                                  </span>
-                                </Card.Footer>
-                              </Card>
-                            </Link>
+                                  <Card.Footer
+                                    bordered
+                                    className="py-2.5 px-4 flex items-center justify-between text-xs"
+                                  >
+                                    <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
+                                      {movie.canonicalId}
+                                    </span>
+                                    <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
+                                      Details <ArrowRight className="w-3 h-3" />
+                                    </span>
+                                  </Card.Footer>
+                                </Card>
+                              </Link>
+                            </ScrollReveal>
                           ))}
                         </div>
                       )}

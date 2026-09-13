@@ -26,7 +26,7 @@ export type ButtonProps<C extends React.ElementType = 'button'> =
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    'bg-starkRed text-white hover:bg-starkRed/90 active:scale-[0.98] focus-visible:ring-starkRed',
+    'bg-stark text-white hover:bg-stark-hover active:scale-[0.98] focus-visible:ring-stark',
   secondary:
     'bg-surface-raised text-content-primary hover:bg-surface-glass border border-stroke-subtle active:scale-[0.98] focus-visible:ring-stroke-focus',
   outline:
