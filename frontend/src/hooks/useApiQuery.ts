@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useCallback } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { ApiClientError } from '../api/types.js';
 
 export interface ApiQueryResult<T> {
@@ -8,50 +9,42 @@ export interface ApiQueryResult<T> {
   refetch: () => void;
 }
 
+/**
+ * Thin adapter over TanStack useQuery that preserves the existing call-site
+ * contract: `useApiQuery(queryFn, deps)`.
+ *
+ * The deps array is used as the query key so TanStack can deduplicate and
+ * cache requests. Every value that queryFn closes over must be listed in deps
+ * (same rule as useCallback / useEffect).
+ */
 export function useApiQuery<T>(
   queryFn: () => Promise<T>,
   deps: any[] = []
 ): ApiQueryResult<T> {
-  const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<ApiClientError | Error | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  // Stable queryFn reference — callers already memoize this with useCallback.
+  // We wrap it in useCallback here as a safety net.
+  const stableQueryFn = useCallback(queryFn, deps); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const isMountedRef = useRef<boolean>(true);
+  const { data, error, isLoading, refetch } = useQuery<
+    T,
+    ApiClientError | Error
+  >({
+    // Prefix with 'api-query' to namespace away from any other query keys.
+    queryKey: ['api-query', ...deps],
+    queryFn: stableQueryFn,
+    // Propagate errors through the error field rather than throwing to an
+    // ErrorBoundary, preserving the existing per-page error handling.
+    throwOnError: false,
+  });
 
-  const executeQuery = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const result = await queryFn();
-      if (isMountedRef.current) {
-        setData(result);
-      }
-    } catch (err: any) {
-      if (isMountedRef.current) {
-        setError(err instanceof Error ? err : new Error(String(err)));
-      }
-    } finally {
-      if (isMountedRef.current) {
-        setIsLoading(false);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, deps);
-
-  useEffect(() => {
-    isMountedRef.current = true;
-    executeQuery();
-
-    return () => {
-      isMountedRef.current = false;
-    };
-  }, [executeQuery]);
+  const refetchCallback = useCallback(() => {
+    void refetch();
+  }, [refetch]);
 
   return {
-    data,
-    error,
+    data: data ?? null,
+    error: error ?? null,
     isLoading,
-    refetch: executeQuery,
+    refetch: refetchCallback,
   };
 }

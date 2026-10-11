@@ -206,11 +206,16 @@ export default function Timeline() {
       </div>
 
       {/* Saga Navigation Tabs / Pill Controls */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
+      <div
+        role="toolbar"
+        aria-label="Filter by saga"
+        className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin"
+      >
         <Button
           variant={selectedSagaId === 'all' ? 'primary' : 'secondary'}
           size="sm"
           onClick={() => setSelectedSagaId('all')}
+          aria-pressed={selectedSagaId === 'all'}
           leftIcon={<Layers className="w-4 h-4" />}
         >
           All Sagas ({movies?.length || 0} Releases)
@@ -226,6 +231,7 @@ export default function Timeline() {
               variant={selectedSagaId === saga.id ? 'primary' : 'secondary'}
               size="sm"
               onClick={() => setSelectedSagaId(saga.id)}
+              aria-pressed={selectedSagaId === saga.id}
             >
               {saga.name} ({count})
             </Button>

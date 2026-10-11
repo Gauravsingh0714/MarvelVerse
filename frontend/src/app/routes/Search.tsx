@@ -239,11 +239,16 @@ export default function Search() {
 
         {/* Category Filter Pills */}
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
+          <div
+            role="toolbar"
+            aria-label="Filter by category"
+            className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin"
+          >
             <Button
               variant={activeCategory === 'all' ? 'primary' : 'secondary'}
               size="sm"
               onClick={() => setActiveCategory('all')}
+              aria-pressed={activeCategory === 'all'}
             >
               All Results {normalizedQuery && `(${totalResultsCount})`}
             </Button>
@@ -251,6 +256,7 @@ export default function Search() {
               variant={activeCategory === 'movies' ? 'primary' : 'secondary'}
               size="sm"
               onClick={() => setActiveCategory('movies')}
+              aria-pressed={activeCategory === 'movies'}
               leftIcon={<Film className="w-3.5 h-3.5" />}
             >
               Movies {normalizedQuery && `(${matchingMovies.length})`}
@@ -261,6 +267,7 @@ export default function Search() {
               }
               size="sm"
               onClick={() => setActiveCategory('characters')}
+              aria-pressed={activeCategory === 'characters'}
               leftIcon={<Users className="w-3.5 h-3.5" />}
             >
               Characters {normalizedQuery && `(${matchingCharacters.length})`}

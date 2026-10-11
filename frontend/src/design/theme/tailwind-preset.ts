@@ -28,10 +28,18 @@ export const tailwindPreset = {
           DEFAULT: 'var(--color-stark-red)',
           hover: 'var(--color-stark-red-hover)',
         },
+        // Alias used in legacy JSX (text-starkRed, bg-starkRed, etc.)
+        starkRed: 'var(--color-stark-red)',
+        vibraniumCyan: 'var(--color-vibranium-cyan)',
         vibranium: 'var(--color-vibranium-cyan)',
         infinity: 'var(--color-infinity-gold)',
         cosmic: 'var(--color-cosmic-purple)',
         tva: 'var(--color-tva-amber)',
+        // Status tokens (used by Alert, Badge, sidebar icons)
+        statusSuccess: 'var(--color-status-success)',
+        statusWarning: 'var(--color-status-warning)',
+        statusError: 'var(--color-status-error)',
+        statusInfo: 'var(--color-status-info)',
       },
       fontFamily: {
         display: ['var(--font-family-display)'],

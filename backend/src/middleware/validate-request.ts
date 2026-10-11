@@ -18,7 +18,8 @@ export function validateQuery(schema: ZodSchema) {
   return (req: Request, _res: Response, next: NextFunction) => {
     const result = schema.safeParse(req.query);
     if (!result.success) {
-      return next(new ApiValidationError('Invalid request parameters'));
+      const msg = result.error.issues.map((i) => i.message).join('; ');
+      return next(new ApiValidationError(msg || 'Invalid request parameters'));
     }
     req.query = result.data as any;
     next();
