@@ -124,6 +124,7 @@ export default function Characters() {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
           <div className="w-full sm:w-64">
             <Input
+              aria-label="Search characters"
               placeholder="Search name, alias, or species..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -133,6 +134,7 @@ export default function Characters() {
 
           <div className="w-full sm:w-48">
             <Select
+              aria-label="Filter by species"
               value={speciesFilter}
               onChange={(e) => setSpeciesFilter(e.target.value)}
             >

@@ -9,9 +9,13 @@ export interface ApiQueryResult<T> {
   refetch: () => void;
 }
 
+export interface UseApiQueryOptions {
+  enabled?: boolean;
+}
+
 /**
  * Thin adapter over TanStack useQuery that preserves the existing call-site
- * contract: `useApiQuery(queryFn, deps)`.
+ * contract: `useApiQuery(queryFn, deps, options)`.
  *
  * The deps array is used as the query key so TanStack can deduplicate and
  * cache requests. Every value that queryFn closes over must be listed in deps
@@ -19,7 +23,8 @@ export interface ApiQueryResult<T> {
  */
 export function useApiQuery<T>(
   queryFn: () => Promise<T>,
-  deps: any[] = []
+  deps: any[] = [],
+  options: UseApiQueryOptions = {}
 ): ApiQueryResult<T> {
   // Stable queryFn reference — callers already memoize this with useCallback.
   // We wrap it in useCallback here as a safety net.
@@ -32,6 +37,7 @@ export function useApiQuery<T>(
     // Prefix with 'api-query' to namespace away from any other query keys.
     queryKey: ['api-query', ...deps],
     queryFn: stableQueryFn,
+    enabled: options.enabled ?? true,
     // Propagate errors through the error field rather than throwing to an
     // ErrorBoundary, preserving the existing per-page error handling.
     throwOnError: false,

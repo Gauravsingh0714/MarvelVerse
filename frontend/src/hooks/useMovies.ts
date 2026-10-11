@@ -28,7 +28,9 @@ export function useMovie(
     return movieService.getMovieByCanonicalId(canonicalId);
   }, [canonicalId]);
 
-  return useApiQuery<CanonicalMovie>(queryFn, [canonicalId]);
+  return useApiQuery<CanonicalMovie>(queryFn, [canonicalId], {
+    enabled: Boolean(canonicalId),
+  });
 }
 
 export function useMovieAppearances(
@@ -39,5 +41,7 @@ export function useMovieAppearances(
     return movieService.getMovieAppearances(movieId);
   }, [movieId]);
 
-  return useApiQuery<CanonicalAppearance[]>(queryFn, [movieId]);
+  return useApiQuery<CanonicalAppearance[]>(queryFn, [movieId], {
+    enabled: Boolean(movieId),
+  });
 }

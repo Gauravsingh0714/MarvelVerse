@@ -17,7 +17,9 @@ export function useCharacter(
     return characterService.getCharacterByCanonicalId(canonicalId);
   }, [canonicalId]);
 
-  return useApiQuery<CanonicalCharacter>(queryFn, [canonicalId]);
+  return useApiQuery<CanonicalCharacter>(queryFn, [canonicalId], {
+    enabled: Boolean(canonicalId),
+  });
 }
 
 export function useCharacterAppearances(
@@ -29,5 +31,7 @@ export function useCharacterAppearances(
     return characterService.getCharacterAppearances(characterId);
   }, [characterId]);
 
-  return useApiQuery<CanonicalAppearance[]>(queryFn, [characterId]);
+  return useApiQuery<CanonicalAppearance[]>(queryFn, [characterId], {
+    enabled: Boolean(characterId),
+  });
 }

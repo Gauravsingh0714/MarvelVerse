@@ -114,6 +114,7 @@ export default function Movies() {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
           <div className="w-full sm:w-64">
             <Input
+              aria-label="Search movies"
               placeholder="Search movie title or genre..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -123,6 +124,7 @@ export default function Movies() {
 
           <div className="w-full sm:w-48">
             <Select
+              aria-label="Filter by phase"
               value={phaseFilter}
               onChange={(e) => setPhaseFilter(e.target.value)}
             >
