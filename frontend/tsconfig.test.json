@@ -10,9 +10,21 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      "@app/*": ["src/app/*"],
+      "@components/*": ["src/components/*"],
+      "@features/*": ["src/features/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@providers/*": ["src/providers/*"],
+      "@services/*": ["src/services/*"],
+      "@store/*": ["src/store/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
+      "@config/*": ["src/config/*"],
       "@marvelverse/shared": ["../shared/src/index.ts"]
     },
     "types": ["node"]
   },
-  "include": ["tests/**/*"]
+  "include": ["tests/**/*", "src/**/*"]
 }

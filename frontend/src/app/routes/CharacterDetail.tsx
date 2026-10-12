@@ -128,7 +128,7 @@ export default function CharacterDetail() {
           {character.verification?.status && (
             <Badge variant="primary" size="md">
               <Shield className="w-3.5 h-3.5 mr-1" />
-              {character.verification.status.toUpperCase()}
+              {character.verification.status?.toUpperCase() || ''}
             </Badge>
           )}
         </div>

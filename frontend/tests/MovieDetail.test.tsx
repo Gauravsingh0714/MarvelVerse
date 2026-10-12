@@ -110,3 +110,107 @@ test('MovieDetail - renders movie data and appearances without .map crash', () =
     queryClient.getQueryData(queryKeys.movies.appearances('mv-movie-iron-man'))
   );
 });
+
+test('MovieDetail - renders loading state without toUpperCase crash when cache is empty', () => {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { retry: false } },
+  });
+
+  let html = '';
+  assert.doesNotThrow(() => {
+    html = renderToString(
+      React.createElement(
+        QueryClientProvider,
+        { client: queryClient },
+        React.createElement(
+          MemoryRouter,
+          { initialEntries: ['/movies/mv-movie-the-incredible-hulk'] },
+          React.createElement(
+            Routes,
+            null,
+            React.createElement(Route, {
+              path: '/movies/:canonicalId',
+              element: React.createElement(MovieDetail),
+            })
+          )
+        )
+      )
+    );
+  });
+
+  // Verify skeleton loading rendered rather than crashing with TypeError
+  assert.equal(html.length > 0, true);
+});
+
+test('MovieDetail - renders other canonical movies (The Incredible Hulk, The Avengers)', () => {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { retry: false } },
+  });
+
+  const mockHulkMovie = {
+    canonicalId: 'mv-movie-the-incredible-hulk',
+    title: 'The Incredible Hulk',
+    phaseId: 'phase-1',
+    sagaId: 'infinity-saga',
+    universeId: 'earth-616',
+    releaseDate: '2008-06-12',
+    runtime: 114,
+    overview: 'Scientist Bruce Banner scours the planet for an antidote.',
+    genres: ['Science Fiction', 'Action'],
+    externalIds: { tmdb: 1724 },
+  };
+
+  const mockHulkAppearances = [
+    {
+      canonicalId: 'mv-app-bruce-banner-hulk',
+      characterId: 'mv-character-bruce-banner',
+      mediaCanonicalId: 'mv-movie-the-incredible-hulk',
+      roleName: 'Bruce Banner / The Hulk',
+    },
+  ];
+
+  const mockCharacters = [
+    {
+      canonicalId: 'mv-character-bruce-banner',
+      name: 'Bruce Banner',
+    },
+  ];
+
+  queryClient.setQueryData(
+    queryKeys.movies.detail('mv-movie-the-incredible-hulk'),
+    mockHulkMovie
+  );
+  queryClient.setQueryData(
+    queryKeys.movies.appearances('mv-movie-the-incredible-hulk'),
+    mockHulkAppearances
+  );
+  queryClient.setQueryData(queryKeys.characters.list(), mockCharacters);
+  queryClient.setQueryData(queryKeys.foundation.phases(), [
+    { id: 'phase-1', name: 'Phase One' },
+  ]);
+
+  let html = '';
+  assert.doesNotThrow(() => {
+    html = renderToString(
+      React.createElement(
+        QueryClientProvider,
+        { client: queryClient },
+        React.createElement(
+          MemoryRouter,
+          { initialEntries: ['/movies/mv-movie-the-incredible-hulk'] },
+          React.createElement(
+            Routes,
+            null,
+            React.createElement(Route, {
+              path: '/movies/:canonicalId',
+              element: React.createElement(MovieDetail),
+            })
+          )
+        )
+      )
+    );
+  });
+
+  assert.equal(html.includes('The Incredible Hulk'), true);
+  assert.equal(html.includes('Bruce Banner'), true);
+});

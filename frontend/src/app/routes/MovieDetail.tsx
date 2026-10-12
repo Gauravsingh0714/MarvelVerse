@@ -54,15 +54,17 @@ export default function MovieDetail() {
   const { data: sagas } = useSagas();
   const { data: universes } = useUniverses();
 
-  // Resolve display names
+  // Resolve display names safely (prevent TypeError during loading or undefined states)
   const phaseName =
     phases?.find((p) => p.id === movie?.phaseId)?.name ||
-    movie?.phaseId.toUpperCase();
+    movie?.phaseId?.toUpperCase() ||
+    '';
   const sagaName =
-    sagas?.find((s) => s.id === movie?.sagaId)?.name || movie?.sagaId;
+    sagas?.find((s) => s.id === movie?.sagaId)?.name || movie?.sagaId || '';
   const universeName =
     universes?.find((u) => u.id === movie?.universeId)?.name ||
-    movie?.universeId;
+    movie?.universeId ||
+    '';
 
   if (isMovieLoading) {
     return (

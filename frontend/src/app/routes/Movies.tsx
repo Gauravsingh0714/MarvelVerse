@@ -180,7 +180,8 @@ export default function Movies() {
                     </Badge>
                     <Badge variant="vibranium" size="sm">
                       {phases?.find((p) => p.id === movie.phaseId)?.name ||
-                        movie.phaseId.toUpperCase()}
+                        movie.phaseId?.toUpperCase() ||
+                        ''}
                     </Badge>
                   </Card.Header>
 
