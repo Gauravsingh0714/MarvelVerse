@@ -16,6 +16,7 @@ import {
   NavigationSection,
   NavigationItem,
   BreadcrumbItemData,
+  ShellProvider,
 } from '../../components/shell';
 import { useShellActions } from '../../components/shell/ShellContext/ShellContext';
 import { IconButton } from '../../components/ui/Button/Button';
@@ -218,7 +219,17 @@ export const AppLayoutContent: React.FC = () => {
 };
 
 export const AppLayout: React.FC = () => {
-  return <AppLayoutContent />;
+  return (
+    <ShellProvider
+      sidebarConfig={{
+        collapsible: true,
+        defaultCollapsed: false,
+        persist: true,
+      }}
+    >
+      <AppLayoutContent />
+    </ShellProvider>
+  );
 };
 
 export default AppLayout;

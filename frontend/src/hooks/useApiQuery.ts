@@ -11,15 +11,15 @@ export interface ApiQueryResult<T> {
 
 export interface UseApiQueryOptions {
   enabled?: boolean;
+  queryKey?: readonly unknown[];
 }
 
 /**
  * Thin adapter over TanStack useQuery that preserves the existing call-site
  * contract: `useApiQuery(queryFn, deps, options)`.
  *
- * The deps array is used as the query key so TanStack can deduplicate and
- * cache requests. Every value that queryFn closes over must be listed in deps
- * (same rule as useCallback / useEffect).
+ * If `options.queryKey` is provided, it is used as the distinct TanStack query key.
+ * Otherwise, `['api-query', ...deps]` is used as the fallback query key.
  */
 export function useApiQuery<T>(
   queryFn: () => Promise<T>,
@@ -30,12 +30,13 @@ export function useApiQuery<T>(
   // We wrap it in useCallback here as a safety net.
   const stableQueryFn = useCallback(queryFn, deps); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const effectiveQueryKey = options.queryKey ?? ['api-query', ...deps];
+
   const { data, error, isLoading, refetch } = useQuery<
     T,
     ApiClientError | Error
   >({
-    // Prefix with 'api-query' to namespace away from any other query keys.
-    queryKey: ['api-query', ...deps],
+    queryKey: effectiveQueryKey,
     queryFn: stableQueryFn,
     enabled: options.enabled ?? true,
     // Propagate errors through the error field rather than throwing to an

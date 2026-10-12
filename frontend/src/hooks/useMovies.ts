@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import { CanonicalMovie, CanonicalAppearance } from '@marvelverse/shared';
 import { movieService, MovieFilters } from '../services/movie.service.js';
 import { useApiQuery, ApiQueryResult } from './useApiQuery.js';
+import { queryKeys } from './queryKeys.js';
 
 export function useMovies(
   filters: MovieFilters = {}
@@ -11,12 +12,13 @@ export function useMovies(
     [filters.universeId, filters.sagaId, filters.phaseId, filters.sort]
   );
 
-  return useApiQuery<CanonicalMovie[]>(queryFn, [
-    filters.universeId,
-    filters.sagaId,
-    filters.phaseId,
-    filters.sort,
-  ]);
+  return useApiQuery<CanonicalMovie[]>(
+    queryFn,
+    [filters.universeId, filters.sagaId, filters.phaseId, filters.sort],
+    {
+      queryKey: queryKeys.movies.list(filters),
+    }
+  );
 }
 
 export function useMovie(
@@ -30,6 +32,7 @@ export function useMovie(
 
   return useApiQuery<CanonicalMovie>(queryFn, [canonicalId], {
     enabled: Boolean(canonicalId),
+    queryKey: queryKeys.movies.detail(canonicalId),
   });
 }
 
@@ -43,5 +46,6 @@ export function useMovieAppearances(
 
   return useApiQuery<CanonicalAppearance[]>(queryFn, [movieId], {
     enabled: Boolean(movieId),
+    queryKey: queryKeys.movies.appearances(movieId),
   });
 }

@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import { cn } from '../../../utils/cn';
 import {
   NavigationItem,
   NavigationSection,
   ShellSidebarConfig,
 } from '../types/shell.types';
-import { ShellProvider } from '../ShellContext/ShellContext';
+import { ShellProvider, ShellStateContext } from '../ShellContext/ShellContext';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { MobileNav } from '../MobileNav/MobileNav';
 import { AppHeader } from '../Header/AppHeader';
@@ -104,6 +104,10 @@ AppShellContent.displayName = 'AppShellContent';
 
 export const AppShell = forwardRef<HTMLDivElement, AppShellProps>(
   ({ sidebarConfig, ...props }, ref) => {
+    const parentContext = useContext(ShellStateContext);
+    if (parentContext) {
+      return <AppShellContent ref={ref} {...props} />;
+    }
     return (
       <ShellProvider sidebarConfig={sidebarConfig}>
         <AppShellContent ref={ref} {...props} />

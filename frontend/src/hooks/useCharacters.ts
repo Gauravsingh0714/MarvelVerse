@@ -2,10 +2,13 @@ import { useCallback } from 'react';
 import { CanonicalCharacter, CanonicalAppearance } from '@marvelverse/shared';
 import { characterService } from '../services/character.service.js';
 import { useApiQuery, ApiQueryResult } from './useApiQuery.js';
+import { queryKeys } from './queryKeys.js';
 
 export function useCharacters(): ApiQueryResult<CanonicalCharacter[]> {
   const queryFn = useCallback(() => characterService.getCharacters(), []);
-  return useApiQuery<CanonicalCharacter[]>(queryFn, []);
+  return useApiQuery<CanonicalCharacter[]>(queryFn, [], {
+    queryKey: queryKeys.characters.list(),
+  });
 }
 
 export function useCharacter(
@@ -19,6 +22,7 @@ export function useCharacter(
 
   return useApiQuery<CanonicalCharacter>(queryFn, [canonicalId], {
     enabled: Boolean(canonicalId),
+    queryKey: queryKeys.characters.detail(canonicalId),
   });
 }
 
@@ -33,5 +37,6 @@ export function useCharacterAppearances(
 
   return useApiQuery<CanonicalAppearance[]>(queryFn, [characterId], {
     enabled: Boolean(characterId),
+    queryKey: queryKeys.characters.appearances(characterId),
   });
 }

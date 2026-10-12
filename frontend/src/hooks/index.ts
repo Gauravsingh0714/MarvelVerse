@@ -1,5 +1,6 @@
 export * from './useTheme.js';
 export * from './useApiQuery.js';
+export * from './queryKeys.js';
 export * from './useMovies.js';
 export * from './useCharacters.js';
 export * from './useFoundation.js';
