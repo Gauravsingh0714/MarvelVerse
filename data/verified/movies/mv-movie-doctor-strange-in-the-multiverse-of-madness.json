@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-doctor-strange-in-the-multiverse-of-madness",
+  "title": "Doctor Strange in the Multiverse of Madness",
+  "releaseDate": "2022-05-06",
+  "releaseOrder": 28,
+  "runtime": 126,
+  "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+  "posterPath": "/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
+  "backdropPath": "/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
+  "genres": ["Fantasy", "Action", "Adventure"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 453395,
+    "imdb": "tt9419884"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 453395,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 4 release #28."
+  }
+}

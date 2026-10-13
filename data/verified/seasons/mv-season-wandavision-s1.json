@@ -1,0 +1,58 @@
+{
+  "canonicalId": "mv-season-wandavision-s1",
+  "tvCanonicalId": "mv-series-wandavision",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Wanda Maximoff and Vision navigate classic sitcom tropes through the decades while living in the idyllic town of Westview.",
+  "airDate": "2021-01-15",
+  "episodeCount": 9,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-wandavision-s1-e1",
+      "episodeNumber": 1,
+      "title": "Filmed Before a Live Studio Audience",
+      "overview": "Wanda and Vision struggle to conceal their powers during a dinner party for Vision's boss.",
+      "airDate": "2021-01-15",
+      "runtime": 30
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-wandavision-s1-e2",
+      "episodeNumber": 2,
+      "title": "Don't Touch That Dial",
+      "overview": "In an effort to blend in, Wanda and Vision perform a magic act in their neighborhood talent show.",
+      "airDate": "2021-01-15",
+      "runtime": 37
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-wandavision-s1-e8",
+      "episodeNumber": 8,
+      "title": "Previously On",
+      "overview": "Wanda embarks on a troubling journey revisiting her past for insight into her present and future.",
+      "airDate": "2021-02-26",
+      "runtime": 43
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-wandavision-s1-e9",
+      "episodeNumber": 9,
+      "title": "The Series Finale",
+      "overview": "The events of WandaVision come to a head and the destiny of the Scarlet Witch is realized.",
+      "airDate": "2021-03-05",
+      "runtime": 50
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 85271,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Verified WandaVision Season 1 canonical record."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-wandavision",
+  "title": "WandaVision",
+  "firstAirDate": "2021-01-15",
+  "lastAirDate": "2021-03-05",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 9,
+  "overview": "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+  "posterPath": "/glKDwgW499FeDIyd9oqGI4055As.jpg",
+  "backdropPath": "/57vVjteucIF3LGnptMuTQioLVSA.jpg",
+  "genres": ["Sci-Fi & Fantasy", "Mystery", "Drama"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 85271,
+    "imdb": "tt9140554"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 85271,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 4 TV Series #1."
+  }
+}

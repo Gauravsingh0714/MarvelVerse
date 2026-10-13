@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sam-wilson-winter-soldier",
+  "characterId": "mv-character-sam-wilson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-winter-soldier",
+  "roleName": "Sam Wilson / Falcon",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

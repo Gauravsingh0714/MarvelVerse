@@ -1,0 +1,40 @@
+{
+  "canonicalId": "mv-season-loki-s2",
+  "tvCanonicalId": "mv-series-loki",
+  "seasonNumber": 2,
+  "title": "Season 2",
+  "overview": "Loki navigates timeslipping and the impending collapse of the Temporal Loom across the multiverse.",
+  "airDate": "2023-10-05",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-loki-s2-e1",
+      "episodeNumber": 1,
+      "title": "Ouroboros",
+      "overview": "Loki finds himself slipping through time and seeks the help of OB in the TVA basement.",
+      "airDate": "2023-10-05",
+      "runtime": 47
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-loki-s2-e6",
+      "episodeNumber": 6,
+      "title": "Glorious Purpose",
+      "overview": "Loki learns the true nature of time, burdens himself with glorious purpose, and ascends the throne at the center of the multiverse.",
+      "airDate": "2023-11-09",
+      "runtime": 58
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 84958,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Verified Loki Season 2 canonical record."
+  }
+}

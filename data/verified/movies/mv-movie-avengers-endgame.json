@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-avengers-endgame",
+  "title": "Avengers: Endgame",
+  "releaseDate": "2019-04-26",
+  "releaseOrder": 22,
+  "runtime": 181,
+  "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more.",
+  "posterPath": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+  "backdropPath": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+  "genres": ["Adventure", "Science Fiction", "Action"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 299534,
+    "imdb": "tt4154796"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 299534,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 3 release #22."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-stephen-strange",
+  "name": "Stephen Strange",
+  "realName": "Stephen Vincent Strange",
+  "aliases": ["Doctor Strange"],
+  "species": "Human",
+  "overview": "A brilliant but arrogant neurosurgeon who discovered the mystic arts after a devastating car accident and became Master of the Mystic Arts.",
+  "externalIds": {
+    "tmdb": 71580
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 71580,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Lead character in Doctor Strange in the Multiverse of Madness."
+  }
+}

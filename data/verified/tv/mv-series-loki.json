@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-loki",
+  "title": "Loki",
+  "firstAirDate": "2021-06-09",
+  "lastAirDate": "2023-11-09",
+  "numberOfSeasons": 2,
+  "numberOfEpisodes": 12,
+  "overview": "After stealing the Tesseract during the events of Avengers: Endgame, an alternate version of Loki is brought to the mysterious Time Variance Authority.",
+  "posterPath": "/voHUml0MtOmAtPjFqNqTqkY492.jpg",
+  "backdropPath": "/k47JEUTQsSMN532HRg6R8tlNL98.jpg",
+  "genres": ["Drama", "Sci-Fi & Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 84958,
+    "imdb": "tt9140560"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 84958,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 4 TV Series #3."
+  }
+}

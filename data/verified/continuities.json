@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cont-core-mcu",
+    "name": "Core MCU",
+    "tier": "core-mcu",
+    "description": "Sacred Timeline and primary Marvel Cinematic Universe continuity produced by Marvel Studios."
+  },
+  {
+    "id": "cont-connected-multiverse",
+    "name": "Connected Multiverse",
+    "tier": "connected-multiverse",
+    "description": "Branching timelines, alternate dimensions, and multiverse realities interacting directly with Earth-616."
+  },
+  {
+    "id": "cont-legacy-adjacent",
+    "name": "Legacy Adjacent",
+    "tier": "legacy-adjacent",
+    "description": "Pre-MCU Marvel franchise universes and legacy timelines (e.g., Earth-10005) acknowledged via the multiverse."
+  },
+  {
+    "id": "cont-future-verified",
+    "name": "Future Verified",
+    "tier": "future-verified",
+    "description": "Officially announced and planned Marvel Studios productions."
+  }
+]

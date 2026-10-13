@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-vision",
+  "name": "Vision",
+  "realName": "Vision",
+  "aliases": ["The Vision", "White Vision"],
+  "species": "Synthezoid",
+  "overview": "A sapient synthezoid created by Ultron using vibranium and the Mind Stone, brought to life with Tony Stark's JARVIS protocol.",
+  "externalIds": {
+    "tmdb": 550844
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 550844,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Co-lead in WandaVision."
+  }
+}

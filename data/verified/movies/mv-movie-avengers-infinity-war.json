@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-avengers-infinity-war",
+  "title": "Avengers: Infinity War",
+  "releaseDate": "2018-04-27",
+  "releaseOrder": 19,
+  "runtime": 149,
+  "overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos.",
+  "posterPath": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+  "backdropPath": "/mDfJG3LC3Djh67UkHumAB55umye.jpg",
+  "genres": ["Adventure", "Action", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 299536,
+    "imdb": "tt4154756"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 299536,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 3 release #19."
+  }
+}

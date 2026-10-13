@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-logan-deadpool-wolverine",
+  "characterId": "mv-character-logan-wolverine",
+  "characterVariantId": "mv-variant-wolverine-worst",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-deadpool-and-wolverine",
+  "roleName": "Logan / Wolverine",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

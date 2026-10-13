@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-wade-wilson",
+  "name": "Wade Wilson",
+  "realName": "Wade Winston Wilson",
+  "aliases": ["Deadpool", "Merc with a Mouth"],
+  "species": "Human (Mutate)",
+  "overview": "A quick-witted Canadian mercenary with accelerated healing factor originating from Earth-10005 who traverses the multiverse to protect his world.",
+  "externalIds": {
+    "tmdb": 10859
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 10859,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Co-lead character in Deadpool & Wolverine."
+  }
+}

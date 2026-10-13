@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-deadpool-and-wolverine",
+  "title": "Deadpool & Wolverine",
+  "releaseDate": "2024-07-26",
+  "releaseOrder": 34,
+  "runtime": 128,
+  "overview": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+  "posterPath": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+  "backdropPath": "/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
+  "genres": ["Action", "Comedy", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 533535,
+    "imdb": "tt6263850"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 533535,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 5 release #34."
+  }
+}

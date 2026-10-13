@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-sam-wilson",
+  "name": "Sam Wilson",
+  "realName": "Samuel Thomas Wilson",
+  "aliases": ["Falcon", "Captain America"],
+  "species": "Human",
+  "overview": "Former United States Air Force parajumper who flies using an experimental winged flight suit and becomes Steve Rogers' trusted ally.",
+  "externalIds": {
+    "tmdb": 53650
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 53650,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Introduced in Captain America: The Winter Soldier."
+  }
+}

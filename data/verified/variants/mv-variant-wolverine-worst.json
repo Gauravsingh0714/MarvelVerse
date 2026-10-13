@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-variant-wolverine-worst",
+  "baseCharacterId": "mv-character-logan-wolverine",
+  "name": "Wolverine (Worst Wolverine Variant)",
+  "variantDesignation": "The Worst Wolverine",
+  "universeId": "the-void",
+  "overview": "A guilt-ridden variant of Logan from an alternate timeline who failed to protect the X-Men of his world, banished to The Void.",
+  "externalIds": {
+    "tmdb": 6968
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 6968,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Co-lead variant character in Deadpool & Wolverine."
+  }
+}

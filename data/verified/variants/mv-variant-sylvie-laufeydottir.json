@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-variant-sylvie-laufeydottir",
+  "baseCharacterId": "mv-character-loki-laufeyson",
+  "name": "Sylvie Laufeydottir",
+  "variantDesignation": "Sylvie",
+  "universeId": "earth-616",
+  "overview": "A female variant of Loki on a lifelong mission to take down the Time Variance Authority and free the multiverse.",
+  "externalIds": {
+    "tmdb": 2244445
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 2244445,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Key variant character in Loki Series Seasons 1 and 2."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-wanda-maximoff",
+  "name": "Wanda Maximoff",
+  "realName": "Wanda Maximoff",
+  "aliases": ["Scarlet Witch"],
+  "species": "Human (Witch)",
+  "overview": "A Sokovian native born with innate magical abilities amplified by the Mind Stone who ascended to become the mythical Scarlet Witch.",
+  "externalIds": {
+    "tmdb": 550843
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 550843,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Lead character in WandaVision and Doctor Strange in the Multiverse of Madness."
+  }
+}

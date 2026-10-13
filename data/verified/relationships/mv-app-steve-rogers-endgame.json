@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-steve-rogers-endgame",
+  "characterId": "mv-character-steve-rogers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Steve Rogers / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

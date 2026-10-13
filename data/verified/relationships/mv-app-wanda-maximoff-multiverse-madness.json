@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wanda-maximoff-multiverse-madness",
+  "characterId": "mv-character-wanda-maximoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-doctor-strange-in-the-multiverse-of-madness",
+  "roleName": "Wanda Maximoff / Scarlet Witch",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

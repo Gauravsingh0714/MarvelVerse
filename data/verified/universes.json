@@ -1,10 +1,26 @@
 [
   {
     "id": "earth-616",
-    "name": "Earth-616"
+    "name": "Earth-616",
+    "description": "The Sacred Timeline and primary reality of the Marvel Cinematic Universe.",
+    "continuityTier": "core-mcu"
   },
   {
     "id": "earth-838",
-    "name": "Earth-838"
+    "name": "Earth-838",
+    "description": "An alternate universe governed by the Illuminati.",
+    "continuityTier": "connected-multiverse"
+  },
+  {
+    "id": "earth-10005",
+    "name": "Earth-10005",
+    "description": "The 20th Century Fox X-Men cinematic timeline.",
+    "continuityTier": "legacy-adjacent"
+  },
+  {
+    "id": "the-void",
+    "name": "The Void",
+    "description": "A purgatory dimension at the end of time where the TVA prunes alternate timelines and variants.",
+    "continuityTier": "connected-multiverse"
   }
 ]

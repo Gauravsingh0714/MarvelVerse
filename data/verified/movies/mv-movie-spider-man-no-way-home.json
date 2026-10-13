@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-spider-man-no-way-home",
+  "title": "Spider-Man: No Way Home",
+  "releaseDate": "2021-12-17",
+  "releaseOrder": 27,
+  "runtime": 148,
+  "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous.",
+  "posterPath": "/5weKu49Gcw090Y74qjeACIRurBY.jpg",
+  "backdropPath": "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 634649,
+    "imdb": "tt10872600"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 634649,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 4 release #27."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "canonicalId": "mv-movie-avengers-doomsday",
+  "title": "Avengers: Doomsday",
+  "releaseDate": "2026-12-18",
+  "releaseOrder": 39,
+  "runtime": null,
+  "overview": "The upcoming fifth Avengers film in the Marvel Cinematic Universe and the conclusion lead-in of the Multiverse Saga.",
+  "posterPath": "/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
+  "backdropPath": "/6KDDoTq8Vq3HuQHULzuvPiCJbMI.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-6",
+  "releaseDateRecord": {
+    "rawDate": "2026-12-18",
+    "status": "unreleased",
+    "precision": "day",
+    "source": "Walt Disney Studios / Marvel Studios Theatrical Release Schedule"
+  },
+  "chronology": {
+    "storyYear": null,
+    "storyDate": null,
+    "precision": "unknown",
+    "storyOrderIndex": null,
+    "notes": "Unreleased production; narrative story placement unknown until release."
+  },
+  "externalIds": {
+    "tmdb": 1003596
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1003596,
+    "sourceUri": "https://www.themoviedb.org/movie/1003596",
+    "method": "official-announcement",
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Theatrical release scheduled for December 18, 2026 (rescheduled from May 1, 2026); runtime unreleased; in-universe story chronology unconfirmed and preserved as null."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-steve-rogers-winter-soldier",
+  "characterId": "mv-character-steve-rogers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-winter-soldier",
+  "roleName": "Steve Rogers / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

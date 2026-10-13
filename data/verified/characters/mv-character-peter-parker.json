@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-peter-parker",
+  "name": "Peter Parker",
+  "realName": "Peter Benjamin Parker",
+  "aliases": ["Spider-Man"],
+  "species": "Human (Mutate)",
+  "overview": "A Queens teenager who gained spider-like abilities after being bitten by a radioactive spider and was mentored by Tony Stark.",
+  "externalIds": {
+    "tmdb": 1136406
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1136406,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Lead character in Spider-Man: No Way Home."
+  }
+}

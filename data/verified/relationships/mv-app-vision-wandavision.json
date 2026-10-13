@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-vision-wandavision",
+  "characterId": "mv-character-vision",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-wandavision",
+  "roleName": "Vision",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

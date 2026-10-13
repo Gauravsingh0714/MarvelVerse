@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-sylvie-loki-series",
+  "characterId": "mv-character-loki-laufeyson",
+  "characterVariantId": "mv-variant-sylvie-laufeydottir",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-loki",
+  "roleName": "Sylvie Laufeydottir",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

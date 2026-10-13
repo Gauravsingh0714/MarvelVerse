@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wade-wilson-deadpool-wolverine",
+  "characterId": "mv-character-wade-wilson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-deadpool-and-wolverine",
+  "roleName": "Wade Wilson / Deadpool",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

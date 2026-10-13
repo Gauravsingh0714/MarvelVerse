@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-tony-stark-endgame",
+  "characterId": "mv-character-tony-stark",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Tony Stark / Iron Man",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

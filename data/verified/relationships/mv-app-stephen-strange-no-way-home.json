@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-stephen-strange-no-way-home",
+  "characterId": "mv-character-stephen-strange",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-spider-man-no-way-home",
+  "roleName": "Dr. Stephen Strange",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

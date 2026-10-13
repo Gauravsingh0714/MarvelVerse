@@ -1,0 +1,58 @@
+{
+  "canonicalId": "mv-season-loki-s1",
+  "tvCanonicalId": "mv-series-loki",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Loki explores the Time Variance Authority and investigates a dangerous variant across the multiverse.",
+  "airDate": "2021-06-09",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-loki-s1-e1",
+      "episodeNumber": 1,
+      "title": "Glorious Purpose",
+      "overview": "After stealing the Tesseract, Loki is brought before the Time Variance Authority.",
+      "airDate": "2021-06-09",
+      "runtime": 51
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-loki-s1-e2",
+      "episodeNumber": 2,
+      "title": "The Variant",
+      "overview": "Mobius puts Loki to work, but not everyone at the TVA is thrilled with the God of Mischief's presence.",
+      "airDate": "2021-06-16",
+      "runtime": 54
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-loki-s1-e5",
+      "episodeNumber": 5,
+      "title": "Journey Into Mystery",
+      "overview": "Loki tries to escape The Void, a desolate purgatory where he meets variant versions of himself.",
+      "airDate": "2021-07-07",
+      "runtime": 49
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-loki-s1-e6",
+      "episodeNumber": 6,
+      "title": "For All Time. Always.",
+      "overview": "The clock is ticking in the season finale as Loki and Sylvie embark on a perilous date with destiny.",
+      "airDate": "2021-07-14",
+      "runtime": 54
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 84958,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Verified Loki Season 1 canonical record."
+  }
+}

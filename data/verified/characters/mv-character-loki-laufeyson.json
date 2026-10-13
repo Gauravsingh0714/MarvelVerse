@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-loki-laufeyson",
+  "name": "Loki Laufeyson",
+  "realName": "Loki Laufeyson",
+  "aliases": ["God of Mischief", "God of Stories"],
+  "species": "Frost Giant / Asgardian",
+  "overview": "The adopted brother of Thor and biological son of Laufey who transcended his villainous past to anchor the timeline branches of the multiverse.",
+  "externalIds": {
+    "tmdb": 91606
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 91606,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Lead character in Loki series and central to the Multiverse Saga."
+  }
+}

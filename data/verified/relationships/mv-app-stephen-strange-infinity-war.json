@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-stephen-strange-infinity-war",
+  "characterId": "mv-character-stephen-strange",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Dr. Stephen Strange",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

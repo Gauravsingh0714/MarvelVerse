@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-bucky-barnes",
+  "name": "Bucky Barnes",
+  "realName": "James Buchanan Barnes",
+  "aliases": ["The Winter Soldier", "White Wolf"],
+  "species": "Human (Enhanced)",
+  "overview": "Steve Rogers' childhood friend who was captured, brainwashed into an elite assassin by Hydra, and eventually freed.",
+  "externalIds": {
+    "tmdb": 60898
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 60898,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Key supporting character in Captain America: The Winter Soldier."
+  }
+}

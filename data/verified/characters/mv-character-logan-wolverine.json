@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-logan-wolverine",
+  "name": "Logan",
+  "realName": "James Howlett",
+  "aliases": ["Wolverine", "Weapon X"],
+  "species": "Mutant",
+  "overview": "A centuries-old mutant endowed with animal-keen senses, enhanced physical capabilities, powerful regenerative healing factor, and an adamantium-infused skeleton.",
+  "externalIds": {
+    "tmdb": 6968
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 6968,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Co-lead character in Deadpool & Wolverine."
+  }
+}

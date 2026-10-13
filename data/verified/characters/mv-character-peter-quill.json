@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-peter-quill",
+  "name": "Peter Quill",
+  "realName": "Peter Jason Quill",
+  "aliases": ["Star-Lord"],
+  "species": "Human / Celestial Hybrid",
+  "overview": "Leader of the Guardians of the Galaxy who was taken from Earth as a boy and raised by the Ravagers.",
+  "externalIds": {
+    "tmdb": 73457
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 73457,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Lead character in Guardians of the Galaxy."
+  }
+}

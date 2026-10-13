@@ -1,0 +1,191 @@
+[
+  {
+    "id": "mv-watchguide-road-to-doomsday",
+    "name": "Road to Doomsday",
+    "slug": "road-to-doomsday",
+    "description": "Representative curated viewing guide preparing viewers for Avengers: Doomsday across four distinct narrative tiers.",
+    "version": "1.0.0",
+    "entries": [
+      {
+        "id": "mv-wg-entry-infinity-war",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-avengers-infinity-war",
+        "title": "Avengers: Infinity War",
+        "tier": "tier-1-absolute-essentials",
+        "curatedOrder": 1,
+        "whyWatchThis": "Establishes the cosmic stakes, catastrophic loss, and narrative scale necessary to understand the multiversal desperation.",
+        "keyPlotPoints": [
+          "Thanos collects the Infinity Stones",
+          "The Blip eliminates 50% of all universal life"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-endgame",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-avengers-endgame",
+        "title": "Avengers: Endgame",
+        "tier": "tier-1-absolute-essentials",
+        "curatedOrder": 2,
+        "whyWatchThis": "Introduces quantum time travel, branch timelines, and establishes the foundation for multiversal fracturing.",
+        "keyPlotPoints": [
+          "Time Heist creates divergent alternate branch timelines",
+          "Tony Stark sacrifices himself using the Nano Gauntlet"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-loki",
+        "entityType": "series",
+        "entityCanonicalId": "mv-series-loki",
+        "title": "Loki",
+        "tier": "tier-1-absolute-essentials",
+        "curatedOrder": 3,
+        "whyWatchThis": "Defines TVA mechanics, timeline branching, timeline death, and Loki's transformation into the multiversal anchor.",
+        "keyPlotPoints": [
+          "Destruction of the Sacred Timeline threshold",
+          "Loki assumes the throne holding multiversal branches together"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-no-way-home",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-spider-man-no-way-home",
+        "title": "Spider-Man: No Way Home",
+        "tier": "tier-2-multiverse-foundation",
+        "curatedOrder": 4,
+        "whyWatchThis": "First major cinematic collision between multiple cinematic Marvel continuities and universes.",
+        "keyPlotPoints": [
+          "Spell of Runes breakdown opens dimensional breaches",
+          "Convergence of legacy villains and Spider-Man variants"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-multiverse-madness",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-doctor-strange-in-the-multiverse-of-madness",
+        "title": "Doctor Strange in the Multiverse of Madness",
+        "tier": "tier-2-multiverse-foundation",
+        "curatedOrder": 5,
+        "whyWatchThis": "Explicitly introduces the concept and danger of Incursions — the collision and destruction of two universes.",
+        "keyPlotPoints": [
+          "Dreamwalking corrupted by the Darkhold",
+          "Warning and demonstration of catastrophic multiversal Incursions"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-deadpool-wolverine",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-deadpool-and-wolverine",
+        "title": "Deadpool & Wolverine",
+        "tier": "tier-2-multiverse-foundation",
+        "curatedOrder": 6,
+        "whyWatchThis": "Introduces Anchor Beings and bridges the 20th Century Fox Marvel legacy continuity into the connected multiverse.",
+        "keyPlotPoints": [
+          "Anchor Being mechanics and timeline decay",
+          "The Void and resistance survivors from pruned universes"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-winter-soldier",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-captain-america-the-winter-soldier",
+        "title": "Captain America: The Winter Soldier",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 7,
+        "whyWatchThis": "Crucial character arcs for Steve Rogers, Bucky Barnes, and Sam Wilson forming the moral bedrock of Earth's defense.",
+        "keyPlotPoints": [
+          "Collapse of S.H.I.E.L.D. from internal Hydra infiltration",
+          "Survival of Bucky Barnes as the Winter Soldier"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-wandavision",
+        "entityType": "series",
+        "entityCanonicalId": "mv-series-wandavision",
+        "title": "WandaVision",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 8,
+        "whyWatchThis": "Traces Wanda Maximoff's grief-fueled evolution into the mythical Scarlet Witch, setting up multiversal peril.",
+        "keyPlotPoints": [
+          "Creation and dissipation of the Westview Hex",
+          "Wanda claims the mantle of Scarlet Witch and discovers the Darkhold"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-the-avengers",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-the-avengers",
+        "title": "The Avengers",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 9,
+        "whyWatchThis": "The genesis of Earth's Mightiest Heroes teaming up against extraterrestrial threats.",
+        "keyPlotPoints": [
+          "Battle of New York unites the original six Avengers",
+          "First post-credits reveal of Thanos"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-guardians-of-the-galaxy",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-guardians-of-the-galaxy",
+        "title": "Guardians of the Galaxy",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 10,
+        "whyWatchThis": "Expands Marvel cosmic scope and provides lore regarding the origin and power of Infinity Stones.",
+        "keyPlotPoints": [
+          "The Collector explains the ancient genesis of the Infinity Stones",
+          "The Power Stone is secured by the Nova Corps"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      }
+    ]
+  }
+]

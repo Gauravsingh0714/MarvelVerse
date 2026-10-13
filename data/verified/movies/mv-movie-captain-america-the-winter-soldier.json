@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-captain-america-the-winter-soldier",
+  "title": "Captain America: The Winter Soldier",
+  "releaseDate": "2014-04-04",
+  "releaseOrder": 9,
+  "runtime": 136,
+  "overview": "As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.",
+  "posterPath": "/tVFRHFw3x25nvCtqqvx5z89ql7V.jpg",
+  "backdropPath": "/70AV2Xx5FQYj20labp0EGdbGdbl.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-2",
+  "externalIds": {
+    "tmdb": 100402,
+    "imdb": "tt1843866"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 100402,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 2 release #9."
+  }
+}

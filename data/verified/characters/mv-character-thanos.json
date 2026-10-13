@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-thanos",
+  "name": "Thanos",
+  "realName": "Thanos",
+  "aliases": ["The Mad Titan"],
+  "species": "Titan",
+  "overview": "A powerful warlord from Titan who seeks to collect all six Infinity Stones to wipe out half of all life in the universe.",
+  "externalIds": {
+    "tmdb": 16851
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 16851,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Central antagonist of the Infinity Saga."
+  }
+}

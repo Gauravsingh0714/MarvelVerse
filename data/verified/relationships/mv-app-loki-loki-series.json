@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-loki-loki-series",
+  "characterId": "mv-character-loki-laufeyson",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-loki",
+  "roleName": "Loki Laufeyson / God of Stories",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

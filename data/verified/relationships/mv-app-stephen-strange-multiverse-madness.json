@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-stephen-strange-multiverse-madness",
+  "characterId": "mv-character-stephen-strange",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-doctor-strange-in-the-multiverse-of-madness",
+  "roleName": "Dr. Stephen Strange",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}
