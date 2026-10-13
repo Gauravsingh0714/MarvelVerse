@@ -1,5 +1,7 @@
 import {
   CanonicalUniverse,
+  CanonicalContinuity,
+  ContinuityTier,
   CanonicalSaga,
   CanonicalPhase,
 } from '@marvelverse/shared';
@@ -31,6 +33,25 @@ export class FoundationRepository {
       this.loader.loadUniverses()
     );
     const found = universes.find((u) => u.id === universeId);
+    return found ? this.clone(found) : null;
+  }
+
+  public getContinuities(): CanonicalContinuity[] {
+    const continuities = this.cache.getOrLoad('continuities', () =>
+      this.loader.loadContinuities()
+    );
+    return this.clone(continuities);
+  }
+
+  public getContinuityById(id: string): CanonicalContinuity | null {
+    const continuities = this.getContinuities();
+    const found = continuities.find((c) => c.id === id);
+    return found ? this.clone(found) : null;
+  }
+
+  public getContinuityByTier(tier: ContinuityTier): CanonicalContinuity | null {
+    const continuities = this.getContinuities();
+    const found = continuities.find((c) => c.tier === tier);
     return found ? this.clone(found) : null;
   }
 

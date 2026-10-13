@@ -1,9 +1,14 @@
-import { CanonicalDataLoader } from './canonical-data-loader.js';
+import {
+  CanonicalDataLoader,
+  ReferenceIntegrityReport,
+} from './canonical-data-loader.js';
 import { CanonicalCache } from './canonical-cache.js';
 import { FoundationRepository } from './foundation-repository.js';
 import { MovieRepository } from './movie-repository.js';
+import { TvRepository } from './tv-repository.js';
 import { CharacterRepository } from './character-repository.js';
 import { RelationshipRepository } from './relationship-repository.js';
+import { WatchGuideRepository } from './watch-guide-repository.js';
 
 export interface CanonicalRepositoryOptions {
   baseWorkspaceDir?: string;
@@ -14,19 +19,28 @@ export interface CanonicalRepositoryOptions {
 export class CanonicalRepository {
   public readonly foundation: FoundationRepository;
   public readonly movies: MovieRepository;
+  public readonly tv: TvRepository;
   public readonly characters: CharacterRepository;
   public readonly relationships: RelationshipRepository;
+  public readonly watchGuides: WatchGuideRepository;
   public readonly cache: CanonicalCache;
+  public readonly loader: CanonicalDataLoader;
 
   constructor(options: CanonicalRepositoryOptions = {}) {
     this.cache = options.cache ?? new CanonicalCache();
-    const loader =
+    this.loader =
       options.loader ?? new CanonicalDataLoader(options.baseWorkspaceDir);
 
-    this.foundation = new FoundationRepository(loader, this.cache);
-    this.movies = new MovieRepository(loader, this.cache);
-    this.characters = new CharacterRepository(loader, this.cache);
-    this.relationships = new RelationshipRepository(loader, this.cache);
+    this.foundation = new FoundationRepository(this.loader, this.cache);
+    this.movies = new MovieRepository(this.loader, this.cache);
+    this.tv = new TvRepository(this.loader, this.cache);
+    this.characters = new CharacterRepository(this.loader, this.cache);
+    this.relationships = new RelationshipRepository(this.loader, this.cache);
+    this.watchGuides = new WatchGuideRepository(this.loader, this.cache);
+  }
+
+  public validateIntegrity(): ReferenceIntegrityReport {
+    return this.loader.validateReferenceIntegrity();
   }
 
   public clearCache(): void {

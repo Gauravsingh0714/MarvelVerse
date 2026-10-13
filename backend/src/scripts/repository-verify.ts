@@ -11,8 +11,9 @@ export async function runRepositoryVerification() {
   const universes = repository.foundation.getUniverses();
   const sagas = repository.foundation.getSagas();
   const phases = repository.foundation.getPhases();
+  const continuities = repository.foundation.getContinuities();
   console.log(
-    `[FOUNDATION] Loaded ${universes.length} Universes, ${sagas.length} Sagas, ${phases.length} Phases.`
+    `[FOUNDATION] Loaded ${universes.length} Universes, ${sagas.length} Sagas, ${phases.length} Phases, ${continuities.length} Continuities.`
   );
 
   // 2. Movie Query Verification
@@ -38,7 +39,7 @@ export async function runRepositoryVerification() {
   const phase1Movies = repository.movies.getMoviesByPhase('phase-1');
   console.log(`\n[FILTER] Movies in Phase 1: ${phase1Movies.length}`);
 
-  // 3. Character Query Verification
+  // 3. Character & Variant Query Verification
   const characters = repository.characters.getCharacters();
   console.log(
     `\n[CHARACTERS] Total Canonical Characters: ${characters.length}`
@@ -48,8 +49,18 @@ export async function runRepositoryVerification() {
       ` -> [${c.canonicalId}] ${c.name} (${c.species || 'Species N/A'})`
     );
   });
+  const variants = repository.characters.getVariants();
+  console.log(`[VARIANTS] Total Canonical Variants: ${variants.length}`);
 
-  // 4. Relationship Query Verification
+  // 4. TV Series Query Verification
+  const tvSeries = repository.tv.getSeries();
+  console.log(`\n[TV SERIES] Total Canonical Series: ${tvSeries.length}`);
+
+  // 5. Watch Guide Query Verification
+  const watchGuides = repository.watchGuides.getWatchGuides();
+  console.log(`[WATCH GUIDES] Total Curated Guides: ${watchGuides.length}`);
+
+  // 6. Relationship Query Verification
   const appearances = repository.relationships.getAppearances();
   console.log(`\n[RELATIONSHIPS] Total Appearances: ${appearances.length}`);
   const tonyApps = repository.relationships.getAppearancesByCharacter(
@@ -57,7 +68,19 @@ export async function runRepositoryVerification() {
   );
   console.log(` -> Tony Stark Appearances: ${tonyApps.length} movies`);
 
-  // 5. Immutability & Cache Verification
+  // 7. Reference Integrity Verification
+  console.log(
+    '\n[INTEGRITY AUDIT] Validating cross-entity reference integrity...'
+  );
+  const integrity = repository.validateIntegrity();
+  if (!integrity.isValid) {
+    throw new Error(
+      `Reference Integrity Verification Failed:\n${integrity.errors.join('\n')}`
+    );
+  }
+  console.log(' -> Reference Integrity: PASS');
+
+  // 8. Immutability & Cache Verification
   console.log(
     '\n[IMMUTABILITY & CACHE AUDIT] Testing data isolation and cache retention...'
   );
@@ -80,6 +103,9 @@ export async function runRepositoryVerification() {
   console.log('Movie Queries:         PASS');
   console.log('Character Queries:     PASS');
   console.log('Relationship Queries:  PASS');
+  console.log('TV Repository Queries: PASS');
+  console.log('Watch Guide Queries:   PASS');
+  console.log('Reference Integrity:   PASS');
   console.log('Cache Management:      PASS');
   console.log('Data Immutability:     PASS');
   console.log('====================================================\n');

@@ -1,4 +1,4 @@
-import { CanonicalAppearance } from '@marvelverse/shared';
+import { CanonicalAppearance, CanonicalMediaType } from '@marvelverse/shared';
 import { CanonicalDataLoader } from './canonical-data-loader.js';
 import { CanonicalCache } from './canonical-cache.js';
 
@@ -48,6 +48,24 @@ export class RelationshipRepository {
     const filtered = appearances.filter(
       (a) => a.mediaCanonicalId === mediaCanonicalId
     );
+    return this.clone(filtered);
+  }
+
+  public getAppearancesByVariant(
+    characterVariantId: string
+  ): CanonicalAppearance[] {
+    const appearances = this.getAllInternal();
+    const filtered = appearances.filter(
+      (a) => a.characterVariantId === characterVariantId
+    );
+    return this.clone(filtered);
+  }
+
+  public getAppearancesByMediaType(
+    mediaType: CanonicalMediaType
+  ): CanonicalAppearance[] {
+    const appearances = this.getAllInternal();
+    const filtered = appearances.filter((a) => a.mediaType === mediaType);
     return this.clone(filtered);
   }
 }
