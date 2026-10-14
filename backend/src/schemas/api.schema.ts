@@ -42,6 +42,28 @@ export const seriesCanonicalIdParamSchema = z
   .string()
   .regex(/^mv-series-[a-z0-9-]+$/, 'Invalid series canonical ID format');
 
+export const seriesQuerySchema = z
+  .object({
+    universeId: z.string().optional(),
+    sagaId: z.string().optional(),
+    phaseId: z.string().optional(),
+    sort: z.enum(['title', 'firstAirDate', 'releaseOrder']).optional(),
+  })
+  .strict('Unknown query parameters are not allowed');
+
+export const roadToDoomsdayTierSchema = z.enum([
+  'tier-1-absolute-essentials',
+  'tier-2-multiverse-foundation',
+  'tier-3-character-depth-context',
+  'tier-4-supplemental-lore',
+]);
+
+export const doomsdayQuerySchema = z
+  .object({
+    tier: roadToDoomsdayTierSchema.optional(),
+  })
+  .strict('Unknown query parameters are not allowed');
+
 export const mediaAssetTypeQuerySchema = z.enum([
   'poster',
   'backdrop',

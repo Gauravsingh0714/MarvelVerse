@@ -96,6 +96,35 @@ export async function runApiVerification() {
     console.log('GET /api/v1/characters/mv-character-tony-stark/appearances');
     console.log('PASS\n');
 
+    console.log('[SERIES]');
+
+    const resSeries = await fetch(`${baseUrl}/series`);
+    if (resSeries.status !== 200) throw new Error('GET /api/v1/series failed');
+    console.log('GET /api/v1/series');
+    console.log('PASS\n');
+
+    const resSeriesId = await fetch(`${baseUrl}/series/mv-series-loki`);
+    if (resSeriesId.status !== 200)
+      throw new Error('GET /api/v1/series/mv-series-loki failed');
+    console.log('GET /api/v1/series/mv-series-loki');
+    console.log('PASS\n');
+
+    console.log('[CURATED]');
+
+    const resCurated = await fetch(`${baseUrl}/curated/doomsday`);
+    if (resCurated.status !== 200)
+      throw new Error('GET /api/v1/curated/doomsday failed');
+    console.log('GET /api/v1/curated/doomsday');
+    console.log('PASS\n');
+
+    const resCuratedTier = await fetch(
+      `${baseUrl}/curated/doomsday?tier=tier-1-absolute-essentials`
+    );
+    if (resCuratedTier.status !== 200)
+      throw new Error('GET /api/v1/curated/doomsday?tier failed');
+    console.log('GET /api/v1/curated/doomsday?tier=tier-1-absolute-essentials');
+    console.log('PASS\n');
+
     console.log('[ERROR HANDLING]');
 
     const resInvalidTmdb = await fetch(`${baseUrl}/movies/tmdb/invalid`);
