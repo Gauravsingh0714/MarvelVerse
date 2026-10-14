@@ -33,8 +33,12 @@ export interface CanonicalProvenance {
 // Provider-independent media representation
 // ----------------------------------------------------
 
+export type MediaProvider = 'tmdb' | 'custom-cdn' | string;
+
 export type MediaAssetType =
   'poster' | 'backdrop' | 'avatar' | 'still' | 'banner' | 'logo';
+
+export type MediaAssetKind = MediaAssetType;
 
 export type MediaAspectRatio =
   'poster' | 'backdrop' | 'square' | 'avatar' | 'wide' | string;
@@ -52,6 +56,45 @@ export interface MediaAsset {
   entityType?:
     'movie' | 'series' | 'season' | 'episode' | 'character' | 'variant';
   entityId?: string;
+}
+
+export type MediaAvailability =
+  'available' | 'unavailable' | 'missing' | 'pending';
+
+export type MediaSize = 'small' | 'medium' | 'large' | 'original';
+
+export interface ResolvedMediaAsset {
+  assetId: string;
+  provider: string;
+  mediaType: MediaAssetType;
+  rawPath: string | null;
+  resolvedUrl: string | null;
+  size: MediaSize;
+  width?: number | null;
+  height?: number | null;
+  aspectRatio?: MediaAspectRatio;
+  altText: string;
+  attribution?: string | null;
+  availability: MediaAvailability;
+  fallbackUrl: string | null;
+  isFallback: boolean;
+  provenance?: CanonicalProvenance;
+}
+
+export interface EntityMediaBundle {
+  entityType:
+    'movie' | 'series' | 'season' | 'episode' | 'character' | 'variant';
+  entityCanonicalId: string;
+  primaryPoster?: ResolvedMediaAsset | null;
+  primaryBackdrop?: ResolvedMediaAsset | null;
+  primaryAvatar?: ResolvedMediaAsset | null;
+  assets: ResolvedMediaAsset[];
+}
+
+export interface MediaResolveOptions {
+  size?: MediaSize;
+  fallback?: boolean;
+  altText?: string;
 }
 
 // ----------------------------------------------------

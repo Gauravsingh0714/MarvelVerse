@@ -3,6 +3,7 @@ import foundationRoutes from './foundation.routes.js';
 import movieRoutes from './movie.routes.js';
 import characterRoutes from './character.routes.js';
 import appearanceRoutes from './appearance.routes.js';
+import mediaRoutes from './media.routes.js';
 import healthRoutes from '../../health/health.routes.js';
 
 const router = Router();
@@ -15,5 +16,6 @@ router.use('/', foundationRoutes);
 router.use('/movies', movieRoutes);
 router.use('/characters', characterRoutes);
 router.use('/appearances', appearanceRoutes);
+router.use('/media', mediaRoutes);
 
 export default router;

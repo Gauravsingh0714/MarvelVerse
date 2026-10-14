@@ -68,6 +68,49 @@ export const mediaAssetSchema = z.object({
   entityId: z.string().optional(),
 });
 
+export const mediaAvailabilitySchema = z.enum([
+  'available',
+  'unavailable',
+  'missing',
+  'pending',
+]);
+
+export const mediaSizeSchema = z.enum(['small', 'medium', 'large', 'original']);
+
+export const resolvedMediaAssetSchema = z.object({
+  assetId: z.string().min(1),
+  provider: z.string().min(1),
+  mediaType: mediaAssetTypeSchema,
+  rawPath: z.string().nullable(),
+  resolvedUrl: z.string().nullable(),
+  size: mediaSizeSchema,
+  width: z.number().int().positive().nullable().optional(),
+  height: z.number().int().positive().nullable().optional(),
+  aspectRatio: z.string().optional(),
+  altText: z.string(),
+  attribution: z.string().nullable().optional(),
+  availability: mediaAvailabilitySchema,
+  fallbackUrl: z.string().nullable(),
+  isFallback: z.boolean(),
+  provenance: canonicalProvenanceSchema.optional(),
+});
+
+export const entityMediaBundleSchema = z.object({
+  entityType: z.enum([
+    'movie',
+    'series',
+    'season',
+    'episode',
+    'character',
+    'variant',
+  ]),
+  entityCanonicalId: z.string().min(1),
+  primaryPoster: resolvedMediaAssetSchema.nullable().optional(),
+  primaryBackdrop: resolvedMediaAssetSchema.nullable().optional(),
+  primaryAvatar: resolvedMediaAssetSchema.nullable().optional(),
+  assets: z.array(resolvedMediaAssetSchema),
+});
+
 // ----------------------------------------------------
 // Date & Chronology Schemas (Document 3 Section 7)
 // ----------------------------------------------------

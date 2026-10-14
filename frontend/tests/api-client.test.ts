@@ -5,6 +5,7 @@ import { ApiClientError } from '../src/api/types.js';
 import { MovieService } from '../src/services/movie.service.js';
 import { CharacterService } from '../src/services/character.service.js';
 import { FoundationService } from '../src/services/foundation.service.js';
+import { MediaService } from '../src/services/media.service.js';
 
 test('ApiClient formats endpoints and parses JSON responses', async () => {
   const mockFetch: typeof fetch = async (input, init) => {
@@ -125,4 +126,48 @@ test('CharacterService & FoundationService construct endpoints correctly', async
   const foundService = new FoundationService(mockClient);
   await foundService.getPhases();
   assert.equal(capturedUrl, '/phases');
+});
+
+test('MediaService constructs endpoint URLs and query strings correctly', async () => {
+  let capturedUrl = '';
+  const mockClient = {
+    get: async <T>(endpoint: string): Promise<T> => {
+      capturedUrl = endpoint;
+      return { data: {} } as unknown as T;
+    },
+  } as any;
+
+  const mediaServiceInstance = new MediaService(mockClient);
+
+  await mediaServiceInstance.resolveMedia({
+    provider: 'tmdb',
+    path: '/poster.jpg',
+    kind: 'poster',
+    size: 'large',
+    altText: 'Test Poster',
+  });
+  assert.equal(
+    capturedUrl,
+    '/media/resolve?provider=tmdb&path=%2Fposter.jpg&kind=poster&size=large&altText=Test+Poster'
+  );
+
+  await mediaServiceInstance.getMovieMedia('mv-movie-iron-man', {
+    posterSize: 'medium',
+    backdropSize: 'large',
+  });
+  assert.equal(
+    capturedUrl,
+    '/media/movies/mv-movie-iron-man?posterSize=medium&backdropSize=large'
+  );
+
+  await mediaServiceInstance.getSeriesMedia('mv-series-loki');
+  assert.equal(capturedUrl, '/media/series/mv-series-loki');
+
+  await mediaServiceInstance.getCharacterMedia('mv-character-tony-stark', {
+    avatarSize: 'small',
+  });
+  assert.equal(
+    capturedUrl,
+    '/media/characters/mv-character-tony-stark?avatarSize=small'
+  );
 });

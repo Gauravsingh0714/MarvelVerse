@@ -28,4 +28,21 @@ export const queryKeys = {
     sagas: () => ['foundation', 'sagas'] as const,
     phases: () => ['foundation', 'phases'] as const,
   },
-} as const;
+  media: {
+    all: ['media'] as const,
+    resolve: (query: Record<string, unknown> = {}) =>
+      ['media', 'resolve', query] as const,
+    movie: (
+      canonicalId: string | null,
+      options: Record<string, unknown> = {}
+    ) => ['media', 'movie', canonicalId, options] as const,
+    series: (
+      canonicalId: string | null,
+      options: Record<string, unknown> = {}
+    ) => ['media', 'series', canonicalId, options] as const,
+    character: (
+      canonicalId: string | null,
+      options: Record<string, unknown> = {}
+    ) => ['media', 'character', canonicalId, options] as const,
+  },
+};

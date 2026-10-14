@@ -37,3 +37,51 @@ export const movieQuerySchema = z
     sort: z.enum(['releaseOrder']).optional(),
   })
   .strict('Unknown query parameters are not allowed');
+
+export const seriesCanonicalIdParamSchema = z
+  .string()
+  .regex(/^mv-series-[a-z0-9-]+$/, 'Invalid series canonical ID format');
+
+export const mediaAssetTypeQuerySchema = z.enum([
+  'poster',
+  'backdrop',
+  'avatar',
+  'still',
+  'banner',
+  'logo',
+]);
+
+export const mediaSizeQuerySchema = z.enum([
+  'small',
+  'medium',
+  'large',
+  'original',
+]);
+
+export const mediaResolveQuerySchema = z
+  .object({
+    provider: z.string().min(1, 'provider is required'),
+    path: z.string().min(1, 'path is required'),
+    type: mediaAssetTypeQuerySchema.optional(),
+    kind: mediaAssetTypeQuerySchema.optional(),
+    size: mediaSizeQuerySchema.optional(),
+    altText: z.string().optional(),
+    fallback: z
+      .enum(['true', 'false'])
+      .optional()
+      .transform((v) => v !== 'false'),
+  })
+  .strict('Unknown query parameters are not allowed');
+
+export const mediaEntityOptionsQuerySchema = z
+  .object({
+    size: mediaSizeQuerySchema.optional(),
+    posterSize: mediaSizeQuerySchema.optional(),
+    backdropSize: mediaSizeQuerySchema.optional(),
+    avatarSize: mediaSizeQuerySchema.optional(),
+    fallback: z
+      .enum(['true', 'false'])
+      .optional()
+      .transform((v) => v !== 'false'),
+  })
+  .strict('Unknown query parameters are not allowed');

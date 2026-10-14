@@ -9,6 +9,7 @@ import { TvRepository } from './tv-repository.js';
 import { CharacterRepository } from './character-repository.js';
 import { RelationshipRepository } from './relationship-repository.js';
 import { WatchGuideRepository } from './watch-guide-repository.js';
+import { MediaRepository } from './media-repository.js';
 
 export interface CanonicalRepositoryOptions {
   baseWorkspaceDir?: string;
@@ -23,6 +24,7 @@ export class CanonicalRepository {
   public readonly characters: CharacterRepository;
   public readonly relationships: RelationshipRepository;
   public readonly watchGuides: WatchGuideRepository;
+  public readonly media: MediaRepository;
   public readonly cache: CanonicalCache;
   public readonly loader: CanonicalDataLoader;
 
@@ -37,6 +39,7 @@ export class CanonicalRepository {
     this.characters = new CharacterRepository(this.loader, this.cache);
     this.relationships = new RelationshipRepository(this.loader, this.cache);
     this.watchGuides = new WatchGuideRepository(this.loader, this.cache);
+    this.media = new MediaRepository(this.loader, this.cache);
   }
 
   public validateIntegrity(): ReferenceIntegrityReport {

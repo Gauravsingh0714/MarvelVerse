@@ -6,4 +6,5 @@ export * from './tv-repository.js';
 export * from './character-repository.js';
 export * from './relationship-repository.js';
 export * from './watch-guide-repository.js';
+export * from './media-repository.js';
 export * from './canonical-repository.js';
