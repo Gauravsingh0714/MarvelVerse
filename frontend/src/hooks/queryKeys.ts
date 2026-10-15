@@ -1,4 +1,6 @@
 import type { MovieFilters } from '../services/movie.service.js';
+import type { SeriesFilters } from '../services/series.service.js';
+import type { DoomsdayFilters } from '../services/curated.service.js';
 
 export const queryKeys = {
   movies: {
@@ -9,6 +11,18 @@ export const queryKeys = {
       ['movies', 'detail', canonicalId] as const,
     appearances: (movieId: string | null) =>
       ['movies', 'appearances', movieId] as const,
+  },
+  series: {
+    all: ['series'] as const,
+    list: (filters: SeriesFilters | Record<string, unknown> = {}) =>
+      ['series', 'list', filters] as const,
+    detail: (canonicalId: string | null) =>
+      ['series', 'detail', canonicalId] as const,
+  },
+  curated: {
+    all: ['curated'] as const,
+    doomsday: (filters: DoomsdayFilters | Record<string, unknown> = {}) =>
+      ['curated', 'doomsday', filters] as const,
   },
   characters: {
     all: ['characters'] as const,

@@ -6,3 +6,5 @@ export * from './useCharacters.js';
 export * from './useFoundation.js';
 export * from './useAppearances.js';
 export * from './useMedia.js';
+export * from './useSeries.js';
+export * from './useRoadToDoomsday.js';

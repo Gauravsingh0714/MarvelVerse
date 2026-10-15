@@ -5,6 +5,8 @@ import { FoundationService } from '../services/foundation.service.js';
 import { MovieService } from '../services/movie.service.js';
 import { CharacterService } from '../services/character.service.js';
 import { AppearanceService } from '../services/appearance.service.js';
+import { SeriesService } from '../services/series.service.js';
+import { CuratedService } from '../services/curated.service.js';
 
 export async function runFrontendApiVerification() {
   console.log('====================================================');
@@ -79,6 +81,30 @@ export async function runFrontendApiVerification() {
     );
     console.log('PASS\n');
 
+    console.log('[SERIES SERVICE]');
+    const series = new SeriesService(client);
+    const allSeries = await series.getSeries({ sort: 'title' });
+    console.log(` -> getSeries(): ${allSeries.length} series`);
+    const lokiSeries = await series.getSeriesById('mv-series-loki');
+    console.log(
+      ` -> getSeriesById('mv-series-loki'): "${lokiSeries.title}" (${lokiSeries.numberOfSeasons} seasons)`
+    );
+    console.log('PASS\n');
+
+    console.log('[CURATED SERVICE]');
+    const curated = new CuratedService(client);
+    const doomsdayAll = await curated.getRoadToDoomsday();
+    console.log(
+      ` -> getRoadToDoomsday(): ${doomsdayAll.length} curated entries`
+    );
+    const doomsdayTier1 = await curated.getRoadToDoomsday({
+      tier: 'tier-1-absolute-essentials',
+    });
+    console.log(
+      ` -> getRoadToDoomsday({ tier: 'tier-1-absolute-essentials' }): ${doomsdayTier1.length} entries`
+    );
+    console.log('PASS\n');
+
     console.log('====================================================');
     console.log(' MARVELVERSE FRONTEND API INTEGRATION SUMMARY');
     console.log('====================================================');
@@ -86,6 +112,8 @@ export async function runFrontendApiVerification() {
     console.log('Movie Service:       PASS');
     console.log('Character Service:   PASS');
     console.log('Appearance Service:  PASS');
+    console.log('Series Service:      PASS');
+    console.log('Curated Service:     PASS');
     console.log('====================================================\n');
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
