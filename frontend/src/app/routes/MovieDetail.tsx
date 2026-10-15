@@ -14,6 +14,7 @@ import {
   Button,
   Alert,
   Skeleton,
+  MediaImage,
 } from '../../components/ui/index.js';
 import {
   ArrowLeft,
@@ -70,7 +71,8 @@ export default function MovieDetail() {
     return (
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         <Skeleton className="h-10 w-48" />
-        <Card>
+        <Card className="overflow-hidden">
+          <Skeleton className="h-64 sm:h-80 w-full rounded-none" />
           <Card.Body className="space-y-6 p-8">
             <Skeleton className="h-8 w-3/4" />
             <Skeleton className="h-4 w-1/2" />
@@ -144,8 +146,24 @@ export default function MovieDetail() {
       </div>
 
       {/* Main Movie Hero Card */}
-      <Card className="border-stroke-subtle shadow-xl">
-        <Card.Body className="p-6 sm:p-8 space-y-0">
+      <Card className="border-stroke-subtle shadow-xl overflow-hidden">
+        {/* Cinematic Backdrop Hero Banner */}
+        <div className="relative w-full h-56 sm:h-72 md:h-80 lg:h-96 bg-surface-raised overflow-hidden">
+          <MediaImage
+            canonicalId={movie.canonicalId}
+            entityType="movie"
+            mediaKind="backdrop"
+            alt={`Backdrop for ${movie.title}`}
+            aspectRatio="backdrop"
+            className="w-full h-full object-cover object-center"
+            size="large"
+            fallbackText={movie.title}
+          />
+          {/* Cinematic Scrim: smooth gradient overlay to blend into card surface */}
+          <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent pointer-events-none" />
+        </div>
+
+        <Card.Body className="p-6 sm:p-8 space-y-0 relative -mt-12 sm:-mt-16">
           <motion.div
             variants={heroStaggerContainer}
             initial={prefersReducedMotion ? false : 'initial'}
@@ -157,31 +175,48 @@ export default function MovieDetail() {
               variants={prefersReducedMotion ? {} : heroItemVariants}
               className="space-y-3 border-b border-stroke-subtle pb-6"
             >
-              <div className="flex flex-wrap items-center gap-3">
-                <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
-                  {movie.title}
-                </h1>
-                {movie.originalTitle && movie.originalTitle !== movie.title && (
-                  <span className="text-sm text-content-muted font-normal italic">
-                    ({movie.originalTitle})
-                  </span>
-                )}
-              </div>
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="w-28 sm:w-36 aspect-[2/3] rounded-lg overflow-hidden shrink-0 shadow-2xl border border-stroke-subtle hidden sm:block bg-surface-raised">
+                  <MediaImage
+                    canonicalId={movie.canonicalId}
+                    entityType="movie"
+                    mediaKind="poster"
+                    alt={`Poster for ${movie.title}`}
+                    aspectRatio="poster"
+                    className="w-full h-full object-cover"
+                    size="medium"
+                    fallbackText={movie.title}
+                  />
+                </div>
+                <div className="flex-1 space-y-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-content-primary">
+                      {movie.title}
+                    </h1>
+                    {movie.originalTitle &&
+                      movie.originalTitle !== movie.title && (
+                        <span className="text-sm text-content-muted font-normal italic">
+                          ({movie.originalTitle})
+                        </span>
+                      )}
+                  </div>
 
-              <div className="flex flex-wrap items-center gap-6 text-sm text-content-secondary">
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-starkRed" />
-                  {movie.releaseDate}
-                </span>
-                {movie.runtime && (
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-vibraniumCyan" />
-                    {movie.runtime} minutes
-                  </span>
-                )}
-                <span className="flex items-center gap-1.5 font-mono text-xs text-content-muted">
-                  Canonical ID: {movie.canonicalId}
-                </span>
+                  <div className="flex flex-wrap items-center gap-6 text-sm text-content-secondary">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar className="w-4 h-4 text-starkRed" />
+                      {movie.releaseDate}
+                    </span>
+                    {movie.runtime && (
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-4 h-4 text-vibraniumCyan" />
+                        {movie.runtime} minutes
+                      </span>
+                    )}
+                    <span className="flex items-center gap-1.5 font-mono text-xs text-content-muted">
+                      Canonical ID: {movie.canonicalId}
+                    </span>
+                  </div>
+                </div>
               </div>
             </motion.div>
 

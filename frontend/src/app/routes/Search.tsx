@@ -11,6 +11,7 @@ import {
   Alert,
   Skeleton,
   Avatar,
+  MediaImage,
 } from '../../components/ui/index.js';
 import {
   Search as SearchIcon,
@@ -388,7 +389,10 @@ export default function Search() {
                       to={`/movies/${movie.canonicalId}`}
                       className="block group"
                     >
-                      <Card interactive className="h-full border-stroke-subtle">
+                      <Card
+                        interactive
+                        className="h-full border-stroke-subtle overflow-hidden flex flex-col"
+                      >
                         <Card.Header
                           bordered
                           className="py-2.5 px-4 flex items-center justify-between"
@@ -404,7 +408,19 @@ export default function Search() {
                           </span>
                         </Card.Header>
 
-                        <Card.Body className="p-4 space-y-2.5">
+                        <div className="relative w-full aspect-[2/3] max-h-48 bg-surface-raised overflow-hidden">
+                          <MediaImage
+                            canonicalId={movie.canonicalId}
+                            entityType="movie"
+                            mediaKind="poster"
+                            alt={`Poster for ${movie.title}`}
+                            aspectRatio="poster"
+                            className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none"
+                            fallbackText={movie.title}
+                          />
+                        </div>
+
+                        <Card.Body className="p-4 space-y-2.5 flex-1">
                           <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors line-clamp-1">
                             {movie.title}
                           </h3>
@@ -504,6 +520,7 @@ export default function Search() {
                         <Card.Body className="p-4 space-y-2.5">
                           <div className="flex items-center gap-3">
                             <Avatar
+                              canonicalId={item.character.canonicalId}
                               name={item.character.name}
                               size="md"
                               className="border border-starkRed/30 shrink-0"

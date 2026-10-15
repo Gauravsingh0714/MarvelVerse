@@ -149,9 +149,10 @@ export default function CharacterDetail() {
               className="flex flex-col sm:flex-row items-start sm:items-center gap-6 border-b border-stroke-subtle pb-6"
             >
               <Avatar
+                canonicalId={character.canonicalId}
                 name={character.name}
                 size="xl"
-                className="w-20 h-20 text-2xl border-2 border-starkRed/30"
+                className="w-20 h-20 text-2xl border-2 border-starkRed/30 shrink-0"
               />
               <div className="space-y-1.5 flex-1">
                 <div className="flex flex-wrap items-center gap-3">

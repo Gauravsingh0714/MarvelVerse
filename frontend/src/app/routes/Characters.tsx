@@ -203,9 +203,10 @@ export default function Characters() {
                   <Card.Body className="space-y-3 p-5">
                     <div className="flex items-center gap-3.5">
                       <Avatar
+                        canonicalId={character.canonicalId}
                         name={character.name}
                         size="md"
-                        className="border border-starkRed/30"
+                        className="border border-starkRed/30 shrink-0"
                       />
                       <div className="space-y-0.5">
                         <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">

@@ -1,5 +1,6 @@
 import React, { forwardRef, useState } from 'react';
-import { cn } from '../../../utils/cn';
+import { cn } from '../../../utils/cn.js';
+import { useCharacterMedia } from '../../../hooks/useMedia.js';
 
 export type AvatarSize = 'sm' | 'md' | 'lg' | 'xl';
 
@@ -8,6 +9,7 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   alt?: string;
   name?: string;
   size?: AvatarSize;
+  canonicalId?: string;
 }
 
 const sizeClasses: Record<AvatarSize, string> = {
@@ -28,7 +30,7 @@ function getInitials(name?: string): string {
   return (first + last).toUpperCase();
 }
 
-export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
+export const BaseAvatar = forwardRef<HTMLDivElement, AvatarProps>(
   ({ src, alt = '', name, size = 'md', className, ...props }, ref) => {
     const [imageError, setImageError] = useState(false);
     const initials = getInitials(name);
@@ -38,7 +40,7 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
       <div
         ref={ref}
         role="img"
-        aria-label={name || alt || 'Avatar'}
+        aria-label={name ? `Portrait of ${name}` : alt || 'Avatar'}
         className={cn(
           'relative inline-flex items-center justify-center rounded-full overflow-hidden shrink-0 select-none',
           'bg-surface-raised text-content-secondary border border-stroke-subtle font-medium',
@@ -50,7 +52,7 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         {showImage ? (
           <img
             src={src}
-            alt={alt || name || 'Avatar'}
+            alt={alt || (name ? `Portrait of ${name}` : 'Avatar')}
             onError={() => setImageError(true)}
             className="w-full h-full object-cover"
           />
@@ -70,5 +72,38 @@ export const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
     );
   }
 );
+
+BaseAvatar.displayName = 'BaseAvatar';
+
+/**
+ * CharacterAvatar resolves the canonical character avatar from Layer 4/5 media infrastructure.
+ */
+export const CharacterAvatar = forwardRef<
+  HTMLDivElement,
+  AvatarProps & { canonicalId: string }
+>(({ canonicalId, src, ...props }, ref) => {
+  const { data: mediaBundle } = useCharacterMedia(canonicalId);
+  const resolvedSrc =
+    src ||
+    (mediaBundle?.primaryAvatar && !mediaBundle.primaryAvatar.isFallback
+      ? (mediaBundle.primaryAvatar.resolvedUrl ?? undefined)
+      : undefined);
+
+  return <BaseAvatar ref={ref} src={resolvedSrc} {...props} />;
+});
+
+CharacterAvatar.displayName = 'CharacterAvatar';
+
+/**
+ * Avatar component with optional automatic canonicalId resolution.
+ */
+export const Avatar = forwardRef<HTMLDivElement, AvatarProps>((props, ref) => {
+  if (props.canonicalId) {
+    return (
+      <CharacterAvatar ref={ref} canonicalId={props.canonicalId} {...props} />
+    );
+  }
+  return <BaseAvatar ref={ref} {...props} />;
+});
 
 Avatar.displayName = 'Avatar';

@@ -17,3 +17,4 @@ export * from './Select/Select';
 export * from './Progress/Progress';
 export * from './Tabs/Tabs';
 export * from './Tooltip/Tooltip';
+export * from './MediaImage/MediaImage';

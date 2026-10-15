@@ -11,6 +11,7 @@ import {
   Select,
   Alert,
   Skeleton,
+  MediaImage,
 } from '../../components/ui/index.js';
 import {
   Film,
@@ -61,7 +62,7 @@ export default function Movies() {
         </div>
         <Skeleton.Group className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Array.from({ length: 6 }).map((_, i) => (
-            <Skeleton key={i} className="h-64 w-full rounded-xl" />
+            <Skeleton key={i} className="h-96 w-full rounded-xl" />
           ))}
         </Skeleton.Group>
       </div>
@@ -173,7 +174,10 @@ export default function Movies() {
           {filteredMovies.map((movie) => (
             <ScrollReveal key={movie.canonicalId}>
               <Link to={`/movies/${movie.canonicalId}`}>
-                <Card interactive className="h-full group border-stroke-subtle">
+                <Card
+                  interactive
+                  className="h-full group border-stroke-subtle overflow-hidden flex flex-col"
+                >
                   <Card.Header bordered className="py-3 px-5">
                     <Badge variant="primary" size="sm">
                       Release #{movie.releaseOrder}
@@ -185,7 +189,19 @@ export default function Movies() {
                     </Badge>
                   </Card.Header>
 
-                  <Card.Body className="space-y-3 p-5">
+                  <div className="relative w-full aspect-[2/3] max-h-80 bg-surface-raised overflow-hidden">
+                    <MediaImage
+                      canonicalId={movie.canonicalId}
+                      entityType="movie"
+                      mediaKind="poster"
+                      alt={`Poster for ${movie.title}`}
+                      aspectRatio="poster"
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none"
+                      fallbackText={movie.title}
+                    />
+                  </div>
+
+                  <Card.Body className="space-y-3 p-5 flex-1">
                     <h2 className="text-xl font-bold text-content-primary tracking-tight group-hover:text-starkRed transition-colors">
                       {movie.title}
                     </h2>
