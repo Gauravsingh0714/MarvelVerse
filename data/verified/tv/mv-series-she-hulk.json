@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-she-hulk",
+  "title": "She-Hulk: Attorney at Law",
+  "firstAirDate": "2022-08-18",
+  "lastAirDate": "2022-10-13",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 9,
+  "overview": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered Hulk.",
+  "posterPath": "/hJfI6Hc7egt.jpg",
+  "backdropPath": "/bKxiL9421.jpg",
+  "genres": ["Comedy", "Sci-Fi & Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 92783,
+    "imdb": "tt10857160"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92783,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series."
+  }
+}

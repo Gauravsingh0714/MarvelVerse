@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bruce-banner-she-hulk",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-she-hulk",
+  "roleName": "Smart Hulk / Bruce Banner",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

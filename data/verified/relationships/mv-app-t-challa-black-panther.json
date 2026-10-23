@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-t-challa-black-panther",
+  "characterId": "mv-character-t-challa",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-black-panther",
+  "roleName": "T'Challa / Black Panther",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

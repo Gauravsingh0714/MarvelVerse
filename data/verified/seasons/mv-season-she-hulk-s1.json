@@ -1,0 +1,102 @@
+{
+  "canonicalId": "mv-season-she-hulk-s1",
+  "tvCanonicalId": "mv-series-she-hulk",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Jennifer Walters leads the Superhuman Law Division while breaking the fourth wall.",
+  "airDate": "2022-08-18",
+  "episodeCount": 9,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-she-hulk-s1-e1",
+      "episodeNumber": 1,
+      "title": "A Normal Amount of Rage",
+      "overview": "Jennifer Walters is exposed to Bruce Banner’s blood and learns to control her Hulk transformation.",
+      "airDate": "2022-08-18",
+      "runtime": 38
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-she-hulk-s1-e2",
+      "episodeNumber": 2,
+      "title": "Superhuman Law",
+      "overview": "Jen is hired to lead the Superhuman Law Division and must represent Emil Blonsky.",
+      "airDate": "2022-08-25",
+      "runtime": 30
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-she-hulk-s1-e3",
+      "episodeNumber": 3,
+      "title": "The People vs. Emil Blonsky",
+      "overview": "Wong testifies on Emil Blonsky’s behalf at his parole hearing.",
+      "airDate": "2022-09-01",
+      "runtime": 34
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-she-hulk-s1-e4",
+      "episodeNumber": 4,
+      "title": "Is This Not Real Magic?",
+      "overview": "Jen assists Wong in a case against an unauthorized mystic arts performer.",
+      "airDate": "2022-09-08",
+      "runtime": 33
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-she-hulk-s1-e5",
+      "episodeNumber": 5,
+      "title": "Mean, Green, and Straight Poured into These Jeans",
+      "overview": "Jen is sued by Titania for trademark infringement over the She-Hulk name.",
+      "airDate": "2022-09-15",
+      "runtime": 32
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-she-hulk-s1-e6",
+      "episodeNumber": 6,
+      "title": "Just Jen",
+      "overview": "Jen attends a friend’s wedding while Nikki and Mallory investigate Intelligencia.",
+      "airDate": "2022-09-22",
+      "runtime": 31
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-she-hulk-s1-e7",
+      "episodeNumber": 7,
+      "title": "The Retreat",
+      "overview": "Jen spends a weekend at Emil Blonsky’s wellness retreat.",
+      "airDate": "2022-09-29",
+      "runtime": 37
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-she-hulk-s1-e8",
+      "episodeNumber": 8,
+      "title": "Ribbit and Rip It",
+      "overview": "Jen teams up with Matt Murdock / Daredevil on a case and against the Leap-Frog.",
+      "airDate": "2022-10-06",
+      "runtime": 36
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-she-hulk-s1-e9",
+      "episodeNumber": 9,
+      "title": "Whose Show Is This?",
+      "overview": "Jen breaks through Marvel’s Fourth Wall and demands a better finale from K.E.V.I.N.",
+      "airDate": "2022-10-13",
+      "runtime": 35
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92783,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

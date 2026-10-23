@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-captain-marvel",
+  "title": "Captain Marvel",
+  "releaseDate": "2019-03-08",
+  "releaseOrder": 21,
+  "runtime": 124,
+  "overview": "Carol Danvers discovers her true identity and unlocks immense cosmic power when Earth becomes caught in an intergalactic war between the Kree and Skrulls.",
+  "posterPath": "/AtsgWhDnHTq68L0lLsUr8A8W5uo.jpg",
+  "backdropPath": "/w2PMyoyCc2Qq62yv0Gcb35s66Q.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 299537,
+    "imdb": "tt4154664"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 299537,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #21."
+  }
+}

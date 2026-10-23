@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-carol-danvers-endgame",
+  "characterId": "mv-character-carol-danvers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Carol Danvers / Captain Marvel",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

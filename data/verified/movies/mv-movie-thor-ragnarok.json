@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-thor-ragnarok",
+  "title": "Thor: Ragnarok",
+  "releaseDate": "2017-11-03",
+  "releaseOrder": 17,
+  "runtime": 130,
+  "overview": "Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnarok from destroying his world at the hands of Hela.",
+  "posterPath": "/rzRwTcFvttcN1ZpX2xv4jvoY0w0.jpg",
+  "backdropPath": "/kaIfm5ryEOwYg8wysqOG323bczQ.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 284053,
+    "imdb": "tt3501632"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 284053,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #17."
+  }
+}

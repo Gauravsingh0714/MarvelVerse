@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-carol-danvers",
+  "name": "Carol Danvers",
+  "realName": "Carol Susan Jane Danvers",
+  "aliases": ["Captain Marvel"],
+  "species": "Human / Kree Hybrid",
+  "overview": "Former Air Force pilot imbued with cosmic Tesseract energy, becoming one of the galaxy’s mightiest protectors.",
+  "externalIds": {
+    "tmdb": 60073
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU Avenger."
+  }
+}

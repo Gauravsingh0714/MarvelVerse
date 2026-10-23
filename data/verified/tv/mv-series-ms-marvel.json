@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-ms-marvel",
+  "title": "Ms. Marvel",
+  "firstAirDate": "2022-06-08",
+  "lastAirDate": "2022-07-13",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 6,
+  "overview": "Kamala Khan, a Muslim American teenager growing up in Jersey City, is a superhero super fan who discovers she has super powers of her own.",
+  "posterPath": "/cdkyMYdu8ao29.jpg",
+  "backdropPath": "/frH2bO10202.jpg",
+  "genres": ["Action & Adventure", "Comedy", "Sci-Fi & Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 92782,
+    "imdb": "tt10857164"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92782,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series."
+  }
+}

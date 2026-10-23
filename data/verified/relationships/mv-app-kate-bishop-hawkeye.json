@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-kate-bishop-hawkeye",
+  "characterId": "mv-character-kate-bishop",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-hawkeye",
+  "roleName": "Kate Bishop / Hawkeye",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

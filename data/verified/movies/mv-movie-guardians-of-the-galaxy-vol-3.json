@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-guardians-of-the-galaxy-vol-3",
+  "title": "Guardians of the Galaxy Vol. 3",
+  "releaseDate": "2023-05-05",
+  "releaseOrder": 32,
+  "runtime": 150,
+  "overview": "The Guardians embark on a high-stakes mission to save Rocket Raccoon’s life from the cruel genetic engineer, the High Evolutionary.",
+  "posterPath": "/r2J02Z2OpNTctfOSN2Y.jpg",
+  "backdropPath": "/5YZbUmjbMa3n.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 447365,
+    "imdb": "tt6791350"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 447365,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 5 release #32."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-doctor-strange",
+  "title": "Doctor Strange",
+  "releaseDate": "2016-11-04",
+  "releaseOrder": 14,
+  "runtime": 115,
+  "overview": "After his career is destroyed in a car crash, brilliant surgeon Stephen Strange trains with the Ancient One in Kamar-Taj to become the Master of the Mystic Arts.",
+  "posterPath": "/uGBVj3bEbCoZbDjjl9wMgrghcyx.jpg",
+  "backdropPath": "/sOUP5v1Cj8mP5Xn2e6uD9D7C2h0.jpg",
+  "genres": ["Action", "Adventure", "Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 284052,
+    "imdb": "tt1211837"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 284052,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #14."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-the-falcon-and-the-winter-soldier",
+  "title": "The Falcon and the Winter Soldier",
+  "firstAirDate": "2021-03-19",
+  "lastAirDate": "2021-04-23",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 6,
+  "overview": "Following the events of Avengers: Endgame, Sam Wilson and Bucky Barnes team up in a global adventure that tests their abilities and their patience.",
+  "posterPath": "/4gglDBMx8icA.jpg",
+  "backdropPath": "/aTjbqMONy77fHJrIYu14g1F0d5h.jpg",
+  "genres": ["Action & Adventure", "Drama", "Sci-Fi & Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 88396,
+    "imdb": "tt9140554"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 88396,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series."
+  }
+}

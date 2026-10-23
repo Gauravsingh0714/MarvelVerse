@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-spider-man-homecoming",
+  "title": "Spider-Man: Homecoming",
+  "releaseDate": "2017-07-07",
+  "releaseOrder": 16,
+  "runtime": 133,
+  "overview": "Peter Parker balances his life as an ordinary high school student in Queens with fighting crime as his superhero alter ego Spider-Man under Tony Stark’s guidance.",
+  "posterPath": "/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+  "backdropPath": "/t2R4yPqF9LwN0E9aQ3E4t5E6X.jpg",
+  "genres": ["Action", "Adventure", "Drama", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 315635,
+    "imdb": "tt2250912"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 315635,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #16."
+  }
+}

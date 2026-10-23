@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bucky-barnes-tfatws",
+  "characterId": "mv-character-bucky-barnes",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-the-falcon-and-the-winter-soldier",
+  "roleName": "Bucky Barnes / Winter Soldier",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

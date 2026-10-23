@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-ant-man-and-the-wasp-quantumania",
+  "title": "Ant-Man and the Wasp: Quantumania",
+  "releaseDate": "2023-02-17",
+  "releaseOrder": 31,
+  "runtime": 125,
+  "overview": "Scott Lang and his family are sucked into the Quantum Realm where they encounter Kang the Conqueror, a multiversal warlord.",
+  "posterPath": "/ngl2FKBlU4fhbds.jpg",
+  "backdropPath": "/m8JTwjd02.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 640146,
+    "imdb": "tt10954600"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 640146,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 5 release #31."
+  }
+}

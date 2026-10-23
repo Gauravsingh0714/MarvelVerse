@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-black-panther",
+  "title": "Black Panther",
+  "releaseDate": "2018-02-16",
+  "releaseOrder": 18,
+  "runtime": 134,
+  "overview": "T'Challa returns home to the technologically advanced African nation of Wakanda to serve as its new king, but is challenged by Erik Killmonger.",
+  "posterPath": "/uxzzxijgPIY7slzFvMotPv8vlum.jpg",
+  "backdropPath": "/b6ZJZHUWtACaueL79aJcuqdIdt.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 284054,
+    "imdb": "tt1825683"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 284054,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #18."
+  }
+}

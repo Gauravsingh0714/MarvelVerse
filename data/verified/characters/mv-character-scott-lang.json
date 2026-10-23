@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-scott-lang",
+  "name": "Scott Lang",
+  "realName": "Scott Edward Harris Lang",
+  "aliases": ["Ant-Man"],
+  "species": "Human",
+  "overview": "Master electrical engineer who uses the Pym Particle suit to shrink and grow in scale.",
+  "externalIds": {
+    "tmdb": 22226
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU Avenger & lead of Ant-Man."
+  }
+}

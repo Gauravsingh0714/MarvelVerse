@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-hope-van-dyne-ant-man",
+  "characterId": "mv-character-hope-van-dyne",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man",
+  "roleName": "Hope van Dyne",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

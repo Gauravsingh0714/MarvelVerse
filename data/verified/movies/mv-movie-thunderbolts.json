@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-thunderbolts",
+  "title": "Thunderbolts*",
+  "releaseDate": "2025-05-02",
+  "releaseOrder": 36,
+  "runtime": 120,
+  "overview": "An irreverent team-up of government-assembled anti-heroes and reformed assassins including Yelena Belova, Bucky Barnes, and U.S. Agent.",
+  "posterPath": "/thunderbolts.jpg",
+  "backdropPath": "/thunderbolts-bg.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 978436,
+    "imdb": "tt20969586"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 978436,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 5 release #36."
+  }
+}

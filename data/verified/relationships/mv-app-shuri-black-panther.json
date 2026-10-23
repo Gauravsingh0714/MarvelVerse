@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-shuri-black-panther",
+  "characterId": "mv-character-shuri",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-black-panther",
+  "roleName": "Shuri",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

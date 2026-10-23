@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-steve-rogers-civil-war",
+  "characterId": "mv-character-steve-rogers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Steve Rogers / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

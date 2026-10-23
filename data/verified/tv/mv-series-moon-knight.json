@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-moon-knight",
+  "title": "Moon Knight",
+  "firstAirDate": "2022-03-30",
+  "lastAirDate": "2022-05-04",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 6,
+  "overview": "Mild-mannered museum gift-shop employee Steven Grant discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector.",
+  "posterPath": "/x6FsYvt33846.jpg",
+  "backdropPath": "/1qpUk27581.jpg",
+  "genres": ["Action & Adventure", "Sci-Fi & Fantasy", "Mystery"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 92749,
+    "imdb": "tt10234724"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92749,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series."
+  }
+}

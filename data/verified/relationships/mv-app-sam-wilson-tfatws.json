@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sam-wilson-tfatws",
+  "characterId": "mv-character-sam-wilson",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-the-falcon-and-the-winter-soldier",
+  "roleName": "Sam Wilson / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

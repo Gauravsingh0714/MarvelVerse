@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-the-marvels",
+  "title": "The Marvels",
+  "releaseDate": "2023-11-10",
+  "releaseOrder": 33,
+  "runtime": 105,
+  "overview": "Carol Danvers, Monica Rambeau, and Kamala Khan find their light-based powers entangled and must work together to defeat Dar-Benn.",
+  "posterPath": "/9GBhzXMFDegHSo.jpg",
+  "backdropPath": "/feSiISwgEpum.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 609681,
+    "imdb": "tt10676048"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 609681,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 5 release #33."
+  }
+}

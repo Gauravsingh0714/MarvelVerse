@@ -1,0 +1,75 @@
+{
+  "canonicalId": "mv-season-ms-marvel-s1",
+  "tvCanonicalId": "mv-series-ms-marvel",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Kamala Khan navigates high school and unlocking cosmic hard-light abilities.",
+  "airDate": "2022-06-08",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-ms-marvel-s1-e1",
+      "episodeNumber": 1,
+      "title": "Generation Why",
+      "overview": "Kamala attends AvengerCon and unlocks light-harnessing powers with a mysterious bangle.",
+      "airDate": "2022-06-08",
+      "runtime": 49
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-ms-marvel-s1-e2",
+      "episodeNumber": 2,
+      "title": "Crushed",
+      "overview": "Kamala trains with Bruno and learns about her family heritage.",
+      "airDate": "2022-06-15",
+      "runtime": 51
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-ms-marvel-s1-e3",
+      "episodeNumber": 3,
+      "title": "Destined",
+      "overview": "Kamala meets the Clandestines and discovers their plan to use the bangle.",
+      "airDate": "2022-06-22",
+      "runtime": 48
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-ms-marvel-s1-e4",
+      "episodeNumber": 4,
+      "title": "Seeing Red",
+      "overview": "Kamala travels to Karachi to visit her grandmother and meets the Red Daggers.",
+      "airDate": "2022-06-29",
+      "runtime": 49
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-ms-marvel-s1-e5",
+      "episodeNumber": 5,
+      "title": "Time and Again",
+      "overview": "Kamala is transported through time to the 1947 Partition of India.",
+      "airDate": "2022-07-06",
+      "runtime": 40
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-ms-marvel-s1-e6",
+      "episodeNumber": 6,
+      "title": "No Normal",
+      "overview": "Kamala adopts the Ms. Marvel mantle and defends her friends from the Department of Damage Control.",
+      "airDate": "2022-07-13",
+      "runtime": 49
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92782,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

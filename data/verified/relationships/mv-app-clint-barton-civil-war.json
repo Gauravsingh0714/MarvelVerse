@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-clint-barton-civil-war",
+  "characterId": "mv-character-clint-barton",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Clint Barton / Hawkeye",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

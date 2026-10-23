@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-scott-lang-ant-man",
+  "characterId": "mv-character-scott-lang",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man",
+  "roleName": "Scott Lang / Ant-Man",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

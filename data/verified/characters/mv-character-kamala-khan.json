@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-kamala-khan",
+  "name": "Kamala Khan",
+  "realName": "Kamala Khan",
+  "aliases": ["Ms. Marvel"],
+  "species": "Human (Mutant)",
+  "overview": "Jersey City high school student who unlocks cosmic hard-light energy via an ancient family heirloom.",
+  "externalIds": {
+    "tmdb": 2793041
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ lead."
+  }
+}

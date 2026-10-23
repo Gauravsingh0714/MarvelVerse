@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-captain-america-civil-war",
+  "title": "Captain America: Civil War",
+  "releaseDate": "2016-05-06",
+  "releaseOrder": 13,
+  "runtime": 147,
+  "overview": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity, creating a fracture between Captain America and Iron Man.",
+  "posterPath": "/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+  "backdropPath": "/kvrtSv1R2dbXbh44iNEQ4BsB55O.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 271110,
+    "imdb": "tt3498820"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 271110,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #13."
+  }
+}

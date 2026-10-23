@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-kate-bishop",
+  "name": "Kate Bishop",
+  "realName": "Katherine Elizabeth Bishop",
+  "aliases": ["Hawkeye"],
+  "species": "Human",
+  "overview": "Elite archer mentored by Clint Barton who takes up the bow as New York’s newest defender.",
+  "externalIds": {
+    "tmdb": 109513
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ Hawkeye co-lead."
+  }
+}

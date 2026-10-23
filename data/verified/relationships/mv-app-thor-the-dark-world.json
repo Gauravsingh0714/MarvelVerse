@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-thor-the-dark-world",
+  "characterId": "mv-character-thor-odinson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-the-dark-world",
+  "roleName": "Thor Odinson",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

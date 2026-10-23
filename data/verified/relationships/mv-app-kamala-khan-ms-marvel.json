@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-kamala-khan-ms-marvel",
+  "characterId": "mv-character-kamala-khan",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-ms-marvel",
+  "roleName": "Kamala Khan / Ms. Marvel",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

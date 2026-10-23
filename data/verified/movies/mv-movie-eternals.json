@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-eternals",
+  "title": "Eternals",
+  "releaseDate": "2021-11-05",
+  "releaseOrder": 26,
+  "runtime": 156,
+  "overview": "An immortal race of superhuman beings who have lived secretly on Earth for 7,000 years emerge to protect humanity from the Deviants.",
+  "posterPath": "/bcCBq9N1EMo3daNIj0i8e9.jpg",
+  "backdropPath": "/c6H7Z4u73Upza85oR8.jpg",
+  "genres": ["Action", "Adventure", "Fantasy", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 524434,
+    "imdb": "tt9032441"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 524434,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 4 release #26."
+  }
+}

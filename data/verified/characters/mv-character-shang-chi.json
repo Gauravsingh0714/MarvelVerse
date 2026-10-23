@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-shang-chi",
+  "name": "Shang-Chi",
+  "realName": "Xu Shang-Chi",
+  "aliases": ["Shaun", "Master of Kung Fu"],
+  "species": "Human",
+  "overview": "Peerless martial artist who overcomes his father Wenwu and inherits the mystical Ten Rings.",
+  "externalIds": {
+    "tmdb": 1489211
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 MCU lead hero."
+  }
+}

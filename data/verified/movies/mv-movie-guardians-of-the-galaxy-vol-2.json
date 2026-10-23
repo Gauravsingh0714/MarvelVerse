@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-guardians-of-the-galaxy-vol-2",
+  "title": "Guardians of the Galaxy Vol. 2",
+  "releaseDate": "2017-05-05",
+  "releaseOrder": 15,
+  "runtime": 136,
+  "overview": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage with the Celestial Ego.",
+  "posterPath": "/y4MBh0EjBlMuOzv9axM4qJmJw4F.jpg",
+  "backdropPath": "/aJn9Xsvq9G3J03P1Xv2Wq3t0qgE.jpg",
+  "genres": ["Action", "Adventure", "Comedy", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 283995,
+    "imdb": "tt3896198"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 283995,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #15."
+  }
+}

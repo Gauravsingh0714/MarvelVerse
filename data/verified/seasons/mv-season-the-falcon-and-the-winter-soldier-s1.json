@@ -1,0 +1,75 @@
+{
+  "canonicalId": "mv-season-the-falcon-and-the-winter-soldier-s1",
+  "tvCanonicalId": "mv-series-the-falcon-and-the-winter-soldier",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Sam Wilson grapples with the legacy of the shield while Bucky Barnes confronts his dark Winter Soldier past.",
+  "airDate": "2021-03-19",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-tfatws-s1-e1",
+      "episodeNumber": 1,
+      "title": "New World Order",
+      "overview": "Sam Wilson and Bucky Barnes address their personal challenges in a post-Blip world.",
+      "airDate": "2021-03-19",
+      "runtime": 50
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-tfatws-s1-e2",
+      "episodeNumber": 2,
+      "title": "The Star-Spangled Man",
+      "overview": "A new Captain America is introduced to the world, while Sam and Bucky discover the Flag Smashers.",
+      "airDate": "2021-03-26",
+      "runtime": 51
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-tfatws-s1-e3",
+      "episodeNumber": 3,
+      "title": "Power Broker",
+      "overview": "Sam and Bucky turn to an unlikely ally, Helmut Zemo, for help tracking the Super Soldier Serum.",
+      "airDate": "2021-04-02",
+      "runtime": 54
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-tfatws-s1-e4",
+      "episodeNumber": 4,
+      "title": "The Whole World Is Watching",
+      "overview": "John Walker takes extreme measures as tensions escalate with the Flag Smashers.",
+      "airDate": "2021-04-09",
+      "runtime": 54
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-tfatws-s1-e5",
+      "episodeNumber": 5,
+      "title": "Truth",
+      "overview": "Sam reconciles his role in the nation’s future while John Walker faces consequences for his actions.",
+      "airDate": "2021-04-16",
+      "runtime": 61
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-tfatws-s1-e6",
+      "episodeNumber": 6,
+      "title": "One World, One People",
+      "overview": "Sam Wilson officially debuts as Captain America to stop the Flag Smashers attack on New York City.",
+      "airDate": "2021-04-23",
+      "runtime": 53
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 88396,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-thor-the-dark-world",
+  "title": "Thor: The Dark World",
+  "releaseDate": "2013-11-08",
+  "releaseOrder": 8,
+  "runtime": 112,
+  "overview": "Thor fights to restore order across the cosmos, but an ancient race led by the vengeful Malekith returns to plunge the universe into darkness.",
+  "posterPath": "/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+  "backdropPath": "/uhYoytlNaq4606ukx9haAPncQI0.jpg",
+  "genres": ["Action", "Adventure", "Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-2",
+  "externalIds": {
+    "tmdb": 76338,
+    "imdb": "tt1981115"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 76338,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 2 release #8."
+  }
+}

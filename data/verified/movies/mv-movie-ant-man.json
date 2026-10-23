@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-ant-man",
+  "title": "Ant-Man",
+  "releaseDate": "2015-07-17",
+  "releaseOrder": 12,
+  "runtime": 117,
+  "overview": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Dr. Hank Pym, protect the secret behind his spectacular Ant-Man suit.",
+  "posterPath": "/rQRnQ9AhNmNp27NGPIJWvIM6SpV.jpg",
+  "backdropPath": "/7AyEEZtkJw1PRaoXvRplRby9BuL.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-2",
+  "externalIds": {
+    "tmdb": 102899,
+    "imdb": "tt0478970"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 102899,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 2 release #12."
+  }
+}

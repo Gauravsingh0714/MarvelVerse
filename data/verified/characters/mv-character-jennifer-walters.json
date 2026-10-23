@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-jennifer-walters",
+  "name": "Jennifer Walters",
+  "realName": "Jennifer Susan Walters",
+  "aliases": ["She-Hulk"],
+  "species": "Human (Gamma Mutate)",
+  "overview": "Attorney heading the Superhuman Law Division who retains her personality as a 6-foot-7-inch green Hulk.",
+  "externalIds": {
+    "tmdb": 1253360
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series lead."
+  }
+}

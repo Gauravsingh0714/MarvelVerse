@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bruce-banner-ragnarok",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Bruce Banner / The Hulk",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

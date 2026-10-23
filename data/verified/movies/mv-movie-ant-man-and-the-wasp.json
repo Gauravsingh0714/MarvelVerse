@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-ant-man-and-the-wasp",
+  "title": "Ant-Man and the Wasp",
+  "releaseDate": "2018-07-06",
+  "releaseOrder": 20,
+  "runtime": 118,
+  "overview": "As Scott Lang awaits the end of his house arrest, Hope van Dyne and Dr. Hank Pym recruit him to help rescue Janet van Dyne from the Quantum Realm.",
+  "posterPath": "/eivQmS3wqz9Q11qGKi89t9m2bE.jpg",
+  "backdropPath": "/6P3c80EOm7QKN49CX34z98Q2b.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 363088,
+    "imdb": "tt5095030"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 363088,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #20."
+  }
+}

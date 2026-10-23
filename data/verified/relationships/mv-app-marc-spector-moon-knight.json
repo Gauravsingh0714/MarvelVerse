@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-marc-spector-moon-knight",
+  "characterId": "mv-character-marc-spector",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-moon-knight",
+  "roleName": "Marc Spector / Steven Grant / Moon Knight",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

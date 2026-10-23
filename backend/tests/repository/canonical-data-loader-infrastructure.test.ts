@@ -43,21 +43,21 @@ test('Batch 1 — Baseline Loading of Production Canonical Data', () => {
   );
 
   const movies = loader.loadMovies();
-  assert.equal(movies.length, 14);
+  assert.equal(movies.length, 39);
   assert.equal(
     movies.some((m) => m.canonicalId === 'mv-movie-iron-man'),
     true
   );
 
   const characters = loader.loadCharacters();
-  assert.equal(characters.length, 16);
+  assert.equal(characters.length, 28);
   assert.equal(
     characters.some((c) => c.canonicalId === 'mv-character-tony-stark'),
     true
   );
 
   const appearances = loader.loadAppearances();
-  assert.equal(appearances.length, 29);
+  assert.equal(appearances.length, 86);
   assert.equal(
     appearances.some((a) => a.canonicalId === 'mv-app-tony-stark-iron-man'),
     true

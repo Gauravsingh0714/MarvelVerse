@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-marc-spector",
+  "name": "Marc Spector",
+  "realName": "Marc Spector",
+  "aliases": ["Moon Knight", "Steven Grant", "Jake Lockley"],
+  "species": "Human (Avatar)",
+  "overview": "Mercenary with dissociative identity disorder who serves as the earthly fist of Khonshu.",
+  "externalIds": {
+    "tmdb": 25072
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series lead."
+  }
+}

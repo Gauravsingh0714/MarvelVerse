@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-natasha-romanoff-civil-war",
+  "characterId": "mv-character-natasha-romanoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Natasha Romanoff / Black Widow",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

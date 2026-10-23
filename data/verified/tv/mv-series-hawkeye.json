@@ -1,0 +1,30 @@
+{
+  "canonicalId": "mv-series-hawkeye",
+  "title": "Hawkeye",
+  "firstAirDate": "2021-11-24",
+  "lastAirDate": "2021-12-22",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 6,
+  "overview": "Former Avenger Clint Barton must partner with young archer Kate Bishop to confront enemies from his past as Ronin in time for Christmas.",
+  "posterPath": "/pqzjCxPVc9TkVg.jpg",
+  "backdropPath": "/1R68vl3d5BiBM2.jpg",
+  "genres": ["Action & Adventure", "Comedy", "Drama"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 88329,
+    "imdb": "tt10160804"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 88329,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed Phase 4 Disney+ series."
+  }
+}

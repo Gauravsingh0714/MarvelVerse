@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-shang-chi-legend-ten-rings",
+  "characterId": "mv-character-shang-chi",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-shang-chi-and-the-legend-of-the-ten-rings",
+  "roleName": "Xu Shang-Chi",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

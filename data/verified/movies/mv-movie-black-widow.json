@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-black-widow",
+  "title": "Black Widow",
+  "releaseDate": "2021-07-09",
+  "releaseOrder": 24,
+  "runtime": 134,
+  "overview": "Natasha Romanoff confronts the darkest parts of her past and reunites with her spy family to dismantle the Red Room and Taskmaster.",
+  "posterPath": "/qAZ0Qzat24kLdO3o8L0L8M2P.jpg",
+  "backdropPath": "/keG4fqOfd2Yf08b3o8X9.jpg",
+  "genres": ["Action", "Adventure", "Thriller"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 497698,
+    "imdb": "tt3480822"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 497698,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 4 release #24."
+  }
+}

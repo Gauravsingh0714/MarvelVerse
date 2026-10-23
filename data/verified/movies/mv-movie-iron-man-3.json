@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-iron-man-3",
+  "title": "Iron Man 3",
+  "releaseDate": "2013-05-03",
+  "releaseOrder": 7,
+  "runtime": 130,
+  "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+  "posterPath": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+  "backdropPath": "/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-2",
+  "externalIds": {
+    "tmdb": 68721,
+    "imdb": "tt1300854"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 68721,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 2 release #7."
+  }
+}

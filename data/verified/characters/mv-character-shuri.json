@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-shuri",
+  "name": "Shuri",
+  "realName": "Shuri",
+  "aliases": ["Black Panther", "Princess of Wakanda"],
+  "species": "Human",
+  "overview": "Brilliant Wakandan technologist and inventor who assumes the mantle of Black Panther.",
+  "externalIds": {
+    "tmdb": 1083010
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU hero & lead of Wakanda Forever."
+  }
+}

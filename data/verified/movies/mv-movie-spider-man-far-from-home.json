@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-spider-man-far-from-home",
+  "title": "Spider-Man: Far From Home",
+  "releaseDate": "2019-07-02",
+  "releaseOrder": 23,
+  "runtime": 129,
+  "overview": "Peter Parker goes on a European class trip, but is enlisted by Nick Fury and Mysterio to battle the elemental creatures threatening Europe.",
+  "posterPath": "/4q2NNZ4hxQjB625bwt9mP8T4X2e.jpg",
+  "backdropPath": "/8ZTVqvKDQU8ewHpVN428Q98GzWD.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-3",
+  "externalIds": {
+    "tmdb": 429617,
+    "imdb": "tt6320628"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 429617,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 3 release #23."
+  }
+}

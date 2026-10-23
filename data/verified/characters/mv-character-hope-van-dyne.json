@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-hope-van-dyne",
+  "name": "Hope van Dyne",
+  "realName": "Hope van Dyne",
+  "aliases": ["The Wasp"],
+  "species": "Human",
+  "overview": "Brilliant scientist and daughter of Hank Pym who wields the powered Wasp suit.",
+  "externalIds": {
+    "tmdb": 19034
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU hero & co-lead of Ant-Man."
+  }
+}

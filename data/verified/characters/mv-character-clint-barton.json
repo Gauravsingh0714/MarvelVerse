@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-clint-barton",
+  "name": "Clint Barton",
+  "realName": "Clinton Francis Barton",
+  "aliases": ["Hawkeye", "Ronin"],
+  "species": "Human",
+  "overview": "Master marksman, former S.H.I.E.L.D. operative, and founding member of the Avengers.",
+  "externalIds": {
+    "tmdb": 17604
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU Avenger."
+  }
+}

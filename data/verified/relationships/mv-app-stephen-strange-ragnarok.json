@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-stephen-strange-ragnarok",
+  "characterId": "mv-character-stephen-strange",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Dr. Stephen Strange",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

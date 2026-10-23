@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-jennifer-walters-she-hulk",
+  "characterId": "mv-character-jennifer-walters",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-she-hulk",
+  "roleName": "Jennifer Walters / She-Hulk",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

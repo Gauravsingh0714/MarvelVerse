@@ -1,0 +1,75 @@
+{
+  "canonicalId": "mv-season-hawkeye-s1",
+  "tvCanonicalId": "mv-series-hawkeye",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Clint Barton and Kate Bishop battle the Tracksuit Mafia and unravel a holiday conspiracy.",
+  "airDate": "2021-11-24",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-hawkeye-s1-e1",
+      "episodeNumber": 1,
+      "title": "Never Meet Your Heroes",
+      "overview": "Kate Bishop accidentally stumbles upon the Ronin suit at a black market auction.",
+      "airDate": "2021-11-24",
+      "runtime": 49
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-hawkeye-s1-e2",
+      "episodeNumber": 2,
+      "title": "Hide and Seek",
+      "overview": "Clint Barton tracks down Kate Bishop and works to recover the Ronin suit.",
+      "airDate": "2021-11-24",
+      "runtime": 52
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-hawkeye-s1-e3",
+      "episodeNumber": 3,
+      "title": "Echoes",
+      "overview": "Clint and Kate escape Maya Lopez and the Tracksuit Mafia in a car chase across New York.",
+      "airDate": "2021-12-01",
+      "runtime": 43
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-hawkeye-s1-e4",
+      "episodeNumber": 4,
+      "title": "Partners, Am I Right?",
+      "overview": "Secrets are revealed about Clint’s family and an unexpected assassin enters the fray.",
+      "airDate": "2021-12-08",
+      "runtime": 40
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-hawkeye-s1-e5",
+      "episodeNumber": 5,
+      "title": "Ronin",
+      "overview": "Clint confronts Maya Lopez as Ronin, while Yelena Belova discovers who hired her.",
+      "airDate": "2021-12-15",
+      "runtime": 45
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-hawkeye-s1-e6",
+      "episodeNumber": 6,
+      "title": "So This Is Christmas?",
+      "overview": "Clint and Kate confront Kingpin and the Tracksuit Mafia in Rockefeller Center.",
+      "airDate": "2021-12-22",
+      "runtime": 62
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 88329,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

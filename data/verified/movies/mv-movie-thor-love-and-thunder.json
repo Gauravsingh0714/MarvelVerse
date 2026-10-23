@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-thor-love-and-thunder",
+  "title": "Thor: Love and Thunder",
+  "releaseDate": "2022-07-08",
+  "releaseOrder": 29,
+  "runtime": 119,
+  "overview": "Thor enlists Valkyrie, Korg and Jane Foster (now the Mighty Thor) to stop Gorr the God Butcher from annihilating all gods.",
+  "posterPath": "/pIkRyD18kl2Fj8k7W.jpg",
+  "backdropPath": "/jsoz1HlxczNt27.jpg",
+  "genres": ["Action", "Adventure", "Comedy", "Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 616037,
+    "imdb": "tt10648342"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 616037,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 4 release #29."
+  }
+}

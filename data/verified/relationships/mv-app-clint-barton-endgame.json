@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-clint-barton-endgame",
+  "characterId": "mv-character-clint-barton",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Clint Barton / Hawkeye / Ronin",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

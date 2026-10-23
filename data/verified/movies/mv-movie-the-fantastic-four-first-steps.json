@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-the-fantastic-four-first-steps",
+  "title": "The Fantastic Four: First Steps",
+  "releaseDate": "2025-07-25",
+  "releaseOrder": 37,
+  "runtime": 125,
+  "overview": "Marvel’s First Family must balance family bonds and cosmic threats as Galactus and the Silver Surfer target Earth.",
+  "posterPath": "/fantasticfourfirststeps.jpg",
+  "backdropPath": "/fantasticfourfirststeps-bg.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-6",
+  "externalIds": {
+    "tmdb": 617126,
+    "imdb": "tt10676052"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 617126,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 6 release #37."
+  }
+}

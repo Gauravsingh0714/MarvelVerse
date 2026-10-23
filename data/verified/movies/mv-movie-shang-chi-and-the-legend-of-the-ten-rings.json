@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-shang-chi-and-the-legend-of-the-ten-rings",
+  "title": "Shang-Chi and the Legend of the Ten Rings",
+  "releaseDate": "2021-09-03",
+  "releaseOrder": 25,
+  "runtime": 132,
+  "overview": "Shang-Chi is drawn into the clandestine Ten Rings organization and forced to confront the legacy of his father Wenwu.",
+  "posterPath": "/1BIoJGKbXjd2xA9jjrX837D.jpg",
+  "backdropPath": "/cinER0j6thFLAW0Q.jpg",
+  "genres": ["Action", "Adventure", "Fantasy"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 566525,
+    "imdb": "tt9376612"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 566525,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 4 release #25."
+  }
+}

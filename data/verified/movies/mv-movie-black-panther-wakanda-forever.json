@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-black-panther-wakanda-forever",
+  "title": "Black Panther: Wakanda Forever",
+  "releaseDate": "2022-11-11",
+  "releaseOrder": 30,
+  "runtime": 161,
+  "overview": "Queen Ramonda and Shuri lead Wakanda in defending their vibranium against world powers and Namor’s underwater kingdom of Talokan.",
+  "posterPath": "/sv1xJUazXeYqALzczSZ3O.jpg",
+  "backdropPath": "/xDMIl84Qo5Tsu62.jpg",
+  "genres": ["Action", "Adventure", "Drama", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "externalIds": {
+    "tmdb": 505642,
+    "imdb": "tt9114286"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 505642,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 4 release #30."
+  }
+}

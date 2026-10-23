@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-thor-ragnarok",
+  "characterId": "mv-character-thor-odinson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Thor Odinson",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

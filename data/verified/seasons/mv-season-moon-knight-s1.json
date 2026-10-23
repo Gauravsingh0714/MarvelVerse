@@ -1,0 +1,75 @@
+{
+  "canonicalId": "mv-season-moon-knight-s1",
+  "tvCanonicalId": "mv-series-moon-knight",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Steven Grant and Marc Spector navigate multiple identities and Egyptian gods.",
+  "airDate": "2022-03-30",
+  "episodeCount": 6,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-moon-knight-s1-e1",
+      "episodeNumber": 1,
+      "title": "The Goldfish Problem",
+      "overview": "Steven Grant experiences blackouts and discovers a violent alternate personality.",
+      "airDate": "2022-03-30",
+      "runtime": 48
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-moon-knight-s1-e2",
+      "episodeNumber": 2,
+      "title": "Summon the Suit",
+      "overview": "Steven meets Marc’s wife Layla and summons the Mr. Knight suit.",
+      "airDate": "2022-04-06",
+      "runtime": 53
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-moon-knight-s1-e3",
+      "episodeNumber": 3,
+      "title": "The Friendly Type",
+      "overview": "Marc and Layla travel to Cairo to find the tomb of Ammit.",
+      "airDate": "2022-04-13",
+      "runtime": 53
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-moon-knight-s1-e4",
+      "episodeNumber": 4,
+      "title": "The Tomb",
+      "overview": "Marc and Layla navigate a dangerous labyrinth and encounter Arthur Harrow.",
+      "airDate": "2022-04-20",
+      "runtime": 53
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-moon-knight-s1-e5",
+      "episodeNumber": 5,
+      "title": "Asylum",
+      "overview": "Marc and Steven journey through Marc’s memories to balance the scales of justice.",
+      "airDate": "2022-04-27",
+      "runtime": 47
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-moon-knight-s1-e6",
+      "episodeNumber": 6,
+      "title": "Gods and Monsters",
+      "overview": "Moon Knight and Layla unite with Khonshu to defeat Arthur Harrow and Ammit.",
+      "airDate": "2022-05-04",
+      "runtime": 44
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 92749,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

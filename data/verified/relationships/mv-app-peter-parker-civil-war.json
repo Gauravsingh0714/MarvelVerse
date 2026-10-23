@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peter-parker-civil-war",
+  "characterId": "mv-character-peter-parker",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Peter Parker / Spider-Man",
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z"
+  }
+}

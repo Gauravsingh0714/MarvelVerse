@@ -1,0 +1,29 @@
+{
+  "canonicalId": "mv-movie-captain-america-brave-new-world",
+  "title": "Captain America: Brave New World",
+  "releaseDate": "2025-02-14",
+  "releaseOrder": 35,
+  "runtime": 118,
+  "overview": "Sam Wilson steps onto the global stage as Captain America and uncovers a sinister international conspiracy reaching into the White House.",
+  "posterPath": "/capbravenewworld.jpg",
+  "backdropPath": "/capbravenewworld-bg.jpg",
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "externalIds": {
+    "tmdb": 822119,
+    "imdb": "tt14513804"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 822119,
+    "acquiredAt": "2026-10-24T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed MCU Phase 5 release #35."
+  }
+}

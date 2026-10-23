@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-t-challa",
+  "name": "T'Challa",
+  "realName": "T'Challa",
+  "aliases": ["Black Panther", "King of Wakanda"],
+  "species": "Human (Enhanced)",
+  "overview": "King of Wakanda and protector of his nation, enhanced by the sacred Heart-Shaped Herb.",
+  "externalIds": {
+    "tmdb": 172069
+  },
+  "verification": {
+    "status": "verified",
+    "method": "curated-pipeline",
+    "verifiedAt": "2026-10-24T00:00:00.000Z",
+    "notes": "Confirmed core MCU lead character."
+  }
+}
