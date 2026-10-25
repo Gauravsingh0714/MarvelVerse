@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-billy-maximoff",
+  "name": "Billy Maximoff",
+  "realName": "William Maximoff / William Kaplan",
+  "aliases": ["Wiccan", "Teen"],
+  "species": "Human (Magical Construct / Reincarnation)",
+  "overview": "The magically manifested twin son of Wanda Maximoff and Vision who survives the hex by inhabiting the body of William Kaplan and seeks his brother along the Witches' Road.",
+  "externalIds": {
+    "imdb": "nm10058284"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed character in WandaVision and co-lead in Agatha All Along."
+  }
+}

@@ -127,8 +127,8 @@ test('GET /api/v1/curated/doomsday returns 200, standard collection envelope, an
   const body = (await res.json()) as any;
   assert.equal(typeof body, 'object');
   assert.equal(Array.isArray(body.data), true);
-  assert.equal(body.meta.count, 10);
-  assert.equal(body.data.length, 10);
+  assert.equal(body.meta.count, 23);
+  assert.equal(body.data.length, 23);
 
   // Verify sorted by curatedOrder
   for (let i = 0; i < body.data.length - 1; i++) {
@@ -199,8 +199,8 @@ test('GET /api/v1/curated/doomsday supports filtering by tier', async () => {
   assert.equal(res.status, 200);
 
   const body = (await res.json()) as any;
-  assert.equal(body.data.length, 3);
-  assert.equal(body.meta.count, 3);
+  assert.equal(body.data.length, 5);
+  assert.equal(body.meta.count, 5);
   assert.ok(
     body.data.every((e: any) => e.tier === 'tier-1-absolute-essentials')
   );

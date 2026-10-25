@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-maya-lopez",
+  "name": "Maya Lopez",
+  "realName": "Maya Lopez",
+  "aliases": ["Echo"],
+  "species": "Human",
+  "overview": "A deaf Native American martial artist and former leader of the Tracksuit Mafia who possesses photographic reflexes and ancestral Choctaw connection.",
+  "externalIds": {
+    "imdb": "nm11993202"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed lead character of Echo and supporting character in Hawkeye."
+  }
+}

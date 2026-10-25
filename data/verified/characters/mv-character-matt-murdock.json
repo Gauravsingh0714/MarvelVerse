@@ -1,0 +1,21 @@
+{
+  "canonicalId": "mv-character-matt-murdock",
+  "name": "Matt Murdock",
+  "realName": "Matthew Michael Murdock",
+  "aliases": [
+    "Daredevil",
+    "The Devil of Hell's Kitchen",
+    "The Man Without Fear"
+  ],
+  "species": "Human",
+  "overview": "A blind attorney who operates as the vigilante Daredevil, protecting the streets of Hell's Kitchen using his superhumanly enhanced senses.",
+  "externalIds": {
+    "imdb": "nm0189144"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed lead character of Daredevil: Born Again and core MCU street-level hero."
+  }
+}

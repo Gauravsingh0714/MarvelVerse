@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-steve-rogers-the-avengers",
+  "characterId": "mv-character-steve-rogers",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-avengers",
+  "roleName": "Steve Rogers / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

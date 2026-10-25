@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-billy-maximoff-agatha-all-along",
+  "characterId": "mv-character-billy-maximoff",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-agatha-all-along",
+  "roleName": "Billy Maximoff / Teen",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z"
+  }
+}

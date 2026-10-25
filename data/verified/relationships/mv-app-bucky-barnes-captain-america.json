@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bucky-barnes-captain-america",
+  "characterId": "mv-character-bucky-barnes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-first-avenger",
+  "roleName": "James Buchanan 'Bucky' Barnes",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

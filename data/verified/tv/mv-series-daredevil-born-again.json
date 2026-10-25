@@ -1,0 +1,36 @@
+{
+  "canonicalId": "mv-series-daredevil-born-again",
+  "title": "Daredevil: Born Again",
+  "firstAirDate": "2025-03-04",
+  "lastAirDate": "2025-04-15",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 9,
+  "overview": "Blind lawyer Matt Murdock and former crime boss Wilson Fisk try to leave their darker identities behind in New York City, only to find their pasts catching up with them.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Action", "Crime", "Drama"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "firstAirDateRecord": {
+    "rawDate": "2025-03-04",
+    "status": "exact",
+    "precision": "day",
+    "source": "Disney+ / Marvel Studios"
+  },
+  "externalIds": {
+    "tmdb": 202555,
+    "imdb": "tt20221436"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 202555,
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 5 TV Series. Season 1 aired March-April 2025 on Disney+ (9 episodes)."
+  }
+}

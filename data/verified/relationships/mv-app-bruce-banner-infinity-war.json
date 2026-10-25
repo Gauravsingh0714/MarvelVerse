@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bruce-banner-infinity-war",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Bruce Banner / Hulk",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "canonicalId": "mv-series-echo",
+  "title": "Echo",
+  "firstAirDate": "2024-01-09",
+  "lastAirDate": "2024-01-09",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 5,
+  "overview": "Pursued by Wilson Fisk's criminal empire, Maya Lopez returns home to Oklahoma to face her estranged family and reconnect with her Choctaw ancestral roots.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Action", "Crime", "Drama"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "firstAirDateRecord": {
+    "rawDate": "2024-01-09",
+    "status": "exact",
+    "precision": "day",
+    "source": "Disney+ / Hulu"
+  },
+  "externalIds": {
+    "tmdb": 138502,
+    "imdb": "tt13966962"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 138502,
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 5 TV miniseries released simultaneously on Disney+ and Hulu on January 9, 2024 (5 episodes)."
+  }
+}

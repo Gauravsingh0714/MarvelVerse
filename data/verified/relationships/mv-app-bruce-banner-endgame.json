@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bruce-banner-endgame",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Bruce Banner / Smart Hulk",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

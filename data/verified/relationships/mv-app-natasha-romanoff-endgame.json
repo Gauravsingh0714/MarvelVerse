@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-natasha-romanoff-endgame",
+  "characterId": "mv-character-natasha-romanoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Natasha Romanoff / Black Widow",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

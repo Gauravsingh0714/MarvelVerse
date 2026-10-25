@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-nick-fury-iron-man-2",
+  "characterId": "mv-character-nick-fury",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-2",
+  "roleName": "Nick Fury",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

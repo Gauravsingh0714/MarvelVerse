@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-hope-van-dyne-endgame",
+  "characterId": "mv-character-hope-van-dyne",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Hope van Dyne / The Wasp",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

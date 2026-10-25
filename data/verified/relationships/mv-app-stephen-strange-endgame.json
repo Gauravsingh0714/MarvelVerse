@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-stephen-strange-endgame",
+  "characterId": "mv-character-stephen-strange",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Doctor Stephen Strange",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

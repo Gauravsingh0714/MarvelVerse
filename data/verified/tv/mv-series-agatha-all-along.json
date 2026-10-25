@@ -1,0 +1,36 @@
+{
+  "canonicalId": "mv-series-agatha-all-along",
+  "title": "Agatha All Along",
+  "firstAirDate": "2024-09-18",
+  "lastAirDate": "2024-10-30",
+  "numberOfSeasons": 1,
+  "numberOfEpisodes": 9,
+  "overview": "A spell-broken Agatha Harkness finds herself powerless and recruits an unlikely coven of witches and a mysterious goth teen to walk the legendary Witches' Road.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Sci-Fi & Fantasy", "Comedy", "Mystery"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-5",
+  "firstAirDateRecord": {
+    "rawDate": "2024-09-18",
+    "status": "exact",
+    "precision": "day",
+    "source": "Disney+ / Marvel Studios"
+  },
+  "externalIds": {
+    "tmdb": 138501,
+    "imdb": "tt15594490"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 138501,
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed as MCU Phase 5 TV series and direct follow-up to WandaVision, aired September-October 2024 on Disney+ (9 episodes)."
+  }
+}

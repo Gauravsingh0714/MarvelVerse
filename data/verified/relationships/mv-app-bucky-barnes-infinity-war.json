@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bucky-barnes-infinity-war",
+  "characterId": "mv-character-bucky-barnes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Bucky Barnes / White Wolf",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

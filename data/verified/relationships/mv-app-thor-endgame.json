@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-thor-endgame",
+  "characterId": "mv-character-thor-odinson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Thor Odinson",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

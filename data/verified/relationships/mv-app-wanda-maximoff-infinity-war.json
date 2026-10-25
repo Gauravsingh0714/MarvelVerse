@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wanda-maximoff-infinity-war",
+  "characterId": "mv-character-wanda-maximoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Wanda Maximoff / Scarlet Witch",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

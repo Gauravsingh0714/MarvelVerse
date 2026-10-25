@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-clint-barton-thor",
+  "characterId": "mv-character-clint-barton",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor",
+  "roleName": "Clint Barton / Hawkeye",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

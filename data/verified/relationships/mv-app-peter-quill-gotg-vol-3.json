@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peter-quill-gotg-vol-3",
+  "characterId": "mv-character-peter-quill",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-guardians-of-the-galaxy-vol-3",
+  "roleName": "Peter Quill / Star-Lord",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

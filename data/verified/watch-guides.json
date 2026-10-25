@@ -4,7 +4,7 @@
     "name": "Road to Doomsday",
     "slug": "road-to-doomsday",
     "description": "Representative curated viewing guide preparing viewers for Avengers: Doomsday across four distinct narrative tiers.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "entries": [
       {
         "id": "mv-wg-entry-infinity-war",
@@ -184,6 +184,240 @@
           "status": "verified",
           "method": "manual-review",
           "verifiedAt": "2026-10-14T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-civil-war",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-captain-america-civil-war",
+        "title": "Captain America: Civil War",
+        "tier": "tier-1-absolute-essentials",
+        "curatedOrder": 11,
+        "whyWatchThis": "Fracturing of the Avengers via Sokovia Accords; establishes ideological divisions and team fragmentation persisting into multiversal team-ups.",
+        "keyPlotPoints": [
+          "Sokovia Accords divide the Avengers into opposing factions",
+          "Rift between Tony Stark and Steve Rogers fractures Earth's defense network"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-doomsday",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-avengers-doomsday",
+        "title": "Avengers: Doomsday",
+        "tier": "tier-1-absolute-essentials",
+        "curatedOrder": 12,
+        "whyWatchThis": "The culmination destination of the Multiverse Saga where Doctor Doom challenges realities across the multiverse.",
+        "keyPlotPoints": [
+          "Victor von Doom emerges as the multiversal threat",
+          "Heroes across realities assemble against complete multiversal collapse"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-fantastic-four-first-steps",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-the-fantastic-four-first-steps",
+        "title": "The Fantastic Four: First Steps",
+        "tier": "tier-2-multiverse-foundation",
+        "curatedOrder": 13,
+        "whyWatchThis": "Introduces Marvel's First Family arriving from an alternate retro-futuristic reality into the MCU; establishes their arch-nemesis Doctor Doom and positions Reed Richards as a central protagonist.",
+        "keyPlotPoints": [
+          "First Family origins and arrival into the broader Marvel continuity",
+          "Foundational multiversal dynamics setting up Doctor Doom's prominence"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-quantumania",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-ant-man-and-the-wasp-quantumania",
+        "title": "Ant-Man and the Wasp: Quantumania",
+        "tier": "tier-2-multiverse-foundation",
+        "curatedOrder": 14,
+        "whyWatchThis": "Unveils the Quantum Realm outside conventional space-time and introduces the multiversal Council of Kangs.",
+        "keyPlotPoints": [
+          "Kang the Conqueror's exile in the Quantum Realm",
+          "Council of Kangs gathers across the multiversal branches"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-captain-marvel",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-captain-marvel",
+        "title": "Captain Marvel",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 15,
+        "whyWatchThis": "Establishes Carol Danvers' cosmic power tier, the history of the Tesseract, and deep-space Marvel alliances.",
+        "keyPlotPoints": [
+          "Carol Danvers absorbs Space Stone energy",
+          "Kree-Skrull conflict establishes cosmic geopolitical backdrop"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-wakanda-forever",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-black-panther-wakanda-forever",
+        "title": "Black Panther: Wakanda Forever",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 16,
+        "whyWatchThis": "Shuri assumes the mantle of Black Panther; introduces Talokan and Namor amidst global tensions over vibranium access.",
+        "keyPlotPoints": [
+          "Death of King T'Challa and succession of Shuri as Black Panther",
+          "Emergence of Namor and secret underwater civilization of Talokan"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-thunderbolts",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-thunderbolts",
+        "title": "Thunderbolts*",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 17,
+        "whyWatchThis": "Assembles Earth's anti-hero operative squad (Bucky Barnes, Yelena Belova, John Walker) alongside Sentry directly preceding the Doomsday crisis.",
+        "keyPlotPoints": [
+          "Government-assembled strike team operating in the shadows",
+          "Introduction of Bob Reynolds / Sentry as a destabilizing power"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-brave-new-world",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-captain-america-brave-new-world",
+        "title": "Captain America: Brave New World",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 18,
+        "whyWatchThis": "Sam Wilson steps forward as Captain America to lead global defense amid political conspiracy and the emergence of Red Hulk.",
+        "keyPlotPoints": [
+          "International scramble over Adamantium from Celestial Tiamut",
+          "President Thaddeus Ross transforms into Red Hulk"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-iron-man",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-iron-man",
+        "title": "Iron Man",
+        "tier": "tier-3-character-depth-context",
+        "curatedOrder": 19,
+        "whyWatchThis": "The foundational genesis of the MCU and Tony Stark's heroic journey; vital thematic resonance with Robert Downey Jr.'s return as Victor von Doom.",
+        "keyPlotPoints": [
+          "Tony Stark builds the Mark I armor and embraces his destiny",
+          "Birth of the Marvel Cinematic Universe with Nick Fury's Avengers Initiative"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-black-panther",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-black-panther",
+        "title": "Black Panther",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 20,
+        "whyWatchThis": "Origins of Wakanda, vibranium technology, and the philosophical debate between isolationism and global aid.",
+        "keyPlotPoints": [
+          "T'Challa ascends the throne as King of Wakanda",
+          "Wakanda reveals its true technology and opens borders to the world"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-thor-ragnarok",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-thor-ragnarok",
+        "title": "Thor: Ragnarok",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 21,
+        "whyWatchThis": "Thor's loss of Mjolnir, destruction of Asgard, and partnership with Hulk leading immediately into Infinity War.",
+        "keyPlotPoints": [
+          "Destruction of Mjolnir and Asgard by Hela and Surtur",
+          "Thor embraces his innate godly power without his hammer"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-age-of-ultron",
+        "entityType": "movie",
+        "entityCanonicalId": "mv-movie-avengers-age-of-ultron",
+        "title": "Avengers: Age of Ultron",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 22,
+        "whyWatchThis": "Creation of Vision with the Mind Stone, introduction of Wanda Maximoff, and the devastation of Sokovia.",
+        "keyPlotPoints": [
+          "Creation and destruction of Ultron; birth of Vision",
+          "Sokovia's destruction lays the political catalyst for the Accords"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
+        }
+      },
+      {
+        "id": "mv-wg-entry-agatha-all-along",
+        "entityType": "series",
+        "entityCanonicalId": "mv-series-agatha-all-along",
+        "title": "Agatha All Along",
+        "tier": "tier-4-supplemental-lore",
+        "curatedOrder": 23,
+        "whyWatchThis": "Direct WandaVision sequel exploring dark magic, the Witches' Road, and introducing the reincarnated Billy Maximoff (Wiccan).",
+        "keyPlotPoints": [
+          "Agatha Harkness and her coven walk the Witches' Road",
+          "Billy Maximoff emerges as the magical successor to the Scarlet Witch"
+        ],
+        "verification": {
+          "status": "verified",
+          "method": "manual-review",
+          "verifiedAt": "2026-10-25T00:00:00.000Z"
         }
       }
     ]

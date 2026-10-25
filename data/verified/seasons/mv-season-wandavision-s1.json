@@ -26,6 +26,51 @@
       "runtime": 37
     },
     {
+      "id": 3,
+      "canonicalId": "mv-episode-wandavision-s1-e3",
+      "episodeNumber": 3,
+      "title": "Now in Color",
+      "overview": "Wanda's pregnancy accelerates rapidly into the 1970s while Vision begins to suspect something is deeply wrong with Westview.",
+      "airDate": "2021-01-22",
+      "runtime": 33
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-wandavision-s1-e4",
+      "episodeNumber": 4,
+      "title": "We Interrupt This Program",
+      "overview": "Captain Monica Rambeau returns after the Blip and joins S.W.O.R.D. and Darcy Lewis outside the Westview anomaly to investigate the broadcast.",
+      "airDate": "2021-01-29",
+      "runtime": 35
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-wandavision-s1-e5",
+      "episodeNumber": 5,
+      "title": "On a Very Special Episode...",
+      "overview": "Wanda and Vision clash over Westview's reality as Billy and Tommy grow rapidly, culminating in a shocking visit from a familiar face.",
+      "airDate": "2021-02-05",
+      "runtime": 42
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-wandavision-s1-e6",
+      "episodeNumber": 6,
+      "title": "All-New Halloween Spooktacular!",
+      "overview": "During a late-90s Halloween in Westview, Vision investigates the edge of town while Wanda expands the hex boundary.",
+      "airDate": "2021-02-12",
+      "runtime": 38
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-wandavision-s1-e7",
+      "episodeNumber": 7,
+      "title": "Breaking the Fourth Wall",
+      "overview": "Wanda navigates a mid-2000s mockumentary mental break while Agnes reveals her true identity as the witch Agatha Harkness.",
+      "airDate": "2021-02-19",
+      "runtime": 38
+    },
+    {
       "id": 8,
       "canonicalId": "mv-episode-wandavision-s1-e8",
       "episodeNumber": 8,
@@ -52,7 +97,7 @@
   "verification": {
     "status": "verified",
     "method": "manual-review",
-    "verifiedAt": "2026-10-14T00:00:00.000Z",
-    "notes": "Verified WandaVision Season 1 canonical record."
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Verified WandaVision Season 1 full 9-episode canonical roster matching Disney+ broadcast schedule."
   }
 }

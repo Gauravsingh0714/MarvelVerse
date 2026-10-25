@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-billy-maximoff-wandavision",
+  "characterId": "mv-character-billy-maximoff",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-wandavision",
+  "roleName": "Billy Maximoff",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z"
+  }
+}

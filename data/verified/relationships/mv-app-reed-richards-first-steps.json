@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-reed-richards-first-steps",
+  "characterId": "mv-character-reed-richards",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-fantastic-four-first-steps",
+  "roleName": "Reed Richards / Mister Fantastic",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z"
+  }
+}

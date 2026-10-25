@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-bucky-barnes-thunderbolts",
+  "characterId": "mv-character-bucky-barnes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thunderbolts",
+  "roleName": "Bucky Barnes / Winter Soldier",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-reed-richards",
+  "name": "Reed Richards",
+  "realName": "Reed Richards",
+  "aliases": ["Mister Fantastic"],
+  "species": "Human",
+  "overview": "Brilliant scientist and leader of the Fantastic Four endowed with extraordinary plasticity and intellect.",
+  "externalIds": {
+    "imdb": "nm0050959"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Confirmed lead character of The Fantastic Four: First Steps and primary participant in Avengers: Doomsday."
+  }
+}

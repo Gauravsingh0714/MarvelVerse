@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sam-wilson-brave-new-world",
+  "characterId": "mv-character-sam-wilson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-brave-new-world",
+  "roleName": "Sam Wilson / Captain America",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

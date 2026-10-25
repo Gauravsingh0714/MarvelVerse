@@ -1,0 +1,103 @@
+{
+  "canonicalId": "mv-season-daredevil-born-again-s1",
+  "tvCanonicalId": "mv-series-daredevil-born-again",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Matt Murdock attempts to balance his legal practice with his oath to protect Hell's Kitchen as Wilson Fisk mounts a formidable political campaign.",
+  "airDate": "2025-03-04",
+  "episodeCount": 9,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e1",
+      "episodeNumber": 1,
+      "title": "Heaven's Half Hour",
+      "overview": "Matt Murdock navigates a changed New York City while Wilson Fisk sets his sights on higher political ambitions.",
+      "airDate": "2025-03-04",
+      "runtime": 50
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e2",
+      "episodeNumber": 2,
+      "title": "Optics",
+      "overview": "Fisk manages public perception following a violent incident as Murdock investigates a troubling new court case.",
+      "airDate": "2025-03-04",
+      "runtime": 48
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e3",
+      "episodeNumber": 3,
+      "title": "The Hollow of His Hand",
+      "overview": "A legal dispute exposes corruption reaching into the municipal justice system.",
+      "airDate": "2025-03-11",
+      "runtime": 52
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e4",
+      "episodeNumber": 4,
+      "title": "Sic Semper Systema",
+      "overview": "Murdock's investigation collides directly with institutional opposition.",
+      "airDate": "2025-03-18",
+      "runtime": 49
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e5",
+      "episodeNumber": 5,
+      "title": "With Interest",
+      "overview": "Old alliances are tested as street-level tensions escalate across Hell's Kitchen.",
+      "airDate": "2025-03-25",
+      "runtime": 51
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e6",
+      "episodeNumber": 6,
+      "title": "Excessive Force",
+      "overview": "A violent confrontation forces Murdock to reconsider his boundaries as a vigilante.",
+      "airDate": "2025-03-25",
+      "runtime": 47
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e7",
+      "episodeNumber": 7,
+      "title": "Art for Art's Sake",
+      "overview": "Fisk consolidates control while Murdock seeks critical evidence to dismantle the burgeoning network.",
+      "airDate": "2025-04-01",
+      "runtime": 53
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e8",
+      "episodeNumber": 8,
+      "title": "Isle of Joy",
+      "overview": "The conflict reaches a boiling point as Murdock prepares for an inevitable confrontation with his greatest nemesis.",
+      "airDate": "2025-04-08",
+      "runtime": 50
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-daredevil-born-again-s1-e9",
+      "episodeNumber": 9,
+      "title": "Straight to Hell",
+      "overview": "In the season finale, Matt Murdock and Wilson Fisk confront the consequences of their choices on the streets of New York.",
+      "airDate": "2025-04-15",
+      "runtime": 55
+    }
+  ],
+  "provenance": {
+    "provider": "disney-plus-release",
+    "sourceId": "daredevil-born-again-s1",
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Verified Season 1 episode roster (9 episodes) matching Disney+ broadcast schedule."
+  }
+}

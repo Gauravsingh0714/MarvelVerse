@@ -17,6 +17,42 @@
       "runtime": 47
     },
     {
+      "id": 2,
+      "canonicalId": "mv-episode-loki-s2-e2",
+      "episodeNumber": 2,
+      "title": "Breaking Brad",
+      "overview": "Loki and Mobius track down hunter Brad Wolfe in London 1977 to locate Sylvie and General Dox before the timeline branches are pruned.",
+      "airDate": "2023-10-12",
+      "runtime": 49
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-loki-s2-e3",
+      "episodeNumber": 3,
+      "title": "1893",
+      "overview": "Loki and Mobius travel to the 1893 Chicago World's Fair tracking Ravonna Renslayer and Miss Minutes, discovering variant inventor Victor Timely.",
+      "airDate": "2023-10-19",
+      "runtime": 53
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-loki-s2-e4",
+      "episodeNumber": 4,
+      "title": "Heart of the TVA",
+      "overview": "The team attempts to use the Throughput Multiplier to fix the Temporal Loom before total catastrophic failure of the multiverse branches.",
+      "airDate": "2023-10-26",
+      "runtime": 49
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-loki-s2-e5",
+      "episodeNumber": 5,
+      "title": "Science/Fiction",
+      "overview": "After the Loom's destruction, Loki experiences spaghettification and timeslips across the multiverse to reassemble his friends and master his control over time.",
+      "airDate": "2023-11-02",
+      "runtime": 45
+    },
+    {
       "id": 6,
       "canonicalId": "mv-episode-loki-s2-e6",
       "episodeNumber": 6,
@@ -34,7 +70,7 @@
   "verification": {
     "status": "verified",
     "method": "manual-review",
-    "verifiedAt": "2026-10-14T00:00:00.000Z",
-    "notes": "Verified Loki Season 2 canonical record."
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Verified Loki Season 2 full 6-episode canonical roster matching Disney+ broadcast schedule."
   }
 }

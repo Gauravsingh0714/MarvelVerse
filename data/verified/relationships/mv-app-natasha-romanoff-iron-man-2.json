@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-natasha-romanoff-iron-man-2",
+  "characterId": "mv-character-natasha-romanoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-2",
+  "roleName": "Natasha Romanoff / Natalie Rushman / Black Widow",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

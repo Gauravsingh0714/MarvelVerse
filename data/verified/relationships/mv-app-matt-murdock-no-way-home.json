@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-matt-murdock-no-way-home",
+  "characterId": "mv-character-matt-murdock",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-spider-man-no-way-home",
+  "roleName": "Matt Murdock",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

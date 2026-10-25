@@ -32,7 +32,7 @@ test('MovieRepository queries canonical movies, filters, and supports TMDB looku
   const repo = createCanonicalRepository();
 
   const allMovies = repo.movies.getMovies();
-  assert.equal(allMovies.length, 39);
+  assert.equal(allMovies.length, 42);
 
   const ironMan = repo.movies.getMovieById('mv-movie-iron-man');
   assert.notEqual(ironMan, null);
@@ -48,7 +48,7 @@ test('MovieRepository queries canonical movies, filters, and supports TMDB looku
   assert.equal(repo.movies.getMovieByTmdbId(9999999), null);
 
   const earth616Movies = repo.movies.getMoviesByUniverse('earth-616');
-  assert.equal(earth616Movies.length, 39);
+  assert.equal(earth616Movies.length, 42);
 
   const infinitySagaMovies = repo.movies.getMoviesBySaga('infinity-saga');
   assert.equal(infinitySagaMovies.length, 23);
@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 28);
+  assert.equal(characters.length, 32);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -82,7 +82,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 86);
+  assert.equal(appearances.length, 125);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'

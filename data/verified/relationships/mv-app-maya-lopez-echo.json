@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-maya-lopez-echo",
+  "characterId": "mv-character-maya-lopez",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-echo",
+  "roleName": "Maya Lopez / Echo",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z"
+  }
+}

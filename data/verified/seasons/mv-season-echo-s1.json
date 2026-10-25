@@ -1,0 +1,67 @@
+{
+  "canonicalId": "mv-season-echo-s1",
+  "tvCanonicalId": "mv-series-echo",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Maya Lopez reconnects with her Choctaw heritage and family while confronting the syndicate she left behind.",
+  "airDate": "2024-01-09",
+  "episodeCount": 5,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-echo-s1-e1",
+      "episodeNumber": 1,
+      "title": "Chafa",
+      "overview": "After attempting to kill Wilson Fisk, Maya Lopez flees New York City and returns to her hometown of Tamaha, Oklahoma.",
+      "airDate": "2024-01-09",
+      "runtime": 49
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-echo-s1-e2",
+      "episodeNumber": 2,
+      "title": "Lowak",
+      "overview": "Maya enlists her estranged family to help hijack a munitions shipment belonging to Fisk's criminal empire.",
+      "airDate": "2024-01-09",
+      "runtime": 39
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-echo-s1-e3",
+      "episodeNumber": 3,
+      "title": "Tuklo",
+      "overview": "Fisk's enforcers track Maya to Oklahoma, endangering those closest to her.",
+      "airDate": "2024-01-09",
+      "runtime": 42
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-echo-s1-e4",
+      "episodeNumber": 4,
+      "title": "Taloa",
+      "overview": "Maya experiences visions of her ancestors and is forced to confront a shocking confrontation.",
+      "airDate": "2024-01-09",
+      "runtime": 37
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-echo-s1-e5",
+      "episodeNumber": 5,
+      "title": "Maya",
+      "overview": "During the annual Choctaw Nation powwow, Maya embraces her heritage and confronts Wilson Fisk once and for all.",
+      "airDate": "2024-01-09",
+      "runtime": 34
+    }
+  ],
+  "provenance": {
+    "provider": "disney-plus-release",
+    "sourceId": "echo-s1",
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Verified Echo Season 1 episode roster (5 episodes) released simultaneously on January 9, 2024."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "canonicalId": "mv-movie-the-guardians-of-the-galaxy-holiday-special",
+  "title": "The Guardians of the Galaxy Holiday Special",
+  "releaseDate": "2022-11-25",
+  "releaseOrder": 42,
+  "runtime": 42,
+  "overview": "On a mission to make Christmas unforgettable for Peter Quill, the Guardians head to Earth in search of the perfect present: legendary actor Kevin Bacon.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Comedy", "Science Fiction", "Special Presentation"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "releaseDateRecord": {
+    "rawDate": "2022-11-25",
+    "status": "exact",
+    "precision": "day",
+    "source": "Disney+ / Marvel Studios"
+  },
+  "chronology": {
+    "storyYear": 2025,
+    "precision": "year",
+    "storyOrderIndex": 30,
+    "notes": "Marvel Studios Special Presentation; bridges Phase 4 and sets up Guardians of the Galaxy Vol. 3."
+  },
+  "externalIds": {
+    "tmdb": 774752,
+    "imdb": "tt13623136"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 774752,
+    "sourceUri": "https://www.themoviedb.org/movie/774752",
+    "method": "official-announcement",
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Marvel Studios Special Presentation (Phase 4). Premiered on Disney+ November 25, 2022."
+  }
+}

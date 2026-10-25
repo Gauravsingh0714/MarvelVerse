@@ -1,0 +1,43 @@
+{
+  "canonicalId": "mv-movie-werewolf-by-night",
+  "title": "Werewolf by Night",
+  "releaseDate": "2022-10-07",
+  "releaseOrder": 41,
+  "runtime": 53,
+  "overview": "On a dark and somber night, a secret cabal of monster hunters emerge from the shadows and gather at the foreboding Bloodstone Temple following the death of their leader.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Action", "Fantasy", "Horror", "Special Presentation"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-4",
+  "releaseDateRecord": {
+    "rawDate": "2022-10-07",
+    "status": "exact",
+    "precision": "day",
+    "source": "Disney+ / Marvel Studios"
+  },
+  "chronology": {
+    "storyYear": 2025,
+    "precision": "year",
+    "storyOrderIndex": 29,
+    "notes": "Marvel Studios Special Presentation; takes place in Phase 4 standalone continuity."
+  },
+  "externalIds": {
+    "tmdb": 894205,
+    "imdb": "tt15318872"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 894205,
+    "sourceUri": "https://www.themoviedb.org/movie/894205",
+    "method": "official-announcement",
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Marvel Studios Special Presentation (Phase 4). Premiered on Disney+ October 7, 2022."
+  }
+}

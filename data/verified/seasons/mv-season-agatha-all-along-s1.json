@@ -1,0 +1,103 @@
+{
+  "canonicalId": "mv-season-agatha-all-along-s1",
+  "tvCanonicalId": "mv-series-agatha-all-along",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Agatha Harkness and an assembled coven navigate trials along the Witches' Road to reclaim their lost power.",
+  "airDate": "2024-09-18",
+  "episodeCount": 9,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e1",
+      "episodeNumber": 1,
+      "title": "Seekest Thou the Road",
+      "overview": "Agatha breaks free of Wanda's Westview spell with help from a mysterious teen and sets out to gather a coven.",
+      "airDate": "2024-09-18",
+      "runtime": 40
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e2",
+      "episodeNumber": 2,
+      "title": "Circle Sewn with Fate / Unlock Thy Hidden Gate",
+      "overview": "The newly assembled coven performs the Sacred Ballad to open the gateway to the Witches' Road.",
+      "airDate": "2024-09-18",
+      "runtime": 41
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e3",
+      "episodeNumber": 3,
+      "title": "Through Many Miles of Tricks and Trials",
+      "overview": "The coven faces their first trial involving potioncraft and hidden family grief.",
+      "airDate": "2024-09-25",
+      "runtime": 38
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e4",
+      "episodeNumber": 4,
+      "title": "If I Can't Reach You Let My Song Teach You",
+      "overview": "A 1970s rock trial challenges the coven to harmonize through curse protection.",
+      "airDate": "2024-10-02",
+      "runtime": 41
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e5",
+      "episodeNumber": 5,
+      "title": "Darkest Hour, Wake Thy Power",
+      "overview": "Under a blood moon, high spirits bring buried secrets to light and the Salem Seven strike.",
+      "airDate": "2024-10-09",
+      "runtime": 33
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e6",
+      "episodeNumber": 6,
+      "title": "Familiar by Thy Side",
+      "overview": "The true identity of the Teen is revealed through the story of William Kaplan and Billy Maximoff.",
+      "airDate": "2024-10-16",
+      "runtime": 42
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e7",
+      "episodeNumber": 7,
+      "title": "Death's Hand in Mine",
+      "overview": "Lilia Calderu's non-linear life leads through a deadly tarot trial.",
+      "airDate": "2024-10-23",
+      "runtime": 37
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e8",
+      "episodeNumber": 8,
+      "title": "Follow Me My Friend To Glory at the End",
+      "overview": "Agatha and Billy face the final trial of the Road and confrontation with Rio Vidal.",
+      "airDate": "2024-10-30",
+      "runtime": 45
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-agatha-all-along-s1-e9",
+      "episodeNumber": 9,
+      "title": "Maiden Mother Crone",
+      "overview": "The true origins of the Witches' Road and Agatha's past with Nicholas Scratch are revealed.",
+      "airDate": "2024-10-30",
+      "runtime": 39
+    }
+  ],
+  "provenance": {
+    "provider": "disney-plus-release",
+    "sourceId": "agatha-all-along-s1",
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Verified Agatha All Along Season 1 episode roster (9 episodes) matching Disney+ broadcast schedule."
+  }
+}

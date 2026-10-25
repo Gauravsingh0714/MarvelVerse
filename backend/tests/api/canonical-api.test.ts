@@ -61,7 +61,7 @@ test('GET /api/v1/movies supports filtering, sorting, and error on unknown query
   const resAll = await fetch(`${baseUrl}/movies`);
   assert.equal(resAll.status, 200);
   const allBody = (await resAll.json()) as any;
-  assert.equal(allBody.data.length, 39);
+  assert.equal(allBody.data.length, 42);
 
   const resFiltered = await fetch(
     `${baseUrl}/movies?universeId=earth-616&sagaId=infinity-saga&phaseId=phase-1`
@@ -107,7 +107,7 @@ test('GET /api/v1/characters endpoints and TMDB route ordering', async () => {
   const resChars = await fetch(`${baseUrl}/characters`);
   assert.equal(resChars.status, 200);
   const charsBody = (await resChars.json()) as any;
-  assert.equal(charsBody.data.length, 28);
+  assert.equal(charsBody.data.length, 32);
 
   const resTony = await fetch(`${baseUrl}/characters/mv-character-tony-stark`);
   assert.equal(resTony.status, 200);
@@ -127,7 +127,7 @@ test('GET /api/v1/appearances and nested character/movie appearance routes', asy
   const resApps = await fetch(`${baseUrl}/appearances`);
   assert.equal(resApps.status, 200);
   const appsBody = (await resApps.json()) as any;
-  assert.equal(appsBody.data.length, 86);
+  assert.equal(appsBody.data.length, 125);
 
   const resTonyApps = await fetch(
     `${baseUrl}/characters/mv-character-tony-stark/appearances`

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-matt-murdock-daredevil-born-again",
+  "characterId": "mv-character-matt-murdock",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-daredevil-born-again",
+  "roleName": "Matt Murdock / Daredevil",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z"
+  }
+}

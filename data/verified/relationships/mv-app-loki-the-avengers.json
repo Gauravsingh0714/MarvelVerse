@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-loki-the-avengers",
+  "characterId": "mv-character-loki-laufeyson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-avengers",
+  "roleName": "Loki Laufeyson",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

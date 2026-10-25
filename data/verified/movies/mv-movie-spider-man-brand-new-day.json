@@ -1,0 +1,43 @@
+{
+  "canonicalId": "mv-movie-spider-man-brand-new-day",
+  "title": "Spider-Man: Brand New Day",
+  "releaseDate": "2026-07-31",
+  "releaseOrder": 38,
+  "runtime": null,
+  "overview": "Peter Parker navigates life operating completely on his own in New York City after the world has forgotten his identity following the spell in No Way Home.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Action", "Adventure", "Science Fiction"],
+  "universeId": "earth-616",
+  "sagaId": "multiverse-saga",
+  "phaseId": "phase-6",
+  "releaseDateRecord": {
+    "rawDate": "2026-07-31",
+    "status": "unreleased",
+    "precision": "day",
+    "source": "Sony Pictures / Marvel Studios Theatrical Release Schedule"
+  },
+  "chronology": {
+    "storyYear": null,
+    "storyDate": null,
+    "precision": "unknown",
+    "storyOrderIndex": null,
+    "notes": "Unreleased production; narrative story placement unknown until release."
+  },
+  "externalIds": {
+    "imdb": "tt20236044"
+  },
+  "provenance": {
+    "provider": "sony-marvel-announcement",
+    "sourceId": "spider-man-4",
+    "sourceUri": "https://www.sonypictures.com",
+    "method": "official-announcement",
+    "acquiredAt": "2026-10-25T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-25T00:00:00.000Z",
+    "notes": "Theatrical release scheduled for July 31, 2026; MCU Phase 6 release #38; runtime unreleased; TMDB ID unconfirmed and omitted from externalIds."
+  }
+}

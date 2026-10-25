@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peter-quill-holiday-special",
+  "characterId": "mv-character-peter-quill",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-guardians-of-the-galaxy-holiday-special",
+  "roleName": "Peter Quill / Star-Lord",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}
