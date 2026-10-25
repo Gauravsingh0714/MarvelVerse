@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-karen-page",
+  "name": "Karen Page",
+  "realName": "Karen Page",
+  "aliases": [],
+  "species": "Human",
+  "overview": "An insightful and tenacious legal assistant at Nelson & Murdock who becomes an investigative journalist at the New York Bulletin, uncovering corruption and criminal conspiracies in Hell's Kitchen.",
+  "externalIds": {
+    "imdb": "nm2403277"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed female lead across Daredevil Seasons 1-3 and Daredevil: Born Again."
+  }
+}

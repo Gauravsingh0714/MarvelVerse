@@ -1,0 +1,223 @@
+{
+  "canonicalId": "mv-season-daredevil-s2",
+  "tvCanonicalId": "mv-series-daredevil",
+  "seasonNumber": 2,
+  "title": "Season 2",
+  "overview": "Just when Matt thinks he is bringing order back to the city, new forces rise in Hell's Kitchen, including the lethal vigilante Frank Castle and Matt's former flame Elektra Natchios.",
+  "airDate": "2016-03-18",
+  "airDateRecord": {
+    "rawDate": "2016-03-18",
+    "status": "exact",
+    "precision": "day",
+    "source": "Netflix"
+  },
+  "episodeCount": 13,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-daredevil-s2-e1",
+      "episodeNumber": 1,
+      "title": "Bang",
+      "overview": "A ruthless military vigilante wipes out the Irish Mob in Hell's Kitchen, drawing Daredevil into a dangerous confrontation.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 48
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-daredevil-s2-e2",
+      "episodeNumber": 2,
+      "title": "Dogs to a Gunfight",
+      "overview": "Suffering from head trauma after his rooftop duel with the Punisher, Matt investigates Frank Castle's tactical movements.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 48
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-daredevil-s2-e3",
+      "episodeNumber": 3,
+      "title": "New York's Finest",
+      "overview": "Chained to a rooftop chimney, Daredevil debates morality, lethal justice, and redemption with the unyielding Frank Castle.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 48
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-daredevil-s2-e4",
+      "episodeNumber": 4,
+      "title": "Penny and Dime",
+      "overview": "Daredevil rescues Frank Castle from the Irish Mob, listening to Castle's heartbreaking memory of his murdered family.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 60
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-daredevil-s2-e5",
+      "episodeNumber": 5,
+      "title": "Kinbaku",
+      "overview": "Matt's wealthy, enigmatic ex-lover Elektra Natchios resurfaces in New York, pulling him into her covert war against the Yakuza.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 56
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-daredevil-s2-e6",
+      "episodeNumber": 6,
+      "title": "Regrets Only",
+      "overview": "Matt and Elektra infiltrate a high-society gala to steal encrypted ledger data, while Nelson and Murdock agree to defend Frank Castle.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 56
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-daredevil-s2-e7",
+      "episodeNumber": 7,
+      "title": "Semper Fidelis",
+      "overview": "The trial of Frank Castle begins as Murdock's double life causes him to miss critical courtroom appearances.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 60
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-daredevil-s2-e8",
+      "episodeNumber": 8,
+      "title": "Guilty as Sin",
+      "overview": "Stick testifies in defense of Castle, while Castle intentionally explodes on the witness stand after a prison visitor contacts him.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-daredevil-s2-e9",
+      "episodeNumber": 9,
+      "title": "Seven Minutes in Heaven",
+      "overview": "Inside Ryker's Island, Wilson Fisk orchestrates a brutal gang war and manipulates Frank Castle into eliminating a rival boss.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 59
+    },
+    {
+      "id": 10,
+      "canonicalId": "mv-episode-daredevil-s2-e10",
+      "episodeNumber": 10,
+      "title": "The Man in the Box",
+      "overview": "Matt visits Fisk in prison, realizing Kingpin intends to destroy Hell's Kitchen upon release, while Elektra rejects Stick's orders.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 51
+    },
+    {
+      "id": 11,
+      "canonicalId": "mv-episode-daredevil-s2-e11",
+      "episodeNumber": 11,
+      "title": ".380",
+      "overview": "Daredevil investigates Black Sky, while Frank Castle hunts down the Blacksmith heroin kingpin across the waterfront.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    },
+    {
+      "id": 12,
+      "canonicalId": "mv-episode-daredevil-s2-e12",
+      "episodeNumber": 12,
+      "title": "The Dark at the End of the Tunnel",
+      "overview": "Stick is captured by Hand ninjas, forcing Daredevil and Elektra to fight their way through ancient underground catacombs.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 57
+    },
+    {
+      "id": 13,
+      "canonicalId": "mv-episode-daredevil-s2-e13",
+      "episodeNumber": 13,
+      "title": "A Cold Day in Hell's Kitchen",
+      "overview": "Daredevil and Elektra battle Nobu and the Hand on a Hell's Kitchen rooftop, where Elektra sacrifices her life to save Matt.",
+      "airDate": "2016-03-18",
+      "airDateRecord": {
+        "rawDate": "2016-03-18",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 55
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 61889,
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed Season 2 of Daredevil. 13 episodes released simultaneously on Netflix on March 18, 2016."
+  }
+}

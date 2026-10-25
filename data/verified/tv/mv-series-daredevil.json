@@ -1,0 +1,36 @@
+{
+  "canonicalId": "mv-series-daredevil",
+  "title": "Daredevil",
+  "firstAirDate": "2015-04-10",
+  "lastAirDate": "2018-10-19",
+  "firstAirDateRecord": {
+    "rawDate": "2015-04-10",
+    "status": "exact",
+    "precision": "day",
+    "source": "Netflix / Marvel Television"
+  },
+  "numberOfSeasons": 3,
+  "numberOfEpisodes": 39,
+  "overview": "A blind lawyer by day, Matt Murdock uses his heightened senses to fight crime as the vigilante Daredevil on the streets of New York City's Hell's Kitchen.",
+  "posterPath": null,
+  "backdropPath": null,
+  "genres": ["Action", "Crime", "Drama"],
+  "universeId": "earth-616",
+  "sagaId": "infinity-saga",
+  "phaseId": "phase-2",
+  "externalIds": {
+    "tmdb": 61889,
+    "imdb": "tt3322312"
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 61889,
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed as Marvel Television / Netflix series (Seasons 1-3). Integrated into MCU Sacred Timeline on Disney+ (Jan 2024). Premiered April 10, 2015 during MCU Phase 2 (Season 1), with Seasons 2 and 3 airing during Phase 3."
+  }
+}

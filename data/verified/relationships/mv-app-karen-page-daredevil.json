@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-karen-page-daredevil",
+  "characterId": "mv-character-karen-page",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-daredevil",
+  "roleName": "Karen Page",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

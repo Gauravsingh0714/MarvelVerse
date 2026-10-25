@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-foggy-nelson-daredevil-born-again",
+  "characterId": "mv-character-foggy-nelson",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-daredevil-born-again",
+  "roleName": "Franklin 'Foggy' Nelson",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

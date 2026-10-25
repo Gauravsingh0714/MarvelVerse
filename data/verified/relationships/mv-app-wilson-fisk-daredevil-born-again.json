@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wilson-fisk-daredevil-born-again",
+  "characterId": "mv-character-wilson-fisk",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-daredevil-born-again",
+  "roleName": "Wilson Fisk / Kingpin",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

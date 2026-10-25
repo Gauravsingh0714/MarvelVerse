@@ -64,7 +64,7 @@ test('GET /api/v1/series supports filtering and deterministic ordering', async (
   const resSort = await fetch(`${baseUrl}/series?sort=firstAirDate`);
   assert.equal(resSort.status, 200);
   const sortBody = (await resSort.json()) as any;
-  assert.equal(sortBody.data[0].canonicalId, 'mv-series-wandavision'); // WandaVision (Jan 2021) before Loki (Jun 2021)
+  assert.equal(sortBody.data[0].canonicalId, 'mv-series-daredevil'); // Daredevil (Apr 2015) before WandaVision (Jan 2021)
 
   // Disallow unknown query parameters
   const resBadQuery = await fetch(`${baseUrl}/series?unknown=123`);

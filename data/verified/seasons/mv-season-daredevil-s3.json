@@ -1,0 +1,223 @@
+{
+  "canonicalId": "mv-season-daredevil-s3",
+  "tvCanonicalId": "mv-series-daredevil",
+  "seasonNumber": 3,
+  "title": "Season 3",
+  "overview": "Missing for months, Matt Murdock reemerges a broken man, putting into question his future as both vigilante Daredevil and lawyer Matthew Murdock. But when his archenemy Wilson Fisk is released from prison, Matt must choose between hiding from the world or embracing his destiny as a hero.",
+  "airDate": "2018-10-19",
+  "airDateRecord": {
+    "rawDate": "2018-10-19",
+    "status": "exact",
+    "precision": "day",
+    "source": "Netflix"
+  },
+  "episodeCount": 13,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-daredevil-s3-e1",
+      "episodeNumber": 1,
+      "title": "Resurrection",
+      "overview": "Miraculously surviving the Midland Circle implosion, a deafened and despairing Matt Murdock recovers under the care of Sister Maggie.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-daredevil-s3-e2",
+      "episodeNumber": 2,
+      "title": "Please",
+      "overview": "Matt tests his returning senses by intervening in a kidnapping, while Wilson Fisk negotiates a federal cooperating witness deal.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 50
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-daredevil-s3-e3",
+      "episodeNumber": 3,
+      "title": "No Good Deed",
+      "overview": "Fisk is moved to luxury house arrest under the supervision of troubled FBI marksman Special Agent Benjamin Poindexter.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 50
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-daredevil-s3-e4",
+      "episodeNumber": 4,
+      "title": "Blindsided",
+      "overview": "In an unbroken ten-minute sequence, Matt infiltrates a maximum security prison to question the Albanian mob, escaping a violent riot.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-daredevil-s3-e5",
+      "episodeNumber": 5,
+      "title": "The Perfect Game",
+      "overview": "Fisk learns about Agent Poindexter's psychiatric history and begins grooming him to become his personal executioner.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 52
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-daredevil-s3-e6",
+      "episodeNumber": 6,
+      "title": "The Devil You Know",
+      "overview": "Poindexter dresses in a stolen Daredevil suit and massacres journalists at the New York Bulletin, framing the real vigilante.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 50
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-daredevil-s3-e7",
+      "episodeNumber": 7,
+      "title": "Aftermath",
+      "overview": "The public turns against Daredevil as Karen Page investigates Poindexter's childhood and Matt seeks Melvin Potter.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 50
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-daredevil-s3-e8",
+      "episodeNumber": 8,
+      "title": "Upstairs/Downstairs",
+      "overview": "Matt and Ray Nadeem team up to uncover Fisk's federal corruption, while Karen visits Fisk in a dangerous battle of wits.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 52
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-daredevil-s3-e9",
+      "episodeNumber": 9,
+      "title": "Revelations",
+      "overview": "Matt learns Sister Maggie is his biological mother, while Fisk takes absolute control of the FBI field office.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 55
+    },
+    {
+      "id": 10,
+      "canonicalId": "mv-episode-daredevil-s3-e10",
+      "episodeNumber": 10,
+      "title": "Karen",
+      "overview": "In rural Vermont and the Clinton Church, Karen Page's tragic past is revealed as Poindexter attacks the sanctuary and Father Lantom dies protecting her.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 46
+    },
+    {
+      "id": 11,
+      "canonicalId": "mv-episode-daredevil-s3-e11",
+      "episodeNumber": 11,
+      "title": "Reunion",
+      "overview": "Matt, Foggy, and Karen reunite in hiding, using Agent Nadeem's dying deposition to legally corner Kingpin.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 50
+    },
+    {
+      "id": 12,
+      "canonicalId": "mv-episode-daredevil-s3-e12",
+      "episodeNumber": 12,
+      "title": "One Last Shot",
+      "overview": "Fisk marries Vanessa in a lavish presidential ballroom while Nadeem's video testimony leaks publicly across social media.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 52
+    },
+    {
+      "id": 13,
+      "canonicalId": "mv-episode-daredevil-s3-e13",
+      "episodeNumber": 13,
+      "title": "A New Napkin",
+      "overview": "A brutal three-way brawl erupts between Daredevil, Kingpin, and Bullseye, ending with Fisk returning to prison and Nelson, Murdock & Page reuniting.",
+      "airDate": "2018-10-19",
+      "airDateRecord": {
+        "rawDate": "2018-10-19",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 61889,
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed Season 3 of Daredevil. 13 episodes released simultaneously on Netflix on October 19, 2018."
+  }
+}

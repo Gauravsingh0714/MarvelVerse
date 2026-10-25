@@ -1,0 +1,223 @@
+{
+  "canonicalId": "mv-season-daredevil-s1",
+  "tvCanonicalId": "mv-series-daredevil",
+  "seasonNumber": 1,
+  "title": "Season 1",
+  "overview": "Blinded as a young boy, Matt Murdock fights injustice by day as a lawyer and by night as the vigilante Daredevil in Hell's Kitchen, New York City, taking on crime boss Wilson Fisk.",
+  "airDate": "2015-04-10",
+  "airDateRecord": {
+    "rawDate": "2015-04-10",
+    "status": "exact",
+    "precision": "day",
+    "source": "Netflix"
+  },
+  "episodeCount": 13,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-daredevil-s1-e1",
+      "episodeNumber": 1,
+      "title": "Into the Ring",
+      "overview": "Murdock and Nelson take the case of a woman accused of murder, while Matt takes to the streets to uncover a human trafficking ring.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 53
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-daredevil-s1-e2",
+      "episodeNumber": 2,
+      "title": "Cut Man",
+      "overview": "Near death, Daredevil is found by a nurse who aids his recovery, while he reflects on his father and vows to save a kidnapped boy.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 53
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-daredevil-s1-e3",
+      "episodeNumber": 3,
+      "title": "Rabbit in a Snowstorm",
+      "overview": "Nelson and Murdock are offered a high-paying client by a mysterious associate of Wilson Fisk, testing their ethics.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 52
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-daredevil-s1-e4",
+      "episodeNumber": 4,
+      "title": "In the Blood",
+      "overview": "Wilson Fisk seeks to strengthen his romantic relationship with art dealer Vanessa Marianna while expanding his criminal syndicate.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 53
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-daredevil-s1-e5",
+      "episodeNumber": 5,
+      "title": "World on Fire",
+      "overview": "Fisk orchestrates coordinated bombings targeting the Russian mob across Hell's Kitchen, shaking the city.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 55
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-daredevil-s1-e6",
+      "episodeNumber": 6,
+      "title": "Condemned",
+      "overview": "Trapped in an abandoned warehouse with an injured Vladimir, Daredevil faces corrupt SWAT officers and Fisk's media manipulation.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 49
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-daredevil-s1-e7",
+      "episodeNumber": 7,
+      "title": "Stick",
+      "overview": "Matt's harsh childhood martial arts mentor Stick returns to Hell's Kitchen, hunting a dangerous weapon known as Black Sky.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 49
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-daredevil-s1-e8",
+      "episodeNumber": 8,
+      "title": "Shadows in the Glass",
+      "overview": "Murdock and Ben Urich prepare to expose Fisk, while Fisk confronts his traumatic childhood and makes a shocking public appearance.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 53
+    },
+    {
+      "id": 9,
+      "canonicalId": "mv-episode-daredevil-s1-e9",
+      "episodeNumber": 9,
+      "title": "Speak of the Devil",
+      "overview": "Matt faces Nobu in brutal combat and survives an ambush by Fisk, returning gravely wounded to his apartment where Foggy discovers his identity.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 57
+    },
+    {
+      "id": 10,
+      "canonicalId": "mv-episode-daredevil-s1-e10",
+      "episodeNumber": 10,
+      "title": "Nelson v. Murdock",
+      "overview": "Foggy confronts Matt about his secret vigilantism, leading to the fracture of their friendship and law partnership.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 56
+    },
+    {
+      "id": 11,
+      "canonicalId": "mv-episode-daredevil-s1-e11",
+      "episodeNumber": 11,
+      "title": "The Path of the Righteous",
+      "overview": "Matt recovers and seeks specialized armor from Melvin Potter, while Fisk mourns the poisoning of Vanessa.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 59
+    },
+    {
+      "id": 12,
+      "canonicalId": "mv-episode-daredevil-s1-e12",
+      "episodeNumber": 12,
+      "title": "The Ones We Leave Behind",
+      "overview": "Fisk retaliates against Ben Urich for investigating his mother, while Madame Gao burns her heroin distribution facility.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 59
+    },
+    {
+      "id": 13,
+      "canonicalId": "mv-episode-daredevil-s1-e13",
+      "episodeNumber": 13,
+      "title": "Daredevil",
+      "overview": "Donning his iconic red armor and dual batons, Daredevil corners and defeats Wilson Fisk in an alley brawl, sending him to prison.",
+      "airDate": "2015-04-10",
+      "airDateRecord": {
+        "rawDate": "2015-04-10",
+        "status": "exact",
+        "precision": "day",
+        "source": "Netflix"
+      },
+      "runtime": 54
+    }
+  ],
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 61889,
+    "acquiredAt": "2026-10-26T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed Season 1 of Daredevil. 13 episodes released simultaneously on Netflix on April 10, 2015."
+  }
+}

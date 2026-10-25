@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-foggy-nelson",
+  "name": "Foggy Nelson",
+  "realName": "Franklin Percy Nelson",
+  "aliases": ["Franklin 'Foggy' Nelson"],
+  "species": "Human",
+  "overview": "A warm, ethical, and talented attorney who co-founds the law firm Nelson & Murdock alongside his best friend Matt Murdock, fighting for the vulnerable citizens of Hell's Kitchen.",
+  "externalIds": {
+    "imdb": "nm0379114"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed co-lead across Daredevil Seasons 1-3 and Daredevil: Born Again."
+  }
+}

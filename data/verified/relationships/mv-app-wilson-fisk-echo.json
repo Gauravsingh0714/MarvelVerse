@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wilson-fisk-echo",
+  "characterId": "mv-character-wilson-fisk",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-echo",
+  "roleName": "Wilson Fisk / Kingpin",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

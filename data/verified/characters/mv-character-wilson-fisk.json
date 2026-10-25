@@ -1,0 +1,17 @@
+{
+  "canonicalId": "mv-character-wilson-fisk",
+  "name": "Wilson Fisk",
+  "realName": "Wilson Grant Fisk",
+  "aliases": ["Kingpin"],
+  "species": "Human (Enhanced Strength)",
+  "overview": "A powerful, ruthless crime lord and businessman who seeks to control and reshape Hell's Kitchen and New York City through criminal empires, political corruption, and brute physical force.",
+  "externalIds": {
+    "imdb": "nm0000352"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z",
+    "notes": "Confirmed main antagonist across Daredevil, Hawkeye, Echo, and Daredevil: Born Again."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-matt-murdock-daredevil",
+  "characterId": "mv-character-matt-murdock",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-daredevil",
+  "roleName": "Matt Murdock / Daredevil",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-26T00:00:00.000Z"
+  }
+}

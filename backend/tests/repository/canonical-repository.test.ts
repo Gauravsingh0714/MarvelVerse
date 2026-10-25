@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 32);
+  assert.equal(characters.length, 35);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -82,7 +82,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 125);
+  assert.equal(appearances.length, 134);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
