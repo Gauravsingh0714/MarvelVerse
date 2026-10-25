@@ -1,4 +1,4 @@
-import { CanonicalTvSeries } from '@marvelverse/shared';
+import { CanonicalTvSeries, CanonicalSeason } from '@marvelverse/shared';
 import { apiClient, ApiClient } from '../api/client.js';
 import { ApiSuccessResponse, ApiCollectionResponse } from '../api/types.js';
 
@@ -29,10 +29,12 @@ export class SeriesService {
     return res.data;
   }
 
-  public async getSeriesById(canonicalId: string): Promise<CanonicalTvSeries> {
-    const res = await this.client.get<ApiSuccessResponse<CanonicalTvSeries>>(
-      `/series/${encodeURIComponent(canonicalId)}`
-    );
+  public async getSeriesById(
+    canonicalId: string
+  ): Promise<CanonicalTvSeries & { seasons?: CanonicalSeason[] }> {
+    const res = await this.client.get<
+      ApiSuccessResponse<CanonicalTvSeries & { seasons?: CanonicalSeason[] }>
+    >(`/series/${encodeURIComponent(canonicalId)}`);
     return res.data;
   }
 }

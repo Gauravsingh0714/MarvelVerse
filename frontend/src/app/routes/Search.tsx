@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
 import { useMovies } from '../../hooks/useMovies.js';
+import { useSeries } from '../../hooks/useSeries.js';
 import { useCharacters } from '../../hooks/useCharacters.js';
 import {
   Card,
@@ -16,6 +17,7 @@ import {
 import {
   Search as SearchIcon,
   Film,
+  Tv,
   Users,
   X,
   ArrowRight,
@@ -26,8 +28,9 @@ import {
   Tag,
   Dna,
 } from 'lucide-react';
+import { formatDate, formatYear } from '../../utils/date.utils.js';
 
-type SearchCategory = 'all' | 'movies' | 'characters';
+type SearchCategory = 'all' | 'movies' | 'series' | 'characters';
 
 const SUGGESTED_SEARCHES = [
   'Iron Man',
@@ -36,6 +39,8 @@ const SUGGESTED_SEARCHES = [
   'Thor',
   'Captain America',
   'Hulk',
+  'Loki',
+  'Daredevil',
 ];
 
 export default function Search() {
@@ -50,17 +55,25 @@ export default function Search() {
   } = useMovies();
 
   const {
+    data: seriesList,
+    isLoading: isSeriesLoading,
+    error: seriesError,
+    refetch: refetchSeries,
+  } = useSeries();
+
+  const {
     data: characters,
     isLoading: isCharactersLoading,
     error: charactersError,
     refetch: refetchCharacters,
   } = useCharacters();
 
-  const isLoading = isMoviesLoading || isCharactersLoading;
-  const combinedError = moviesError || charactersError;
+  const isLoading = isMoviesLoading || isSeriesLoading || isCharactersLoading;
+  const combinedError = moviesError || seriesError || charactersError;
 
   const handleRefetchAll = () => {
     refetchMovies();
+    refetchSeries();
     refetchCharacters();
   };
 
@@ -83,6 +96,24 @@ export default function Search() {
       return matchTitle || matchOverview || matchCanonicalId || matchGenres;
     });
   }, [movies, normalizedQuery]);
+
+  // Filter series
+  const matchingSeries = useMemo(() => {
+    if (!seriesList || !normalizedQuery) return [];
+    return seriesList.filter((series) => {
+      const matchTitle = series.title.toLowerCase().includes(normalizedQuery);
+      const matchOverview = series.overview
+        ?.toLowerCase()
+        .includes(normalizedQuery);
+      const matchCanonicalId = series.canonicalId
+        .toLowerCase()
+        .includes(normalizedQuery);
+      const matchGenres = series.genres?.some((g) =>
+        g.toLowerCase().includes(normalizedQuery)
+      );
+      return matchTitle || matchOverview || matchCanonicalId || matchGenres;
+    });
+  }, [seriesList, normalizedQuery]);
 
   // Filter characters & track matched alias
   const matchingCharacters = useMemo(() => {
@@ -129,11 +160,16 @@ export default function Search() {
       .filter((item) => item.isMatch);
   }, [characters, normalizedQuery]);
 
-  const totalResultsCount = matchingMovies.length + matchingCharacters.length;
+  const totalResultsCount =
+    matchingMovies.length + matchingSeries.length + matchingCharacters.length;
 
   const showMoviesSection =
     (activeCategory === 'all' || activeCategory === 'movies') &&
     matchingMovies.length > 0;
+
+  const showSeriesSection =
+    (activeCategory === 'all' || activeCategory === 'series') &&
+    matchingSeries.length > 0;
 
   const showCharactersSection =
     (activeCategory === 'all' || activeCategory === 'characters') &&
@@ -143,6 +179,7 @@ export default function Search() {
     normalizedQuery !== '' &&
     ((activeCategory === 'all' && totalResultsCount === 0) ||
       (activeCategory === 'movies' && matchingMovies.length === 0) ||
+      (activeCategory === 'series' && matchingSeries.length === 0) ||
       (activeCategory === 'characters' && matchingCharacters.length === 0));
 
   if (isLoading) {
@@ -263,6 +300,15 @@ export default function Search() {
               Movies {normalizedQuery && `(${matchingMovies.length})`}
             </Button>
             <Button
+              variant={activeCategory === 'series' ? 'primary' : 'secondary'}
+              size="sm"
+              onClick={() => setActiveCategory('series')}
+              aria-pressed={activeCategory === 'series'}
+              leftIcon={<Tv className="w-3.5 h-3.5" />}
+            >
+              TV Series {normalizedQuery && `(${matchingSeries.length})`}
+            </Button>
+            <Button
               variant={
                 activeCategory === 'characters' ? 'primary' : 'secondary'
               }
@@ -279,6 +325,8 @@ export default function Search() {
             <span className="text-xs text-content-muted font-medium">
               {matchingMovies.length}{' '}
               {matchingMovies.length === 1 ? 'movie' : 'movies'} •{' '}
+              {matchingSeries.length}{' '}
+              {matchingSeries.length === 1 ? 'series' : 'series'} •{' '}
               {matchingCharacters.length}{' '}
               {matchingCharacters.length === 1 ? 'character' : 'characters'}
             </span>
@@ -402,9 +450,7 @@ export default function Search() {
                             Movie
                           </Badge>
                           <span className="text-xs font-mono text-content-muted">
-                            {movie.releaseDate
-                              ? movie.releaseDate.slice(0, 4)
-                              : 'MCU'}
+                            {formatYear(movie.releaseDate) || 'MCU'}
                           </span>
                         </Card.Header>
 
@@ -429,7 +475,7 @@ export default function Search() {
                             {movie.releaseDate && (
                               <span className="flex items-center gap-1">
                                 <Calendar className="w-3 h-3 text-starkRed" />
-                                {movie.releaseDate}
+                                {formatDate(movie.releaseDate)}
                               </span>
                             )}
                             {movie.runtime && (
@@ -466,6 +512,116 @@ export default function Search() {
                         >
                           <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
                             {movie.canonicalId}
+                          </span>
+                          <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
+                            Details <ArrowRight className="w-3 h-3" />
+                          </span>
+                        </Card.Footer>
+                      </Card>
+                    </Link>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* TV Series Section */}
+          {showSeriesSection && (
+            <section className="space-y-4">
+              <div className="flex items-center justify-between border-b border-stroke-subtle pb-2.5">
+                <h2 className="text-lg font-bold text-content-primary flex items-center gap-2">
+                  <Tv className="w-5 h-5 text-starkRed" />
+                  TV Series
+                </h2>
+                <Badge variant="vibranium" size="sm">
+                  {matchingSeries.length}{' '}
+                  {matchingSeries.length === 1 ? 'Result' : 'Results'}
+                </Badge>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {matchingSeries.map((series) => (
+                  <ScrollReveal key={series.canonicalId}>
+                    <Link
+                      to={`/series/${series.canonicalId}`}
+                      className="block group"
+                    >
+                      <Card
+                        interactive
+                        className="h-full border-stroke-subtle overflow-hidden flex flex-col"
+                      >
+                        <Card.Header
+                          bordered
+                          className="py-2.5 px-4 flex items-center justify-between"
+                        >
+                          <Badge variant="vibranium" size="sm">
+                            <Tv className="w-3 h-3 mr-1" />
+                            TV Series
+                          </Badge>
+                          {series.phaseId && (
+                            <span className="text-xs font-mono text-content-muted">
+                              {series.phaseId.toUpperCase()}
+                            </span>
+                          )}
+                        </Card.Header>
+
+                        <div className="relative w-full aspect-[2/3] max-h-48 bg-surface-raised overflow-hidden">
+                          <MediaImage
+                            canonicalId={series.canonicalId}
+                            entityType="series"
+                            mediaKind="poster"
+                            alt={`Poster for ${series.title}`}
+                            aspectRatio="poster"
+                            className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none"
+                            fallbackText={series.title}
+                          />
+                        </div>
+
+                        <Card.Body className="p-4 space-y-2.5 flex-1">
+                          <h3 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors line-clamp-1">
+                            {series.title}
+                          </h3>
+
+                          <div className="flex flex-wrap items-center gap-3 text-xs text-content-muted">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="w-3 h-3 text-starkRed" />
+                              {formatDate(series.firstAirDate)}
+                            </span>
+                            <span>
+                              {series.numberOfSeasons}{' '}
+                              {series.numberOfSeasons === 1
+                                ? 'Season'
+                                : 'Seasons'}{' '}
+                              • {series.numberOfEpisodes} Ep
+                            </span>
+                          </div>
+
+                          {series.overview && (
+                            <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                              {series.overview}
+                            </p>
+                          )}
+
+                          {series.genres && series.genres.length > 0 && (
+                            <div className="flex flex-wrap gap-1 pt-1">
+                              {series.genres.slice(0, 3).map((genre) => (
+                                <span
+                                  key={genre}
+                                  className="text-[10px] px-1.5 py-0.5 rounded bg-surface-raised text-content-muted font-medium"
+                                >
+                                  {genre}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </Card.Body>
+
+                        <Card.Footer
+                          bordered
+                          className="py-2 px-4 flex items-center justify-between text-xs"
+                        >
+                          <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
+                            {series.canonicalId}
                           </span>
                           <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
                             Details <ArrowRight className="w-3 h-3" />

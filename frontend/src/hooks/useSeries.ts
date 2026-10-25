@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { CanonicalTvSeries } from '@marvelverse/shared';
+import { CanonicalTvSeries, CanonicalSeason } from '@marvelverse/shared';
 import { seriesService, SeriesFilters } from '../services/series.service.js';
 import { useApiQuery, ApiQueryResult } from './useApiQuery.js';
 import { queryKeys } from './queryKeys.js';
@@ -23,7 +23,7 @@ export function useSeries(
 
 export function useSeriesDetail(
   canonicalId: string | null
-): ApiQueryResult<CanonicalTvSeries> {
+): ApiQueryResult<CanonicalTvSeries & { seasons?: CanonicalSeason[] }> {
   const isIdValid = Boolean(
     canonicalId && /^mv-series-[a-z0-9-]+$/.test(canonicalId)
   );
@@ -35,8 +35,12 @@ export function useSeriesDetail(
     return seriesService.getSeriesById(canonicalId);
   }, [canonicalId]);
 
-  return useApiQuery<CanonicalTvSeries>(queryFn, [canonicalId], {
-    enabled: isIdValid,
-    queryKey: queryKeys.series.detail(canonicalId),
-  });
+  return useApiQuery<CanonicalTvSeries & { seasons?: CanonicalSeason[] }>(
+    queryFn,
+    [canonicalId],
+    {
+      enabled: isIdValid,
+      queryKey: queryKeys.series.detail(canonicalId),
+    }
+  );
 }

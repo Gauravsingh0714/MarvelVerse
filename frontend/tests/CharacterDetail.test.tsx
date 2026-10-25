@@ -254,3 +254,77 @@ test('CharacterDetail - renders other characters (Steve Rogers)', () => {
   assert.equal(html.includes('Captain America'), true);
   assert.equal(html.includes('Captain America: The First Avenger'), true);
 });
+
+test('CharacterDetail - resolves TV series appearances with /series link and TV Series badge', () => {
+  const queryClient = new QueryClient({
+    defaultOptions: { queries: { retry: false } },
+  });
+
+  const mockLokiChar = {
+    canonicalId: 'mv-character-loki-laufeyson',
+    name: 'Loki Laufeyson',
+    species: 'Frost Giant',
+    overview: 'God of Mischief.',
+  };
+
+  const mockAppearances = [
+    {
+      canonicalId: 'mv-app-loki-loki-series',
+      characterId: 'mv-character-loki-laufeyson',
+      mediaType: 'series',
+      mediaCanonicalId: 'mv-series-loki',
+      roleName: 'Loki Laufeyson / God of Stories',
+    },
+  ];
+
+  const mockSeries = [
+    {
+      canonicalId: 'mv-series-loki',
+      title: 'Loki',
+      firstAirDate: '2021-06-09',
+      numberOfSeasons: 2,
+      numberOfEpisodes: 12,
+    },
+  ];
+
+  queryClient.setQueryData(
+    queryKeys.characters.detail('mv-character-loki-laufeyson'),
+    mockLokiChar
+  );
+  queryClient.setQueryData(
+    queryKeys.characters.appearances('mv-character-loki-laufeyson'),
+    mockAppearances
+  );
+  queryClient.setQueryData(queryKeys.series.list({}), mockSeries);
+  queryClient.setQueryData(queryKeys.movies.list({}), []);
+
+  let html = '';
+  assert.doesNotThrow(() => {
+    html = renderToString(
+      React.createElement(
+        QueryClientProvider,
+        { client: queryClient },
+        React.createElement(
+          MemoryRouter,
+          { initialEntries: ['/characters/mv-character-loki-laufeyson'] },
+          React.createElement(
+            Routes,
+            null,
+            React.createElement(Route, {
+              path: '/characters/:canonicalId',
+              element: React.createElement(CharacterDetail),
+            })
+          )
+        )
+      )
+    );
+  });
+
+  const cleanHtml = html.replace(/<!--.*?-->/g, '');
+  assert.equal(cleanHtml.includes('Verified Screen Appearances'), true);
+  assert.equal(cleanHtml.includes('Loki'), true);
+  assert.equal(cleanHtml.includes('Loki Laufeyson / God of Stories'), true);
+  assert.equal(cleanHtml.includes('TV Series'), true);
+  assert.equal(cleanHtml.includes('/series/mv-series-loki'), true);
+  assert.equal(cleanHtml.includes('/movies/mv-series-loki'), false);
+});

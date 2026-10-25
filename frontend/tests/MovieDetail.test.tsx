@@ -102,6 +102,8 @@ test('MovieDetail - renders movie data and appearances without .map crash', () =
 
   // Verify movie info rendered
   assert.equal(html.includes('Iron Man'), true);
+  // Verify date formatted as DD-MM-YYYY
+  assert.equal(html.includes('02-05-2008'), true);
   // Verify appearance rendered
   assert.equal(html.includes('Tony Stark'), true);
   // Verify no crash occurred and cache entries remain separate

@@ -8,6 +8,8 @@ import { RouteLoading } from './components/RouteLoading';
 const Home = lazy(() => import('./routes/Home'));
 const Movies = lazy(() => import('./routes/Movies'));
 const MovieDetail = lazy(() => import('./routes/MovieDetail'));
+const Series = lazy(() => import('./routes/Series'));
+const SeriesDetail = lazy(() => import('./routes/SeriesDetail'));
 const Characters = lazy(() => import('./routes/Characters'));
 const CharacterDetail = lazy(() => import('./routes/CharacterDetail'));
 const Timeline = lazy(() => import('./routes/Timeline'));
@@ -51,6 +53,22 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageFallback />}>
             <MovieDetail />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'series',
+        element: (
+          <Suspense fallback={<PageFallback />}>
+            <Series />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'series/:canonicalId',
+        element: (
+          <Suspense fallback={<PageFallback />}>
+            <SeriesDetail />
           </Suspense>
         ),
       },

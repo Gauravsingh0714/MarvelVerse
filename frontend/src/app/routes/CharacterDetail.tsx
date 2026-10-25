@@ -6,6 +6,7 @@ import {
   useCharacterAppearances,
 } from '../../hooks/useCharacters.js';
 import { useMovies } from '../../hooks/useMovies.js';
+import { useSeries } from '../../hooks/useSeries.js';
 import {
   Card,
   Badge,
@@ -45,6 +46,7 @@ export default function CharacterDetail() {
   } = useCharacterAppearances(canonicalId ?? null);
 
   const { data: movies } = useMovies();
+  const { data: seriesList } = useSeries();
 
   if (isCharacterLoading) {
     return (
@@ -245,7 +247,7 @@ export default function CharacterDetail() {
         <div className="flex items-center justify-between border-b border-stroke-subtle pb-3">
           <h2 className="text-xl font-bold text-content-primary flex items-center gap-2">
             <Film className="w-5 h-5 text-starkRed" />
-            Verified Film Appearances
+            Verified Screen Appearances
           </h2>
           {appearances && (
             <Badge variant="default" size="sm">
@@ -273,15 +275,31 @@ export default function CharacterDetail() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {appearances.map((app) => {
-              const matchedMovie = movies?.find(
-                (m) => m.canonicalId === app.mediaCanonicalId
-              );
-              const movieTitle = matchedMovie?.title || app.mediaCanonicalId;
+              const isSeries =
+                app.mediaType === 'series' || app.mediaType === 'tv';
+              const matchedSeries = isSeries
+                ? seriesList?.find(
+                    (s) => s.canonicalId === app.mediaCanonicalId
+                  )
+                : undefined;
+              const matchedMovie = !isSeries
+                ? movies?.find((m) => m.canonicalId === app.mediaCanonicalId)
+                : undefined;
+
+              const mediaTitle = isSeries
+                ? matchedSeries?.title || app.mediaCanonicalId
+                : matchedMovie?.title || app.mediaCanonicalId;
+
+              const detailPath = isSeries
+                ? `/series/${app.mediaCanonicalId}`
+                : `/movies/${app.mediaCanonicalId}`;
+
+              const mediaTypeLabel = isSeries ? 'TV Series' : 'Movie';
 
               return (
                 <Link
                   key={app.canonicalId}
-                  to={`/movies/${app.mediaCanonicalId}`}
+                  to={detailPath}
                   className="block group"
                 >
                   <Card interactive className="h-full border-stroke-subtle">
@@ -289,7 +307,7 @@ export default function CharacterDetail() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="space-y-0.5">
                           <h3 className="font-bold text-sm text-content-primary group-hover:text-starkRed transition-colors">
-                            {movieTitle}
+                            {mediaTitle}
                           </h3>
                           <p className="text-xs text-content-secondary">
                             Role:{' '}
@@ -298,15 +316,23 @@ export default function CharacterDetail() {
                             </span>
                           </p>
                         </div>
-                        {app.isUncredited && (
-                          <Badge variant="warning" size="sm">
-                            Uncredited
+                        <div className="flex flex-col items-end gap-1">
+                          <Badge
+                            variant={isSeries ? 'vibranium' : 'primary'}
+                            size="sm"
+                          >
+                            {mediaTypeLabel}
                           </Badge>
-                        )}
+                          {app.isUncredited && (
+                            <Badge variant="warning" size="sm">
+                              Uncredited
+                            </Badge>
+                          )}
+                        </div>
                       </div>
 
                       <div className="flex items-center justify-between text-xs text-content-muted font-mono pt-2 border-t border-stroke-subtle/50">
-                        <span>Movie Details</span>
+                        <span>{mediaTypeLabel} Details</span>
                         <span className="inline-flex items-center gap-1 text-starkRed font-sans font-medium group-hover:translate-x-0.5 transition-transform">
                           View <ArrowRight className="w-3 h-3" />
                         </span>

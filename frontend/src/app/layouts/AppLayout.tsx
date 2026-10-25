@@ -9,6 +9,10 @@ import {
   Sun,
   Moon,
   SunMoon,
+  Film,
+  Tv,
+  Users,
+  Clock,
 } from 'lucide-react';
 import {
   AppShell,
@@ -64,6 +68,36 @@ const appNavigationSections: NavigationSection[] = [
       },
     ],
   },
+  {
+    id: 'catalog',
+    title: 'MCU Catalog',
+    items: [
+      {
+        id: 'movies',
+        label: 'Movies',
+        href: '/movies',
+        icon: <Film className="w-4 h-4" />,
+      },
+      {
+        id: 'series',
+        label: 'TV Series',
+        href: '/series',
+        icon: <Tv className="w-4 h-4" />,
+      },
+      {
+        id: 'characters',
+        label: 'Characters',
+        href: '/characters',
+        icon: <Users className="w-4 h-4" />,
+      },
+      {
+        id: 'timeline',
+        label: 'Timeline',
+        href: '/timeline',
+        icon: <Clock className="w-4 h-4" />,
+      },
+    ],
+  },
 ];
 
 /** Strict segment boundary route matching */
@@ -87,10 +121,13 @@ export const AppLayoutContent: React.FC = () => {
 
   // Derive active item ID from URL (URL is single source of truth)
   const activeNavId = useMemo(() => {
-    const matchedItem = appNavigationSections[0].items.find((item) =>
-      isRouteActive(location.pathname, item.href)
-    );
-    return matchedItem ? matchedItem.id : 'dashboard';
+    for (const section of appNavigationSections) {
+      const matchedItem = section.items.find((item) =>
+        isRouteActive(location.pathname, item.href)
+      );
+      if (matchedItem) return matchedItem.id;
+    }
+    return 'dashboard';
   }, [location.pathname]);
 
   // Derive breadcrumbs dynamically from route handles or path segments

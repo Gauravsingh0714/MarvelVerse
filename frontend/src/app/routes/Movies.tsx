@@ -23,6 +23,7 @@ import {
   ArrowRight,
   FilterX,
 } from 'lucide-react';
+import { formatDate } from '../../utils/date.utils.js';
 
 export default function Movies() {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -209,7 +210,7 @@ export default function Movies() {
                     <div className="flex items-center gap-4 text-xs text-content-muted">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5 text-starkRed" />
-                        {movie.releaseDate}
+                        {formatDate(movie.releaseDate)}
                       </span>
                       {movie.runtime && (
                         <span className="flex items-center gap-1">

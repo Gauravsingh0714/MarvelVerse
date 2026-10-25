@@ -30,6 +30,7 @@ import {
   User,
   RefreshCw,
 } from 'lucide-react';
+import { formatDate } from '../../utils/date.utils.js';
 
 export default function MovieDetail() {
   const { canonicalId } = useParams<{ canonicalId: string }>();
@@ -204,7 +205,7 @@ export default function MovieDetail() {
                   <div className="flex flex-wrap items-center gap-6 text-sm text-content-secondary">
                     <span className="flex items-center gap-1.5">
                       <Calendar className="w-4 h-4 text-starkRed" />
-                      {movie.releaseDate}
+                      {formatDate(movie.releaseDate)}
                     </span>
                     {movie.runtime && (
                       <span className="flex items-center gap-1.5">

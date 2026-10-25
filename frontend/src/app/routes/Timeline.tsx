@@ -1,12 +1,9 @@
 import { useState, useMemo } from 'react';
 import { ScrollReveal } from '../../components/ui/Motion/ScrollReveal.js';
 import { Link } from 'react-router-dom';
-import {
-  CanonicalSaga,
-  CanonicalPhase,
-  CanonicalMovie,
-} from '@marvelverse/shared';
+import { CanonicalSaga, CanonicalPhase } from '@marvelverse/shared';
 import { useMovies } from '../../hooks/useMovies.js';
+import { useSeries } from '../../hooks/useSeries.js';
 import {
   useUniverses,
   useSagas,
@@ -28,17 +25,37 @@ import {
   Sparkles,
   ArrowRight,
   Info,
+  Film,
+  Tv,
 } from 'lucide-react';
+import { formatDate, formatYear } from '../../utils/date.utils.js';
+
+export interface TimelineMediaItem {
+  id: string;
+  canonicalId: string;
+  title: string;
+  mediaType: 'movie' | 'series';
+  releaseDate: string; // ISO date for sorting
+  phaseId?: string;
+  sagaId?: string;
+  universeId: string;
+  overview?: string;
+  runtime?: number | null;
+  numberOfSeasons?: number;
+  numberOfEpisodes?: number;
+  releaseOrder?: number;
+  detailPath: string;
+}
 
 interface PhaseGroup {
   phase: CanonicalPhase;
-  movies: CanonicalMovie[];
+  items: TimelineMediaItem[];
 }
 
 interface SagaGroup {
   saga: CanonicalSaga;
   phases: PhaseGroup[];
-  totalMovies: number;
+  totalItems: number;
 }
 
 export default function Timeline() {
@@ -74,16 +91,29 @@ export default function Timeline() {
     sort: 'releaseOrder',
   });
 
+  const {
+    data: seriesList,
+    isLoading: isSeriesLoading,
+    error: seriesError,
+    refetch: refetchSeries,
+  } = useSeries();
+
   const isLoading =
-    isUniversesLoading || isSagasLoading || isPhasesLoading || isMoviesLoading;
+    isUniversesLoading ||
+    isSagasLoading ||
+    isPhasesLoading ||
+    isMoviesLoading ||
+    isSeriesLoading;
+
   const combinedError =
-    universesError || sagasError || phasesError || moviesError;
+    universesError || sagasError || phasesError || moviesError || seriesError;
 
   const handleRefetchAll = () => {
     refetchUniverses();
     refetchSagas();
     refetchPhases();
     refetchMovies();
+    refetchSeries();
   };
 
   // Primary universe context (Earth-616 is primary MCU continuity)
@@ -91,9 +121,9 @@ export default function Timeline() {
     return universes?.find((u) => u.id === 'earth-616') || universes?.[0];
   }, [universes]);
 
-  // Hierarchical grouping: Saga -> Phase -> Movies (Strategy A)
+  // Hierarchical grouping: Saga -> Phase -> Items (Movies & Series unified chronologically)
   const sagaGroups = useMemo<SagaGroup[]>(() => {
-    if (!sagas || !phases || !movies) return [];
+    if (!sagas || !phases || (!movies && !seriesList)) return [];
 
     const sortedSagas = [...sagas].sort((a, b) => a.order - b.order);
     const sortedPhases = [...phases].sort((a, b) => a.number - b.number);
@@ -101,30 +131,86 @@ export default function Timeline() {
     return sortedSagas.map((saga) => {
       const sagaPhases = sortedPhases.filter((p) => p.sagaId === saga.id);
 
-      let totalMoviesInSaga = 0;
+      let totalItemsInSaga = 0;
 
       const phaseGroups: PhaseGroup[] = sagaPhases.map((phase) => {
-        const phaseMovies = movies.filter((m) => m.phaseId === phase.id);
-        totalMoviesInSaga += phaseMovies.length;
+        const phaseMovies: TimelineMediaItem[] = (movies || [])
+          .filter((m) => m.phaseId === phase.id)
+          .map((m) => ({
+            id: `movie-${m.canonicalId}`,
+            canonicalId: m.canonicalId,
+            title: m.title,
+            mediaType: 'movie',
+            releaseDate: m.releaseDate,
+            phaseId: m.phaseId,
+            sagaId: m.sagaId,
+            universeId: m.universeId,
+            overview: m.overview,
+            runtime: m.runtime,
+            releaseOrder: m.releaseOrder,
+            detailPath: `/movies/${m.canonicalId}`,
+          }));
+
+        const phaseSeries: TimelineMediaItem[] = (seriesList || [])
+          .filter((s) => s.phaseId === phase.id)
+          .map((s) => ({
+            id: `series-${s.canonicalId}`,
+            canonicalId: s.canonicalId,
+            title: s.title,
+            mediaType: 'series',
+            releaseDate: s.firstAirDate,
+            phaseId: s.phaseId,
+            sagaId: s.sagaId,
+            universeId: s.universeId,
+            overview: s.overview,
+            numberOfSeasons: s.numberOfSeasons,
+            numberOfEpisodes: s.numberOfEpisodes,
+            detailPath: `/series/${s.canonicalId}`,
+          }));
+
+        // Combine and ensure stable unique identity
+        const combined = [...phaseMovies, ...phaseSeries];
+        const seen = new Set<string>();
+        const uniqueItems: TimelineMediaItem[] = [];
+        for (const item of combined) {
+          if (!seen.has(item.id)) {
+            seen.add(item.id);
+            uniqueItems.push(item);
+          }
+        }
+
+        // Chronological sort: ISO date comparison ascending
+        uniqueItems.sort((a, b) => {
+          if (!a.releaseDate) return 1;
+          if (!b.releaseDate) return -1;
+          return a.releaseDate.localeCompare(b.releaseDate);
+        });
+
+        totalItemsInSaga += uniqueItems.length;
+
         return {
           phase,
-          movies: phaseMovies,
+          items: uniqueItems,
         };
       });
 
       return {
         saga,
         phases: phaseGroups,
-        totalMovies: totalMoviesInSaga,
+        totalItems: totalItemsInSaga,
       };
     });
-  }, [sagas, phases, movies]);
+  }, [sagas, phases, movies, seriesList]);
 
   // Filtered sagas based on active tab selection
   const displayedSagaGroups = useMemo(() => {
     if (selectedSagaId === 'all') return sagaGroups;
     return sagaGroups.filter((sg) => sg.saga.id === selectedSagaId);
   }, [sagaGroups, selectedSagaId]);
+
+  const totalAllReleases = useMemo(() => {
+    return sagaGroups.reduce((acc, curr) => acc + curr.totalItems, 0);
+  }, [sagaGroups]);
 
   if (isLoading) {
     return (
@@ -218,12 +304,12 @@ export default function Timeline() {
           aria-pressed={selectedSagaId === 'all'}
           leftIcon={<Layers className="w-4 h-4" />}
         >
-          All Sagas ({movies?.length || 0} Releases)
+          All Sagas ({totalAllReleases} Releases)
         </Button>
 
         {sagas?.map((saga) => {
           const matchedGroup = sagaGroups.find((sg) => sg.saga.id === saga.id);
-          const count = matchedGroup?.totalMovies || 0;
+          const count = matchedGroup?.totalItems || 0;
 
           return (
             <Button
@@ -269,7 +355,7 @@ export default function Timeline() {
                 </div>
 
                 <Badge variant="primary" size="md">
-                  {sagaGroup.totalMovies} Total Releases
+                  {sagaGroup.totalItems} Total Releases
                 </Badge>
               </div>
 
@@ -295,73 +381,99 @@ export default function Timeline() {
                         </div>
 
                         <span className="text-xs text-content-muted font-medium">
-                          {phaseGroup.movies.length}{' '}
-                          {phaseGroup.movies.length === 1 ? 'Movie' : 'Movies'}
+                          {phaseGroup.items.length}{' '}
+                          {phaseGroup.items.length === 1
+                            ? 'Release'
+                            : 'Releases'}
                         </span>
                       </div>
 
-                      {/* Phase Movies Grid or Empty Phase Fallback */}
-                      {phaseGroup.movies.length === 0 ? (
+                      {/* Phase Items Grid or Empty Phase Fallback */}
+                      {phaseGroup.items.length === 0 ? (
                         <div className="p-4 rounded-lg bg-surface-raised border border-stroke-subtle/60 flex items-center gap-3 text-xs text-content-secondary">
                           <Info className="w-4 h-4 text-content-muted shrink-0" />
                           <span>
-                            No verified movies are currently associated with{' '}
+                            No verified releases are currently associated with{' '}
                             <strong>{phaseGroup.phase.name}</strong>.
                           </span>
                         </div>
                       ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {phaseGroup.movies.map((movie) => (
-                            <ScrollReveal key={movie.canonicalId}>
+                          {phaseGroup.items.map((item) => (
+                            <ScrollReveal key={item.id}>
                               <Link
-                                to={`/movies/${movie.canonicalId}`}
+                                to={item.detailPath}
                                 className="block group"
                               >
                                 <Card
                                   interactive
-                                  className="h-full border-stroke-subtle"
+                                  className="h-full border-stroke-subtle flex flex-col justify-between"
                                 >
-                                  <Card.Header
-                                    bordered
-                                    className="py-2.5 px-4 flex items-center justify-between"
-                                  >
-                                    <Badge variant="primary" size="sm">
-                                      Release #{movie.releaseOrder}
-                                    </Badge>
-                                    <span className="text-xs font-mono text-content-muted">
-                                      {movie.releaseDate.slice(0, 4)}
-                                    </span>
-                                  </Card.Header>
-
-                                  <Card.Body className="p-4 space-y-2">
-                                    <h4 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors">
-                                      {movie.title}
-                                    </h4>
-
-                                    <div className="flex items-center gap-3 text-xs text-content-muted">
-                                      <span className="flex items-center gap-1">
-                                        <Calendar className="w-3 h-3 text-starkRed" />
-                                        {movie.releaseDate}
-                                      </span>
-                                      {movie.runtime && (
-                                        <span className="flex items-center gap-1">
-                                          <Clock className="w-3 h-3 text-vibraniumCyan" />
-                                          {movie.runtime} min
-                                        </span>
+                                  <div>
+                                    <Card.Header
+                                      bordered
+                                      className="py-2.5 px-4 flex items-center justify-between"
+                                    >
+                                      {item.mediaType === 'movie' ? (
+                                        <Badge variant="primary" size="sm">
+                                          <Film className="w-3 h-3 mr-1" />
+                                          Release #{item.releaseOrder}
+                                        </Badge>
+                                      ) : (
+                                        <Badge variant="vibranium" size="sm">
+                                          <Tv className="w-3 h-3 mr-1" />
+                                          TV Series
+                                        </Badge>
                                       )}
-                                    </div>
+                                      <span className="text-xs font-mono text-content-muted">
+                                        {formatYear(item.releaseDate) || 'MCU'}
+                                      </span>
+                                    </Card.Header>
 
-                                    <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
-                                      {movie.overview}
-                                    </p>
-                                  </Card.Body>
+                                    <Card.Body className="p-4 space-y-2">
+                                      <h4 className="font-bold text-base text-content-primary group-hover:text-starkRed transition-colors">
+                                        {item.title}
+                                      </h4>
+
+                                      <div className="flex flex-wrap items-center gap-3 text-xs text-content-muted">
+                                        <span className="flex items-center gap-1">
+                                          <Calendar className="w-3 h-3 text-starkRed" />
+                                          {formatDate(item.releaseDate)}
+                                        </span>
+                                        {item.mediaType === 'movie' &&
+                                          item.runtime && (
+                                            <span className="flex items-center gap-1">
+                                              <Clock className="w-3 h-3 text-vibraniumCyan" />
+                                              {item.runtime} min
+                                            </span>
+                                          )}
+                                        {item.mediaType === 'series' &&
+                                          item.numberOfSeasons && (
+                                            <span className="flex items-center gap-1">
+                                              <Layers className="w-3 h-3 text-vibraniumCyan" />
+                                              {item.numberOfSeasons}{' '}
+                                              {item.numberOfSeasons === 1
+                                                ? 'Season'
+                                                : 'Seasons'}{' '}
+                                              • {item.numberOfEpisodes} Ep
+                                            </span>
+                                          )}
+                                      </div>
+
+                                      {item.overview && (
+                                        <p className="text-xs text-content-secondary line-clamp-2 leading-relaxed">
+                                          {item.overview}
+                                        </p>
+                                      )}
+                                    </Card.Body>
+                                  </div>
 
                                   <Card.Footer
                                     bordered
                                     className="py-2.5 px-4 flex items-center justify-between text-xs"
                                   >
                                     <span className="font-mono text-[11px] text-content-muted truncate max-w-[150px]">
-                                      {movie.canonicalId}
+                                      {item.canonicalId}
                                     </span>
                                     <span className="inline-flex items-center gap-1 text-starkRed font-medium group-hover:translate-x-0.5 transition-transform">
                                       Details <ArrowRight className="w-3 h-3" />
