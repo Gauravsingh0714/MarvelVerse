@@ -61,16 +61,62 @@ test('GET /api/v1/series supports filtering and deterministic ordering', async (
   assert.ok(phaseBody.data.every((s: any) => s.phaseId === 'phase-4'));
 
   // Sort by firstAirDate
-  const resSort = await fetch(`${baseUrl}/series?sort=firstAirDate`);
-  assert.equal(resSort.status, 200);
-  const sortBody = (await resSort.json()) as any;
-  assert.equal(sortBody.data[0].canonicalId, 'mv-series-daredevil'); // Daredevil (Apr 2015) before WandaVision (Jan 2021)
+  const resSortAirDate = await fetch(`${baseUrl}/series?sort=firstAirDate`);
+  assert.equal(resSortAirDate.status, 200);
+  const sortAirDateBody = (await resSortAirDate.json()) as any;
+  assert.equal(sortAirDateBody.data[0].canonicalId, 'mv-series-daredevil'); // Daredevil (Apr 2015)
+  // Ensure chronologically ascending
+  for (let i = 1; i < sortAirDateBody.data.length; i++) {
+    const prevDate = sortAirDateBody.data[i - 1].firstAirDate;
+    const currDate = sortAirDateBody.data[i].firstAirDate;
+    assert.ok(
+      prevDate <= currDate,
+      `Expected ${prevDate} <= ${currDate} in firstAirDate sort`
+    );
+  }
+
+  // Sort by title
+  const resSortTitle = await fetch(`${baseUrl}/series?sort=title`);
+  assert.equal(resSortTitle.status, 200);
+  const sortTitleBody = (await resSortTitle.json()) as any;
+  // Ensure alphabetically ascending by title
+  for (let i = 1; i < sortTitleBody.data.length; i++) {
+    const prevTitle = sortTitleBody.data[i - 1].title;
+    const currTitle = sortTitleBody.data[i].title;
+    assert.ok(
+      prevTitle.localeCompare(currTitle) <= 0,
+      `Expected "${prevTitle}" <= "${currTitle}" in title sort`
+    );
+  }
+
+  // Rejection of unsupported 'releaseOrder' sort on series
+  const resReleaseOrder = await fetch(`${baseUrl}/series?sort=releaseOrder`);
+  assert.equal(resReleaseOrder.status, 400);
+  const badSortBody = (await resReleaseOrder.json()) as any;
+  assert.equal(badSortBody.error.code, 'VALIDATION_ERROR');
 
   // Disallow unknown query parameters
   const resBadQuery = await fetch(`${baseUrl}/series?unknown=123`);
   assert.equal(resBadQuery.status, 400);
   const badBody = (await resBadQuery.json()) as any;
   assert.equal(badBody.error.code, 'VALIDATION_ERROR');
+});
+
+test('GET /api/v1/characters returns characters strictly sorted alphabetically by name A-Z', async () => {
+  const res = await fetch(`${baseUrl}/characters`);
+  assert.equal(res.status, 200);
+  const body = (await res.json()) as any;
+  assert.equal(Array.isArray(body.data), true);
+  assert.ok(body.data.length > 0);
+
+  for (let i = 1; i < body.data.length; i++) {
+    const prev = body.data[i - 1].name;
+    const curr = body.data[i].name;
+    assert.ok(
+      prev.localeCompare(curr) <= 0,
+      `Expected "${prev}" to precede or equal "${curr}" in characters alphabetical sort`
+    );
+  }
 });
 
 // ====================================================

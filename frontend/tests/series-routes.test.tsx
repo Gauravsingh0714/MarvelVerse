@@ -49,7 +49,7 @@ test('Series route - renders series catalog with DD-MM-YYYY premiere date and se
   ];
 
   queryClient.setQueryData(
-    queryKeys.series.list({ phaseId: undefined, sort: 'releaseOrder' }),
+    queryKeys.series.list({ phaseId: undefined, sort: 'firstAirDate' }),
     mockSeriesList
   );
 
@@ -78,6 +78,10 @@ test('Series route - renders series catalog with DD-MM-YYYY premiere date and se
   // Verify seasons/episodes counts
   assert.equal(cleanHtml.includes('2 Seasons • 12 Episodes'), true);
   assert.equal(cleanHtml.includes('3 Seasons • 39 Episodes'), true);
+  // Verify sorting options: Premiere Date and Title (A-Z) present; Release Order removed
+  assert.equal(cleanHtml.includes('Premiere Date'), true);
+  assert.equal(cleanHtml.includes('Title (A-Z)'), true);
+  assert.equal(cleanHtml.includes('Release Order'), false);
 });
 
 test('SeriesDetail route - renders Loki details, both seasons, and all 12 episodes with DD-MM-YYYY dates', () => {

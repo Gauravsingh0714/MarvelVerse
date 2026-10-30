@@ -6,7 +6,7 @@ export interface SeriesFilters {
   universeId?: string;
   sagaId?: string;
   phaseId?: string;
-  sort?: 'title' | 'firstAirDate' | 'releaseOrder';
+  sort?: 'title' | 'firstAirDate';
 }
 
 export class SeriesService {

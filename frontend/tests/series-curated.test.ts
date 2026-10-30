@@ -86,6 +86,9 @@ test('SeriesService.getSeries serializes query parameters correctly', async () =
     capturedEndpoint,
     '/series?universeId=earth-616&sagaId=multiverse-saga&phaseId=phase-4&sort=firstAirDate'
   );
+
+  await service.getSeries({ sort: 'title' });
+  assert.equal(capturedEndpoint, '/series?sort=title');
 });
 
 test('SeriesService.getSeries propagates ApiClientError on failure', async () => {

@@ -27,9 +27,9 @@ import { formatDate } from '../../utils/date.utils.js';
 export default function Series() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [phaseFilter, setPhaseFilter] = useState<string>('');
-  const [sortBy, setSortBy] = useState<
-    'title' | 'firstAirDate' | 'releaseOrder'
-  >('releaseOrder');
+  const [sortBy, setSortBy] = useState<'firstAirDate' | 'title'>(
+    'firstAirDate'
+  );
 
   const {
     data: seriesList,
@@ -147,12 +147,9 @@ export default function Series() {
               aria-label="Sort series"
               value={sortBy}
               onChange={(e) =>
-                setSortBy(
-                  e.target.value as 'title' | 'firstAirDate' | 'releaseOrder'
-                )
+                setSortBy(e.target.value as 'firstAirDate' | 'title')
               }
             >
-              <option value="releaseOrder">Release Order</option>
               <option value="firstAirDate">Premiere Date</option>
               <option value="title">Title (A-Z)</option>
             </Select>

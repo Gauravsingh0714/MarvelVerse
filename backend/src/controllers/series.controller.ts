@@ -10,7 +10,7 @@ export class SeriesController {
         universeId?: string;
         sagaId?: string;
         phaseId?: string;
-        sort?: string;
+        sort?: 'title' | 'firstAirDate';
       };
 
       let series = repository.tv.getSeries();
@@ -26,7 +26,11 @@ export class SeriesController {
       }
 
       if (sort === 'firstAirDate') {
-        series.sort((a, b) => a.firstAirDate.localeCompare(b.firstAirDate));
+        series.sort(
+          (a, b) =>
+            a.firstAirDate.localeCompare(b.firstAirDate) ||
+            a.title.localeCompare(b.title)
+        );
       } else {
         // Deterministic default sort by title
         series.sort((a, b) => a.title.localeCompare(b.title));

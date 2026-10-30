@@ -47,7 +47,7 @@ export const seriesQuerySchema = z
     universeId: z.string().optional(),
     sagaId: z.string().optional(),
     phaseId: z.string().optional(),
-    sort: z.enum(['title', 'firstAirDate', 'releaseOrder']).optional(),
+    sort: z.enum(['title', 'firstAirDate']).optional(),
   })
   .strict('Unknown query parameters are not allowed');
 
