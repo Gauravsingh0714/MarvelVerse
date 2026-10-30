@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-nebula-gotg",
+  "characterId": "mv-character-nebula",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-guardians-of-the-galaxy",
+  "roleName": "Nebula",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-gamora-endgame",
+  "characterId": "mv-character-gamora",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Gamora (2014 Alternate)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

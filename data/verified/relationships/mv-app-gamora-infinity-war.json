@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-gamora-infinity-war",
+  "characterId": "mv-character-gamora",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Gamora",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

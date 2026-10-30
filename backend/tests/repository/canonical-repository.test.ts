@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 35);
+  assert.equal(characters.length, 41);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -76,13 +76,29 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   assert.equal(tonyTmdb?.canonicalId, 'mv-character-tony-stark');
 
   assert.equal(repo.characters.getCharacterById('missing'), null);
+
+  // Batch 12: Verify all 6 Guardians of the Galaxy characters load cleanly
+  const guardiansIds = [
+    'mv-character-rocket-raccoon',
+    'mv-character-groot',
+    'mv-character-gamora',
+    'mv-character-drax-the-destroyer',
+    'mv-character-nebula',
+    'mv-character-mantis',
+  ];
+  for (const gid of guardiansIds) {
+    const char = repo.characters.getCharacterById(gid);
+    assert.ok(char, `Expected ${gid} to be retrievable`);
+    assert.equal(char.canonicalId, gid);
+    assert.ok(char.name.length > 0);
+  }
 });
 
 test('RelationshipRepository queries appearance relationships by character and media', () => {
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 134);
+  assert.equal(appearances.length, 175);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -107,6 +123,36 @@ test('RelationshipRepository queries appearance relationships by character and m
     repo.relationships.getAppearancesByCharacter('unknown').length,
     0
   );
+
+  // Batch 12: Verify Peter Quill backfilled appearances (7 total)
+  const quillApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-peter-quill'
+  );
+  assert.equal(quillApps.length, 7);
+  assert.ok(
+    quillApps.some((a) => a.mediaCanonicalId === 'mv-movie-avengers-endgame'),
+    'Expected Peter Quill appearance in Avengers: Endgame'
+  );
+  assert.ok(
+    quillApps.some(
+      (a) => a.mediaCanonicalId === 'mv-movie-thor-love-and-thunder'
+    ),
+    'Expected Peter Quill appearance in Thor: Love and Thunder'
+  );
+
+  // Batch 12: Verify Gamora Option A distinct roleName values
+  const gamoraApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-gamora'
+  );
+  assert.equal(gamoraApps.length, 5);
+  const endgameGamora = gamoraApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-avengers-endgame'
+  );
+  assert.equal(endgameGamora?.roleName, 'Gamora (2014 Alternate)');
+  const gotg3Gamora = gamoraApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-guardians-of-the-galaxy-vol-3'
+  );
+  assert.equal(gotg3Gamora?.roleName, 'Gamora (Ravager / 2014 Alternate)');
 });
 
 test('CanonicalCache caches records in memory and supports clearCache()', () => {

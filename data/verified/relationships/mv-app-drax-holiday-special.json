@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-drax-holiday-special",
+  "characterId": "mv-character-drax-the-destroyer",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-guardians-of-the-galaxy-holiday-special",
+  "roleName": "Drax the Destroyer",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

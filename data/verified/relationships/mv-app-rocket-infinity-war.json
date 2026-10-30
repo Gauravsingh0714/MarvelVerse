@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-rocket-infinity-war",
+  "characterId": "mv-character-rocket-raccoon",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Rocket Raccoon",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

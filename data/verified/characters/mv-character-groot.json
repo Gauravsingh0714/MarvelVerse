@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-groot",
+  "name": "Groot",
+  "realName": "Groot",
+  "aliases": ["Tree"],
+  "species": "Flora Colossus",
+  "overview": "Sentient tree-like organism from Planet X and loyal partner of Rocket who communicates primarily through variations of the phrase \"I am Groot\".",
+  "externalIds": {
+    "tmdb": 1238915
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1238915,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Founding member of the Guardians of the Galaxy."
+  }
+}

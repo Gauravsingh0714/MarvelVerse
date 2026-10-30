@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peter-quill-endgame",
+  "characterId": "mv-character-peter-quill",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Peter Quill / Star-Lord",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

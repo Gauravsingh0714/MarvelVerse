@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-nebula",
+  "name": "Nebula",
+  "realName": "Nebula",
+  "aliases": [],
+  "species": "Luphomoid (Cybernetic)",
+  "overview": "Cybernetically modified assassin and adopted daughter of Thanos who evolves from bitter rival of Gamora to compassionate leader on Knowhere.",
+  "externalIds": {
+    "tmdb": 1238917
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1238917,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Key member of the Guardians of the Galaxy and temporary Avenger during the Blip."
+  }
+}

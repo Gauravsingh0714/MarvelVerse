@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-mantis-gotg-vol-2",
+  "characterId": "mv-character-mantis",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-guardians-of-the-galaxy-vol-2",
+  "roleName": "Mantis",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

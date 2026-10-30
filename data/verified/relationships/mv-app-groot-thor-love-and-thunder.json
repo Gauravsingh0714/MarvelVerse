@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-groot-thor-love-and-thunder",
+  "characterId": "mv-character-groot",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-love-and-thunder",
+  "roleName": "Groot",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

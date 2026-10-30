@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-drax-the-destroyer",
+  "name": "Drax the Destroyer",
+  "realName": "Drax",
+  "aliases": ["Drax"],
+  "species": "Kylosian",
+  "overview": "Fierce Kylosian warrior motivated by vengeance for the murder of his family by Ronan and Thanos, who finds a second family with the Guardians.",
+  "externalIds": {
+    "tmdb": 1238916
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1238916,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Founding member of the Guardians of the Galaxy."
+  }
+}

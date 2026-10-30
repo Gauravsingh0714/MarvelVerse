@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-mantis",
+  "name": "Mantis",
+  "realName": "Mantis",
+  "aliases": [],
+  "species": "Empath (Insectoid / Celestial Hybrid)",
+  "overview": "Empathic former servant of Ego and half-sister of Peter Quill who uses her emotion-sensing and manipulating abilities in service of the Guardians.",
+  "externalIds": {
+    "tmdb": 1709405
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1709405,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Joined the Guardians in Vol. 2; key emotional anchor of the team."
+  }
+}

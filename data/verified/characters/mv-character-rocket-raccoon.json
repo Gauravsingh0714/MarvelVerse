@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-rocket-raccoon",
+  "name": "Rocket Raccoon",
+  "realName": "89P13",
+  "aliases": ["Rocket", "Subject 89P13"],
+  "species": "Halfworlder (Enhanced Cybernetic Raccoon)",
+  "overview": "Genetically and cybernetically enhanced master tactician, pilot, and weapons expert who serves as the core engineer of the Guardians of the Galaxy.",
+  "externalIds": {
+    "tmdb": 1238914
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1238914,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Core member and later captain of the Guardians of the Galaxy."
+  }
+}

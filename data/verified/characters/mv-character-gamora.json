@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-gamora",
+  "name": "Gamora",
+  "realName": "Gamora Zen Whoberi Ben Titan",
+  "aliases": ["Deadliest Woman in the Galaxy"],
+  "species": "Zen-Whoberi",
+  "overview": "Former assassin raised as an adopted daughter of Thanos who broke free of his control to fight alongside the Guardians of the Galaxy.",
+  "externalIds": {
+    "tmdb": 1238913
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1238913,
+    "acquiredAt": "2026-10-14T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z",
+    "notes": "Founding Guardian; 2014 alternate timeline version represented via appearance role distinctions."
+  }
+}

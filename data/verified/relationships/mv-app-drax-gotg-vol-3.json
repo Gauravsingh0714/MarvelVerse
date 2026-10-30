@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-drax-gotg-vol-3",
+  "characterId": "mv-character-drax-the-destroyer",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-guardians-of-the-galaxy-vol-3",
+  "roleName": "Drax the Destroyer",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

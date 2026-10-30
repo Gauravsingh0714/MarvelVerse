@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-groot-holiday-special",
+  "characterId": "mv-character-groot",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-guardians-of-the-galaxy-holiday-special",
+  "roleName": "Young Adult Groot",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

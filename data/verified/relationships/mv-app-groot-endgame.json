@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-groot-endgame",
+  "characterId": "mv-character-groot",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Groot",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-14T00:00:00.000Z"
+  }
+}
