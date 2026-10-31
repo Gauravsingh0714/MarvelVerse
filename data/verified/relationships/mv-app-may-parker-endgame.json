@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-may-parker-endgame",
+  "characterId": "mv-character-may-parker",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "May Parker (funeral)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

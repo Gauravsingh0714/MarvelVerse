@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-pepper-potts",
+  "name": "Pepper Potts",
+  "realName": "Virginia Potts",
+  "aliases": ["Rescue", "Virginia Potts"],
+  "species": "Human",
+  "overview": "Longtime confidante, executive partner, and eventual wife of Tony Stark who rose to CEO of Stark Industries and donned the Rescue armor during the Battle of Earth.",
+  "externalIds": {
+    "tmdb": 12052
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 12052,
+    "acquiredAt": "2026-11-01T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z",
+    "notes": "Foundational MCU character appearing across the Infinity Saga from Iron Man through Avengers: Endgame."
+  }
+}

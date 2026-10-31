@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-happy-hogan-endgame",
+  "characterId": "mv-character-happy-hogan",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Happy Hogan",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

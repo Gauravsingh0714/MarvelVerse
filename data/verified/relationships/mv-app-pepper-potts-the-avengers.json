@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-pepper-potts-the-avengers",
+  "characterId": "mv-character-pepper-potts",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-avengers",
+  "roleName": "Pepper Potts",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

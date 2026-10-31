@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-may-parker-no-way-home",
+  "characterId": "mv-character-may-parker",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-spider-man-no-way-home",
+  "roleName": "May Parker",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

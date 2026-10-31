@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-phil-coulson-iron-man",
+  "characterId": "mv-character-phil-coulson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man",
+  "roleName": "Agent Phil Coulson",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

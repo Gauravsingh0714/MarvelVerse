@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-phil-coulson",
+  "name": "Phil Coulson",
+  "realName": "Phillip J. Coulson",
+  "aliases": ["Agent Coulson"],
+  "species": "Human",
+  "overview": "Dedicated high-level S.H.I.E.L.D. operative and right hand to Director Nick Fury whose tragic death at the hands of Loki united the Avengers to protect Earth.",
+  "externalIds": {
+    "tmdb": 9048
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 9048,
+    "acquiredAt": "2026-11-01T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z",
+    "notes": "Key Phase 1 connective character whose sacrifice directly precipitated the assembly of the Avengers."
+  }
+}

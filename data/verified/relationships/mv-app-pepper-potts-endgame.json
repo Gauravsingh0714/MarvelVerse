@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-pepper-potts-endgame",
+  "characterId": "mv-character-pepper-potts",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Pepper Potts / Rescue",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

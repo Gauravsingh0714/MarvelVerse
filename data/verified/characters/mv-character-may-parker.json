@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-may-parker",
+  "name": "May Parker",
+  "realName": "Maybelle Parker",
+  "aliases": ["Aunt May"],
+  "species": "Human",
+  "overview": "Loving aunt and guardian of Peter Parker who championed community charity work at F.E.A.S.T. and imparted the defining moral lesson of power and responsibility.",
+  "externalIds": {
+    "tmdb": 3149
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 3149,
+    "acquiredAt": "2026-11-01T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z",
+    "notes": "Essential supporting character across the MCU Spider-Man trilogy and Captain America: Civil War."
+  }
+}

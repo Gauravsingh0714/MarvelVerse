@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-happy-hogan",
+  "name": "Happy Hogan",
+  "realName": "Harold Joseph Hogan",
+  "aliases": ["Happy"],
+  "species": "Human",
+  "overview": "Former boxer, Tony Stark's personal bodyguard and driver, who later served as Head of Security for Stark Industries and vital mentor/liaison to Peter Parker.",
+  "externalIds": {
+    "tmdb": 15277
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 15277,
+    "acquiredAt": "2026-11-01T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z",
+    "notes": "Integral supporting character appearing across Iron Man, Avengers, and Spider-Man franchises."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-may-parker-homecoming",
+  "characterId": "mv-character-may-parker",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-spider-man-homecoming",
+  "roleName": "Aunt May Parker",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

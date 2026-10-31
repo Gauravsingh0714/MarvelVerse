@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-pepper-potts-iron-man",
+  "characterId": "mv-character-pepper-potts",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man",
+  "roleName": "Pepper Potts",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

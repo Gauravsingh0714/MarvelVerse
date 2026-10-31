@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-happy-hogan-iron-man-3",
+  "characterId": "mv-character-happy-hogan",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-3",
+  "roleName": "Head of Security Happy Hogan",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-01T00:00:00.000Z"
+  }
+}

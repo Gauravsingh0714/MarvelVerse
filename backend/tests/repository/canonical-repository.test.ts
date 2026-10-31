@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 49);
+  assert.equal(characters.length, 53);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -120,13 +120,27 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
     assert.equal(char.canonicalId, cid);
     assert.ok(char.name.length > 0);
   }
+
+  // Batch 15: Verify all 4 characters load cleanly
+  const batch15Ids = [
+    'mv-character-pepper-potts',
+    'mv-character-happy-hogan',
+    'mv-character-phil-coulson',
+    'mv-character-may-parker',
+  ];
+  for (const cid of batch15Ids) {
+    const char = repo.characters.getCharacterById(cid);
+    assert.ok(char, `Expected ${cid} to be retrievable`);
+    assert.equal(char.canonicalId, cid);
+    assert.ok(char.name.length > 0);
+  }
 });
 
 test('RelationshipRepository queries appearance relationships by character and media', () => {
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 226);
+  assert.equal(appearances.length, 250);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -141,7 +155,7 @@ test('RelationshipRepository queries appearance relationships by character and m
 
   const ironManApps =
     repo.relationships.getAppearancesByMedia('mv-movie-iron-man');
-  assert.equal(ironManApps.length, 3);
+  assert.equal(ironManApps.length, 6);
   assert.equal(
     ironManApps.some((a) => a.characterId === 'mv-character-tony-stark'),
     true
@@ -242,6 +256,31 @@ test('RelationshipRepository queries appearance relationships by character and m
     (a) => a.mediaCanonicalId === 'mv-movie-captain-america-the-winter-soldier'
   );
   assert.equal(furyWs?.roleName, 'Director Nick Fury');
+
+  // Batch 15: Verify Foundational Allies & Stark Inner Circle appearances
+  const pepperApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-pepper-potts'
+  );
+  assert.equal(pepperApps.length, 7);
+  const rescuePepper = pepperApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-avengers-endgame'
+  );
+  assert.equal(rescuePepper?.roleName, 'Pepper Potts / Rescue');
+
+  const happyApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-happy-hogan'
+  );
+  assert.equal(happyApps.length, 7);
+
+  const coulsonApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-phil-coulson'
+  );
+  assert.equal(coulsonApps.length, 5);
+
+  const mayApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-may-parker'
+  );
+  assert.equal(mayApps.length, 5);
 });
 
 test('CanonicalCache caches records in memory and supports clearCache()', () => {
