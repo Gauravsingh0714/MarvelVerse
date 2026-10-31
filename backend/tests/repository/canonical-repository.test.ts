@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 45);
+  assert.equal(characters.length, 49);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -106,13 +106,27 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
     assert.equal(char.canonicalId, cid);
     assert.ok(char.name.length > 0);
   }
+
+  // Batch 14: Verify all 4 characters load cleanly
+  const batch14Ids = [
+    'mv-character-peggy-carter',
+    'mv-character-maria-hill',
+    'mv-character-sharon-carter',
+    'mv-character-yelena-belova',
+  ];
+  for (const cid of batch14Ids) {
+    const char = repo.characters.getCharacterById(cid);
+    assert.ok(char, `Expected ${cid} to be retrievable`);
+    assert.equal(char.canonicalId, cid);
+    assert.ok(char.name.length > 0);
+  }
 });
 
 test('RelationshipRepository queries appearance relationships by character and media', () => {
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 207);
+  assert.equal(appearances.length, 226);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -190,6 +204,44 @@ test('RelationshipRepository queries appearance relationships by character and m
     (a) => a.mediaCanonicalId === 'mv-movie-thor-love-and-thunder'
   );
   assert.equal(loveJane?.roleName, 'Dr. Jane Foster / Mighty Thor');
+
+  // Batch 14: Verify Espionage & Strategic Defense characters and appearances
+  const peggyApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-peggy-carter'
+  );
+  assert.equal(peggyApps.length, 6);
+
+  const mariaApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-maria-hill'
+  );
+  assert.equal(mariaApps.length, 5);
+  const siMaria = mariaApps.find(
+    (a) => a.mediaCanonicalId === 'mv-series-secret-invasion'
+  );
+  assert.equal(siMaria?.roleName, 'Maria Hill (killed by Gravik)');
+
+  const sharonApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-sharon-carter'
+  );
+  assert.equal(sharonApps.length, 3);
+  const tfatwsSharon = sharonApps.find(
+    (a) => a.mediaCanonicalId === 'mv-series-the-falcon-and-the-winter-soldier'
+  );
+  assert.equal(tfatwsSharon?.roleName, 'Sharon Carter / The Power Broker');
+
+  const yelenaApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-yelena-belova'
+  );
+  assert.equal(yelenaApps.length, 3);
+
+  const furyApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-nick-fury'
+  );
+  assert.equal(furyApps.length, 7);
+  const furyWs = furyApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-captain-america-the-winter-soldier'
+  );
+  assert.equal(furyWs?.roleName, 'Director Nick Fury');
 });
 
 test('CanonicalCache caches records in memory and supports clearCache()', () => {

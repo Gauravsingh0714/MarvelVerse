@@ -292,8 +292,8 @@ test('CanonicalRepository: K. Existing canonical entities continue to load with 
   assert.equal(sagas.length, 2);
   assert.equal(phases.length, 6);
   assert.equal(movies.length, 42);
-  assert.equal(characters.length, 45);
-  assert.equal(appearances.length, 207);
+  assert.equal(characters.length, 49);
+  assert.equal(appearances.length, 226);
 
   // Verify that movies still contain valid posterPath / backdropPath
   for (const movie of movies) {

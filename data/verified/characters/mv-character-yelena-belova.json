@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-yelena-belova",
+  "name": "Yelena Belova",
+  "realName": "Yelena Belova",
+  "aliases": ["Black Widow"],
+  "species": "Human",
+  "overview": "Trained Red Room operative and adoptive sister of Natasha Romanoff who inherited the Black Widow mantle and later joined the Thunderbolts.",
+  "externalIds": {
+    "tmdb": 1473892
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1473892,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Major MCU character with arcs across Black Widow, Hawkeye, and Thunderbolts."
+  }
+}

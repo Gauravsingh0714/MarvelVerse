@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peggy-carter-age-of-ultron",
+  "characterId": "mv-character-peggy-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-age-of-ultron",
+  "roleName": "Agent Peggy Carter (dream)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

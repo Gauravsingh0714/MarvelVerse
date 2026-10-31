@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-maria-hill-age-of-ultron",
+  "characterId": "mv-character-maria-hill",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-age-of-ultron",
+  "roleName": "Agent Maria Hill",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

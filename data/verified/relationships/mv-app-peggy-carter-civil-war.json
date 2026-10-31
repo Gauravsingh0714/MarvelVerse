@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peggy-carter-civil-war",
+  "characterId": "mv-character-peggy-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Director Peggy Carter (funeral)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

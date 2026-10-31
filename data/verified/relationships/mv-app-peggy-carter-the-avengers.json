@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peggy-carter-the-avengers",
+  "characterId": "mv-character-peggy-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-avengers",
+  "roleName": "Agent Peggy Carter (file archive)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-peggy-carter-captain-america",
+  "characterId": "mv-character-peggy-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-first-avenger",
+  "roleName": "Agent Peggy Carter",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

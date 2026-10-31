@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-yelena-belova-hawkeye",
+  "characterId": "mv-character-yelena-belova",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-hawkeye",
+  "roleName": "Yelena Belova",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

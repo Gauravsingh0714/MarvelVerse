@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-nick-fury-age-of-ultron",
+  "characterId": "mv-character-nick-fury",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-age-of-ultron",
+  "roleName": "Director Nick Fury",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

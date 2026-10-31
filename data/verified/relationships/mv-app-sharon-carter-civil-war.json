@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sharon-carter-civil-war",
+  "characterId": "mv-character-sharon-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Sharon Carter",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

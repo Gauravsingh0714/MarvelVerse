@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-peggy-carter",
+  "name": "Peggy Carter",
+  "realName": "Margaret Elizabeth Carter",
+  "aliases": ["Agent Carter", "Director Carter"],
+  "species": "Human",
+  "overview": "Founding member of S.H.I.E.L.D. and decorated SSR agent who served alongside Steve Rogers during World War II, later rising to Director of S.H.I.E.L.D.",
+  "externalIds": {
+    "tmdb": 234352
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 234352,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Foundational MCU character appearing across Phase 1-3 films from Captain America: The First Avenger through Avengers: Endgame."
+  }
+}

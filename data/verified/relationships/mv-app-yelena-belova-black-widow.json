@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-yelena-belova-black-widow",
+  "characterId": "mv-character-yelena-belova",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-black-widow",
+  "roleName": "Yelena Belova / Black Widow",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-maria-hill-the-avengers",
+  "characterId": "mv-character-maria-hill",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-avengers",
+  "roleName": "Deputy Director Maria Hill",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

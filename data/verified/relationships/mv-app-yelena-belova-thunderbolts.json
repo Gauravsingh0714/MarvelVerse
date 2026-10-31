@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-yelena-belova-thunderbolts",
+  "characterId": "mv-character-yelena-belova",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thunderbolts",
+  "roleName": "Yelena Belova / Thunderbolts",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

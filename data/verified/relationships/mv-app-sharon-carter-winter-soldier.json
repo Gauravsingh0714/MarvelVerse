@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sharon-carter-winter-soldier",
+  "characterId": "mv-character-sharon-carter",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-winter-soldier",
+  "roleName": "Agent 13 / Sharon Carter",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}
