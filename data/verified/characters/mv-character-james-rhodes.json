@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-james-rhodes",
+  "name": "James Rhodes",
+  "realName": "James Rupert Rhodes",
+  "aliases": ["War Machine", "Iron Patriot", "Rhodey"],
+  "species": "Human",
+  "overview": "A decorated United States Air Force officer and Tony Stark's longtime confidant who defends the world in heavily armed modular armor as War Machine.",
+  "externalIds": {
+    "tmdb": 28166
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 28166,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Foundational Avenger; War Machine / Iron Patriot."
+  }
+}

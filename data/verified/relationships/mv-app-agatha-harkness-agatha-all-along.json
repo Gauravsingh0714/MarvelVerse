@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-agatha-harkness-agatha-all-along",
+  "characterId": "mv-character-agatha-harkness",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-agatha-all-along",
+  "roleName": "Agatha Harkness",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

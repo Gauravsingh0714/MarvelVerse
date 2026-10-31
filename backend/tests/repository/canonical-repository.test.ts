@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 41);
+  assert.equal(characters.length, 45);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -92,13 +92,27 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
     assert.equal(char.canonicalId, gid);
     assert.ok(char.name.length > 0);
   }
+
+  // Batch 13: Verify all 4 characters load cleanly
+  const batch13Ids = [
+    'mv-character-james-rhodes',
+    'mv-character-wong',
+    'mv-character-agatha-harkness',
+    'mv-character-jane-foster',
+  ];
+  for (const cid of batch13Ids) {
+    const char = repo.characters.getCharacterById(cid);
+    assert.ok(char, `Expected ${cid} to be retrievable`);
+    assert.equal(char.canonicalId, cid);
+    assert.ok(char.name.length > 0);
+  }
 });
 
 test('RelationshipRepository queries appearance relationships by character and media', () => {
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 175);
+  assert.equal(appearances.length, 207);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -113,7 +127,7 @@ test('RelationshipRepository queries appearance relationships by character and m
 
   const ironManApps =
     repo.relationships.getAppearancesByMedia('mv-movie-iron-man');
-  assert.equal(ironManApps.length, 2);
+  assert.equal(ironManApps.length, 3);
   assert.equal(
     ironManApps.some((a) => a.characterId === 'mv-character-tony-stark'),
     true
@@ -153,6 +167,29 @@ test('RelationshipRepository queries appearance relationships by character and m
     (a) => a.mediaCanonicalId === 'mv-movie-guardians-of-the-galaxy-vol-3'
   );
   assert.equal(gotg3Gamora?.roleName, 'Gamora (Ravager / 2014 Alternate)');
+
+  // Batch 13: Verify James Rhodes appearances and Secret Invasion impersonation modeling
+  const rhodesApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-james-rhodes'
+  );
+  assert.equal(rhodesApps.length, 9);
+  const siRhodes = rhodesApps.find(
+    (a) => a.mediaCanonicalId === 'mv-series-secret-invasion'
+  );
+  assert.equal(
+    siRhodes?.roleName,
+    'Colonel James Rhodes (Impersonated by Skrull Raava)'
+  );
+
+  // Batch 13: Verify Jane Foster Mighty Thor appearance
+  const janeApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-jane-foster'
+  );
+  assert.equal(janeApps.length, 4);
+  const loveJane = janeApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-thor-love-and-thunder'
+  );
+  assert.equal(loveJane?.roleName, 'Dr. Jane Foster / Mighty Thor');
 });
 
 test('CanonicalCache caches records in memory and supports clearCache()', () => {

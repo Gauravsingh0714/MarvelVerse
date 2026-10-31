@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wong-multiverse-of-madness",
+  "characterId": "mv-character-wong",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-doctor-strange-in-the-multiverse-of-madness",
+  "roleName": "Wong / Sorcerer Supreme",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

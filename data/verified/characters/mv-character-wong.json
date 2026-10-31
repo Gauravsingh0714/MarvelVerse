@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-wong",
+  "name": "Wong",
+  "realName": "Wong",
+  "aliases": ["Sorcerer Supreme"],
+  "species": "Human",
+  "overview": "A master of the mystic arts and Kamar-Taj librarian who ascends to the role of Sorcerer Supreme, guiding Earth's mystical defenses across multiple dimensional threats.",
+  "externalIds": {
+    "tmdb": 1475704
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1475704,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Master of the Mystic Arts and current Sorcerer Supreme of Earth-616."
+  }
+}

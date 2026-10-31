@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-jane-foster-the-dark-world",
+  "characterId": "mv-character-jane-foster",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-the-dark-world",
+  "roleName": "Dr. Jane Foster",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

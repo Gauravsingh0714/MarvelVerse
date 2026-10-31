@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-james-rhodes-fatws",
+  "characterId": "mv-character-james-rhodes",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-the-falcon-and-the-winter-soldier",
+  "roleName": "Colonel James Rhodes",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

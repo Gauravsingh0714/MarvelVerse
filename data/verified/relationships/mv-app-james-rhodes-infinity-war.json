@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-james-rhodes-infinity-war",
+  "characterId": "mv-character-james-rhodes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Colonel James Rhodes / War Machine",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wong-doctor-strange",
+  "characterId": "mv-character-wong",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-doctor-strange",
+  "roleName": "Wong",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

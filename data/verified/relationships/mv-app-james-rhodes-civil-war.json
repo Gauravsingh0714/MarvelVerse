@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-james-rhodes-civil-war",
+  "characterId": "mv-character-james-rhodes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Colonel James Rhodes / War Machine",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-agatha-harkness",
+  "name": "Agatha Harkness",
+  "realName": "Agatha Harkness",
+  "aliases": ["Agnes", "The Witch of Salem"],
+  "species": "Witch",
+  "overview": "An ancient, powerful witch from the Salem coven trials who studies dark magic and the Darkhold, infiltrates Westview, and walks the Witches' Road to reclaim her stolen power.",
+  "externalIds": {
+    "tmdb": 22119
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 22119,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Antagonist of WandaVision and lead protagonist of Agatha All Along."
+  }
+}

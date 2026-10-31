@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-james-rhodes-iron-man-3",
+  "characterId": "mv-character-james-rhodes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-3",
+  "roleName": "Colonel James Rhodes / Iron Patriot",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

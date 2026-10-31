@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-jane-foster",
+  "name": "Jane Foster",
+  "realName": "Jane Foster",
+  "aliases": ["Mighty Thor", "Goddess of Thunder", "Dr. Jane Foster"],
+  "species": "Human",
+  "overview": "A brilliant world-renowned astrophysicist who discovers the Bifrost and studies cosmic anomalies, later proving worthy to wield the reforged Mjolnir as the Mighty Thor.",
+  "externalIds": {
+    "tmdb": 1030513
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 1030513,
+    "acquiredAt": "2026-10-31T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z",
+    "notes": "Astrophysicist and mainline wielder of Mjolnir as the Mighty Thor."
+  }
+}

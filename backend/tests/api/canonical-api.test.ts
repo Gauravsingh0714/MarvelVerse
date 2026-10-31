@@ -107,7 +107,7 @@ test('GET /api/v1/characters endpoints and TMDB route ordering', async () => {
   const resChars = await fetch(`${baseUrl}/characters`);
   assert.equal(resChars.status, 200);
   const charsBody = (await resChars.json()) as any;
-  assert.equal(charsBody.data.length, 41);
+  assert.equal(charsBody.data.length, 45);
 
   const resTony = await fetch(`${baseUrl}/characters/mv-character-tony-stark`);
   assert.equal(resTony.status, 200);
@@ -127,7 +127,7 @@ test('GET /api/v1/appearances and nested character/movie appearance routes', asy
   const resApps = await fetch(`${baseUrl}/appearances`);
   assert.equal(resApps.status, 200);
   const appsBody = (await resApps.json()) as any;
-  assert.equal(appsBody.data.length, 175);
+  assert.equal(appsBody.data.length, 207);
 
   const resTonyApps = await fetch(
     `${baseUrl}/characters/mv-character-tony-stark/appearances`
@@ -141,7 +141,7 @@ test('GET /api/v1/appearances and nested character/movie appearance routes', asy
   );
   assert.equal(resIronManApps.status, 200);
   const ironManAppsBody = (await resIronManApps.json()) as any;
-  assert.equal(ironManAppsBody.data.length, 2);
+  assert.equal(ironManAppsBody.data.length, 3);
 
   const resMissingCharApps = await fetch(
     `${baseUrl}/characters/mv-character-non-existent/appearances`

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-jane-foster-thor",
+  "characterId": "mv-character-jane-foster",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor",
+  "roleName": "Dr. Jane Foster",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

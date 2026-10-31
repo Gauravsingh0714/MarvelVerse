@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-loki-endgame",
+  "characterId": "mv-character-loki-laufeyson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Loki Laufeyson (2012 Time Heist)",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

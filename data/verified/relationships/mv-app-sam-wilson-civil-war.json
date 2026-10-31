@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sam-wilson-civil-war",
+  "characterId": "mv-character-sam-wilson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-civil-war",
+  "roleName": "Sam Wilson / Falcon",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

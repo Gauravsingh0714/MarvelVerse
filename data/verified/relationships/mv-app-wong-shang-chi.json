@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-wong-shang-chi",
+  "characterId": "mv-character-wong",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-shang-chi-and-the-legend-of-the-ten-rings",
+  "roleName": "Wong",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}

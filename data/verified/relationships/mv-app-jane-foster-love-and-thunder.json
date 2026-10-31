@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-jane-foster-love-and-thunder",
+  "characterId": "mv-character-jane-foster",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-love-and-thunder",
+  "roleName": "Dr. Jane Foster / Mighty Thor",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-10-31T00:00:00.000Z"
+  }
+}
