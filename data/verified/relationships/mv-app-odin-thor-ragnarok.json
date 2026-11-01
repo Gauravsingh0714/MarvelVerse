@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-odin-thor-ragnarok",
+  "characterId": "mv-character-odin-borson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Odin",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z"
+  }
+}

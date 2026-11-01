@@ -3,7 +3,7 @@
   "title": "Spider-Man: Brand New Day",
   "releaseDate": "2026-07-31",
   "releaseOrder": 38,
-  "runtime": null,
+  "runtime": 139,
   "overview": "Peter Parker navigates life operating completely on his own in New York City after the world has forgotten his identity following the spell in No Way Home.",
   "posterPath": null,
   "backdropPath": null,
@@ -13,16 +13,16 @@
   "phaseId": "phase-6",
   "releaseDateRecord": {
     "rawDate": "2026-07-31",
-    "status": "unreleased",
+    "status": "exact",
     "precision": "day",
-    "source": "Sony Pictures / Marvel Studios Theatrical Release Schedule"
+    "source": "Sony Pictures / Marvel Studios Theatrical Distribution"
   },
   "chronology": {
     "storyYear": null,
     "storyDate": null,
     "precision": "unknown",
     "storyOrderIndex": null,
-    "notes": "Unreleased production; narrative story placement unknown until release."
+    "notes": "Story set in post-No Way Home continuity with Peter Parker operating anonymously in New York City."
   },
   "externalIds": {
     "imdb": "tt20236044"
@@ -37,7 +37,7 @@
   "verification": {
     "status": "verified",
     "method": "manual-review",
-    "verifiedAt": "2026-10-25T00:00:00.000Z",
-    "notes": "Theatrical release scheduled for July 31, 2026; MCU Phase 6 release #38; runtime unreleased; TMDB ID unconfirmed and omitted from externalIds."
+    "verifiedAt": "2026-11-02T00:00:00.000Z",
+    "notes": "Theatrically released July 31, 2026; MCU Phase 6 release #38; runtime 139 min; TMDB ID unconfirmed and omitted from externalIds."
   }
 }

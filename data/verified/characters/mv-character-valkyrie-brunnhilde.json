@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-valkyrie-brunnhilde",
+  "name": "Valkyrie",
+  "realName": "Brunnhilde",
+  "aliases": ["Scrapper 142", "King Valkyrie"],
+  "species": "Asgardian",
+  "overview": "Elite Asgardian warrior and sole survivor of the Valkyrior who became a scrapper on Sakaar before fighting alongside the Revengers and being crowned Sovereign of New Asgard.",
+  "externalIds": {
+    "tmdb": 62561
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 62561,
+    "acquiredAt": "2026-11-02T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z",
+    "notes": "Verified MCU character portrayed by Tessa Thompson from Thor: Ragnarok through The Marvels."
+  }
+}

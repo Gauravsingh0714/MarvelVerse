@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-valkyrie-the-marvels",
+  "characterId": "mv-character-valkyrie-brunnhilde",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-marvels",
+  "roleName": "King Valkyrie",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z"
+  }
+}

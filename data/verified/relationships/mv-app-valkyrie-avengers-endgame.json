@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-valkyrie-avengers-endgame",
+  "characterId": "mv-character-valkyrie-brunnhilde",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-endgame",
+  "roleName": "Valkyrie / King of New Asgard",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z"
+  }
+}

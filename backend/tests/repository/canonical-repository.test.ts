@@ -65,7 +65,7 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
   const repo = createCanonicalRepository();
 
   const characters = repo.characters.getCharacters();
-  assert.equal(characters.length, 53);
+  assert.equal(characters.length, 55);
 
   const tony = repo.characters.getCharacterById('mv-character-tony-stark');
   assert.notEqual(tony, null);
@@ -134,13 +134,25 @@ test('CharacterRepository queries characters by ID and TMDB ID', () => {
     assert.equal(char.canonicalId, cid);
     assert.ok(char.name.length > 0);
   }
+
+  // Batch 2 (Asgardian Royalty): Verify Valkyrie and Odin load cleanly
+  const batch2Ids = [
+    'mv-character-valkyrie-brunnhilde',
+    'mv-character-odin-borson',
+  ];
+  for (const cid of batch2Ids) {
+    const char = repo.characters.getCharacterById(cid);
+    assert.ok(char, `Expected ${cid} to be retrievable`);
+    assert.equal(char.canonicalId, cid);
+    assert.ok(char.name.length > 0);
+  }
 });
 
 test('RelationshipRepository queries appearance relationships by character and media', () => {
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 250);
+  assert.equal(appearances.length, 258);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -281,6 +293,49 @@ test('RelationshipRepository queries appearance relationships by character and m
     'mv-character-may-parker'
   );
   assert.equal(mayApps.length, 5);
+
+  // Batch 2 (Asgardian Royalty): Verify Valkyrie & Odin appearances
+  const valkyrieApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-valkyrie-brunnhilde'
+  );
+  assert.equal(valkyrieApps.length, 4);
+  const theMarvelsValkyrie = valkyrieApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-the-marvels'
+  );
+  assert.equal(theMarvelsValkyrie?.roleName, 'King Valkyrie');
+  const ragnarokValkyrie = valkyrieApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-thor-ragnarok'
+  );
+  assert.equal(ragnarokValkyrie?.roleName, 'Valkyrie / Scrapper 142');
+
+  const odinApps = repo.relationships.getAppearancesByCharacter(
+    'mv-character-odin-borson'
+  );
+  assert.equal(odinApps.length, 3);
+  const ragnarokOdin = odinApps.find(
+    (a) => a.mediaCanonicalId === 'mv-movie-thor-ragnarok'
+  );
+  assert.equal(
+    odinApps.find((a) => a.mediaCanonicalId === 'mv-movie-thor')?.roleName,
+    'King Odin'
+  );
+  assert.equal(ragnarokOdin?.roleName, 'Odin');
+});
+
+test('TvRepository and SeasonRepository verify Daredevil: Born Again Season 2 metadata', () => {
+  const repo = createCanonicalRepository();
+  const series = repo.tv.getSeriesById('mv-series-daredevil-born-again');
+  assert.ok(series, 'Expected Daredevil: Born Again series to load');
+  assert.equal(series?.numberOfSeasons, 2);
+  assert.equal(series?.numberOfEpisodes, 17);
+  assert.equal(series?.lastAirDate, '2026-05-05');
+
+  const s2 = repo.tv.getSeasonById('mv-season-daredevil-born-again-s2');
+  assert.ok(s2, 'Expected Daredevil: Born Again Season 2 to load');
+  assert.equal(s2?.seasonNumber, 2);
+  assert.equal(s2?.episodeCount, 8);
+  assert.equal(s2?.episodes.length, 8);
+  assert.equal(s2?.airDate, '2026-03-24');
 });
 
 test('CanonicalCache caches records in memory and supports clearCache()', () => {

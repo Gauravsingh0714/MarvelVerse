@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-odin-borson",
+  "name": "Odin",
+  "realName": "Odin Borson",
+  "aliases": ["Allfather", "King Odin"],
+  "species": "Asgardian",
+  "overview": "Ancient King of Asgard, protector of the Nine Realms, and father to Thor, Hela, and adoptive father to Loki.",
+  "externalIds": {
+    "tmdb": 4173
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 4173,
+    "acquiredAt": "2026-11-02T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z",
+    "notes": "Verified MCU Phase 1-3 Asgardian monarch portrayed by Sir Anthony Hopkins."
+  }
+}

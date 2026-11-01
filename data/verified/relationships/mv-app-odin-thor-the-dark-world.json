@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-odin-thor-the-dark-world",
+  "characterId": "mv-character-odin-borson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-the-dark-world",
+  "roleName": "King Odin",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "canonicalId": "mv-season-daredevil-born-again-s2",
+  "tvCanonicalId": "mv-series-daredevil-born-again",
+  "seasonNumber": 2,
+  "title": "Season 2",
+  "overview": "Matt Murdock and Wilson Fisk's escalating ideological conflict spills across New York City as new alliances and old grudges reshape the municipal landscape.",
+  "airDate": "2026-03-24",
+  "episodeCount": 8,
+  "episodes": [
+    {
+      "id": 1,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e1",
+      "episodeNumber": 1,
+      "title": "The Northern Star",
+      "overview": "Matt Murdock confronts the municipal fallout of Mayor Fisk's aggressive administrative enforcement across Hell's Kitchen.",
+      "airDate": "2026-03-24"
+    },
+    {
+      "id": 2,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e2",
+      "episodeNumber": 2,
+      "title": "Shoot the Moon",
+      "overview": "A daring high-stakes operation threatens to destabilize City Hall's new political framework.",
+      "airDate": "2026-03-24"
+    },
+    {
+      "id": 3,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e3",
+      "episodeNumber": 3,
+      "title": "The Scales & The Sword",
+      "overview": "Legal arguments in court mirror fierce street confrontations as Nelson & Murdock take on a sensitive public case.",
+      "airDate": "2026-03-31"
+    },
+    {
+      "id": 4,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e4",
+      "episodeNumber": 4,
+      "title": "Gloves Off",
+      "overview": "Vigilante activity intensifies when unexpected criminal syndicates exploit political turmoil.",
+      "airDate": "2026-04-07"
+    },
+    {
+      "id": 5,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e5",
+      "episodeNumber": 5,
+      "title": "The Grand Design",
+      "overview": "Fisk's comprehensive vision for the future of New York faces pushback from grassroots resistance.",
+      "airDate": "2026-04-14"
+    },
+    {
+      "id": 6,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e6",
+      "episodeNumber": 6,
+      "title": "Requiem",
+      "overview": "Tragic losses force both sides to reassess the personal costs of their prolonged ideological war.",
+      "airDate": "2026-04-21"
+    },
+    {
+      "id": 7,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e7",
+      "episodeNumber": 7,
+      "title": "The Hateful Darkness",
+      "overview": "As the mayoral term hangs by a thread, secrets buried within municipal archives come to light.",
+      "airDate": "2026-04-28"
+    },
+    {
+      "id": 8,
+      "canonicalId": "mv-episode-daredevil-born-again-s2-e8",
+      "episodeNumber": 8,
+      "title": "The Southern Cross",
+      "overview": "In an explosive season finale, Matt Murdock and Wilson Fisk clash in a decisive confrontation that determines the future of Hell's Kitchen.",
+      "airDate": "2026-05-05"
+    }
+  ],
+  "provenance": {
+    "provider": "disney-plus-release",
+    "sourceId": "daredevil-born-again-s2",
+    "acquiredAt": "2026-11-02T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z",
+    "notes": "Verified Season 2 episode roster (8 episodes) matching Disney+ broadcast schedule from March 24 through May 5, 2026."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-valkyrie-thor-ragnarok",
+  "characterId": "mv-character-valkyrie-brunnhilde",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Valkyrie / Scrapper 142",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-02T00:00:00.000Z"
+  }
+}
