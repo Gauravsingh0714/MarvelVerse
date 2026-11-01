@@ -5,7 +5,7 @@
 An interactive Marvel Cinematic Universe explorer built with a modern full-stack TypeScript architecture.
 
 ![Status](https://img.shields.io/badge/status-active-success)
-![Progress](https://img.shields.io/badge/progress-Stage%202%20Complete-blue)
+![Progress](https://img.shields.io/badge/progress-Stage%203%20In%20Progress-blue)
 ![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
 ![Backend](https://img.shields.io/badge/backend-Node.js%20%2B%20Express-339933)
 ![Language](https://img.shields.io/badge/language-TypeScript-3178C6)
@@ -25,19 +25,19 @@ The project uses a canonical data architecture that separates external data sour
 
 ## 🚧 Current Progress
 
-### Stage 2 Complete
+### Stage 3 In Progress
 
-| Stage   | Status      | Description                                                  |
-| ------- | ----------- | ------------------------------------------------------------ |
-| Stage 0 | ✅ Complete | Monorepo, repository tooling, frontend and backend bootstrap |
-| Stage 1 | ✅ Complete | Design system and application shell foundation               |
-| Stage 2 | ✅ Complete | Canonical data, REST API, and frontend API integration       |
-| Stage 3 | 🔜 Next     | Feature development                                          |
+| Stage   | Status         | Description                                                             |
+| ------- | -------------- | ----------------------------------------------------------------------- |
+| Stage 0 | ✅ Complete    | Monorepo, repository tooling, frontend and backend bootstrap            |
+| Stage 1 | ✅ Complete    | Design system and application shell foundation                          |
+| Stage 2 | ✅ Complete    | Canonical data, REST API, and frontend API integration                  |
+| Stage 3 | 🔄 In Progress | Feature development, canonical catalog expansion & media infrastructure |
 
 Current release milestone:
 
 ```text
-v2.0.0-stage2
+v3.0.0-dev (Stage 3 — Canonical Expansion & Feature Development)
 ```
 
 ---
@@ -51,9 +51,12 @@ The project currently supports canonical models for:
 - Universes
 - Sagas
 - Phases
-- Movies
-- Characters
-- Character appearances
+- Movies (42 productions)
+- TV Series (12 productions)
+- TV Seasons & Episodes (16 seasons)
+- Characters (55 canonical entities)
+- Character appearances (258 verified relationships)
+- Character variants (2 canonical variants)
 
 Each entity uses stable internal identifiers, for example:
 
@@ -83,6 +86,10 @@ MarvelVerse exposes canonical data through a versioned REST API.
 /api/v1/movies/tmdb/:tmdbId
 /api/v1/movies/:movieId/appearances
 
+/api/v1/series
+/api/v1/series/:canonicalId
+/api/v1/series/:seriesId/seasons
+
 /api/v1/characters
 /api/v1/characters/:canonicalId
 /api/v1/characters/tmdb/:tmdbId
@@ -90,6 +97,8 @@ MarvelVerse exposes canonical data through a versioned REST API.
 
 /api/v1/appearances
 /api/v1/appearances/:canonicalId
+
+/api/v1/media/:entityType/:id
 ```
 
 ### Frontend API Integration
@@ -99,10 +108,12 @@ The frontend includes:
 - API client
 - Foundation service
 - Movie service
+- Series service
 - Character service
 - Appearance service
 - `useApiQuery`
 - `useMovies`
+- `useSeries`
 - `useCharacters`
 - `useFoundation`
 - `useAppearances`
@@ -110,6 +121,7 @@ The frontend includes:
 The following routes are connected to canonical API data:
 
 - Movies
+- TV Series
 - Characters
 - Timeline
 
@@ -247,28 +259,22 @@ pnpm --filter marvelverse-frontend test
 
 ---
 
-## 🏷️ Current Release
+## 🏷️ Current Release & Milestone
 
 ```text
-v2.0.0-stage2
-Stage 2 — Data, API and Frontend Integration Complete
+Stage 3 (In Progress) — Feature Development & Canonical Expansion
+Milestone: v3.0.0-dev (Preceding: v2.0.0-stage2)
 ```
 
-This release includes:
+This stage includes:
 
-- Canonical data model
-- TMDB acquisition and normalization pipeline
-- Data validation and verification
-- Repository and query layer
-- Versioned REST API
-- Shared API contracts
-- Frontend API client
-- Service layer
-- React data hooks
-- Dynamic Movies page
-- Dynamic Characters page
-- Dynamic Timeline page
-- Backend and frontend tests
+- Expanded canonical dataset (42 movies, 12 TV series, 16 seasons, 55 characters, 258 relationships, 2 variants)
+- Batch-driven MCU catalog expansions (Batches 1–16, including Asgardian Royalty and Daredevil: Born Again Season 2)
+- TV series and season repository and API endpoints
+- Media resolver infrastructure with secure fallback handling
+- Versioned REST API and shared contract schemas
+- Frontend dynamic routes for Movies, TV Series, Characters, and Timeline
+- Comprehensive multi-layer verification and regression test suites
 
 ---
 
@@ -320,6 +326,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ⭐ If you find MarvelVerse interesting, consider giving the repository a star.
 
-**Current Progress: Stage 2 Complete**
+**Current Progress: Stage 3 In Progress**
 
 </div>

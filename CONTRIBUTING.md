@@ -61,13 +61,13 @@ Start development:
 Frontend
 
 ```bash
-pnpm --filter frontend dev
+pnpm --filter marvelverse-frontend dev
 ```
 
 Backend
 
 ```bash
-pnpm --filter backend dev
+pnpm --filter marvelverse-backend dev
 ```
 
 ---
@@ -75,15 +75,17 @@ pnpm --filter backend dev
 # Repository Structure
 
 ```
-frontend/     React application
+frontend/     React application (marvelverse-frontend)
 
-backend/      Express API
+backend/      Express API (marvelverse-backend)
 
-shared/       Shared types and utilities
+shared/       Shared types, contracts, and Zod schemas
 
-docs/         Architecture and documentation
+data/         Canonical verified datasets (movies, tv, seasons, characters, relationships, variants)
 
-design/       Design assets
+docs/         Architecture, PRDs, and documentation
+
+design/       Design assets and Stitch branding
 
 .github/      GitHub workflows and templates
 ```
