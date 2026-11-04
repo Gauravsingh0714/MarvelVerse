@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-bruce-banner-iron-man-3",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-iron-man-3",
+  "roleName": "Bruce Banner",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

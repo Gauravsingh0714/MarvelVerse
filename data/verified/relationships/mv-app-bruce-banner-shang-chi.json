@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-bruce-banner-shang-chi",
+  "characterId": "mv-character-bruce-banner",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-shang-chi-and-the-legend-of-the-ten-rings",
+  "roleName": "Bruce Banner",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

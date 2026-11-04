@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-sam-wilson-ant-man",
+  "characterId": "mv-character-sam-wilson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man",
+  "roleName": "Sam Wilson / Falcon",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

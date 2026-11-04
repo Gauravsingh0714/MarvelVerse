@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-kate-bishop-the-marvels",
+  "characterId": "mv-character-kate-bishop",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-marvels",
+  "roleName": "Kate Bishop",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

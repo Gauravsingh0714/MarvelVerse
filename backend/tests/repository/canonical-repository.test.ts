@@ -152,7 +152,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 258);
+  assert.equal(appearances.length, 277);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -263,7 +263,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const furyApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-nick-fury'
   );
-  assert.equal(furyApps.length, 7);
+  assert.equal(furyApps.length, 13);
   const furyWs = furyApps.find(
     (a) => a.mediaCanonicalId === 'mv-movie-captain-america-the-winter-soldier'
   );

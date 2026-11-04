@@ -127,7 +127,7 @@ test('GET /api/v1/appearances and nested character/movie appearance routes', asy
   const resApps = await fetch(`${baseUrl}/appearances`);
   assert.equal(resApps.status, 200);
   const appsBody = (await resApps.json()) as any;
-  assert.equal(appsBody.data.length, 258);
+  assert.equal(appsBody.data.length, 277);
 
   const resTonyApps = await fetch(
     `${baseUrl}/characters/mv-character-tony-stark/appearances`

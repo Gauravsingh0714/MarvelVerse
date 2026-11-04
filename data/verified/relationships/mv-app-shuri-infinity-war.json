@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-shuri-infinity-war",
+  "characterId": "mv-character-shuri",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Shuri",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

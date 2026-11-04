@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-carol-danvers-ms-marvel",
+  "characterId": "mv-character-carol-danvers",
+  "mediaType": "series",
+  "mediaCanonicalId": "mv-series-ms-marvel",
+  "roleName": "Carol Danvers / Captain Marvel",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

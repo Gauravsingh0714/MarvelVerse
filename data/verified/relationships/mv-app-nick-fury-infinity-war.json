@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-nick-fury-infinity-war",
+  "characterId": "mv-character-nick-fury",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-avengers-infinity-war",
+  "roleName": "Nick Fury",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

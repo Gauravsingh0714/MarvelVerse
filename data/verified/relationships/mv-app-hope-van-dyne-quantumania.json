@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-hope-van-dyne-quantumania",
+  "characterId": "mv-character-hope-van-dyne",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man-and-the-wasp-quantumania",
+  "roleName": "Hope van Dyne / The Wasp",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}
