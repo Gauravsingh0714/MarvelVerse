@@ -152,7 +152,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 282);
+  assert.equal(appearances.length, 285);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
