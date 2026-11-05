@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-natasha-romanoff-captain-marvel",
+  "characterId": "mv-character-natasha-romanoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-marvel",
+  "roleName": "Natasha Romanoff / Black Widow",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

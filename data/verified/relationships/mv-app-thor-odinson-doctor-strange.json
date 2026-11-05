@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-thor-odinson-doctor-strange",
+  "characterId": "mv-character-thor-odinson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-doctor-strange",
+  "roleName": "Thor Odinson",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

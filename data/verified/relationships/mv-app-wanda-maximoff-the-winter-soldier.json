@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-wanda-maximoff-the-winter-soldier",
+  "characterId": "mv-character-wanda-maximoff",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-captain-america-the-winter-soldier",
+  "roleName": "Wanda Maximoff",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

@@ -152,7 +152,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 277);
+  assert.equal(appearances.length, 282);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -212,7 +212,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const rhodesApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-james-rhodes'
   );
-  assert.equal(rhodesApps.length, 9);
+  assert.equal(rhodesApps.length, 10);
   const siRhodes = rhodesApps.find(
     (a) => a.mediaCanonicalId === 'mv-series-secret-invasion'
   );
@@ -235,7 +235,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const peggyApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-peggy-carter'
   );
-  assert.equal(peggyApps.length, 6);
+  assert.equal(peggyApps.length, 7);
 
   const mariaApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-maria-hill'
