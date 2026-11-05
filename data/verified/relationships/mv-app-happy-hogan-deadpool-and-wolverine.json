@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-happy-hogan-deadpool-and-wolverine",
+  "characterId": "mv-character-happy-hogan",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-deadpool-and-wolverine",
+  "roleName": "Happy Hogan",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

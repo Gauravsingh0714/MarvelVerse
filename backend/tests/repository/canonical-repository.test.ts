@@ -152,7 +152,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const repo = createCanonicalRepository();
 
   const appearances = repo.relationships.getAppearances();
-  assert.equal(appearances.length, 285);
+  assert.equal(appearances.length, 289);
 
   const app = repo.relationships.getAppearanceById(
     'mv-app-tony-stark-iron-man'
@@ -163,7 +163,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const tonyApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-tony-stark'
   );
-  assert.equal(tonyApps.length, 9);
+  assert.equal(tonyApps.length, 10);
 
   const ironManApps =
     repo.relationships.getAppearancesByMedia('mv-movie-iron-man');
@@ -282,7 +282,7 @@ test('RelationshipRepository queries appearance relationships by character and m
   const happyApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-happy-hogan'
   );
-  assert.equal(happyApps.length, 7);
+  assert.equal(happyApps.length, 8);
 
   const coulsonApps = repo.relationships.getAppearancesByCharacter(
     'mv-character-phil-coulson'

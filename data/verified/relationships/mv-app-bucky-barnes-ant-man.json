@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-bucky-barnes-ant-man",
+  "characterId": "mv-character-bucky-barnes",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man",
+  "roleName": "Bucky Barnes / The Winter Soldier",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

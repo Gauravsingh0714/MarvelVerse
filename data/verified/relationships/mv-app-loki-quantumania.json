@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-loki-quantumania",
+  "characterId": "mv-character-loki-laufeyson",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-ant-man-and-the-wasp-quantumania",
+  "roleName": "Loki Laufeyson",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}

@@ -127,14 +127,14 @@ test('GET /api/v1/appearances and nested character/movie appearance routes', asy
   const resApps = await fetch(`${baseUrl}/appearances`);
   assert.equal(resApps.status, 200);
   const appsBody = (await resApps.json()) as any;
-  assert.equal(appsBody.data.length, 285);
+  assert.equal(appsBody.data.length, 289);
 
   const resTonyApps = await fetch(
     `${baseUrl}/characters/mv-character-tony-stark/appearances`
   );
   assert.equal(resTonyApps.status, 200);
   const tonyAppsBody = (await resTonyApps.json()) as any;
-  assert.equal(tonyAppsBody.data.length, 9);
+  assert.equal(tonyAppsBody.data.length, 10);
 
   const resIronManApps = await fetch(
     `${baseUrl}/movies/mv-movie-iron-man/appearances`

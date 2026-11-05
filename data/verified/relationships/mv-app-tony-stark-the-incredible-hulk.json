@@ -1,0 +1,13 @@
+{
+  "canonicalId": "mv-app-tony-stark-the-incredible-hulk",
+  "characterId": "mv-character-tony-stark",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-the-incredible-hulk",
+  "roleName": "Tony Stark",
+  "isUncredited": true,
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-05T00:00:00.000Z"
+  }
+}
