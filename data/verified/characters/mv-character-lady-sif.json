@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-lady-sif",
+  "name": "Lady Sif",
+  "realName": "Sif",
+  "aliases": ["Sif"],
+  "species": "Asgardian",
+  "overview": "Fierce Asgardian warrior and loyal companion to Thor and the Warriors Three who defended the Nine Realms against the Frost Giants, Marauders, and Gorr the God Butcher.",
+  "externalIds": {
+    "tmdb": 54379
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 54379,
+    "acquiredAt": "2026-11-06T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-06T00:00:00.000Z",
+    "notes": "Verified MCU Asgardian warrior portrayed by Jaimie Alexander across the Thor franchise."
+  }
+}

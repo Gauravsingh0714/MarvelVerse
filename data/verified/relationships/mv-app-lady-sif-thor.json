@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-lady-sif-thor",
+  "characterId": "mv-character-lady-sif",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor",
+  "roleName": "Lady Sif",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-06T00:00:00.000Z"
+  }
+}

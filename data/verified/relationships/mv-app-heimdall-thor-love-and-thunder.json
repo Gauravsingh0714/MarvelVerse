@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-heimdall-thor-love-and-thunder",
+  "characterId": "mv-character-heimdall",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-love-and-thunder",
+  "roleName": "Heimdall",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-06T00:00:00.000Z"
+  }
+}

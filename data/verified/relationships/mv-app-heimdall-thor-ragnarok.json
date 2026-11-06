@@ -1,0 +1,12 @@
+{
+  "canonicalId": "mv-app-heimdall-thor-ragnarok",
+  "characterId": "mv-character-heimdall",
+  "mediaType": "movie",
+  "mediaCanonicalId": "mv-movie-thor-ragnarok",
+  "roleName": "Heimdall",
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-06T00:00:00.000Z"
+  }
+}

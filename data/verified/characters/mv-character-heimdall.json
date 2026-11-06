@@ -1,0 +1,22 @@
+{
+  "canonicalId": "mv-character-heimdall",
+  "name": "Heimdall",
+  "realName": "Heimdall",
+  "aliases": ["The Gatekeeper"],
+  "species": "Asgardian",
+  "overview": "All-seeing, all-hearing Asgardian warrior and guardian of the Bifrost Bridge who stood as one of Thor's most loyal defenders across the Nine Realms.",
+  "externalIds": {
+    "tmdb": 17605
+  },
+  "provenance": {
+    "provider": "tmdb",
+    "sourceId": 17605,
+    "acquiredAt": "2026-11-06T00:00:00.000Z"
+  },
+  "verification": {
+    "status": "verified",
+    "method": "manual-review",
+    "verifiedAt": "2026-11-06T00:00:00.000Z",
+    "notes": "Verified MCU Asgardian guardian portrayed by Idris Elba across Thor and Avengers films."
+  }
+}
